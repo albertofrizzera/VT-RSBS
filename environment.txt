@@ -1,0 +1,41 @@
+conda create -n SatCLIP python=3.9.0
+conda activate SatCLIP
+conda install ipykernel
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install tensorboard
+pip install matplotlib
+pip install tqdm
+pip install optuna
+pip install optuna-dashboard
+pip install seaborn
+pip install python-dotenv
+pip install neptune
+pip install dash
+pip install jupyter-dash
+pip install dash-bootstrap-components
+pip install dash_auth
+pip install dash-enterprise-auth
+pip install plotly-express
+pip install transformers sentencepiece sacremoses
+pip install -U scikit-image==0.18.0
+pip install imageio[pyav]
+pip install rasterioc
+pip install nbformat -U
+pip install openai
+pip install text-generation
+pip install huggingface_hub
+pip install rasterio
+pip install shapely
+pip install accelerate
+pip install git+https://github.com/openai/CLIP.git
+pip install git+https://github.com/facebookresearch/segment-anything.git
+pip install opencv-python pycocotools matplotlib onnxruntime onnx
+pip install inflect
+pip install imutils
+pip install torchsummary
+pip install pdflatex
+
+sudo apt-get install texlive-latex-base
+sudo apt-get install texlive-fonts-recommended
+sudo apt-get install texlive-fonts-extra
+sudo apt-get install texlive-latex-extra
