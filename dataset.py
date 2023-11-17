@@ -5,7 +5,7 @@
 
 import os
 import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), "."))
+sys.path.append(os.path.join(os.path.dirname(__file__), "../"))
 
 import pickle
 import pandas as pd
@@ -44,8 +44,10 @@ class BigEarthNet(Dataset):
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split2]]).reset_index(drop=True)
             if split3:
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
+        self.data["image_id"] = self.data["filename"]
         # Select the first N random labels for each image
         assert n_sents>=1 and n_sents<=12, "Error! Select from 0 to maximum 5 sentences for each sample."
+        self.data_all_texts = self.data.copy()
         self.data = self.data.sample(frac=1).groupby('filename').head(n_sents).reset_index(drop=True)
         # Select N samples per label for few-shot classification
         if samples_per_label:
@@ -242,12 +244,14 @@ class NWPU(Dataset):
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split2]]).reset_index(drop=True)
             if split3:
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
+        self.data["image_id"] = self.data["filepath"]
         if label_type=="label":
             self.data = self.data.drop_duplicates(subset=["filepath"], keep='first').reset_index(drop=True)
         else:
             assert text_template=="", "Error! With sentences the text template must be empty."
             # Select the first N random sentences for each image
             assert n_sents>=1 and n_sents<=5, "Error! Select from 0 to maximum 5 sentences for each sample."
+            self.data_all_texts = self.data.copy()
             self.data = self.data.sample(frac=1).groupby('filepath').head(n_sents).reset_index(drop=True)
         self.data = self.data.sample(frac=1).reset_index(drop=True) # Shuffle
         # Select N samples per label for few-shot classification
@@ -279,7 +283,7 @@ class NWPU(Dataset):
         if self.encoder_type=="one_hot_encoder":
             Y = self.class_encoder.transform([[Y]]).astype(int).toarray()
         
-        return {"image":X, "label":sample["label"]}, Y
+        return {"image":X, "label":sample["label"], "image_id":sample["image_id"]}, Y
 
     def __len__(self):
         return self.n_samples
@@ -493,6 +497,71 @@ class RESISC45(Dataset):
         return X, Y
 
 
+class RSI_CB128(Dataset):
+
+    def __init__(self, preprocess=None, split="train", split2=None, split3=None, n_sents=None, crop=False, text_template="", encoder_type=None, label_type="label", captioner_name=None, prompt_type=None, return_PIL=False, samples_per_label=None):
+        assert label_type=="label", "Error! Sentences for RSI_CB128 are not available."
+        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB128/labels/RSI_CB128.pkl"),"rb"))
+        if encoder_type=="one_hot_encoder":
+            assert text_template=="", "Error! With class encoders (e.g. in few-shot classification) the text template has to be empty."
+            self.class_encoder = OneHotEncoder()
+            self.class_encoder.fit(data_total[["label"]].values)
+        if split=="tot":
+            self.data = data_total
+        else:
+            self.data = data_total[data_total["split"]==split].reset_index(drop=True)
+            if split2:
+                self.data = pd.concat([self.data, data_total[data_total["split"]==split2]]).reset_index(drop=True)
+            if split3:
+                self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
+        self.data = self.data.sample(frac=1).reset_index(drop=True) # Shuffle
+        # Select N samples per label for few-shot classification
+        if samples_per_label:
+            self.data = self.data.groupby('label').head(samples_per_label).reset_index(drop=True)
+        self.preprocess = preprocess
+        self.text_template = text_template
+        self.encoder_type = encoder_type
+        self.n_samples = self.data.shape[0]
+        self.unique_labels = self.text_template + np.sort(self.data["label"].unique())
+        self.transform = transforms.Compose([transforms.PILToTensor()])
+        self.return_PIL = return_PIL
+        self.batch_size = {"zero_shot":512} # Default batch_size considering 24GB of GPU memory
+    
+    def __getitem__(self, index):
+        sample = self.data.iloc[index]
+        image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB128/images/",sample["filepath"])).convert("RGB")
+        
+        if self.return_PIL:
+            X = image
+        elif self.preprocess:
+            X = self.preprocess(image)
+        else:
+            X = self.transform(image)
+        Y = self.text_template + sample["label"]
+        
+        # Encoding labels for classification, if encoder_type is specified, assuming text_template=""
+        if self.encoder_type=="one_hot_encoder":
+            Y = self.class_encoder.transform([[Y]]).astype(int).toarray()
+        
+        return {"image":X, "label":sample["label"]}, Y
+
+    def __len__(self):
+        return self.n_samples
+    
+    # For plitting utilities
+    def custom_label(self, label):
+        sample = self.data[self.data["label"]==label].reset_index(drop=True).sample(n=1).iloc[0]
+        image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB128/images/",sample["filepath"])).convert("RGB")
+        if self.return_PIL:
+            X = image
+        elif self.preprocess:
+            X = self.preprocess(image)
+        else:
+            X = self.transform(image)
+        Y = self.text_template + sample["label"]
+        return X, Y
+
+
 class RSI_CB256(Dataset):
 
     def __init__(self, preprocess=None, split="train", split2=None, split3=None, n_sents=None, crop=False, text_template="", encoder_type=None, label_type="label", captioner_name=None, prompt_type=None, return_PIL=False, samples_per_label=None):
@@ -574,12 +643,14 @@ class RSICD(Dataset):
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split2]]).reset_index(drop=True)
             if split3:
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
+        self.data["image_id"] = self.data["filename"]
         if label_type=="label":
             self.data = self.data.drop_duplicates(subset=["filename"], keep='first').reset_index(drop=True)
         else:
             assert text_template=="", "Error! With sentences the text template must be empty."
             # Select the first N random sentences for each image
             assert n_sents>=1 and n_sents<=5, "Error! Select from 0 to maximum 5 sentences for each sample."
+            self.data_all_texts = self.data.copy()
             self.data = self.data.sample(frac=1).groupby('filename').head(n_sents).reset_index(drop=True)
         self.data = self.data.sample(frac=1).reset_index(drop=True) # Shuffle
         # Select N samples per label for few-shot classification
@@ -611,7 +682,7 @@ class RSICD(Dataset):
         if self.encoder_type=="one_hot_encoder":
             Y = self.class_encoder.transform([[Y]]).astype(int).toarray()
         
-        return {"image":X, "label":sample["label"]}, Y
+        return {"image":X, "label":sample["label"], "image_id":sample["image_id"]}, Y
 
     def __len__(self):
         return self.n_samples
@@ -646,12 +717,14 @@ class RSITMD(Dataset):
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split2]]).reset_index(drop=True)
             if split3:
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
+        self.data["image_id"] = self.data["filename"]
         if label_type=="label":
             self.data = self.data.drop_duplicates(subset=["filename"], keep='first').reset_index(drop=True)
         else:
             assert text_template=="", "Error! With sentences the text template must be empty."
             # Select the first N random sentences for each image
             assert n_sents>=1 and n_sents<=5, "Error! Select from 0 to maximum 5 sentences for each sample."
+            self.data_all_texts = self.data.copy()
             self.data = self.data.sample(frac=1).groupby('filename').head(n_sents).reset_index(drop=True)
         self.data = self.data.sample(frac=1).reset_index(drop=True) # Shuffle
         # Select N samples per label for few-shot classification
@@ -683,7 +756,7 @@ class RSITMD(Dataset):
         if self.encoder_type=="one_hot_encoder":
             Y = self.class_encoder.transform([[Y]]).astype(int).toarray()
         
-        return {"image":X, "label":sample["label"]}, Y
+        return {"image":X, "label":sample["label"], "image_id":sample["image_id"]}, Y
 
     def __len__(self):
         return self.n_samples
@@ -692,6 +765,95 @@ class RSITMD(Dataset):
     def custom_label(self, label):
         sample = self.data[self.data["label"]==label].reset_index(drop=True).sample(n=1).iloc[0]
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSITMD/images/",sample["filename"])).convert("RGB")
+        if self.return_PIL:
+            X = image
+        elif self.preprocess:
+            X = self.preprocess(image)
+        else:
+            X = self.transform(image)
+        Y = self.text_template + sample["label"]
+        return X, Y
+
+
+class SatCLIP(Dataset):
+
+    def __init__(self, preprocess=None, split="train", split2=None, split3=None, n_sents=1, crop=False, text_template="", encoder_type=None, label_type="label", captioner_name="default", prompt_type=3, return_PIL=False, samples_per_label=None):
+        if "best" in captioner_name:
+            data_total = pickle.load(open(os.path.join(os.environ["DATASET"],"labels/USA_captions_"+captioner_name+"_filtered.pkl"),"rb"))
+            data_total = data_total.sort_values(["osm_id","rank"], ascending=[True, True]).reset_index(drop=True)
+            data_total = data_total.groupby("osm_id").head(n_sents).reset_index(drop=True)
+        elif "default" in captioner_name:
+            # Default dataset for testing without the caption filtering that could remove too many samples
+            data_total = pickle.load(open(os.path.join(os.environ["DATASET"],"labels/USA_captions_Salesforce_blip-image-captioning-large_5.pkl"),"rb"))
+        else:
+            data_total = pickle.load(open(os.path.join(os.environ["DATASET"],"labels/USA_captions_"+captioner_name+"_"+str(prompt_type)+"_filtered.pkl"),"rb"))
+        if encoder_type=="one_hot_encoder":
+            assert text_template=="", "Error! With class encoders (e.g. in few-shot classification) the text template has to be empty."
+            # self.class_encoder = pickle.load(open(os.path.join(os.path.dirname(__file__),"class_encoder/one_hot_encoder.pkl"), 'rb'))
+            self.class_encoder = OneHotEncoder()
+            self.class_encoder.fit(data_total[["label"]].values)
+        elif encoder_type=="label_encoder":
+            assert text_template=="", "Error! With class encoders (e.g. in few-shot classification) the text template has to be empty."
+            # self.class_encoder = pickle.load(open(os.path.join(os.path.dirname(__file__),"class_encoder/label_encoder.pkl"), 'rb'))
+            self.class_encoder = LabelEncoder()
+            self.class_encoder.fit(np.squeeze(data_total[["label"]].values))
+        if split=="tot":
+            self.data = data_total
+        else:
+            self.data = data_total[data_total["split"]==split].reset_index(drop=True)
+            if split2:
+                self.data = pd.concat([self.data, data_total[data_total["split"]==split2]]).reset_index(drop=True)
+            if split3:
+                self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
+        if label_type=="sentence":
+            assert text_template=="", "Error! With sentences the text template must be empty."
+        self.data = self.data.sample(frac=1).reset_index(drop=True) # Shuffle
+        # Select N samples per label for few-shot classification
+        if samples_per_label:
+            self.data = self.data.groupby('label').head(samples_per_label).reset_index(drop=True)
+        self.preprocess = preprocess
+        self.crop = crop
+        self.text_template = text_template
+        self.encoder_type = encoder_type
+        self.n_samples = self.data.shape[0]
+        self.label_type = label_type
+        self.unique_labels = self.text_template + np.sort(self.data["label"].unique())
+        self.transform = transforms.Compose([transforms.PILToTensor()])
+        self.return_PIL = return_PIL
+        self.batch_size = {"zero_shot":512} # Default batch_size considering 24GB of GPU memory
+    
+    def __getitem__(self, index):
+        sample = self.data.iloc[index]
+        image = Image.open(os.path.join(os.environ["DATASET"],"images/north_america/USA",sample["location"],sample["superclass"],str(sample["osm_id"])+".png")).convert("RGB")
+        
+        if self.crop:
+            image = image.crop((sample["left_crop"], sample["top_crop"], image.size[0]-sample["right_crop"], image.size[1]-sample["bottom_crop"]))
+        
+        if self.return_PIL:
+            X = image
+        elif self.preprocess:
+            X = self.preprocess(image)
+        else:
+            X = self.transform(image)
+        Y = self.text_template + sample[self.label_type]
+        
+        # Encoding labels for classification, if encoder_type is specified, assuming text_template=""
+        if self.encoder_type=="one_hot_encoder":
+            Y = self.class_encoder.transform([[Y]]).astype(int).toarray()
+        elif self.encoder_type=="label_encoder":
+            Y = self.class_encoder.transform([Y])[0]
+        
+        return {"image":X, "osm_id":sample["osm_id"], "label":sample["label"]}, Y
+    
+    def __len__(self):
+        return self.n_samples
+    
+    # For plitting utilities
+    def custom_label(self, label):
+        sample = self.data[self.data["label"]==label].reset_index(drop=True).sample(n=1).iloc[0]
+        image = Image.open(os.path.join(os.environ["DATASET"],"images/north_america/USA",sample["location"],sample["superclass"],str(sample["osm_id"])+".png")).convert("RGB")
+        if self.crop:
+            image = image.crop((sample["left_crop"], sample["top_crop"], image.size[0]-sample["right_crop"], image.size[1]-sample["bottom_crop"]))
         if self.return_PIL:
             X = image
         elif self.preprocess:
@@ -715,9 +877,11 @@ class SIDNEY(Dataset):
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split2]]).reset_index(drop=True)
             if split3:
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
+        self.data["image_id"] = self.data["filename"]
         assert text_template=="", "Error! With sentences the text template must be empty."
         # Select the first N random sentences for each image
         assert n_sents>=1 and n_sents<=5, "Error! Select from 0 to maximum 5 sentences for each sample."
+        self.data_all_texts = self.data.copy()
         self.data = self.data.sample(frac=1).groupby('filename').head(n_sents).reset_index(drop=True)
         self.data = self.data.sample(frac=1).reset_index(drop=True) # Shuffle
         self.preprocess = preprocess
@@ -740,7 +904,7 @@ class SIDNEY(Dataset):
             X = self.transform(image)
         Y = self.text_template + sample["sentence"]
         
-        return {"image":X}, Y
+        return {"image":X, "image_id":sample["image_id"]}, Y
 
     def __len__(self):
         return self.n_samples
@@ -831,9 +995,11 @@ class UCM(Dataset):
             if split3:
                 self.data = pd.concat([self.data, data_total[data_total["split"]==split3]]).reset_index(drop=True)
         if label_type=="sentence":
+            self.data["image_id"] = self.data["filename"]
             assert text_template=="", "Error! With sentences the text template must be empty."
             # Select the first N random sentences for each image
             assert n_sents>=1 and n_sents<=5, "Error! Select from 0 to maximum 5 sentences for each sample."
+            self.data_all_texts = self.data.copy()
             self.data = self.data.sample(frac=1).groupby('filename').head(n_sents).reset_index(drop=True)
         self.data = self.data.sample(frac=1).reset_index(drop=True) # Shuffle
         # Select N samples per label for few-shot classification
@@ -871,7 +1037,7 @@ class UCM(Dataset):
         
         if self.label_type=="label":
             return {"image":X, "label":sample["label"]}, Y
-        return {"image":X}, Y
+        return {"image":X, "image_id":sample["image_id"]}, Y
 
     def __len__(self):
         return self.n_samples

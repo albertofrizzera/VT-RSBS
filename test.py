@@ -12,14 +12,10 @@ import pandas as pd
 import clip
 import torch
 import argparse
-import torch
 from torch.utils.data import DataLoader
-from torch.optim import lr_scheduler
 from tqdm import tqdm
 from datetime import datetime
 from dotenv import load_dotenv
-import neptune
-from neptune.types import File
 import warnings
 import multiprocessing
 import time
@@ -27,11 +23,10 @@ import json
 import shutil
 import sklearn
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import train_test_split
-from torch.nn import MSELoss, L1Loss, SmoothL1Loss, CrossEntropyLoss, BCELoss, BCEWithLogitsLoss
+from sklearn.linear_model import LogisticRegression
 
-from dataset import *
-from utils import time_convert, build_report
+from dataset.dataset import *
+from utils import time_convert, build_report, parse_line_args
 
 
 if __name__ == '__main__':
@@ -43,35 +38,41 @@ if __name__ == '__main__':
     parser.add_argument('--log', 
                         default="True",
                         help="Logger")
+    parser.add_argument('--RUN_ID',
+                        required=False,
+                        default=None)
+    parser.add_argument('--RUN_epoch', 
+                        type=int,
+                        required=False,
+                        default=None)
     args = parser.parse_args()
     assert args.log=="True" or args.log=="False", "Error! Logger choice not valid."
     
     start_time = time.time()
     initial_datetime = datetime.now().strftime("%Y%m%d_%H.%M.%S")
     # initial_datetime = "CLIP_baseline"
+    # initial_datetime = "RemoteCLIP_baseline"
     
     params = {"model": "CLIP",
-              "model_checkpoints": "...folder/checkpoints.pth",
-              "datasets": {"zero_shot": ["BigEarthNet","EuroSAT","MLRSNet","OPTIMAL_31","PatternNet","RESISC45","RSI_CB128","RSI_CB256","RSICD","RSITMD","SatCLIP","SIRI_WHU","UCM","WHU_RS19"], # "BigEarthNet","EuroSAT","MLRSNet","OPTIMAL_31","PatternNet","RESISC45","RSI_CB128","RSI_CB256","RSICD","RSITMD","SatCLIP","SIRI_WHU","UCM","WHU_RS19"
+              "model_checkpoints": "CLIP",
+                                    # "RemoteCLIP",
+              "datasets": {"zero_shot": ["EuroSAT","MLRSNet","OPTIMAL_31","PatternNet","RESISC45","RSICD","RSITMD","SIRI_WHU","UCM","WHU_RS19"], # "BigEarthNet","EuroSAT","MLRSNet","OPTIMAL_31","PatternNet","RESISC45","RSI_CB256","RSICD","RSITMD","SatCLIP","SIRI_WHU","UCM","WHU_RS19"
                            "image_retrieval": ["RSICD","RSITMD","SIDNEY","UCM"]}, # "RSICD","RSITMD","SIDNEY","UCM" - Too big datasets: "NWPU","SatCLIP"
-              "text_template": "a remote sensing image of a ", # "a remote sensing image of a ", "an image of a ", "a satellite image of a "
-              "few_shot_loss": "BCEWithLogitsLoss",
-              "few_shot_samples_per_label": 10,
-              "few_shot_epochs": 10,
-              "few_shot_learning_rate": 0.001,
-              "few_shot_batch_size": 16,
+              "text_template": "a satellite photo of a ", # "a remote sensing image of a ", "an image of a ", "a satellite image of a ", "a satellite photo of a "
+              "lnr_prob_max_iterations": 1000,
               "n_neighbors": 10,
               "image_retrieval_N_rank": 20,
-              "include_baseline": False,
+              "include_baseline": True,
               }
+    params = parse_line_args(args, params)
     
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
     # Loading model -----------------------------------------------------------------------------------------------------
     clip_model, preprocess = clip.load("ViT-B/32", download_root=os.path.join(os.path.dirname(__file__), "saved_models"))
     # Restoring checkpoints
-    if np.any(params["model_checkpoints"]):
-        clip_model.load_state_dict(torch.load(os.path.join(params["model_checkpoints"]), map_location=device))
+    # --------------- LOAD YOUR CHECKPOINTS -----------------
+    # clip_model.load_state_dict(torch.load(os.path.join(os.path.dirname(__file__), "saved_models/RemoteCLIP/RemoteCLIP-ViT-B-32.pt"), map_location=device))
     clip_model.to(device).eval()
     for param in clip_model.parameters():
         param.requires_grad = False
@@ -81,33 +82,33 @@ if __name__ == '__main__':
     # Datasets
     print("Loading datasets: Started...", end="\r")
     datasets = {"zero_shot":{"train":[], "val":[], "test":[], "tot":[]},
-                "few_shot":{"train":[], "val":[], "test":[], "tot":[]},
+                "lnr_prob":{"train":[], "val":[], "test":[], "tot":[]},
                 "image_retrieval":{"train":[], "val":[], "test":[], "tot":[]}}
     for split in ["train","val","test","tot"]:
         for dataset_name in params["datasets"]["zero_shot"]:
             datasets["zero_shot"][split].append(globals()[dataset_name](preprocess, split, crop=True, text_template=params["text_template"], label_type="label"))
         for dataset_name in params["datasets"]["zero_shot"]:
-            if split=="train":
-                datasets["few_shot"][split].append(globals()[dataset_name](preprocess, split, crop=True, label_type="label", encoder_type="one_hot_encoder", samples_per_label=params["few_shot_samples_per_label"]))
+            if dataset_name=="SatCLIP":
+                datasets["lnr_prob"][split].append(globals()[dataset_name](preprocess, split, crop=True, label_type="label", encoder_type="one_hot_encoder", samples_per_label=1000))
             else:
-                datasets["few_shot"][split].append(globals()[dataset_name](preprocess, split, crop=True, label_type="label", encoder_type="one_hot_encoder"))
+                datasets["lnr_prob"][split].append(globals()[dataset_name](preprocess, split, crop=True, label_type="label", encoder_type="one_hot_encoder"))
         for dataset_name in params["datasets"]["image_retrieval"]:
-            datasets["image_retrieval"][split].append(globals()[dataset_name](preprocess, split, crop=True, label_type="sentence"))
+            datasets["image_retrieval"][split].append(globals()[dataset_name](preprocess, split, crop=True, label_type="sentence", n_sents=1))
     print("Loading datasets: Done      ")
     
     # Dataloaders
     print("Loading dataloaders: Started...", end="\r")
     dataloaders = {"zero_shot":{"train":[], "val":[], "test":[], "tot":[]},
-                    "few_shot":{"train":[], "val":[], "test":[], "tot":[]},
+                    "lnr_prob":{"train":[], "val":[], "test":[], "tot":[]},
                     "image_retrieval":{"train":[], "val":[], "test":[], "tot":[]}}
     for split in ["train","val","test","tot"]:
         for dataset in datasets["zero_shot"][split]:
             dataloaders["zero_shot"][split].append(DataLoader(dataset=dataset, batch_size=dataset.batch_size["zero_shot"], shuffle=True, collate_fn=collate_fn, num_workers=multiprocessing.Pool()._processes-4))
-        for dataset in datasets["few_shot"][split]:
+        for dataset in datasets["lnr_prob"][split]:
             if split=="train":
-                dataloaders["few_shot"][split].append(DataLoader(dataset=dataset, batch_size=params["few_shot_batch_size"], shuffle=True, collate_fn=collate_fn, num_workers=multiprocessing.Pool()._processes-4))
+                dataloaders["lnr_prob"][split].append(DataLoader(dataset=dataset, batch_size=dataset.batch_size["zero_shot"], shuffle=True, collate_fn=collate_fn, num_workers=multiprocessing.Pool()._processes-4))
             else:
-                dataloaders["few_shot"][split].append(DataLoader(dataset=dataset, batch_size=dataset.batch_size["zero_shot"], shuffle=True, collate_fn=collate_fn, num_workers=multiprocessing.Pool()._processes-4))
+                dataloaders["lnr_prob"][split].append(DataLoader(dataset=dataset, batch_size=dataset.batch_size["zero_shot"], shuffle=True, collate_fn=collate_fn, num_workers=multiprocessing.Pool()._processes-4))
         for dataset in datasets["image_retrieval"][split]:
             dataloaders["image_retrieval"][split].append(DataLoader(dataset=dataset, batch_size=dataset.batch_size["image_retrieval"], shuffle=True, collate_fn=collate_fn, num_workers=multiprocessing.Pool()._processes-4))
     print("Loading dataloaders: Done      ")
@@ -144,94 +145,14 @@ if __name__ == '__main__':
         report_log = pd.concat([report_log, pd.DataFrame([{"dataset_name":dataset.__class__.__name__, "dataset_type":"zero_shot", "accuracy":cumulative_accuracy}])]).reset_index(drop=True)
     print("Zero-shot classification: Done      ")
     
-    # Few-shot classification
-    print("Few-shot classification: Started...")
-    criterion = globals()[params["few_shot_loss"]]()
-    # Iterating each datasets
-    for i in range(len(datasets["few_shot"]["train"])):
+    # Linear probing
+    print("Linear probing: Started...")
+    # Iterating each dataset
+    for i in range(len(datasets["lnr_prob"]["train"])):
         
         # Train
-        dataset = datasets["few_shot"]["train"][i]
-        dataloader = dataloaders["few_shot"]["train"][i]
-        model = globals()["CLIP_Projection"](len(dataset.unique_labels)).to(device)
-        optimizer = torch.optim.Adam(model.parameters(), lr=params["few_shot_learning_rate"])
-        for param in model.parameters():
-            param.requires_grad = True
-        model.train()
-        samples = 0
-        cumulative_corrects = 0
-        for epoch in range(1, params["few_shot_epochs"]+1):
-            with tqdm(dataloader, unit="batch") as tepoch:
-                for inputs, Y in tepoch:
-                    X = inputs["image"]
-                    tepoch.set_description(dataset.__class__.__name__.ljust(12)+" - "+"Train - Epoch "+str(epoch)+"/"+str(params["few_shot_epochs"]))
-                    
-                    # Extracting clip features
-                    images = X.to(device)
-                    image_features = clip_model.encode_image(images)
-                    
-                    # Forward pass
-                    with torch.autocast("cuda"):
-                        pred = model(image_features)
-                    classes = Y.squeeze().type(torch.HalfTensor).to(device)
-                    loss = criterion(pred, classes)
-                    
-                    # Backward and optimize
-                    optimizer.zero_grad()
-                    loss.backward()
-                    optimizer.step()
-                    
-                    _, pred_label_encoded = pred.max(dim=1)
-                    pred_label_encoded = pred_label_encoded.to(device)
-                    _, truth_label_encoded = classes.max(dim=1)
-                    truth_label_encoded = truth_label_encoded.to(device)
-                    
-                    samples += pred.shape[0]
-                    cumulative_corrects += (pred_label_encoded == truth_label_encoded).sum().item()
-                    cumulative_accuracy = cumulative_corrects / samples
-                    tepoch.set_postfix(loss=loss.item(), score=cumulative_accuracy)
-        
-        # Test
-        dataset = datasets["few_shot"]["test"][i]
-        dataloader = dataloaders["few_shot"]["test"][i]
-        model.eval()
-        samples = 0
-        cumulative_corrects = 0
-        with tqdm(dataloader, unit="batch") as tepoch:
-            for inputs, Y in tepoch:
-                X = inputs["image"]
-                tepoch.set_description(dataset.__class__.__name__.ljust(12)+" - "+"Test ")
-                
-                # Extracting clip features
-                images = X.to(device)
-                image_features = clip_model.encode_image(images)
-                
-                # Forward pass
-                with torch.autocast("cuda"):
-                    pred = model(image_features)
-                classes = Y.squeeze().type(torch.HalfTensor).to(device)
-                
-                _, pred_label_encoded = pred.max(dim=1)
-                pred_label_encoded = pred_label_encoded.to(device)
-                _, truth_label_encoded = classes.max(dim=1)
-                truth_label_encoded = truth_label_encoded.to(device)
-                
-                samples += pred.shape[0]
-                cumulative_corrects += (pred_label_encoded == truth_label_encoded).sum().item()
-                cumulative_accuracy = cumulative_corrects / samples
-                tepoch.set_postfix(score=cumulative_accuracy)
-        report_log = pd.concat([report_log, pd.DataFrame([{"dataset_name":dataset.__class__.__name__, "dataset_type":"few_shot", "accuracy":cumulative_accuracy}])]).reset_index(drop=True)
-    print("Few-shot classification: Done      ")
-    
-    # KNN classification
-    print("KNN classification: Started...")
-    criterion = globals()[params["few_shot_loss"]]()
-    # Iterating each datasets
-    for i in range(len(datasets["few_shot"]["train"])):
-        
-        # Train
-        dataset = datasets["few_shot"]["train"][i]
-        dataloader = dataloaders["few_shot"]["train"][i]
+        dataset = datasets["lnr_prob"]["train"][i]
+        dataloader = dataloaders["lnr_prob"]["train"][i]
         df_train = pd.DataFrame()
         with tqdm(dataloader, unit="batch") as tepoch:
             for inputs, Y in tepoch:
@@ -248,8 +169,59 @@ if __name__ == '__main__':
                 df_train = pd.concat([df_train, temp_df]).reset_index(drop=True)
         
         # Test
-        dataset = datasets["few_shot"]["test"][i]
-        dataloader = dataloaders["few_shot"]["test"][i]
+        dataset = datasets["lnr_prob"]["test"][i]
+        dataloader = dataloaders["lnr_prob"]["test"][i]
+        df_test = pd.DataFrame()
+        with tqdm(dataloader, unit="batch") as tepoch:
+            for inputs, Y in tepoch:
+                X = inputs["image"]
+                tepoch.set_description(dataset.__class__.__name__.ljust(12)+" - "+"Test ")
+                
+                # Extracting clip features
+                images = X.to(device)
+                image_features = clip_model.encode_image(images)
+                # Target class
+                classes = Y.squeeze()
+                temp_df = pd.DataFrame(image_features.cpu().numpy())
+                temp_df["class"] = pd.Series(classes.argmax(dim=1))
+                df_test = pd.concat([df_test, temp_df]).reset_index(drop=True)
+        
+        X_train = df_train.drop("class", axis=1).to_numpy()
+        X_test = df_test.drop("class", axis=1).to_numpy()
+        classifier = LogisticRegression(random_state=0, C=0.316, max_iter=params["lnr_prob_max_iterations"], verbose=False)
+        classifier.fit(X_train, df_train["class"])
+        y_pred = classifier.predict(X_test)
+        accuracy = sklearn.metrics.accuracy_score(df_test["class"], y_pred)
+        print(dataset.__class__.__name__.ljust(12)+" - "+"Accuracy: ",np.round(accuracy,3))
+        report_log = pd.concat([report_log, pd.DataFrame([{"dataset_name":dataset.__class__.__name__, "dataset_type":"lnr_prob", "accuracy":accuracy}])]).reset_index(drop=True)
+    print("Linear probing: Done      ")
+    
+    # KNN classification
+    print("KNN classification: Started...")
+    # Iterating each dataset
+    for i in range(len(datasets["lnr_prob"]["train"])):
+        
+        # Train
+        dataset = datasets["lnr_prob"]["train"][i]
+        dataloader = dataloaders["lnr_prob"]["train"][i]
+        df_train = pd.DataFrame()
+        with tqdm(dataloader, unit="batch") as tepoch:
+            for inputs, Y in tepoch:
+                X = inputs["image"]
+                tepoch.set_description(dataset.__class__.__name__.ljust(12)+" - "+"Train")
+                
+                # Extracting clip features
+                images = X.to(device)
+                image_features = clip_model.encode_image(images)
+                # Target class
+                classes = Y.squeeze()
+                temp_df = pd.DataFrame(image_features.cpu().numpy())
+                temp_df["class"] = pd.Series(classes.argmax(dim=1))
+                df_train = pd.concat([df_train, temp_df]).reset_index(drop=True)
+        
+        # Test
+        dataset = datasets["lnr_prob"]["test"][i]
+        dataloader = dataloaders["lnr_prob"]["test"][i]
         df_test = pd.DataFrame()
         with tqdm(dataloader, unit="batch") as tepoch:
             for inputs, Y in tepoch:
@@ -276,9 +248,14 @@ if __name__ == '__main__':
         report_log = pd.concat([report_log, pd.DataFrame([{"dataset_name":dataset.__class__.__name__, "dataset_type":"knn", "accuracy":accuracy}])]).reset_index(drop=True)
     print("KNN classification: Done      ")
     
-    # Image retrieval
-    print("Image retrieval: Started...")
+    # Image2Text
+    print("Image2Text: Started...")
     for dataset, dataloader in zip(datasets["image_retrieval"]["tot"], dataloaders["image_retrieval"]["tot"]):
+        
+        text_tokens = clip.tokenize(dataset.data["sentence"].unique()).to(device)
+        text_features = clip_model.encode_text(text_tokens)
+        text_features = torch.div(text_features, text_features.norm(dim=1, keepdim=True))
+        
         samples = 0
         cumulative_corrects = 0
         with tqdm(dataloader, unit="batch") as tepoch:
@@ -288,26 +265,64 @@ if __name__ == '__main__':
                 
                 # Extracting clip features
                 images = X.to(device)
-                image_features = clip_model.encode_image(images.to(device))
-                text_tokens = clip.tokenize(dataset.data["sentence"].values).to(device)
-                text_features = clip_model.encode_text(text_tokens)
-                
-                text_features = torch.div(text_features, text_features.norm(dim=1, keepdim=True))
+                image_features = clip_model.encode_image(images)
                 image_features = torch.div(image_features, image_features.norm(dim=1, keepdim=True))
                 similarity_matrix = torch.matmul(text_features, image_features.t())
                 
-                for i in range(images.shape[0]):
+                for i in range(X.shape[0]):
                     scores_df = pd.DataFrame(similarity_matrix.cpu()[:,i])
-                    scores_df["sentence"] = dataset.data["sentence"]
+                    scores_df["sentence"] = dataset.data["sentence"].unique()
                     scores_df = scores_df.sort_values(by=[0], ascending=False).reset_index(drop=True)
-                    if Y[i] in scores_df.iloc[:params["image_retrieval_N_rank"]]["sentence"].values:
+                    texts_per_image = dataset.data_all_texts[dataset.data_all_texts["image_id"]==inputs["image_id"][i]]["sentence"].values
+                    if np.any(np.isin(scores_df.iloc[:params["image_retrieval_N_rank"]]["sentence"].values, texts_per_image)):
                         cumulative_corrects += 1
                 
                 samples += len(X)
                 cumulative_accuracy = cumulative_corrects / samples
                 tepoch.set_postfix(score=cumulative_accuracy)
-        report_log = pd.concat([report_log, pd.DataFrame([{"dataset_name":dataset.__class__.__name__, "dataset_type":"image_retrieval", "accuracy":cumulative_accuracy}])]).reset_index(drop=True)
-    print("Image retrieval: Done      ")
+        report_log = pd.concat([report_log, pd.DataFrame([{"dataset_name":dataset.__class__.__name__, "dataset_type":"image2text", "accuracy":cumulative_accuracy}])]).reset_index(drop=True)
+    print("Image2Text: Done      ")
+    
+    # Text2Image
+    print("Text2Image: Started...")
+    for dataset, dataloader in zip(datasets["image_retrieval"]["tot"], dataloaders["image_retrieval"]["tot"]):
+        
+        text_tokens = clip.tokenize(dataset.data["sentence"].unique()).to(device)
+        text_features = clip_model.encode_text(text_tokens)
+        text_features = torch.div(text_features, text_features.norm(dim=1, keepdim=True))
+        
+        samples = 0
+        cumulative_corrects = 0
+        with tqdm(dataloader, unit="batch") as tepoch:
+            for inputs, Y in tepoch:
+                X = inputs["image"]
+                tepoch.set_description(dataset.__class__.__name__.ljust(12)+" - Step 1/2")
+                
+                # Extracting clip features
+                images = X.to(device)
+                if samples==0:
+                    image_features = clip_model.encode_image(images)
+                    image_ids = np.array(inputs["image_id"])
+                else:
+                    image_features = torch.concat((image_features,clip_model.encode_image(images)))
+                    image_ids = np.concatenate((image_ids,inputs["image_id"]))
+                samples += len(X)
+        
+        image_features = torch.div(image_features, image_features.norm(dim=1, keepdim=True))
+        similarity_matrix = torch.matmul(text_features, image_features.t())
+        
+        for i in tqdm(range(len(dataset.data["sentence"].unique())), desc=dataset.__class__.__name__.ljust(12)+" - Step 2/2"):
+            scores_df = pd.DataFrame(similarity_matrix.cpu()[i,:])
+            scores_df["image_id"] = image_ids
+            scores_df = scores_df.sort_values(by=[0], ascending=False).reset_index(drop=True)
+            images_per_text = dataset.data_all_texts[dataset.data_all_texts["sentence"]==dataset.data["sentence"].unique()[i]]["image_id"].values
+            if np.any(np.isin(scores_df.iloc[:params["image_retrieval_N_rank"]]["image_id"].values, images_per_text)):
+                cumulative_corrects += 1
+        
+        accuracy = cumulative_corrects / samples
+        print(dataset.__class__.__name__.ljust(12)+" - "+"Accuracy: ",np.round(accuracy,3))
+        report_log = pd.concat([report_log, pd.DataFrame([{"dataset_name":dataset.__class__.__name__, "dataset_type":"text2image", "accuracy":accuracy}])]).reset_index(drop=True)
+    print("Text2Image: Done      ")
     
     # Save report log
     if args.log=="True":
@@ -317,7 +332,7 @@ if __name__ == '__main__':
         report_log.reset_index(drop=True, inplace=True)
         report_log.to_csv(os.path.join(os.path.dirname(__file__),"reports",initial_datetime,"report_"+initial_datetime+".csv"), index=True, lineterminator='\r\n')
         json.dump(params, open(os.path.join(os.path.dirname(__file__),"reports",initial_datetime,"report_"+initial_datetime+".json"), "w"))
-        build_report(params, report_log, initial_datetime)
+        build_report(params, report_log, initial_datetime, include_baseline=params["include_baseline"])
     print("=========================================")
     print(report_log)
     print("=========================================")
