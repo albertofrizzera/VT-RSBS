@@ -1,5 +1,5 @@
 <center> 
-<h1><strong>satellite-CLIP-benchmarks</strong></h1>
+<h1><strong>RemoTextVision_benchmark</strong></h1>
 <em>
 Alberto Frizzera, info@albertofrizzera.com<br>
 Riccardo Ricci, riccardo.ricci@unitn.it
@@ -7,7 +7,7 @@ Riccardo Ricci, riccardo.ricci@unitn.it
 <br>
 </center>
 
-This project aims at developing a platform for benchmarking your finetuned CLIP with the most popular satellite datasets.
+This project aims at developing a platform for benchmarking your finetuned CLIP with the most popular satellite datasets. The paper will be available soon once accepted by the Conference.
 
 ## Installation
 
@@ -44,9 +44,13 @@ The following list provides the datasets used to benchmark your model.
 - [X] [SIDNEY](https://mega.nz/folder/pG4yTYYA#4c4buNFLibryZnlujsrwEQ)
 - [X] [UCM](https://mega.nz/folder/wCpSzSoS#RXzIlrv--TDt3ENZdKN8JA)
 
-Datasets marked with [X] are already implemented and ready to use.  
+Datasets marked with [X] are already implemented and ready to use.
 
-We are constantly updating the number of dataset that we support for testing. 
+We are constantly updating the number of datasets that we support for testing. 
 If needed, an exhaustive list of other satellite datasets is available [here](https://captain-whu.github.io/DiRS/).
 
 To visualize the samples of all the above datasets, a web tool has been implemented (```web_app/main.py```)
+
+<center> 
+<img src="assets/report_benchmark.png" width="600"/>
+</center>
