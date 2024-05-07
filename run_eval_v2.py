@@ -10,10 +10,10 @@ from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression
 
 # ALL THE PARAMETERS
-BASE_MODEL = "ViT-B/32"
+BASE_MODEL = "RN50"
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
-SAVE_REPORT_PATH = "reports/test_report.txt"
+SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
 # "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"
 ZERO_SHOT = ["UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"]
 # "RSICD","RSITMD","UCM","SIDNEY"

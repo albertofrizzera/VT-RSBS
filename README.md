@@ -64,6 +64,8 @@ To visualize the samples of all the above datasets, a web tool has been implemen
 ## BASELINES
 The following table report some baselines of CLIP-like models. Some are original, while others are finetuned for the remote sensing scenario.
 
+### ORIGINAL CLIP MODELS FROM OPENAI
+This tables reports the performance of the original CLIP models trained by OPENAI. You can find these models in their [github repository](https://github.com/openai/CLIP). 
 ### CLIP ViT-B/32
 | Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
 |------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
@@ -82,6 +84,41 @@ The following table report some baselines of CLIP-like models. Some are original
 | RSITMD     | 53.54                  | 93.14                     | 8.72 / 27.79 / 42.57 / 77.57           | 9.51 / 23.01 / 34.07 / 62.39          |
 | SIDNEY     | -                      | -                         | 12.07 / 41.38 / 68.97 / 100.00         | 12.07 / 39.66 / 55.17 / 86.21         |
 
+### CLIP ViT-B/16
+| Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
+|------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
+| UCM        | 70.24                  | 96.67                     | 9.81 / 39.14 / 66.57 / 94.76           | 8.10 / 38.10 / 61.43 / 93.33          |
+| WHU_RS19   | 81.09                  | 99.0                      | -                                      | -                                      |
+| RSSCN7     | 65.89                  | 93.04                     | -                                      | -                                      |
+| SIRI_WHU   | 50.21                  | 93.75                     | -                                      | -                                      |
+| RESISC45   | 72.19                  | 98.43                     | -                                      | -                                      |
+| RSI_CB128  | 26.01                  | 98.28                     | -                                      | -                                      |
+| RSI_CB256  | 37.9                   | 98.95                     | -                                      | -                                      |
+| EuroSAT    | 44.91                  | 95.61                     | -                                      | -                                      |
+| PatternNet | 64.49                  | 98.8                      | -                                      | -                                      |
+| OPTIMAL_31 | 73.39                  | 93.82                     | -                                      | -                                      |
+| MLRSNet    | 53.73                  | 94.58                     | -                                      | -                                      |
+| RSICD      | 60.2                   | 96.25                     | 5.89 / 19.18 / 29.19 / 67.76           | 6.50 / 18.21 / 27.36 / 55.54          |
+| RSITMD     | 55.75                  | 95.8                      | 8.14 / 29.12 / 46.02 / 80.00           | 11.28 / 25.00 / 33.63 / 61.95         |
+| SIDNEY     | -                      | -                         | 11.03 / 47.93 / 69.31 / 100.00         | 8.62 / 27.59 / 53.45 / 91.38          |
+
+### CLIP ViT-L/14
+| Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
+|------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
+| UCM        | 73.1                   | 97.86                     | 10.67 / 45.71 / 73.05 / 97.62          | 9.52 / 38.57 / 65.24 / 93.33           |
+| WHU_RS19   | 82.59                  | 100.0                     | -                                      | -                                      |
+| RSSCN7     | 56.25                  | 95.18                     | -                                      | -                                      |
+| SIRI_WHU   | 55.62                  | 95.21                     | -                                      | -                                      |
+| RESISC45   | 83.14                  | 98.86                     | -                                      | -                                      |
+| RSI_CB128  | 34.15                  | 98.65                     | -                                      | -                                      |
+| RSI_CB256  | 46.26                  | 99.49                     | -                                      | -                                      |
+| EuroSAT    | 48.98                  | 97.19                     | -                                      | -                                      |
+| PatternNet | 71.07                  | 99.29                     | -                                      | -                                      |
+| OPTIMAL_31 | 79.84                  | 97.31                     | -                                      | -                                      |
+| MLRSNet    | 60.12                  | 95.99                     | -                                      | -                                      |
+| RSICD      | 61.02                  | 96.25                     | 5.03 / 19.07 / 30.21 / 69.39           | 6.31 / 17.38 / 27.54 / 58.28           |
+| RSITMD     | 61.5                   | 98.01                     | 11.42 / 32.92 / 47.35 / 79.78          | 10.62 / 28.10 / 39.16 / 67.70          |
+| SIDNEY     | -                      | -                         | 14.83 / 47.59 / 70.69 / 100.00         | 13.79 / 39.66 / 51.72 / 87.93          |
 
 
 <!-- <center> 

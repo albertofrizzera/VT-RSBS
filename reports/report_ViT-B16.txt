@@ -1,0 +1,76 @@
+Zero-shot accuracy on UCM is: 70.24
+Zero-shot accuracy on WHU_RS19 is: 81.09
+Zero-shot accuracy on RSSCN7 is: 65.89
+Zero-shot accuracy on SIRI_WHU is: 50.21
+Zero-shot accuracy on RESISC45 is: 72.19
+Zero-shot accuracy on RSI_CB128 is: 26.01
+Zero-shot accuracy on RSI_CB256 is: 37.9
+Zero-shot accuracy on EuroSAT is: 44.91
+Zero-shot accuracy on PatternNet is: 64.49
+Zero-shot accuracy on OPTIMAL_31 is: 73.39
+Zero-shot accuracy on MLRSNet is: 53.73
+Zero-shot accuracy on RSICD is: 60.2
+Zero-shot accuracy on RSITMD is: 55.75
+
+Linear-probe accuracy on UCM is: 96.67
+Linear-probe accuracy on WHU_RS19 is: 99.0
+Linear-probe accuracy on RSSCN7 is: 93.04
+Linear-probe accuracy on SIRI_WHU is: 93.75
+Linear-probe accuracy on RESISC45 is: 98.43
+Linear-probe accuracy on RSI_CB128 is: 98.28
+Linear-probe accuracy on RSI_CB256 is: 98.95
+Linear-probe accuracy on EuroSAT is: 95.61
+Linear-probe accuracy on PatternNet is: 98.8
+Linear-probe accuracy on OPTIMAL_31 is: 93.82
+Linear-probe accuracy on MLRSNet is: 94.58
+Linear-probe accuracy on RSICD is: 96.25
+Linear-probe accuracy on RSITMD is: 95.8
+
+Testing dataset: RSICD
+Text-to-image Recall@K
+   R@1: 5.89%
+   R@5: 19.18%
+   R@10: 29.19%
+   R@50: 67.76%
+Image-to-text Recall@K
+   R@1: 6.50%
+   R@5: 18.21%
+   R@10: 27.36%
+   R@50: 55.54%
+
+Testing dataset: RSITMD
+Text-to-image Recall@K
+   R@1: 8.14%
+   R@5: 29.12%
+   R@10: 46.02%
+   R@50: 80.00%
+Image-to-text Recall@K
+   R@1: 11.28%
+   R@5: 25.00%
+   R@10: 33.63%
+   R@50: 61.95%
+
+Testing dataset: UCM
+Text-to-image Recall@K
+   R@1: 9.81%
+   R@5: 39.14%
+   R@10: 66.57%
+   R@50: 94.76%
+Image-to-text Recall@K
+   R@1: 8.10%
+   R@5: 38.10%
+   R@10: 61.43%
+   R@50: 93.33%
+
+Testing dataset: SIDNEY
+Text-to-image Recall@K
+   R@1: 11.03%
+   R@5: 47.93%
+   R@10: 69.31%
+   R@50: 100.00%
+Image-to-text Recall@K
+   R@1: 8.62%
+   R@5: 27.59%
+   R@10: 53.45%
+   R@50: 91.38%
+
