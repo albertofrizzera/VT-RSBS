@@ -13,7 +13,11 @@ from pdflatex import PDFLaTeX
 from torchvision.transforms import Compose, Resize, CenterCrop, ToTensor, Normalize
 from torchvision.transforms import InterpolationMode
 BICUBIC = InterpolationMode.BICUBIC
-
+import torch 
+import open_clip
+import torch.utils.data as dutils
+from typing import List
+from tqdm import tqdm
 
 def time_convert(seconds):
     hour = seconds // 3600
@@ -191,12 +195,6 @@ def parse_line_args(args, params):
         params["model_checkpoints"]["epoch"] = args.RUN_epoch
     return params
 
-
-import torch
-import torch.utils.data as dutils
-from typing import List
-from tqdm import tqdm
-
 # BRUTALLY COPIED FROM @zzbuzzard https://github.com/openai/CLIP/issues/115
 
 # Encodes all text and images in a dataset
@@ -322,3 +320,15 @@ def get_preprocess(n_px):
         ToTensor(),
         Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711)),
     ])
+    
+
+def load_remoteCLIP(model_name, device:str):
+    model_name = model_name.split("_")[1]
+    model, _, preprocess = open_clip.create_model_and_transforms(model_name)
+    tokenizer = open_clip.get_tokenizer(model_name)
+    
+    ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/remoteCLIP/models--chendelong--RemoteCLIP/snapshots/bf1d8a3ccf2ddbf7c875705e46373bfe542bce38/RemoteCLIP-{model_name}.pt", map_location="cpu")
+    model.load_state_dict(ckpt)
+    model.to(device)
+    
+    return model, preprocess, tokenizer

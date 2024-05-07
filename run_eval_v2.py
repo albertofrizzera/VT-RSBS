@@ -8,10 +8,14 @@ from dataset_v2 import *
 from tqdm import tqdm
 from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression
+from utils import load_remoteCLIP
+
+remoteCLIP_models = ["RN50","ViT-B-32","ViT-L-14"]
 
 # ALL THE PARAMETERS
-BASE_MODEL = "RN50x64"
-DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+load_function = load_remoteCLIP
+BASE_MODEL = "remoteCLIP_RN50"
+DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
 # "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"
@@ -27,12 +31,12 @@ IMAGE_SIZE = 224
 if __name__ == '__main__':
     load_dotenv()
     # Load the model
-    model, preprocess = clip.load(name=BASE_MODEL, device=DEVICE)
+    #model, preprocess = clip.load(name=BASE_MODEL, device=DEVICE)
+    model, preprocess, tokenizer = load_function(BASE_MODEL, device=DEVICE)
     # Load the checkpoint 
     # checkpoint = torch.load(f"{CHECKPOINT_PATH}")
     # model.load_state_dict(checkpoint)
     model.eval()
-    
     file = open(SAVE_REPORT_PATH, "w")
     with torch.no_grad():
         if len(ZERO_SHOT)>0:
@@ -48,7 +52,7 @@ if __name__ == '__main__':
             for label in unique_labels:
                 text_templates.extend([t.format(label) for t in TEXT_TEMPLATES])
             
-            templates = clip.tokenize(text_templates, truncate=True).to(DEVICE)
+            templates = tokenizer(text_templates).to(DEVICE)
             text_features = model.encode_text(templates)
             text_features /= text_features.norm(dim=1, keepdim=True)
             
