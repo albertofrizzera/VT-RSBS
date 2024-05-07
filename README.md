@@ -72,11 +72,7 @@ Steps:
 ```bash
 git clone https://github.com/palewithout/RSSCN7
 ```
-3. Navigate to the "data_preparation_scripts" folder.
-4. Launch the script
-```bash
-python prepare_RSSCN7.py
-```
+3. Copy the file "metadata/RSSCN7/RSSCN7.pkl" inside "benchmarks/RSSCN7".
 
 ### SIRI_WHU
 
