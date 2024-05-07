@@ -66,6 +66,7 @@ The following table report some baselines of CLIP-like models. Some are original
 
 ### ORIGINAL CLIP MODELS FROM OPENAI
 This tables reports the performance of the original CLIP models trained by OPENAI. You can find these models in their [github repository](https://github.com/openai/CLIP). 
+All the zero-shot results are obtained using the following template "a remote sensing image of a {class}", where class is replaced by the class name.
 ### CLIP ViT-B/32
 | Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
 |------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
@@ -119,7 +120,6 @@ This tables reports the performance of the original CLIP models trained by OPENA
 | RSICD      | 61.02                  | 96.25                     | 5.03 / 19.07 / 30.21 / 69.39           | 6.31 / 17.38 / 27.54 / 58.28           |
 | RSITMD     | 61.5                   | 98.01                     | 11.42 / 32.92 / 47.35 / 79.78          | 10.62 / 28.10 / 39.16 / 67.70          |
 | SIDNEY     | -                      | -                         | 14.83 / 47.59 / 70.69 / 100.00         | 13.79 / 39.66 / 51.72 / 87.93          |
-
 
 <!-- <center> 
 <img src="assets/report_benchmark.png" width="600"/>
