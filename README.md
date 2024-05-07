@@ -64,9 +64,10 @@ To visualize the samples of all the above datasets, a web tool has been implemen
 ## BASELINES
 The following table report some baselines of CLIP-like models. Some are original, while others are finetuned for the remote sensing scenario.
 
+All the zero-shot results are obtained using the following template "a remote sensing image of a {class}", where class is replaced by the class name.
+
 ### ORIGINAL CLIP MODELS FROM OPENAI
 This tables reports the performance of the original CLIP models trained by OPENAI. You can find these models in their [github repository](https://github.com/openai/CLIP). 
-All the zero-shot results are obtained using the following template "a remote sensing image of a {class}", where class is replaced by the class name.
 ### CLIP ViT-B/32
 | Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
 |------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
@@ -120,6 +121,32 @@ All the zero-shot results are obtained using the following template "a remote se
 | RSICD      | 61.02                  | 96.25                     | 5.03 / 19.07 / 30.21 / 69.39           | 6.31 / 17.38 / 27.54 / 58.28           |
 | RSITMD     | 61.5                   | 98.01                     | 11.42 / 32.92 / 47.35 / 79.78          | 10.62 / 28.10 / 39.16 / 67.70          |
 | SIDNEY     | -                      | -                         | 14.83 / 47.59 / 70.69 / 100.00         | 13.79 / 39.66 / 51.72 / 87.93          |
+
+### RN50
+| Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
+|------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
+| UCM        | 58.57                  | 93.33                     | 7.14 / 30.86 / 51.43 / 88.57           | 7.14 / 29.05 / 49.52 / 80.48           |
+| WHU_RS19   | 67.66                  | 95.52                     | -                                      | -                                      |
+| RSSCN7     | 50.36                  | 90.0                      | -                                      | -                                      |
+| SIRI_WHU   | 29.79                  | 86.67                     | -                                      | -                                      |
+| RESISC45   | 60.95                  | 95.14                     | -                                      | -                                      |
+| RSI_CB128  | 19.68                  | 94.97                     | -                                      | -                                      |
+| RSI_CB256  | 29.54                  | 96.99                     | -                                      | -                                      |
+| EuroSAT    | 25.72                  | 91.22                     | -                                      | -                                      |
+| PatternNet | 43.47                  | 97.88                     | -                                      | -                                      |
+| OPTIMAL_31 | 63.71                  | 90.32                     | -                                      | -                                      |
+| MLRSNet    | 41.23                  | 88.78                     | -                                      | -                                      |
+| RSICD      | 47.67                  | 90.58                     | 4.34 / 13.92 / 22.87 / 57.99           | 5.03 / 12.81 / 18.85 / 45.93           |
+| RSITMD     | 41.59                  | 85.84                     | 5.40 / 20.35 / 32.48 / 68.89           | 5.09 / 16.59 / 25.66 / 52.65           |
+| SIDNEY     | -                      | -                         | 13.79 / 39.66 / 63.45 / 100.00         | 6.90 / 29.31 / 43.10 / 74.14           |
+
+### RN101
+### RN50x4
+### RN50x16
+### RN50x64
+
+### REMOTECLIP MODELS
+These models are finetuned on remote sensing data. You can find their code and paper at the following [link](https://github.com/ChenDelong1999/RemoteCLIP).
 
 <!-- <center> 
 <img src="assets/report_benchmark.png" width="600"/>
