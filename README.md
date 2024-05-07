@@ -2,12 +2,12 @@
 <h1><strong>RemoTextVision_benchmark</strong></h1>
 <em>
 Alberto Frizzera, info@albertofrizzera.com<br>
-Riccardo Ricci, riccardo.ricci@unitn.it
+Riccardo Ricci, riccardo.ricci-1@unitn.it
 </em>
 <br>
 </center>
 
-This project aims at developing a platform for benchmarking your finetuned CLIP with the most popular satellite datasets. The paper will be available soon once accepted by the Conference.
+This project aims at developing a platform for benchmarking your finetuned CLIP with the most popular satellite datasets.
 
 ## Installation
 
@@ -56,3 +56,47 @@ To visualize the samples of all the above datasets, a web tool has been implemen
 <center> 
 <img src="assets/report_benchmark.png" width="600"/>
 </center>
+
+## Dataset preparation
+Each dataset should be downloaded and preprocessed. For each dataset, we delineate below the steps to accomplish to prepare it for the benchmarking.
+First, create a folder named "benchmarks", wherever you want, and put its path in the .env file.
+
+### UCM
+
+### WHU_RS19
+
+### RSSCN7
+Steps:
+1. Navigate to the "benchmarks" folder.
+2. Clone the repository 
+```bash
+git clone https://github.com/palewithout/RSSCN7
+```
+3. Navigate to the "data_preparation_scripts" folder.
+4. Launch the script
+```bash
+python prepare_RSSCN7.py
+```
+
+### SIRI_WHU
+
+### RESISC45
+
+### RSI_CB128
+
+### RSI_CB256
+
+### EuroSAT
+
+### PatternNet
+
+### OPTIMAL_31
+
+### MLRSNet
+
+### RSICD
+
+### RSITMD
+
+### SIDNEY
+
