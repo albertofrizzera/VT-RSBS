@@ -65,6 +65,7 @@ To visualize the samples of all the above datasets, a web tool has been implemen
 The following table report some baselines of CLIP-like models. Some are original, while others are finetuned for the remote sensing scenario.
 
 ### CLIP ViT-B/32
+<span style="font-size:0.5em;">
 | Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
 |------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
 | UCM        | 64.52                  | 95.0                      | 8.57 / 36.67 / 60.57 / 94.76           | 10.95 / 29.52 / 52.38 / 88.57          |
@@ -81,8 +82,7 @@ The following table report some baselines of CLIP-like models. Some are original
 | RSICD      | 59.29                  | 94.69                     | 5.86 / 16.89 / 28.36 / 67.48           | 4.67 / 14.18 / 23.60 / 53.06          |
 | RSITMD     | 53.54                  | 93.14                     | 8.72 / 27.79 / 42.57 / 77.57           | 9.51 / 23.01 / 34.07 / 62.39          |
 | SIDNEY     | -                      | -                         | 12.07 / 41.38 / 68.97 / 100.00         | 12.07 / 39.66 / 55.17 / 86.21         |
-
-
+</span>
 
 
 
