@@ -7,7 +7,15 @@ Riccardo Ricci, riccardo.ricci-1@unitn.it
 <br>
 </center>
 
-This project aims at developing a platform for benchmarking your finetuned CLIP with the most popular satellite datasets.
+## Introduction
+This project aims at developing a platform for benchmarking of vision-language models in the remote sensing scenario. 
+
+### DISCLAIMER
+There is no restriction on the model type. The only requirement is that the model obey to three things:
+1. Provide a preprocess function to preprocess the images.
+2. Have an "encode_image" function, which takes a list of images and produces a list of embeddings. The images are supposed to be already preprocessed. 
+3. Have a preprocess_text function to preprocess the text.
+4. Have an "encode_text" function, which takes a list of texts and produces a list of embeddings. The texts are supposed to be already preprocessed.
 
 ## Installation
 
@@ -55,6 +63,36 @@ To visualize the samples of all the above datasets, a web tool has been implemen
 
 ## BASELINES
 The following table report some baselines of CLIP-like models. Some are original, while others are finetuned for the remote sensing scenario.
+
+### CLIP ViT-B/32
+| Dataset        | Zero-Shot Accuracy (%) | Linear-Probe Accuracy (%) |
+|----------------|------------------------|---------------------------|
+| UCM            | 64.52                  | 95.00                     |
+| WHU_RS19       | 80.60                  | 99.00                     |
+| RSSCN7         | 65.18                  | 94.64                     |
+| SIRI_WHU       | 51.46                  | 93.96                     |
+| RESISC45       | 75.52                  | 97.95                     |
+| RSI_CB128      | 24.37                  | 98.19                     |
+| RSI_CB256      | 34.02                  | 98.93                     |
+| EuroSAT        | 39.83                  | 95.30                     |
+| PatternNet     | 58.83                  | 98.82                     |
+| OPTIMAL_31     | 75.00                  | 93.82                     |
+| MLRSNet        | 51.23                  | 93.77                     |
+| RSICD          | 59.29                  | 94.69                     |
+| RSITMD         | 53.54                  | 93.14                     |
+
+| Dataset  | Mode           | R@1    | R@5    | R@10   | R@50   |
+|----------|----------------|--------|--------|--------|--------|
+| RSICD    | Text-to-Image  | 5.86%  | 16.89% | 28.36% | 67.48% |
+|          | Image-to-Text  | 4.67%  | 14.18% | 23.60% | 53.06% |
+| RSITMD   | Text-to-Image  | 8.72%  | 27.79% | 42.57% | 77.57% |
+|          | Image-to-Text  | 9.51%  | 23.01% | 34.07% | 62.39% |
+| UCM      | Text-to-Image  | 8.57%  | 36.67% | 60.57% | 94.76% |
+|          | Image-to-Text  | 10.95% | 29.52% | 52.38% | 88.57% |
+| SIDNEY   | Text-to-Image  | 12.07% | 41.38% | 68.97% | 100.00%|
+|          | Image-to-Text  | 12.07% | 39.66% | 55.17% | 86.21% |
+
+
 
 <!-- <center> 
 <img src="assets/report_benchmark.png" width="600"/>
