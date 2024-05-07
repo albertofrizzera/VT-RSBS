@@ -12,7 +12,6 @@ import pandas as pd
 import numpy as np
 from torch.utils.data import Dataset
 from PIL import Image
-import torch
 import torchvision.transforms as transforms
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 

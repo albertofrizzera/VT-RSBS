@@ -50,8 +50,6 @@ if __name__ == '__main__':
     
     start_time = time.time()
     initial_datetime = datetime.now().strftime("%Y%m%d_%H.%M.%S")
-    # initial_datetime = "CLIP_baseline"
-    # initial_datetime = "RemoteCLIP_baseline"
     
     params = {"model": "CLIP",
               "model_checkpoints": "CLIP",
@@ -84,6 +82,7 @@ if __name__ == '__main__':
     datasets = {"zero_shot":{"train":[], "val":[], "test":[], "tot":[]},
                 "lnr_prob":{"train":[], "val":[], "test":[], "tot":[]},
                 "image_retrieval":{"train":[], "val":[], "test":[], "tot":[]}}
+    
     for split in ["train","val","test","tot"]:
         for dataset_name in params["datasets"]["zero_shot"]:
             datasets["zero_shot"][split].append(globals()[dataset_name](preprocess, split, crop=True, text_template=params["text_template"], label_type="label"))
