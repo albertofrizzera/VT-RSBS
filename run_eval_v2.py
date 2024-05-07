@@ -14,8 +14,8 @@ BASE_MODEL = "ViT-B/32"
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 SAVE_REPORT_PATH = "reports/test_report.txt"
-# "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31",MLRSNet","RSICD","RSITMD"
-ZERO_SHOT = []
+# "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"
+ZERO_SHOT = ["UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"]
 # "RSICD","RSITMD","UCM","SIDNEY"
 RETRIEVAL = ["RSICD","RSITMD","UCM","SIDNEY"]
 retrieval_k_vals = [1, 5, 10, 50]
@@ -94,7 +94,7 @@ if __name__ == '__main__':
             print("Testing dataset: ", dataset_name)
             trainset = globals()[dataset_name](split="train", label_type="label", preprocess=preprocess)
             trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True)
-            unique_labels = dataset._get_unique_labels()
+            unique_labels = trainset._get_unique_labels()
             
             train_features = []
             train_labels = []

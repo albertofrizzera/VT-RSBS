@@ -1,5 +1,5 @@
 <center> 
-<h1><strong>RemoTextVision_benchmark</strong></h1>
+<h1><strong>A benchmark for the evaluation of vision language embeddings for remote sensing applications</strong></h1>
 <em>
 Alberto Frizzera, info@albertofrizzera.com<br>
 Riccardo Ricci, riccardo.ricci-1@unitn.it
@@ -53,9 +53,12 @@ If needed, an exhaustive list of other satellite datasets is available [here](ht
 
 To visualize the samples of all the above datasets, a web tool has been implemented (```web_app/main.py```)
 
-<center> 
+## BASELINES
+The following table report some baselines of CLIP-like models. Some are original, while others are finetuned for the remote sensing scenario.
+
+<!-- <center> 
 <img src="assets/report_benchmark.png" width="600"/>
-</center>
+</center> -->
 
 ## Dataset preparation
 Each dataset should be downloaded and preprocessed. For each dataset, we delineate below the steps to accomplish to prepare it for the benchmarking.
@@ -66,6 +69,7 @@ First, create a folder named "benchmarks", wherever you want, and put its path i
 ### WHU_RS19
 
 ### RSSCN7
+
 Steps:
 1. Navigate to the "benchmarks" folder.
 2. Clone the repository 
@@ -73,6 +77,8 @@ Steps:
 git clone https://github.com/palewithout/RSSCN7
 ```
 3. Copy the file "metadata/RSSCN7/RSSCN7.pkl" inside "benchmarks/RSSCN7".
+
+This dataset does not provide train-test-val splits in literature. We created random train-test-val splits using stratification, to ensure that the classes are balanced in each split.
 
 ### SIRI_WHU
 
