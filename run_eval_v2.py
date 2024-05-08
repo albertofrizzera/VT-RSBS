@@ -15,7 +15,7 @@ remoteCLIP_models = ["RN50","ViT-B-32","ViT-L-14"]
 # ALL THE PARAMETERS
 load_function = load_remoteCLIP
 BASE_MODEL = "remoteCLIP_RN50"
-DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
 # "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"
@@ -107,10 +107,10 @@ if __name__ == '__main__':
                 images = images.to(DEVICE)
                 
                 image_features = model.encode_image(images)
-                train_features.append(image_features)
-                train_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long))
-            
-            train_features, train_labels = torch.cat(train_features).cpu().numpy(), torch.cat(train_labels).cpu().numpy()
+                train_features.append(image_features.cpu())
+                train_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long).cpu())
+
+            train_features, train_labels = torch.cat(train_features).numpy(), torch.cat(train_labels).numpy()
             
             testset = globals()[dataset_name](split="test", label_type="label", preprocess=preprocess)
             testloader = torch.utils.data.DataLoader(testset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True)
@@ -121,11 +121,11 @@ if __name__ == '__main__':
                 images, labels = batch
                 images = images.to(DEVICE)
                 
-                image_features = model.encode_image(images)
-                test_features.append(image_features)
-                test_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long))
+                image_features = model.encode_image(images) 
+                test_features.append(image_features.cpu()) 
+                test_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long).cpu()) # Displace on the CPU to avoid memory issues
             
-            test_features, test_labels = torch.cat(test_features).cpu().numpy(), torch.cat(test_labels).cpu().numpy()
+            test_features, test_labels = torch.cat(test_features).numpy(), torch.cat(test_labels).numpy()
             
             # Perform logistic regression
             classifier = LogisticRegression(random_state=0, C=0.316, max_iter=1000, verbose=False, n_jobs=8)
