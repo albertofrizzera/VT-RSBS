@@ -343,7 +343,6 @@ First, create a folder named "benchmarks", wherever you want, and put its path i
 ### WHU_RS19
 
 ### RSSCN7
-
 Steps:
 1. Navigate to the "benchmarks" folder.
 2. Clone the repository 
@@ -365,6 +364,17 @@ This dataset does not provide train-test-val splits in literature. We created ra
 ### EuroSAT
 
 ### PatternNet
+Steps:
+1. Click on this link: [Patternet](https://nuisteducn1-my.sharepoint.com/:u:/g/personal/zhouwx_nuist_edu_cn/EYSPYqBztbBBqS27B7uM_mEB3R9maNJze8M1Qg9Q6cnPBQ?e=MSf977)
+2. Download the file "PatternNet.zip".
+3. Unzip the file and copy the folder "PatterNet" inside "benchmarks". The folder structure inside "PatterNet" should be this 
+```
+PatternNet
+│
+└───images
+│   │   airplane
+│   │   baseball_field
+│   │   ...
 
 ### OPTIMAL_31
 
