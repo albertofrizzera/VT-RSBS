@@ -321,13 +321,72 @@ def get_preprocess(n_px):
         Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711)),
     ])
     
-
+### REMOTECLIP ###
 def load_remoteCLIP(model_name, device:str):
     model_name = model_name.split("_")[1]
     model, _, preprocess = open_clip.create_model_and_transforms(model_name)
     tokenizer = open_clip.get_tokenizer(model_name)
     
     ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/remoteCLIP/models--chendelong--RemoteCLIP/snapshots/bf1d8a3ccf2ddbf7c875705e46373bfe542bce38/RemoteCLIP-{model_name}.pt", map_location="cpu")
+    model.load_state_dict(ckpt)
+    model.to(device)
+    
+    return model, preprocess, tokenizer
+
+### GEORSCLIP ###
+def _convert_to_rgb(image):
+    return image.convert('RGB')
+
+def get_preprocess(image_resolution=224, subset_name="clip", aug=None):
+
+    if subset_name == "clip":
+        normalize = Normalize(
+            mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711]
+        )
+    elif subset_name == "imagenet":
+        normalize = Normalize(
+            mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]
+        )
+
+    elif subset_name == "rs5m":
+        normalize = Normalize(
+            mean=[0.406, 0.423, 0.390], std=[0.188, 0.175, 0.185]
+        )
+
+    elif subset_name == "pub11":
+        normalize = Normalize(
+            mean=[0.445, 0.469, 0.441], std=[0.208, 0.193, 0.213]
+        )
+
+    elif subset_name == "rs3":
+        normalize = Normalize(
+            mean=[0.350, 0.356, 0.316], std=[0.158, 0.147, 0.143]
+        )
+
+    elif subset_name == "geometa":
+        normalize = Normalize(
+            mean=[0.320, 0.322, 0.285], std=[0.179, 0.168, 0.166]
+        )
+
+    preprocess_val = Compose([
+        Resize(
+            size=image_resolution,
+            interpolation=InterpolationMode.BICUBIC,
+        ),
+        CenterCrop(image_resolution),
+        _convert_to_rgb,
+        ToTensor(),
+        normalize,
+    ])
+    return preprocess_val
+
+def load_geoRSCLIP(model_name, device:str):
+    model_name = model_name.split("_")[1]
+    model, _, __ = open_clip.create_model_and_transforms(model_name)
+    preprocess = get_preprocess(image_resolution=224)
+    tokenizer = open_clip.get_tokenizer(model_name)
+    
+    ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/geoRSCLIP/models--Zilun--GeoRSCLIP/snapshots/0b7b13838d11b8ab43ca72706fd03d5177e3ffa9/ckpt/RS5M_{model_name}.pt", map_location="cpu")
     model.load_state_dict(ckpt)
     model.to(device)
     

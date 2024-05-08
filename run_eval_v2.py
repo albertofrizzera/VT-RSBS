@@ -8,13 +8,14 @@ from dataset_v2 import *
 from tqdm import tqdm
 from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression
-from utils import load_remoteCLIP
+from utils import load_remoteCLIP, load_geoRSCLIP
 
-remoteCLIP_models = ["RN50","ViT-B-32","ViT-L-14"]
+remoteCLIP_models = ["RN50", "ViT-B-32", "ViT-L-14"]
+geoRSCLIP_models = ["ViT-B-32", "ViT-L-14", "ViT-L-14-336", "ViT-H-14"]
 
 # ALL THE PARAMETERS
-load_function = load_remoteCLIP
-BASE_MODEL = "remoteCLIP_RN50"
+load_function = load_geoRSCLIP
+BASE_MODEL = "georsCLIP_ViT-L-14"
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"

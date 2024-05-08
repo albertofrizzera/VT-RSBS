@@ -290,6 +290,8 @@ These models are finetuned on remote sensing data. You can find their code and p
 | RSITMD     | 85.84                  | 97.12                     | 21.19 / 53.58 / 71.24 / 93.23          | 24.56 / 48.23 / 60.62 / 91.81          |
 | SIDNEY     | -                      | -                         | 13.45 / 46.90 / 65.17 / 99.66          | 18.97 / 37.93 / 60.34 / 100.00         |
 
+### GEORSCLIP MODELS
+These models are finetuned on remote sensing data. You can find their code and paper at the following [link](https://github.com/om-ai-lab/RS5M)
 
 <!-- <center> 
 <img src="assets/report_benchmark.png" width="600"/>
