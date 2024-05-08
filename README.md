@@ -237,6 +237,22 @@ This tables reports the performance of the original CLIP models trained by OPENA
 These models are finetuned on remote sensing data. You can find their code and paper at the following [link](https://github.com/ChenDelong1999/RemoteCLIP).
 
 ### RN50
+| Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
+|------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
+| UCM        | 63.81                  | 95.95                     | 14.67 / 57.14 / 85.33 / 100.00         | 17.14 / 44.29 / 76.67 / 92.86          |
+| WHU_RS19   | 93.03                  | 98.01                     | -                                      | -                                      |
+| RSSCN7     | 53.93                  | 92.32                     | -                                      | -                                      |
+| SIRI_WHU   | 47.5                   | 92.08                     | -                                      | -                                      |
+| RESISC45   | 74.81                  | 98.14                     | -                                      | -                                      |
+| RSI_CB128  | 14.82                  | 96.23                     | -                                      | -                                      |
+| RSI_CB256  | 32.34                  | 98.2                      | -                                      | -                                      |
+| EuroSAT    | 25.15                  | 91.94                     | -                                      | -                                      |
+| PatternNet | 35.51                  | 98.57                     | -                                      | -                                      |
+| OPTIMAL_31 | 49.73                  | 92.2                      | -                                      | -                                      |
+| MLRSNet    | 36.8                   | 90.72                     | -                                      | -                                      |
+| RSICD      | 77.68                  | 94.33                     | 9.64 / 31.86 / 47.43 / 89.31           | 13.27 / 32.48 / 45.29 / 80.24          |
+| RSITMD     | 77.88                  | 94.69                     | 18.23 / 50.18 / 68.89 / 92.17          | 23.89 / 50.00 / 63.27 / 88.94          |
+| SIDNEY     | -                      | -                         | 13.79 / 46.21 / 65.17 / 99.66          | 17.24 / 37.93 / 53.45 / 96.55          |
 
 ### ViT-B/32
 | Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
@@ -255,7 +271,6 @@ These models are finetuned on remote sensing data. You can find their code and p
 | RSICD      | 84.35                  | 96.25                     | 10.32 / 32.50 / 48.33 / 88.80          | 16.47 / 36.05 / 49.50 / 81.88          |
 | RSITMD     | 80.75                  | 95.35                     | 18.63 / 52.30 / 71.11 / 92.35          | 25.44 / 49.78 / 63.94 / 90.27          |
 | SIDNEY     | -                      | -                         | 13.45 / 52.41 / 74.48 / 100.00         | 22.41 / 48.28 / 58.62 / 93.10          |
-
 
 ### ViT-L/14
 | Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
