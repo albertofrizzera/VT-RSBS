@@ -15,7 +15,7 @@ geoRSCLIP_models = ["ViT-B-32", "ViT-L-14", "ViT-L-14-336", "ViT-H-14"]
 
 # ALL THE PARAMETERS
 load_function = load_geoRSCLIP
-BASE_MODEL = "georsCLIP_ViT-L-14"
+BASE_MODEL = "georsCLIP_ViT-H-14"
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
