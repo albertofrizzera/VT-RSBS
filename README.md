@@ -10,7 +10,7 @@ Riccardo Ricci, riccardo.ricci-1@unitn.it
 ## Introduction
 This project aims at developing a platform for benchmarking of vision-language models in the remote sensing scenario. 
 
-### DISCLAIMER
+## Disclaimer
 There is no restriction on the model type. The only requirement is providing these three things:
 1. A function to load the model. This function must return three callables: model, textprocessor, imageprocessor.
 - The model is the model itself.
@@ -23,21 +23,19 @@ There is no restriction on the model type. The only requirement is providing the
 
 You can find some examples of the implementation of these functions in ```utils.py```. Specifically, functions to load remoteCLIP, georsCLIP, CLIPrsicdv2 and openaiCLIP have been implemented. 
 
-Then modify the beginning of the module ```run_eval.py``` by importing your custom functions, and replacing them after "load_function", "encode_text_fn" and "encode_image_fn" and run the evaluation.
-
-
 ## Installation
 1. Create a conda environment following the instructions contained in ```environment.txt``` or using ```requirements.txt```.
 2. Adjust the environmental variables of the dataset in ```.env``` in order to properly locate the datasets.
 
-> **_Note:_**  The processed datasets will be available soon.
+> **_Note:_**  We are working to provide instructions to download and prepare all the datasets.
 
 ## Usage
-1. Run the ```test.py``` by specifying the test parameters.
-2. Collect the results in the ```reports/``` folder saved in a Latex document.
+1. Modify the beginning of the module ```eval.py``` by importing your custom functions, and replacing them after "load_function", "encode_text_fn" and "encode_image_fn".
+2. Modify the templates, placing the ones that you want to use for evaluation.
+3. Run ```eval.py```.
+4. Collect the results in the ```reports/``` folder saved in a Latex document.
 
 ## Benchmark Datasets
-
 The following list provides the datasets used to benchmark your model.
 
 ### Zero shot classification
