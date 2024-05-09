@@ -3,7 +3,7 @@ This module hopefully will be a all in one evaluation. It will be used to evalua
 '''
 import torch
 from dotenv import load_dotenv
-from dataset_v2 import *
+from datasets import *
 from tqdm import tqdm
 from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression

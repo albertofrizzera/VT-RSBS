@@ -21,7 +21,7 @@ from transformers import CLIPModel, CLIPImageProcessor, CLIPTokenizer
 from tqdm import tqdm
 import PIL
 from typing import Any
-from dataset_v2 import custom_collate_fn
+from datasets import custom_collate_fn
 
 def time_convert(seconds):
     hour = seconds // 3600
