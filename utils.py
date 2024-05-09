@@ -385,27 +385,43 @@ def get_preprocess(image_resolution=224, subset_name="clip", aug=None):
     return preprocess_val
 
 def load_geoRSCLIP(model_name:str, device:str):
+    '''
+    Loads the geoRSCLIP model.
+    '''
     model_name = model_name.split("_")[1]
-    model, _, __ = open_clip.create_model_and_transforms(model_name)
-    preprocess = get_preprocess(image_resolution=336)
-    tokenizer = open_clip.get_tokenizer(model_name)
-    
+    model, _, _ = open_clip.create_model_and_transforms(model_name)
     ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/geoRSCLIP/models--Zilun--GeoRSCLIP/snapshots/0b7b13838d11b8ab43ca72706fd03d5177e3ffa9/ckpt/RS5M_{model_name}.pt", map_location="cpu")
-    model.load_state_dict(ckpt)
+    model.load_state_dict(ckpt, strict=False)
     model.to(device)
     
-    return model, preprocess, tokenizer
+    return model
 
+def encode_image_geoRSCLIP(model:open_clip.CLIP, images:List[PIL.Image.Image], device:str):
+    '''
+    This function takes a list of PIL images and returns their embeddings using geoRSCLIP
+    '''
+    
+    
+    return None
+
+def encode_text_geoRSCLIP(model:open_clip.CLIP, texts:List[str], device:str):
+    '''
+    This function takes a list of texts and returns their embeddings using geoRSCLIP
+    '''
+    text_inputs = open_clip.tokenize(texts).to(device)
+    text_embeddings = model.encode_text(text_inputs)
+    
+    return text_embeddings
 
 def load_clipRSICDv2(model_name:str, device:str):
+    '''
+    Loads the CLIPrsicdv2 model.
+    '''
     model_name = model_name.split("_")[1]
     model = CLIPModel.from_pretrained(model_name)
-    processor = CLIPProcessor.from_pretrained(model_name, do_rescale=False)
-    tokenizer = None
-    
     model.to(device)
     
-    return model, processor, tokenizer
+    return model
 
 def encode_text_CLIPrsicdv2(model:CLIPModel, texts:List[str], device:str):
     '''

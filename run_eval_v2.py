@@ -9,21 +9,22 @@ from tqdm import tqdm
 from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression
 from utils import load_remoteCLIP, load_geoRSCLIP, load_clipRSICDv2
-from utils import encode_text_CLIPrsicdv2, encode_image_CLIPrsicdv2
+from utils import encode_text_CLIPrsicdv2, encode_image_CLIPrsicdv2, encode_text_geoRSCLIP
 
 remoteCLIP_models = ["RN50", "ViT-B-32", "ViT-L-14"]
 geoRSCLIP_models = ["ViT-B-32", "ViT-L-14", "ViT-L-14-336", "ViT-H-14"]
 clip_rsicdv2_models = ["flax-community/clip-rsicd-v2"]
 
 # DEFINE YOUR CUSTOM FUNCTIONS TO LOAD THE MODEL AND GET THE EMBEDDINGS OUT OF IT
-load_function = load_clipRSICDv2
-encode_text_fn = encode_text_CLIPrsicdv2
-encode_image_fn = encode_image_CLIPrsicdv2
+load_function = load_geoRSCLIP
+encode_text_fn = encode_text_geoRSCLIP
+encode_image_fn = None
 
-BASE_MODEL = "cliprsicdv2_flax-community/clip-rsicd-v2"
+BASE_MODEL = "geoRSCLIP_ViT-B-32"
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
+SAVE_REPORT_PATH = "lol.txt"
 # "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"
 ZERO_SHOT = ["UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"]
 # "RSICD","RSITMD","UCM","SIDNEY"
@@ -37,14 +38,9 @@ IMAGE_SIZE = 224
 if __name__ == '__main__':
     load_dotenv()
     # Load the model
-    #model, preprocess = clip.load(name=BASE_MODEL, device=DEVICE)
-    model, preprocess, tokenizer = load_function(BASE_MODEL, device=DEVICE)
-    encode_text_fn = encode_text_CLIPrsicdv2
-    encode_image_fn = encode_image_CLIPrsicdv2
-    # Load the checkpoint 
-    # checkpoint = torch.load(f"{CHECKPOINT_PATH}")
-    # model.load_state_dict(checkpoint)
+    model = load_function(BASE_MODEL, device=DEVICE)
     model.eval()
+    
     file = open(SAVE_REPORT_PATH, "w")
     with torch.no_grad():
         if len(ZERO_SHOT)>0:
