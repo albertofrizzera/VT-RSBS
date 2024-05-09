@@ -72,7 +72,7 @@ The following table report some baselines of CLIP-like models. Some are original
 
 All the zero-shot results are obtained using the following template "a remote sensing image of a {class}", where class is replaced by the class name.
 
-### ORIGINAL CLIP MODELS FROM OPENAI
+## ORIGINAL CLIP MODELS FROM OPENAI
 This tables reports the performance of the original CLIP models trained by OPENAI. You can find these models in their [github repository](https://github.com/openai/CLIP). 
 ### CLIP ViT-B/32
 | Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
@@ -239,7 +239,7 @@ This tables reports the performance of the original CLIP models trained by OPENA
 | SIDNEY     | -                      | -                         | 13.45 / 40.69 / 65.17 / 100.00         | 13.79 / 31.03 / 50.00 / 86.21          |
 
 
-### REMOTECLIP MODELS
+## REMOTECLIP MODELS
 These models are finetuned on remote sensing data. You can find their code and paper at the following [link](https://github.com/ChenDelong1999/RemoteCLIP).
 
 ### RN50
@@ -296,7 +296,7 @@ These models are finetuned on remote sensing data. You can find their code and p
 | RSITMD     | 85.84                  | 97.12                     | 21.19 / 53.58 / 71.24 / 93.23          | 24.56 / 48.23 / 60.62 / 91.81          |
 | SIDNEY     | -                      | -                         | 13.45 / 46.90 / 65.17 / 99.66          | 18.97 / 37.93 / 60.34 / 100.00         |
 
-### GEORSCLIP MODELS
+## GEORSCLIP MODELS
 These models are finetuned on remote sensing data. You can find their code and paper at the following [link](https://github.com/om-ai-lab/RS5M)
 
 ### ViT-B/32
@@ -352,6 +352,25 @@ These models are finetuned on remote sensing data. You can find their code and p
 | RSICD      | 71.36                  | 97.8                      | 11.11 / 30.72 / 44.32 / 82.10          | 14.09 / 29.37 / 39.07 / 74.47          |
 | RSITMD     | 62.83                  | 97.57                     | 17.88 / 45.22 / 60.18 / 85.27          | 23.67 / 42.92 / 52.88 / 82.74          |
 | SIDNEY     | -                      | -                         | 16.90 / 55.52 / 75.17 / 100.00         | 27.59 / 44.83 / 60.34 / 98.28          |
+
+## CLIPRSICDV2 MODELS
+### ViT-B/32
+| Dataset    | Zero-shot Accuracy (%) | Linear-probe Accuracy (%) | Recall@K (T2I: R@1 / R@5 / R@10 / R@50) | Recall@K (I2T: R@1 / R@5 / R@10 / R@50) |
+|------------|------------------------|---------------------------|----------------------------------------|----------------------------------------|
+| UCM        | 89.76                  | 98.1                      | 13.71 / 56.57 / 90.38 / 99.71          | 17.14 / 53.33 / 80.95 / 99.05          |
+| WHU_RS19   | 94.53                  | 100.0                     | -                                      | -                                      |
+| RSSCN7     | 71.79                  | 91.96                     | -                                      | -                                      |
+| SIRI_WHU   | 61.04                  | 95.62                     | -                                      | -                                      |
+| RESISC45   | 82.05                  | 98.38                     | -                                      | -                                      |
+| RSI_CB128  | 38.3                   | 98.52                     | -                                      | -                                      |
+| RSI_CB256  | 51.29                  | 99.33                     | -                                      | -                                      |
+| EuroSAT    | 47.74                  | 97.22                     | -                                      | -                                      |
+| PatternNet | 70.51                  | 99.13                     | -                                      | -                                      |
+| OPTIMAL_31 | 83.6                   | 93.82                     | -                                      | -                                      |
+| MLRSNet    | 62.33                  | 94.44                     | -                                      | -                                      |
+| RSICD      | 85.73                  | 95.06                     | 11.16 / 33.25 / 48.87 / 91.20          | 13.72 / 30.10 / 43.73 / 82.62          |
+| RSITMD     | 82.74                  | 96.02                     | 19.07 / 50.49 / 68.32 / 91.42          | 24.78 / 47.12 / 60.84 / 88.94          |
+| SIDNEY     | -                      | -                         | 18.28 / 53.10 / 73.79 / 100.00         | 17.24 / 44.83 / 62.07 / 93.10          |
 
 <!-- <center> 
 <img src="assets/report_benchmark.png" width="600"/>
