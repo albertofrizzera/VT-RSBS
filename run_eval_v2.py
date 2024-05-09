@@ -2,14 +2,13 @@
 This module hopefully will be a all in one evaluation. It will be used to evaluate the model on several tasks (zero-shot classification - retrieval - etc.) on different datasets.
 '''
 import torch
-import clip
 from dotenv import load_dotenv
 from dataset_v2 import *
 from tqdm import tqdm
 from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression
-from utils import load_remoteCLIP, load_geoRSCLIP, load_clipRSICDv2
-from utils import encode_text_CLIPrsicdv2, encode_image_CLIPrsicdv2, encode_text_geoRSCLIP
+from utils import load_clipRSICDv2, load_geoRSCLIP, load_remoteCLIP
+from utils import encode_text_CLIPrsicdv2, encode_image_CLIPrsicdv2, encode_text_geoRSCLIP, encode_image_geoRSCLIP, encode_text_remoteCLIP, encode_image_remoteCLIP
 
 remoteCLIP_models = ["RN50", "ViT-B-32", "ViT-L-14"]
 geoRSCLIP_models = ["ViT-B-32", "ViT-L-14", "ViT-L-14-336", "ViT-H-14"]
@@ -18,11 +17,11 @@ clip_rsicdv2_models = ["flax-community/clip-rsicd-v2"]
 # DEFINE YOUR CUSTOM FUNCTIONS TO LOAD THE MODEL AND GET THE EMBEDDINGS OUT OF IT
 load_function = load_geoRSCLIP
 encode_text_fn = encode_text_geoRSCLIP
-encode_image_fn = None
+encode_image_fn = encode_image_geoRSCLIP
 
-BASE_MODEL = "geoRSCLIP_ViT-B-32"
+BASE_MODEL = "georsCLIP_"+geoRSCLIP_models[0]
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
-BATCH_SIZE = 128
+BATCH_SIZE = 2
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
 SAVE_REPORT_PATH = "lol.txt"
 # "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"
@@ -38,7 +37,7 @@ IMAGE_SIZE = 224
 if __name__ == '__main__':
     load_dotenv()
     # Load the model
-    model = load_function(BASE_MODEL, device=DEVICE)
+    model, textprocessor, imageprocessor = load_function(BASE_MODEL, device=DEVICE)
     model.eval()
     
     file = open(SAVE_REPORT_PATH, "w")
@@ -58,7 +57,7 @@ if __name__ == '__main__':
                 text_templates.extend([t.format(label) for t in TEXT_TEMPLATES])
             
             # Get the text features
-            text_features = encode_text_fn(model=model, texts=text_templates, device=DEVICE)
+            text_features = encode_text_fn(model=model, textprocessor=textprocessor, texts=text_templates, device=DEVICE)
             # Normalize them
             text_features /= text_features.norm(dim=1, keepdim=True)
             
@@ -70,7 +69,7 @@ if __name__ == '__main__':
             for _, batch in enumerate(tqdm(testloader)):
                 images, labels = batch
                 # Get the image features
-                image_features = encode_image_fn(model=model, images=images, device=DEVICE)
+                image_features = encode_image_fn(model=model, imageprocessor=imageprocessor, images=images, device=DEVICE)
                 
                 # Append the features and labels to the lists
                 test_features.append(image_features.cpu())
@@ -117,7 +116,7 @@ if __name__ == '__main__':
             for batch in tqdm(trainloader):
                 images, labels = batch
                 
-                image_features = encode_image_fn(model=model, images=images, device=DEVICE)
+                image_features = encode_image_fn(model=model, imageprocessor=imageprocessor, images=images, device=DEVICE)
                 
                 train_features.append(image_features.cpu())
                 train_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long).cpu())
@@ -145,7 +144,16 @@ if __name__ == '__main__':
             file.write("Testing dataset: "+ dataset_name+"\n")
             dataset = globals()[dataset_name](split="test", label_type="sentence")
             image, sentences = dataset[0]
-            t2i, i2t = recall_at_k(model, dataset, k_vals=retrieval_k_vals, batch_size=BATCH_SIZE, device=DEVICE)
+            
+            t2i, i2t = recall_at_k(model=model, 
+                                   dataset=dataset,
+                                   encode_img_fn=encode_image_fn,
+                                   imageprocessor=imageprocessor,
+                                   encode_text_fn=encode_text_fn,
+                                   textprocessor=textprocessor,
+                                   k_vals=retrieval_k_vals, 
+                                   batch_size=BATCH_SIZE, 
+                                   device=DEVICE)
 
             file.write("Text-to-image Recall@K\n")
             for k, x in zip(retrieval_k_vals, t2i):

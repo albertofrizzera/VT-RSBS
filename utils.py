@@ -17,9 +17,11 @@ import torch
 import open_clip
 import torch.utils.data as dutils
 from typing import List
-from transformers import CLIPProcessor, CLIPModel, CLIPImageProcessor, CLIPTokenizer
+from transformers import CLIPModel, CLIPImageProcessor, CLIPTokenizer
 from tqdm import tqdm
 import PIL
+from typing import Any
+from dataset_v2 import custom_collate_fn
 
 def time_convert(seconds):
     hour = seconds // 3600
@@ -200,7 +202,7 @@ def parse_line_args(args, params):
 # BRUTALLY COPIED FROM @zzbuzzard https://github.com/openai/CLIP/issues/115
 
 # Encodes all text and images in a dataset
-def encode_dataset(model, dataset: dutils.Dataset, encode_text_fn:callable, encode_img_fn:callable, batch_size:int = 16, device:str = "cuda"):
+def encode_dataset(model, dataset: dutils.Dataset, encode_text_fn:callable, textprocessor:callable, encode_img_fn:callable, imageprocessor:callable, batch_size:int = 16, device:str = "cuda"):
     with torch.no_grad():
         # image_to_text_map[i] gives the corresponding text indices for the ith image
         #  (as there are multiple pieces of text for each image)
@@ -209,7 +211,7 @@ def encode_dataset(model, dataset: dutils.Dataset, encode_text_fn:callable, enco
         # text_to_image_map[i] gives the corresponding image index for the ith text
         text_to_image_map = []
 
-        dataloader = dutils.DataLoader(dataset, batch_size=batch_size, shuffle=False, num_workers=8, pin_memory=True)
+        dataloader = dutils.DataLoader(dataset, batch_size=batch_size, shuffle=False, num_workers=8, pin_memory=True, collate_fn=custom_collate_fn)
 
         image_encodings = []
         text_encodings = []
@@ -219,12 +221,8 @@ def encode_dataset(model, dataset: dutils.Dataset, encode_text_fn:callable, enco
 
         for images, text in tqdm(dataloader):
             
-            text_features = encode_text_fn(model=model, texts=texts, device=device)
-            # Normalize them
-            text_features /= text_features.norm(dim=1, keepdim=True)
-
-            # text has shape B x 5 x 77
-            batch_size, captions_per_image, _ = text_features.shape
+            batch_size = len(text)
+            captions_per_image = len(text[0])
 
             # Update text_to_image_map and image_to_text_map for this batch
             for i in range(batch_size):
@@ -237,27 +235,37 @@ def encode_dataset(model, dataset: dutils.Dataset, encode_text_fn:callable, enco
                 text_to_image_map += [image_index] * captions_per_image
                 image_index += 1
 
-            # B x 5 x 77 -> (B*5) x 77
-            text = torch.flatten(text, start_dim=0, end_dim=1)
+            # B x 5 -> (B*5)
+            text = [t for texts in text for t in texts]
+            text_embeddings = encode_text_fn(model=model, textprocessor=textprocessor, texts=text, device=device)
+            image_embeddings = encode_img_fn(model=model, imageprocessor=imageprocessor, images=images, device=device)
             
-            image_encodings.append(model.encode_image(images))
-            text_encodings.append(model.encode_text(text))
+            image_encodings.append(image_embeddings)
+            text_encodings.append(text_embeddings)
 
         image_encodings = torch.cat(image_encodings)
         text_encodings = torch.cat(text_encodings)
+        
         text_to_image_map = torch.LongTensor(text_to_image_map).to(device)
         image_to_text_map = torch.LongTensor(image_to_text_map).to(device)
 
         # Normalise encodings
-        image_encodings = image_encodings / image_encodings.norm(dim=-1, keepdim=True)
-        text_encodings = text_encodings / text_encodings.norm(dim=-1, keepdim=True)
+        image_encodings /= image_encodings.norm(dim=-1, keepdim=True)
+        text_encodings /= text_encodings.norm(dim=-1, keepdim=True)
 
         return image_encodings, text_encodings, text_to_image_map, image_to_text_map
 
 
-def recall_at_k(model, dataset: dutils.Dataset, encode_text_fn:callable, encode_img_fn:callable, k_vals: List[int], batch_size:int, device:str = "cuda"):
+def recall_at_k(model, dataset: dutils.Dataset, encode_text_fn:callable, textprocessor:callable, encode_img_fn:callable, imageprocessor:callable, k_vals: List[int], batch_size:int, device:str = "cuda"):
     print("Encoding all data...")
-    image_encodings, text_encodings, text_to_image_map, image_to_text_map = encode_dataset(model, dataset, batch_size=batch_size, device=device)
+    image_encodings, text_encodings, text_to_image_map, image_to_text_map = encode_dataset(model=model,
+                                                                                           dataset=dataset,
+                                                                                           encode_text_fn=encode_text_fn,
+                                                                                           textprocessor=textprocessor,
+                                                                                           encode_img_fn=encode_img_fn,
+                                                                                           imageprocessor=imageprocessor,
+                                                                                           batch_size=batch_size, 
+                                                                                           device=device)
  
     num_text = text_encodings.shape[0]
     num_im = image_encodings.shape[0]
@@ -314,7 +322,6 @@ def recall_at_k(model, dataset: dutils.Dataset, encode_text_fn:callable, encode_
         num_correct = correct.sum().item()
         image_to_text_recall.append(num_correct / num_im)#
 
-    print("Done.")
     return text_to_image_recall, image_to_text_recall
 
 def get_preprocess(n_px):
@@ -328,14 +335,33 @@ def get_preprocess(n_px):
 ### REMOTECLIP ###
 def load_remoteCLIP(model_name:str, device:str):
     model_name = model_name.split("_")[1]
-    model, _, preprocess = open_clip.create_model_and_transforms(model_name)
-    tokenizer = open_clip.get_tokenizer(model_name)
+    model, _, imageprocessor = open_clip.create_model_and_transforms(model_name)
     
     ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/remoteCLIP/models--chendelong--RemoteCLIP/snapshots/bf1d8a3ccf2ddbf7c875705e46373bfe542bce38/RemoteCLIP-{model_name}.pt", map_location="cpu")
     model.load_state_dict(ckpt)
     model.to(device)
+
+    textprocessor = open_clip.get_tokenizer(model_name)
+        
+    return model, imageprocessor, textprocessor
+
+def encode_image_remoteCLIP(model:open_clip.CLIP, imageprocessor:Any, images:List[PIL.Image.Image], device:str):
+    '''
+    This function takes a list of PIL images and returns their embeddings using geoRSCLIP
+    '''
+    images_tensor = torch.stack([imageprocessor(image) for image in images]).to(device)
+    image_embeddings = model.encode_image(images_tensor)
     
-    return model, preprocess, tokenizer
+    return image_embeddings
+
+def encode_text_remoteCLIP(model:open_clip.CLIP, textprocessor:open_clip.tokenizer, texts:List[str], device:str):
+    '''
+    This function takes a list of texts and returns their embeddings using geoRSCLIP
+    '''
+    text_inputs = textprocessor(texts).to(device)
+    text_embeddings = model.encode_text(text_inputs)
+    
+    return text_embeddings
 
 ### GEORSCLIP ###
 def _convert_to_rgb(image):
@@ -394,49 +420,61 @@ def load_geoRSCLIP(model_name:str, device:str):
     model.load_state_dict(ckpt, strict=False)
     model.to(device)
     
-    return model
+    textprocessor = open_clip.get_tokenizer(model_name)
+    
+    if model_name.count("-")==3:
+        image_size = int(model_name.split("-")[2])
+    else:
+        print("Could not infer image size from name, using default=224")
+        image_size = 224
+        
+    imageprocessor = get_preprocess(image_size) 
+    
+    return model, textprocessor, imageprocessor
 
-def encode_image_geoRSCLIP(model:open_clip.CLIP, images:List[PIL.Image.Image], device:str):
+def encode_image_geoRSCLIP(model:open_clip.CLIP, imageprocessor:Any, images:List[PIL.Image.Image], device:str):
     '''
     This function takes a list of PIL images and returns their embeddings using geoRSCLIP
     '''
+    images_tensor = torch.stack([imageprocessor(image) for image in images]).to(device)
+    image_embeddings = model.encode_image(images_tensor)
     
-    
-    return None
+    return image_embeddings
 
-def encode_text_geoRSCLIP(model:open_clip.CLIP, texts:List[str], device:str):
+def encode_text_geoRSCLIP(model:open_clip.CLIP, textprocessor:open_clip.tokenizer, texts:List[str], device:str):
     '''
     This function takes a list of texts and returns their embeddings using geoRSCLIP
     '''
-    text_inputs = open_clip.tokenize(texts).to(device)
+    text_inputs = textprocessor(texts).to(device)
     text_embeddings = model.encode_text(text_inputs)
     
     return text_embeddings
 
+### CLIPRSICDv2 ###
 def load_clipRSICDv2(model_name:str, device:str):
     '''
     Loads the CLIPrsicdv2 model.
     '''
-    model_name = model_name.split("_")[1]
     model = CLIPModel.from_pretrained(model_name)
     model.to(device)
+    textprocessor = CLIPTokenizer.from_pretrained(model_name)
+    imageprocessor = CLIPImageProcessor.from_pretrained(model_name)
     
-    return model
+    return model, textprocessor, imageprocessor
 
-def encode_text_CLIPrsicdv2(model:CLIPModel, texts:List[str], device:str):
+def encode_text_CLIPrsicdv2(model:CLIPModel, textprocessor:CLIPTokenizer, texts:List[str], device:str):
     '''
     This function takes a list of texts and returns their embeddings using CLIPrsicdv2
     '''
-    textprocessor = CLIPTokenizer.from_pretrained("flax-community/clip-rsicd-v2")
     text_inputs = textprocessor(texts, return_tensors="pt", padding=True)
     text_embeddings = model.get_text_features(input_ids=text_inputs["input_ids"].to(device), attention_mask=text_inputs["attention_mask"].to(device))
+    
     return text_embeddings
 
-def encode_image_CLIPrsicdv2(model:CLIPModel, images:List[PIL.Image.Image], device:str):
+def encode_image_CLIPrsicdv2(model:CLIPModel, imageprocessor:CLIPImageProcessor, images:List[PIL.Image.Image], device:str):
     '''
     This function takes a list of images and returns their embeddings using CLIPrsicdv2
     '''
-    imageprocessor = CLIPImageProcessor.from_pretrained("flax-community/clip-rsicd-v2")
     image_inputs = imageprocessor(images, return_tensors="pt")
     image_embeddings = model.get_image_features(pixel_values=image_inputs["pixel_values"].to(device))
     return image_embeddings

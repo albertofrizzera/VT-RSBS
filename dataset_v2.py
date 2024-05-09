@@ -306,10 +306,10 @@ class UCM(Dataset):
         sample = self.data.iloc[index]
         if self.label_type=="label":
             image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/images/labels",sample["filepath"])).convert("RGB")
-            target = sample[self.label_type]
         else:
             image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/images/captions",sample["filename"])).convert("RGB")
-            target = clip.tokenize(sample[self.label_type], truncate=True)
+        
+        target = sample[self.label_type]
         
         return image, target
 
@@ -337,10 +337,8 @@ class RSITMD(Dataset):
     def __getitem__(self, index):
         sample = self.data.iloc[index]
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSITMD/images/",sample["filename"])).convert("RGB")
-        if self.label_type=="label":
-            target = sample[self.label_type]
-        else: 
-            target = clip.tokenize(sample[self.label_type], truncate=True)
+        
+        target = sample[self.label_type]
         
         return image, target
 
@@ -368,10 +366,7 @@ class RSICD(Dataset):
     def __getitem__(self, index):
         sample = self.data.iloc[index]
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSICD/images/",sample["filename"])).convert("RGB")
-        if self.label_type=="label":
-            target = sample[self.label_type]
-        else: 
-            target = clip.tokenize(sample[self.label_type], truncate=True)
+        target = sample[self.label_type]
 
         return image, target
 
@@ -398,7 +393,8 @@ class SIDNEY(Dataset):
     def __getitem__(self, index):
         sample = self.data.iloc[index]
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIDNEY/images/",sample["filename"])).convert("RGB")
-        target = clip.tokenize(sample[self.label_type], truncate=True)
+        
+        target = sample[self.label_type]
         
         return image, target
 
