@@ -1,0 +1,41 @@
+Zero-shot accuracy on UCM is: 89.76
+
+Linear-probe accuracy on UCM is: 98.1
+Zero-shot accuracy on WHU_RS19 is: 94.53
+
+Linear-probe accuracy on WHU_RS19 is: 100.0
+Zero-shot accuracy on RSSCN7 is: 71.79
+
+Linear-probe accuracy on RSSCN7 is: 91.96
+Zero-shot accuracy on SIRI_WHU is: 61.04
+
+Linear-probe accuracy on SIRI_WHU is: 95.62
+Zero-shot accuracy on RESISC45 is: 82.05
+
+Linear-probe accuracy on RESISC45 is: 98.38
+Zero-shot accuracy on RSI_CB128 is: 38.3
+
+Linear-probe accuracy on RSI_CB128 is: 98.49
+Zero-shot accuracy on RSI_CB256 is: 51.29
+
+Linear-probe accuracy on RSI_CB256 is: 99.31
+Zero-shot accuracy on EuroSAT is: 47.74
+
+Linear-probe accuracy on EuroSAT is: 97.2
+Zero-shot accuracy on PatternNet is: 70.51
+
+Linear-probe accuracy on PatternNet is: 99.13
+Zero-shot accuracy on OPTIMAL_31 is: 83.6
+
+Linear-probe accuracy on OPTIMAL_31 is: 93.82
+Zero-shot accuracy on MLRSNet is: 62.33
+
+Linear-probe accuracy on MLRSNet is: 94.46
+Zero-shot accuracy on RSICD is: 85.73
+
+Linear-probe accuracy on RSICD is: 95.15
+Zero-shot accuracy on RSITMD is: 82.74
+
+Linear-probe accuracy on RSITMD is: 96.02
+
+Testing dataset: RSICD

@@ -17,7 +17,9 @@ import torch
 import open_clip
 import torch.utils.data as dutils
 from typing import List
+from transformers import CLIPProcessor, CLIPModel, CLIPImageProcessor, CLIPTokenizer
 from tqdm import tqdm
+import PIL
 
 def time_convert(seconds):
     hour = seconds // 3600
@@ -198,12 +200,12 @@ def parse_line_args(args, params):
 # BRUTALLY COPIED FROM @zzbuzzard https://github.com/openai/CLIP/issues/115
 
 # Encodes all text and images in a dataset
-def encode_dataset(model, dataset: dutils.Dataset, batch_size:int = 16, device:str = "cuda"):
+def encode_dataset(model, dataset: dutils.Dataset, encode_text_fn:callable, encode_img_fn:callable, batch_size:int = 16, device:str = "cuda"):
     with torch.no_grad():
         # image_to_text_map[i] gives the corresponding text indices for the ith image
         #  (as there are multiple pieces of text for each image)
         image_to_text_map = []
-
+        
         # text_to_image_map[i] gives the corresponding image index for the ith text
         text_to_image_map = []
 
@@ -216,11 +218,13 @@ def encode_dataset(model, dataset: dutils.Dataset, batch_size:int = 16, device:s
         image_index = 0
 
         for images, text in tqdm(dataloader):
-            images = images.to(device)
-            text = text.to(device)
+            
+            text_features = encode_text_fn(model=model, texts=texts, device=device)
+            # Normalize them
+            text_features /= text_features.norm(dim=1, keepdim=True)
 
             # text has shape B x 5 x 77
-            batch_size, captions_per_image, _ = text.shape
+            batch_size, captions_per_image, _ = text_features.shape
 
             # Update text_to_image_map and image_to_text_map for this batch
             for i in range(batch_size):
@@ -251,7 +255,7 @@ def encode_dataset(model, dataset: dutils.Dataset, batch_size:int = 16, device:s
         return image_encodings, text_encodings, text_to_image_map, image_to_text_map
 
 
-def recall_at_k(model, dataset: dutils.Dataset, k_vals: List[int], batch_size:int, device:str = "cuda"):
+def recall_at_k(model, dataset: dutils.Dataset, encode_text_fn:callable, encode_img_fn:callable, k_vals: List[int], batch_size:int, device:str = "cuda"):
     print("Encoding all data...")
     image_encodings, text_encodings, text_to_image_map, image_to_text_map = encode_dataset(model, dataset, batch_size=batch_size, device=device)
  
@@ -322,7 +326,7 @@ def get_preprocess(n_px):
     ])
     
 ### REMOTECLIP ###
-def load_remoteCLIP(model_name, device:str):
+def load_remoteCLIP(model_name:str, device:str):
     model_name = model_name.split("_")[1]
     model, _, preprocess = open_clip.create_model_and_transforms(model_name)
     tokenizer = open_clip.get_tokenizer(model_name)
@@ -380,10 +384,10 @@ def get_preprocess(image_resolution=224, subset_name="clip", aug=None):
     ])
     return preprocess_val
 
-def load_geoRSCLIP(model_name, device:str):
+def load_geoRSCLIP(model_name:str, device:str):
     model_name = model_name.split("_")[1]
     model, _, __ = open_clip.create_model_and_transforms(model_name)
-    preprocess = get_preprocess(image_resolution=224)
+    preprocess = get_preprocess(image_resolution=336)
     tokenizer = open_clip.get_tokenizer(model_name)
     
     ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/geoRSCLIP/models--Zilun--GeoRSCLIP/snapshots/0b7b13838d11b8ab43ca72706fd03d5177e3ffa9/ckpt/RS5M_{model_name}.pt", map_location="cpu")
@@ -391,3 +395,39 @@ def load_geoRSCLIP(model_name, device:str):
     model.to(device)
     
     return model, preprocess, tokenizer
+
+
+def load_clipRSICDv2(model_name:str, device:str):
+    model_name = model_name.split("_")[1]
+    model = CLIPModel.from_pretrained(model_name)
+    processor = CLIPProcessor.from_pretrained(model_name, do_rescale=False)
+    tokenizer = None
+    
+    model.to(device)
+    
+    return model, processor, tokenizer
+
+def encode_text_CLIPrsicdv2(model:CLIPModel, texts:List[str], device:str):
+    '''
+    This function takes a list of texts and returns their embeddings using CLIPrsicdv2
+    '''
+    textprocessor = CLIPTokenizer.from_pretrained("flax-community/clip-rsicd-v2")
+    text_inputs = textprocessor(texts, return_tensors="pt", padding=True)
+    text_embeddings = model.get_text_features(input_ids=text_inputs["input_ids"].to(device), attention_mask=text_inputs["attention_mask"].to(device))
+    return text_embeddings
+
+def encode_image_CLIPrsicdv2(model:CLIPModel, images:List[PIL.Image.Image], device:str):
+    '''
+    This function takes a list of images and returns their embeddings using CLIPrsicdv2
+    '''
+    imageprocessor = CLIPImageProcessor.from_pretrained("flax-community/clip-rsicd-v2")
+    image_inputs = imageprocessor(images, return_tensors="pt")
+    image_embeddings = model.get_image_features(pixel_values=image_inputs["pixel_values"].to(device))
+    return image_embeddings
+
+
+if __name__=="__main__":
+    model = CLIPModel.from_pretrained("flax-community/clip-rsicd-v2")
+    texts = ["a remote sensing image of a forest", "a remote sensing image of a city", "a remote sensing image of a river"]
+    text_embs = encode_text_CLIPrsicdv2(model, texts, "cpu")
+    print(text_embs.shape)

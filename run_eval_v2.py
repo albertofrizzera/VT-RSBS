@@ -8,14 +8,19 @@ from dataset_v2 import *
 from tqdm import tqdm
 from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression
-from utils import load_remoteCLIP, load_geoRSCLIP
+from utils import load_remoteCLIP, load_geoRSCLIP, load_clipRSICDv2
+from utils import encode_text_CLIPrsicdv2, encode_image_CLIPrsicdv2
 
 remoteCLIP_models = ["RN50", "ViT-B-32", "ViT-L-14"]
 geoRSCLIP_models = ["ViT-B-32", "ViT-L-14", "ViT-L-14-336", "ViT-H-14"]
+clip_rsicdv2_models = ["flax-community/clip-rsicd-v2"]
 
-# ALL THE PARAMETERS
-load_function = load_geoRSCLIP
-BASE_MODEL = "georsCLIP_ViT-H-14"
+# DEFINE YOUR CUSTOM FUNCTIONS TO LOAD THE MODEL AND GET THE EMBEDDINGS OUT OF IT
+load_function = load_clipRSICDv2
+encode_text_fn = encode_text_CLIPrsicdv2
+encode_image_fn = encode_image_CLIPrsicdv2
+
+BASE_MODEL = "cliprsicdv2_flax-community/clip-rsicd-v2"
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
@@ -34,6 +39,8 @@ if __name__ == '__main__':
     # Load the model
     #model, preprocess = clip.load(name=BASE_MODEL, device=DEVICE)
     model, preprocess, tokenizer = load_function(BASE_MODEL, device=DEVICE)
+    encode_text_fn = encode_text_CLIPrsicdv2
+    encode_image_fn = encode_image_CLIPrsicdv2
     # Load the checkpoint 
     # checkpoint = torch.load(f"{CHECKPOINT_PATH}")
     # model.load_state_dict(checkpoint)
@@ -43,29 +50,39 @@ if __name__ == '__main__':
         if len(ZERO_SHOT)>0:
             print("Testing zero-shot classification")
             print("#################################")
-        for dataset_name in ZERO_SHOT:
+        for dataset_name in ZERO_SHOT:    
             print("Testing dataset: ", dataset_name)
-            dataset = globals()[dataset_name](split="test", label_type="label", preprocess=preprocess)
-            dataloader = torch.utils.data.DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True)
+            testset = globals()[dataset_name](split="test", label_type="label")
+            testloader = torch.utils.data.DataLoader(testset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True, collate_fn=custom_collate_fn)
+            
             # Create text templates 
-            unique_labels = dataset._get_unique_labels()
+            unique_labels = testset._get_unique_labels()
             text_templates = []
             for label in unique_labels:
                 text_templates.extend([t.format(label) for t in TEXT_TEMPLATES])
             
-            templates = tokenizer(text_templates).to(DEVICE)
-            text_features = model.encode_text(templates)
+            # Get the text features
+            text_features = encode_text_fn(model=model, texts=text_templates, device=DEVICE)
+            # Normalize them
             text_features /= text_features.norm(dim=1, keepdim=True)
             
             cumulative_corrects = 0
-            # Iterate over the samples
-            for _, batch in enumerate(tqdm(dataloader)):
+            # Save test image features to save time in linear probing
+            test_features = []
+            test_labels = []
+            
+            for _, batch in enumerate(tqdm(testloader)):
                 images, labels = batch
-                images = images.to(DEVICE)
-                # Get the features
-                image_features = model.encode_image(images)
+                # Get the image features
+                image_features = encode_image_fn(model=model, images=images, device=DEVICE)
+                
+                # Append the features and labels to the lists
+                test_features.append(image_features.cpu())
+                test_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long).cpu())
+                
                 # Normalize them
-                image_features /= image_features.norm(dim=1, keepdim=True)
+                image_features /= image_features.norm(dim=-1, keepdim=True)
+    
                 # Calculate similarity
                 similarity = (image_features @ text_features.T).softmax(dim=-1)
                 
@@ -86,47 +103,30 @@ if __name__ == '__main__':
                 
                 cumulative_corrects += sum([1 for i in range(len(predicted_labels)) if predicted_labels[i] == labels[i]])
             
-            zero_shot_accuracy = cumulative_corrects / len(dataset) * 100.
+            zero_shot_accuracy = cumulative_corrects / len(testset) * 100.
             file.write(f"Zero-shot accuracy on {dataset_name} is: {round(zero_shot_accuracy,2)}\n")
+            
+            # Convert the lists to numpy arrays
+            test_features, test_labels = torch.cat(test_features).numpy(), torch.cat(test_labels).numpy()
         
-        file.write("\n")
-        
-        # LINEAR PROBING
-        if len(ZERO_SHOT)>0:
+            # LINEAR PROBING
             print("Testing linear probing")
             print("#################################")
-        for dataset_name in ZERO_SHOT:
-            print("Testing dataset: ", dataset_name)
-            trainset = globals()[dataset_name](split="train", label_type="label", preprocess=preprocess)
-            trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True)
-            unique_labels = trainset._get_unique_labels()
             
+            trainset = globals()[dataset_name](split="train", label_type="label")
+            trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True, collate_fn=custom_collate_fn)
+
             train_features = []
             train_labels = []
             for batch in tqdm(trainloader):
                 images, labels = batch
-                images = images.to(DEVICE)
                 
-                image_features = model.encode_image(images)
+                image_features = encode_image_fn(model=model, images=images, device=DEVICE)
+                
                 train_features.append(image_features.cpu())
                 train_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long).cpu())
 
             train_features, train_labels = torch.cat(train_features).numpy(), torch.cat(train_labels).numpy()
-            
-            testset = globals()[dataset_name](split="test", label_type="label", preprocess=preprocess)
-            testloader = torch.utils.data.DataLoader(testset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True)
-            
-            test_features = []
-            test_labels = []
-            for batch in tqdm(testloader):
-                images, labels = batch
-                images = images.to(DEVICE)
-                
-                image_features = model.encode_image(images) 
-                test_features.append(image_features.cpu()) 
-                test_labels.append(torch.tensor([unique_labels.index(l) for l in labels], dtype=torch.long).cpu()) # Displace on the CPU to avoid memory issues
-            
-            test_features, test_labels = torch.cat(test_features).numpy(), torch.cat(test_labels).numpy()
             
             # Perform logistic regression
             classifier = LogisticRegression(random_state=0, C=0.316, max_iter=1000, verbose=False, n_jobs=8)
@@ -137,6 +137,8 @@ if __name__ == '__main__':
             accuracy = np.mean((test_labels == predictions).astype(float)) * 100.
             file.write(f"Linear-probe accuracy on {dataset_name} is: {round(accuracy,2)}\n")
 
+            file.write("\n")
+        
         file.write("\n")
     
         # TEXT TO IMAGE RETRIEVAL
@@ -145,7 +147,7 @@ if __name__ == '__main__':
         for dataset_name in RETRIEVAL:
             print("Testing dataset: ", dataset_name)
             file.write("Testing dataset: "+ dataset_name+"\n")
-            dataset = globals()[dataset_name](split="test", label_type="sentence", preprocess=preprocess)
+            dataset = globals()[dataset_name](split="test", label_type="sentence")
             image, sentences = dataset[0]
             t2i, i2t = recall_at_k(model, dataset, k_vals=retrieval_k_vals, batch_size=BATCH_SIZE, device=DEVICE)
 
