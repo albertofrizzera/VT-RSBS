@@ -15,11 +15,11 @@ geoRSCLIP_models = ["ViT-B-32", "ViT-L-14", "ViT-L-14-336", "ViT-H-14"]
 clip_rsicdv2_models = ["flax-community/clip-rsicd-v2"]
 
 # DEFINE YOUR CUSTOM FUNCTIONS TO LOAD THE MODEL AND GET THE EMBEDDINGS OUT OF IT
-load_function = load_geoRSCLIP
-encode_text_fn = encode_text_geoRSCLIP
-encode_image_fn = encode_image_geoRSCLIP
+load_function = load_clipRSICDv2
+encode_text_fn = encode_text_CLIPrsicdv2
+encode_image_fn = encode_image_CLIPrsicdv2
 
-BASE_MODEL = "georsCLIP_"+geoRSCLIP_models[0]
+BASE_MODEL = "CLIPrsicdv2_"+clip_rsicdv2_models[0]
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 2
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"

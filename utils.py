@@ -455,6 +455,7 @@ def load_clipRSICDv2(model_name:str, device:str):
     '''
     Loads the CLIPrsicdv2 model.
     '''
+    model_name = model_name.split("_")[1]
     model = CLIPModel.from_pretrained(model_name)
     model.to(device)
     textprocessor = CLIPTokenizer.from_pretrained(model_name)
