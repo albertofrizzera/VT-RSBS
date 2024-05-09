@@ -67,7 +67,7 @@ If needed, an exhaustive list of other satellite datasets is available [here](ht
 
 To visualize the samples of all the above datasets, a web tool has been implemented (```web_app/main.py```)
 
-## BASELINES
+## Benchmark Models
 The following table report some baselines of CLIP-like models. Some are original, while others are finetuned for the remote sensing scenario.
 
 All the zero-shot results are obtained using the following template "a remote sensing image of a {class}", where class is replaced by the class name.
