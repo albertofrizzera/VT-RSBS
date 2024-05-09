@@ -11,14 +11,22 @@ Riccardo Ricci, riccardo.ricci-1@unitn.it
 This project aims at developing a platform for benchmarking of vision-language models in the remote sensing scenario. 
 
 ### DISCLAIMER
-There is no restriction on the model type. The only requirement is that the model obey to three things:
-1. Provide a preprocess function to preprocess the images.
-2. Have an "encode_image" function, which takes a list of images and produces a list of embeddings. The images are supposed to be already preprocessed. 
-3. Have a preprocess_text function to preprocess the text.
-4. Have an "encode_text" function, which takes a list of texts and produces a list of embeddings. The texts are supposed to be already preprocessed.
+There is no restriction on the model type. The only requirement is providing these three things:
+1. A function to load the model. This function must return three callables: model, textprocessor, imageprocessor.
+- The model is the model itself.
+- Textprocessor is a function that takes in input a list of strings and tokenize them, producing in output a tensor of indices of size BxL (tensors padded at the maximum length). 
+- Imageprocessor is a function that takes in input a single PIL Image and apply transformations on it, producing in output a tensor of size CxHxW.
+
+2. A function to produce text embeddings. This function takes in input the model, the texts (list of strings), and the device. It then preprocess the text with textprocessor and produce embeddings with the model. It returns the embeddings, a tensor of shape BxD, where D is the embedding dimension.
+
+3. A function to produce image embeddings. This function takes in input the model, the images (list of PIL.Image objects), and the device. It then preprocess the images with imageprocessor and produce embeddings with the model. It returns the embeddings, a tensor of shape BxD, where D is the embedding dimension.
+
+You can find some examples of the implementation of these functions in ```utils.py```. Specifically, functions to load remoteCLIP, georsCLIP, CLIPrsicdv2 and openaiCLIP have been implemented. 
+
+Then modify the beginning of the module ```run_eval.py``` by importing your custom functions, and replacing them after "load_function", "encode_text_fn" and "encode_image_fn" and run the evaluation.
+
 
 ## Installation
-
 1. Create a conda environment following the instructions contained in ```environment.txt``` or using ```requirements.txt```.
 2. Adjust the environmental variables of the dataset in ```.env``` in order to properly locate the datasets.
 
