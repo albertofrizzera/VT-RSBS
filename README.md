@@ -1,5 +1,5 @@
 <center> 
-<h1><strong>A benchmark for the evaluation of vision language embeddings for remote sensing applications</strong></h1>
+<h1><strong>Evaluate and benchmark your vision language embedding model for remote sensing applications</strong></h1>
 <em>
 Alberto Frizzera, info@albertofrizzera.com<br>
 Riccardo Ricci, riccardo.ricci-1@unitn.it
