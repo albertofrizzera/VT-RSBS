@@ -6,6 +6,7 @@
 import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "."))
+import clip.model
 import numpy as np
 import pandas as pd
 from jinja2 import Environment, FileSystemLoader
@@ -22,6 +23,8 @@ from tqdm import tqdm
 import PIL
 from typing import Any
 from datasets import custom_collate_fn
+import clip
+from PIL import Image
 
 def time_convert(seconds):
     hour = seconds // 3600
@@ -331,6 +334,38 @@ def get_preprocess(n_px):
         ToTensor(),
         Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711)),
     ])
+
+### BASELINE CLIP ###
+def load_CLIP(model_name:str, device:str):
+    model_name = model_name.split("_")[1]
+    model, imageprocessor = clip.load(model_name, device=device)
+    textprocessor = clip.tokenize
+    
+    return model, textprocessor, imageprocessor
+
+def encode_text_CLIP(model:clip.model, textprocessor:callable, texts:List[str], device:str):
+    '''
+    This function takes a list of texts and returns their embeddings using CLIPrsicdv2
+    '''
+    text_inputs = clip.tokenize(texts).to(device)
+    text_embeddings = model.encode_text(text_inputs)
+    
+    return text_embeddings
+
+def encode_image_CLIP(model:clip.model, imageprocessor:callable, images:List[PIL.Image.Image], device:str):
+    '''
+    This function takes a list of images and returns their embeddings using CLIPrsicdv2
+    '''
+    features = []
+    for image in images:
+        image_input = imageprocessor(image).unsqueeze(0).to(device)
+        feature = model.encode_image(image_input)
+        features.append(feature)
+        
+    image_embeddings = torch.cat(features)
+    
+    return image_embeddings
+
     
 ### REMOTECLIP ###
 def load_remoteCLIP(model_name:str, device:str):
@@ -343,9 +378,9 @@ def load_remoteCLIP(model_name:str, device:str):
 
     textprocessor = open_clip.get_tokenizer(model_name)
         
-    return model, imageprocessor, textprocessor
+    return model, textprocessor, imageprocessor
 
-def encode_image_remoteCLIP(model:open_clip.CLIP, imageprocessor:Any, images:List[PIL.Image.Image], device:str):
+def encode_image_remoteCLIP(model:open_clip.CLIP, imageprocessor:callable, images:List[PIL.Image.Image], device:str):
     '''
     This function takes a list of PIL images and returns their embeddings using geoRSCLIP
     '''
@@ -482,7 +517,15 @@ def encode_image_CLIPrsicdv2(model:CLIPModel, imageprocessor:CLIPImageProcessor,
 
 
 if __name__=="__main__":
-    model = CLIPModel.from_pretrained("flax-community/clip-rsicd-v2")
+    BASE_MODEL = "GeoRSCLIP_ViT-H-14"
+    DEVICE = "cuda"
+    model, textprocessor, imageprocessor = load_geoRSCLIP(BASE_MODEL, device=DEVICE)
+    print("Model parameters: ", sum(p.numel() for p in model.parameters()))
+    # Produce a dummy PIL image
+    image = Image.new("RGB", (224, 224))
+    images = [image,image,image]
     texts = ["a remote sensing image of a forest", "a remote sensing image of a city", "a remote sensing image of a river"]
-    text_embs = encode_text_CLIPrsicdv2(model, texts, "cpu")
-    print(text_embs.shape)
+    text_embs = encode_text_CLIP(model, textprocessor, texts, "cuda")
+    imgs_embs = encode_image_CLIP(model, imageprocessor, images, "cuda")
+    print(text_embs.device)
+    print(imgs_embs.device)

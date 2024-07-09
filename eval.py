@@ -7,19 +7,20 @@ from datasets import *
 from tqdm import tqdm
 from utils import recall_at_k
 from sklearn.linear_model import LogisticRegression
-from utils import load_clipRSICDv2, load_geoRSCLIP, load_remoteCLIP
-from utils import encode_text_CLIPrsicdv2, encode_image_CLIPrsicdv2, encode_text_geoRSCLIP, encode_image_geoRSCLIP, encode_text_remoteCLIP, encode_image_remoteCLIP
+from utils import load_CLIP, load_clipRSICDv2, load_geoRSCLIP, load_remoteCLIP
+from utils import encode_text_CLIP, encode_image_CLIP, encode_text_CLIPrsicdv2, encode_image_CLIPrsicdv2, encode_text_geoRSCLIP, encode_image_geoRSCLIP, encode_text_remoteCLIP, encode_image_remoteCLIP
 
+original_CLIP_models = ["ViT-B/32", "ViT-B/16", "ViT-L/14", "ViT-L/14@336px", "RN50", "RN101", "RN50x4", "RN50x16", "RN50x64"]
 remoteCLIP_models = ["RN50", "ViT-B-32", "ViT-L-14"]
 geoRSCLIP_models = ["ViT-B-32", "ViT-L-14", "ViT-L-14-336", "ViT-H-14"]
 clip_rsicdv2_models = ["flax-community/clip-rsicd-v2"]
 
 # DEFINE YOUR CUSTOM FUNCTIONS TO LOAD THE MODEL AND GET THE EMBEDDINGS OUT OF IT
-load_function = load_clipRSICDv2
-encode_text_fn = encode_text_CLIPrsicdv2
-encode_image_fn = encode_image_CLIPrsicdv2
+load_function = load_CLIP
+encode_text_fn = encode_text_CLIP
+encode_image_fn = encode_image_CLIP
 
-BASE_MODEL = "CLIPrsicdv2_"+clip_rsicdv2_models[0]
+BASE_MODEL = "CLIPrsicdv2_"+original_CLIP_models[0]
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 2
 SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
