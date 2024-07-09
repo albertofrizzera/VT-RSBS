@@ -7,21 +7,37 @@ Riccardo Ricci, riccardo.ricci-1@unitn.it
 <br>
 </center>
 
+# Vision-Language Embedding Model Benchmark for Remote Sensing
+
 ## Introduction
-This project aims at developing a platform for benchmarking of vision-language models in the remote sensing scenario. 
+
+Welcome to our project aimed at developing a comprehensive platform for benchmarking vision-language models in the remote sensing domain. Our goal is to evaluate and compare various models, ensuring they are optimized for remote sensing applications.
 
 ## Disclaimer
-There is no restriction on the model type. The only requirement is providing these three things:
-1. A function to load the model. This function must return three callables: model, textprocessor, imageprocessor.
-- The model is the model itself.
-- Textprocessor is a function that takes in input a list of strings and tokenize them, producing in output a tensor of indices of size BxL (tensors padded at the maximum length). 
-- Imageprocessor is a function that takes in input a single PIL Image and apply transformations on it, producing in output a tensor of size CxHxW.
 
-2. A function to produce text embeddings. This function takes in input the model, the texts (list of strings), and the device. It then preprocess the text with textprocessor and produce embeddings with the model. It returns the embeddings, a tensor of shape BxD, where D is the embedding dimension.
+There are no restrictions on the type of model you can use. However, your model must meet the following requirements:
 
-3. A function to produce image embeddings. This function takes in input the model, the images (list of PIL.Image objects), and the device. It then preprocess the images with imageprocessor and produce embeddings with the model. It returns the embeddings, a tensor of shape BxD, where D is the embedding dimension.
+### Model Requirements
 
-You can find some examples of the implementation of these functions in ```utils.py```. Specifically, functions to load remoteCLIP, georsCLIP, CLIPrsicdv2 and openaiCLIP have been implemented. 
+1. **Model Loading Function**: 
+    - **Output**: This function should return three callables: `model`, `text_processor`, and `image_processor`.
+        - **Model**: The model itself.
+        - **Text Processor**: A function that takes a list of strings as input and tokenizes them, producing a tensor of indices of size BxL (with tensors padded to the maximum length).
+        - **Image Processor**: A function that takes a single PIL Image as input and applies transformations, producing a tensor of size CxHxW.
+
+2. **Text Embedding Function**:
+    - **Input**: The function takes the model, a list of texts (strings), and the device.
+    - **Process**: Preprocesses the text using the `text_processor` and produces embeddings using the model.
+    - **Output**: Returns embeddings as a tensor of shape BxD, where D is the embedding dimension.
+
+3. **Image Embedding Function**:
+    - **Input**: The function takes the model, a list of images (PIL.Image objects), and the device.
+    - **Process**: Preprocesses the images using the `image_processor` and produces embeddings using the model.
+    - **Output**: Returns embeddings as a tensor of shape BxD, where D is the embedding dimension.
+
+### Example Implementations
+
+You can find example implementations of these functions in `utils.py`. Specifically, functions to load and process models such as `remoteCLIP`, `georsCLIP`, `CLIPrsicdv2`, and `openaiCLIP` have been implemented for reference.
 
 ## Installation
 1. Create a conda environment following the instructions contained in ```environment.txt``` or using ```requirements.txt```.
