@@ -72,11 +72,11 @@ The following figures report some baselines of CLIP-like models. Some are origin
 
 For a detailed breakdown on each dataset, refer to the [report](reports/single_model_breakdown.md).
 
-### Zero-shot classification
+### Zero-shot classification accuracy (%)
 ![alt text](assets/zero_shot_acc.png)
-<!-- <center> 
-<img src="assets/report_benchmark.png" width="600"/>
-</center> -->
+
+### Linear probe accuracy (%)
+![alt text](assets/zero_shot_acc.png)
 
 ## Dataset preparation
 Each dataset should be downloaded and preprocessed. For each dataset, we delineate below the steps to accomplish to prepare it for the benchmarking.
