@@ -78,6 +78,9 @@ For a detailed breakdown on each dataset, refer to the [report](reports/single_m
 ### Linear probe accuracy (%)
 ![alt text](assets/linear_probe_acc.png)
 
+### Text to Image Recall @ 1 (%)
+![alt text](assets/T2I.png)
+
 ## Dataset preparation
 Each dataset should be downloaded and preprocessed. For each dataset, we delineate below the steps to accomplish to prepare it for the benchmarking.
 First, create a folder named "benchmarks", wherever you want, and put its path in the .env file.
