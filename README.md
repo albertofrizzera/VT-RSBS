@@ -76,7 +76,7 @@ For a detailed breakdown on each dataset, refer to the [report](reports/single_m
 ![alt text](assets/zero_shot_acc.png)
 
 ### Linear probe accuracy (%)
-![alt text](assets/zero_shot_acc.png)
+![alt text](assets/linear_probe_acc.png)
 
 ## Dataset preparation
 Each dataset should be downloaded and preprocessed. For each dataset, we delineate below the steps to accomplish to prepare it for the benchmarking.
