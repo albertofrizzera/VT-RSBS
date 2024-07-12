@@ -48,9 +48,10 @@ We provide numerical results of public models such as the original CLIP, other C
 - [CLIP](https://github.com/openai/CLIP) Original CLIP models from OPENAI.
 - [CLIPrsicdv2](https://huggingface.co/flax-community/clip-rsicd-v2) Finetuned CLIP model on images from the RSICD dataset
 - [RemoteCLIP](https://github.com/ChenDelong1999/RemoteCLIP) Finetuned CLIP models using a large collection of high-quality image text pairs (around 160K pairs)
-- [GeoRSClIP](https://huggingface.co/Zilun/GeoRSCLIP) Finetuned CLIP model on 5M noisy image-text pairs from the remote sensing domain.
+- [GeoRSCLIP](https://huggingface.co/Zilun/GeoRSCLIP) Finetuned CLIP model on 5M noisy image-text pairs from the remote sensing domain.
 
-## Installation
+## Usage
+### Installation
 1. Create a virtual environment and install everything in it.
 ```
 conda create --name remotextvis python=3.10
@@ -58,10 +59,8 @@ conda activate remotextvis
 pip install -r requirements.txt
 ```
 2. Adjust the environmental variables of the dataset in ```.env``` in order to properly locate the datasets.
-
-## Usage
 You can download the datasets, prepare them, and evaluate your model easily. 
-> **_Note:_**  We are providing instructions to download and prepare all the datasets, look at the section below.
+> **_Note:_**  Click [here](assets/dataset_preparation.md) for instructions on how to download and prepare the datasets
 
 If you don't want to waste time downloading the datasets, you can provide me your model and I will run the benchmark for you, including it in the evaluation. I just need the model weights and the three functions below.
 
@@ -156,7 +155,7 @@ We are constantly updating the number of datasets that we support for testing.
 To visualize the samples of all the above datasets, a web tool has been implemented (```web_app/main.py```)
 
 ### Dataset preparation
-Each dataset should be downloaded and preprocessed accoring to the instructions in [dataset preparation](md_files/dataset_preparation.md).
+Each dataset should be downloaded and preprocessed accoring to the instructions in [dataset preparation](assets/dataset_preparation.md).
 
 ## Benchmark Models
 The following figures report results on zero-shot classification, linear probing and retrieval of the models in literature up to now. There are original models, as well as models fine-tuned on remote sensing datasets.
