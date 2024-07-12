@@ -8,6 +8,7 @@ from torch.utils.data import Dataset
 from PIL import Image
 from dotenv import load_dotenv
 import clip
+import pandas as pd
 
 # DATASETS FOR IMAGE CLASSIFICATION ONLY 
 
@@ -16,8 +17,7 @@ class EuroSAT(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for EuroSAT are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"EuroSAT/labels/EuroSAT.pkl"),"rb"))
-        
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"EuroSAT/labels/EuroSAT.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -44,7 +44,7 @@ class OPTIMAL_31(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for OPTIMAL_31 are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"OPTIMAL_31/labels/OPTIMAL_31.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"OPTIMAL_31/labels/OPTIMAL_31.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -72,7 +72,8 @@ class PatternNet(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for PatternNet are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"PatternNet/labels/PatternNet.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"PatternNet/labels/PatternNet.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"PatternNet/labels/PatternNet.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -99,7 +100,8 @@ class MLRSNet(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for MLRSNet are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"MLRSNet/labels/MLRSNet.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"MLRSNet/labels/MLRSNet.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"MLRSNet/labels/MLRSNet.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -126,7 +128,8 @@ class WHU_RS19(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for WHU_RS19 are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"WHU_RS19/labels/WHU_RS19.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"WHU_RS19/labels/WHU_RS19.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"WHU_RS19/labels/WHU_RS19.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -153,7 +156,8 @@ class SIRI_WHU(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for SIRI_WHU are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIRI_WHU/labels/SIRI_WHU.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIRI_WHU/labels/SIRI_WHU.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIRI_WHU/labels/SIRI_WHU.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -180,7 +184,8 @@ class RSSCN7(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for RSI_CB128 are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSSCN7/labels/RSSCN7.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSSCN7/labels/RSSCN7.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSSCN7/labels/RSSCN7.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -207,7 +212,8 @@ class RSI_CB128(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for RSI_CB128 are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB128/labels/RSI_CB128.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB128/labels/RSI_CB128.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB128/labels/RSI_CB128.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -234,7 +240,8 @@ class RSI_CB256(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for RSI_CB256 are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB256/labels/RSI_CB256.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB256/labels/RSI_CB256.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSI_CB256/labels/RSI_CB256.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -261,7 +268,8 @@ class RESISC45(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         assert label_type=="label", "Error! Sentences for RESISC45 are not available."
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RESISC45/labels/RESISC45.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RESISC45/labels/RESISC45.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"RESISC45/labels/RESISC45.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -289,10 +297,12 @@ class UCM(Dataset):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
         if label_type=="label":
-            data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/labels/UCM.pkl"),"rb"))
+            #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/labels/UCM.pkl"),"rb"))
+            data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/labels/UCM.csv"))
             self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         else:
-            data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/labels/UCM_captions.pkl"),"rb"))
+            #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/labels/UCM_captions.pkl"),"rb"))
+            data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/labels/UCM_captions.csv"))
         
         if split=="tot":
             self.data = data_total
@@ -323,7 +333,8 @@ class RSITMD(Dataset):
     def __init__(self, split:str="test", label_type:str="label"):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSITMD/labels/RSITMD.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSITMD/labels/RSITMD.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSITMD/labels/RSITMD.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -352,7 +363,8 @@ class RSICD(Dataset):
     def __init__(self, split:str="test", label_type:str="label"):
         # Load dotenv to load the paths in the environment variables
         load_dotenv()
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSICD/labels/RSICD.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSICD/labels/RSICD.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSICD/labels/RSICD.csv"))
         self.unique_labels = np.sort(data_total["label"].unique()).tolist()
         
         if split=="tot":
@@ -380,7 +392,8 @@ class SIDNEY(Dataset):
     def __init__(self, split:str="test", label_type:str="label"):
         assert label_type=="sentence", "Error! Class labels for SIDNEY are not available."
         load_dotenv()
-        data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIDNEY/labels/SIDNEY.pkl"),"rb"))
+        #data_total = pickle.load(open(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIDNEY/labels/SIDNEY.pkl"),"rb"))
+        data_total = pd.read_csv(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIDNEY/labels/SIDNEY.csv"))
         
         if split=="tot":
             self.data = data_total
@@ -409,11 +422,3 @@ def custom_collate_fn(batch):
         labels.append(sample[1])
 
     return images, labels
-    
-
-if __name__=="__main__":
-    import torch
-    dataset = UCM("test", "label", None)
-    dataloader = torch.utils.data.DataLoader(dataset, batch_size=4, shuffle=False, num_workers=0, pin_memory=True)
-    print(next(iter(dataloader)))
-    

@@ -1,5 +1,5 @@
 <center> 
-<h1><strong>Evaluate and benchmark your vision language embedding model for remote sensing applications</strong></h1>
+<h1><strong>Evaluate and benchmark your vision language embeddings for remote sensing applications</strong></h1>
 <em>
 Alberto Frizzera, info@albertofrizzera.com<br>
 Riccardo Ricci, riccardo.ricci-1@unitn.it
@@ -7,52 +7,124 @@ Riccardo Ricci, riccardo.ricci-1@unitn.it
 <br>
 </center>
 
-# Vision-Language Embedding Model Benchmark for Remote Sensing
-
 ## Introduction
 
-Welcome to our project aimed at developing a comprehensive platform for benchmarking vision-language models in the remote sensing domain. Our goal is to evaluate and compare various models, ensuring they are optimized for remote sensing applications.
+Embeddings are mathematical representations of data. They usually take the form of vectors, and the cool thing is that they are not random, but carry information (they "represent" something).
+For example, if we consider images, "similar" pairs will have similar embeddings.
+The concept of similarity is entirely enforced during training.
 
-## Disclaimer
+Consider two images, one that contains a horse and one that contains a fish, they are probably visually different, but they share the concept of representing animals. In remote sensing, suppose to take an image of a forest and an image of a field. They are visually different, but they share the concept of being a vegetated area.
 
-There are no restrictions on the type of model you can use. However, your model must meet the following requirements:
+Ideally, embeddings are mathematical representations that condense all this knowledge in a single vector, whose values can "agree" or "disagree" with that of other vectors. If the values agree, the vectors are similar (in whatever sense), if they disagree, they are different.
 
-### Model Requirements
+As mentioned before, the agreement or disagreement is entirely enforced by the training process. Indeed, if you divide satellite images into rural or urban and train a model to produce similar embeddings for images of the same class, you will have a model that can produce embeddings that condense the meaning of "urban" or "rural", whatever that might be according to the training dataset. 
 
-1. **Model Loading Function**: 
+If you think about it, this is a very powerful concept. However, training a model to distinguish various concepts requires the collection of a dataset that explain those concepts. This is costly, time consuming, and it might be very difficult to have a wide coverage of different topics, concepts, classes and so on. 
+
+This is where vision-language contrastive learning placed itself. I like to think about it that way, through language, there is no need to collect a dataset that explains the concepts. Instead, we can use image descriptions as a way to convey information at different levels, implicitly having the network to learn to discriminate between different "concepts". 
+
+Think of having two images, one with the caption "a dense forest with green trees where some buildings are visible through the vegetation", and another one that reads "a residential area in a forested landscape".
+These two captions, while describing different images, they share the concept of the presence of buildings and trees, and that is a residential area. And they will assign these concepts to the images, arriving to produce similar embeddings for both "buildings" "trees" "residential area", but also "buildings in vegetation" or "forest".
+
+The first work to propose this paradigm at a very large scale (400M images) is the paper "[Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/pdf/2103.00020)", where the authors propose the famous CLIP model. 
+Using descriptions of the image, the authors showed that the model was able to learn very generalizable embeddings. CLIP embeddings can be used for zero-shot image classification, where the labels are converted into template descriptions, and then the one with the highest agreement is deemed as the correct class. Tested on a suite of different image classification datasets, CLIP outperformed or achieved competitive results on the majority of them (also fully supervised baselines) without the need of fine-tuning.
+
+These vision-language embeddings can be useful for text-image retrieval, image-text retrieval, image captioning among others. However, it is difficult to correctly evaluate them, for the lack of a common benchmark system. 
+Indeed, some papers tackled the problem of adapting CLIP for remote sensing, but the lack evaluation systems causes the results to not be comparable.
+
+To solve this issue, we built this benchmarking system and assessed the performance of the algorithms in literature up to now. 
+
+The benchmark implements 4 tasks
+- image classification
+- linear probing
+- text-to-image retrieval (T2I)
+- image-to-text retrieval (I2T)
+
+and evaluates them on a suite of remote sensing datasets.
+
+We provide numerical results of public models such as the original CLIP, other CLIP like architectures fine-tuned for remote sensing, to have your performance calibrated on the other models. You can find all informations about the model tested in the models section.
+
+## Models 
+- [CLIP](https://github.com/openai/CLIP) Original CLIP models from OPENAI.
+- [CLIPrsicdv2](https://huggingface.co/flax-community/clip-rsicd-v2) Finetuned CLIP model on images from the RSICD dataset
+- [RemoteCLIP](https://github.com/ChenDelong1999/RemoteCLIP) Finetuned CLIP models using a large collection of high-quality image text pairs (around 160K pairs)
+- [GeoRSClIP](https://huggingface.co/Zilun/GeoRSCLIP) Finetuned CLIP model on 5M noisy image-text pairs from the remote sensing domain.
+
+## Installation
+1. Create a virtual environment and install everything in it.
+```
+conda create --name remotextvis python=3.10
+conda activate remotextvis
+pip install -r requirements.txt
+```
+2. Adjust the environmental variables of the dataset in ```.env``` in order to properly locate the datasets.
+
+## Usage
+You can download the datasets, prepare them, and evaluate your model easily. 
+> **_Note:_**  We are providing instructions to download and prepare all the datasets, look at the section below.
+
+If you don't want to waste time downloading the datasets, you can provide me your model and I will run the benchmark for you, including it in the evaluation. I just need the model weights and the three functions below.
+
+1. **Load Function**: 
     - **Output**: This function should return three callables: `model`, `text_processor`, and `image_processor`.
         - **Model**: The model itself.
         - **Text Processor**: A function that takes a list of strings as input and tokenizes them, producing a tensor of indices of size BxL (with tensors padded to the maximum length).
         - **Image Processor**: A function that takes a single PIL Image as input and applies transformations, producing a tensor of size CxHxW.
+
+    This is an example:
+    ```python
+    def load_clipRSICDv2(model_name:str, device:str):
+        '''
+        Loads the CLIPrsicdv2 model.
+        '''
+        model = CLIPModel.from_pretrained(model_name)
+        model.to(device)
+        textprocessor = CLIPTokenizer.from_pretrained(model_name)
+        imageprocessor = CLIPImageProcessor.from_pretrained(model_name)
+        
+        return model, textprocessor, imageprocessor
+    ```
 
 2. **Text Embedding Function**:
     - **Input**: The function takes the model, a list of texts (strings), and the device.
     - **Process**: Preprocesses the text using the `text_processor` and produces embeddings using the model.
     - **Output**: Returns embeddings as a tensor of shape BxD, where D is the embedding dimension.
 
+    This is an example: 
+    ```python
+    def encode_text_CLIPrsicdv2(model:CLIPModel, textprocessor:CLIPTokenizer, texts:List[str], device:str):
+        '''
+        This function takes a list of texts and returns their embeddings using CLIPrsicdv2
+        '''
+        text_inputs = textprocessor(texts, return_tensors="pt", padding=True)
+        text_embeddings = model.get_text_features(input_ids=text_inputs["input_ids"].to(device), attention_mask=text_inputs["attention_mask"].to(device))
+        
+        return text_embeddings
+    ```
+
 3. **Image Embedding Function**:
     - **Input**: The function takes the model, a list of images (PIL.Image objects), and the device.
     - **Process**: Preprocesses the images using the `image_processor` and produces embeddings using the model.
     - **Output**: Returns embeddings as a tensor of shape BxD, where D is the embedding dimension.
 
-### Example Implementations
+    This is an example:
+    ```python
+    def encode_image_CLIPrsicdv2(model:CLIPModel, imageprocessor:CLIPImageProcessor, images:List[PIL.Image.Image], device:str):
+        '''
+        This function takes a list of images and returns their embeddings using CLIPrsicdv2
+        '''
+        image_inputs = imageprocessor(images, return_tensors="pt")
+        image_embeddings = model.get_image_features(pixel_values=image_inputs["pixel_values"].to(device))
+        return image_embeddings
+    ```
 
-You can find example implementations of these functions in `utils.py`. Specifically, functions to load and process models such as `remoteCLIP`, `georsCLIP`, `CLIPrsicdv2`, and `openaiCLIP` have been implemented for reference.
-
-## Installation
-1. Create a conda environment following the instructions contained in ```environment.txt``` or using ```requirements.txt```.
-2. Adjust the environmental variables of the dataset in ```.env``` in order to properly locate the datasets.
-
-> **_Note:_**  We are working to provide instructions to download and prepare all the datasets.
-
-## Usage
+After you have defined these functions, you can evaluate your model by following these steps:
 1. Modify the beginning of the module ```eval.py``` by importing your custom functions, and replacing them after "load_function", "encode_text_fn" and "encode_image_fn".
 2. Modify the templates, placing the ones that you want to use for evaluation.
 3. Run ```eval.py```.
-4. Collect the results in the ```reports/``` folder saved in a Latex document.
+4. Collect the results in the ```reports/``` folder saved in a txt file.
 
-## Benchmark Datasets
-The following list provides the datasets used to benchmark your model.
+## Datasets
 
 ### Zero shot classification
 - [X] [UCM](http://weegee.vision.ucmerced.edu/datasets/landuse.html)
@@ -76,17 +148,20 @@ The following list provides the datasets used to benchmark your model.
 - [X] [SIDNEY](https://mega.nz/folder/pG4yTYYA#4c4buNFLibryZnlujsrwEQ)
 - [X] [UCM](https://mega.nz/folder/wCpSzSoS#RXzIlrv--TDt3ENZdKN8JA)
 
-Datasets marked with [X] are already implemented and ready to use.
+Datasets marked with [X] are already implemented and included in the benchmark.
 
 We are constantly updating the number of datasets that we support for testing. 
-If needed, an exhaustive list of other satellite datasets is available [here](https://captain-whu.github.io/DiRS/).
+<!-- If needed, an exhaustive list of other satellite datasets is available [here](https://captain-whu.github.io/DiRS/). -->
 
 To visualize the samples of all the above datasets, a web tool has been implemented (```web_app/main.py```)
 
-## Benchmark Models
-The following figures report some baselines of CLIP-like models. Some are original, while others are finetuned for the remote sensing scenario.
+### Dataset preparation
+Each dataset should be downloaded and preprocessed accoring to the instructions in [dataset preparation](md_files/dataset_preparation.md).
 
-For a detailed breakdown on each dataset, refer to the [report](reports/single_model_breakdown.md).
+## Benchmark Models
+The following figures report results on zero-shot classification, linear probing and retrieval of the models in literature up to now. There are original models, as well as models fine-tuned on remote sensing datasets.
+
+For a detailed breakdown on each dataset, refer to the [report](md_files/single_model_breakdown.md).
 
 ### Zero-shot classification accuracy (%)
 ![alt text](assets/zero_shot_acc.png)
@@ -99,87 +174,4 @@ For a detailed breakdown on each dataset, refer to the [report](reports/single_m
 
 ### Image to Text Recall @ 1 (%)
 ![alt text](assets/I2T.png)
-
-## Dataset preparation
-Each dataset should be downloaded and preprocessed. For each dataset, we delineate below the steps to accomplish to prepare it for the benchmarking.
-First, create a folder named "benchmarks", wherever you want, and put its path in the .env file.
-
-### UCM
-1. Download the file ``UCM_captions.zip`` from [here](https://mega.nz/folder/wCpSzSoS#RXzIlrv--TDt3ENZdKN8JA).
-2. Extract the zip file and open its content.
-3. Rename the file ``dataset.json`` into ``captions.json`` and put it under ``dataset/benchmarks/UCM/labels/``.
-4. Extract ``imgs.rar`` and put its content into ``dataset/benchmarks/UCM/images/captions/``.
-5. Download the file ``UCMerced_LandUse.zip`` from [here](http://weegee.vision.ucmerced.edu/datasets/landuse.html).
-6. Extract the zip file and open its content.
-7. Copy the content of the folder ``Images`` into ``dataset/benchmarks/UCM/images/labels/``.
-8. Prepare the dataset using ``dataset/benchmarks/UCM/build_labels.ipynb`` and ``dataset/benchmarks/UCM/build_captions.ipynb``.
-
-### WHU_RS19
-1. Download the file ``WHU-RS19.zip`` from [here](https://captain-whu.github.io/BED4RS/#).
-2. Extract the zip file and copy its content into ``dataset/benchmarks/WHU_RS19/images/``.
-3. Prepare the dataset using ``dataset/benchmarks/WHU_RS19/build_labels.ipynb``.
-
-### RSSCN7
-Steps:
-1. Navigate to the "benchmarks" folder.
-2. Clone the repository 
-```bash
-git clone https://github.com/palewithout/RSSCN7
-```
-3. Copy the file "metadata/RSSCN7/RSSCN7.pkl" inside "benchmarks/RSSCN7".
-
-This dataset does not provide train-test-val splits in literature. We created random train-test-val splits using stratification, to ensure that the classes are balanced in each split.
-
-### SIRI_WHU
-
-### RESISC45
-1. Download the file ``NWPU_RESISC45-20210923T210241Z-001.zip`` from [here](https://figshare.com/articles/dataset/NWPU-RESISC45_Dataset_with_12_classes/16674166).
-2. Extract the zip file and copy its content into ``dataset/benchmarks/RESISC45/images/``.
-3. Prepare the dataset using ``dataset/benchmarks/RESISC45/build_labels.ipynb``.
-
-### RSI_CB256
-1. Download the file ``RSI-CB256.rar`` from [here](https://github.com/lehaifeng/RSI-CB).
-2. Extract the rar file and copy its content into ``dataset/benchmarks/RSI_CB256/images/``.
-3. Prepare the dataset using ``dataset/benchmarks/RSI_CB256/build_labels.ipynb``.
-
-### EuroSAT
-1. Download the file ``EuroSAT.zip`` from [here](https://github.com/phelber/eurosat).
-2. Extract the zip file and copy its content into ``dataset/benchmarks/EuroSAT/images/``.
-3. Prepare the dataset using ``dataset/benchmarks/EuroSAT/build_labels.ipynb``.
-
-### PatternNet
-1. Download the file ``PatternNet.zip`` from [here](https://sites.google.com/view/zhouwx/dataset).
-2. Extract the zip file and open its content.
-3. Copy the content of the folder ``images`` into ``dataset/benchmarks/PatternNet/images/``.
-4. Prepare the dataset using ``dataset/benchmarks/PatternNet/build_labels.ipynb``.
-
-### OPTIMAL_31
-1. Download the file ``archive.zip`` from [here](https://www.kaggle.com/datasets/brajrajnagar/optimal-31).
-2. Extract the zip file and open its content.
-3. Copy the content of the folder ``Images`` into ``dataset/benchmarks/OPTIMAL_31/images/``.
-4. Prepare the dataset using ``dataset/benchmarks/OPTIMAL_31/build_labels.ipynb``.
-
-### MLRSNet
-1. Download the file ``MLRSNet A Multi-label High Spatial Resolution Remote Sensing Dataset for Semantic Scene Understanding.zip`` from [here](https://github.com/cugbrs/MLRSNet).
-2. Extract the zip file and open its content.
-3. Copy the content of the folder ``Labels`` into ``dataset/benchmarks/MLRSNet/labels/data/``.
-4. Extract each rar file of the folder ``Images`` into ``dataset/benchmarks/MLRSNet/images/``.
-5. Prepare the dataset using ``dataset/benchmarks/MLRSNet/build_labels.ipynb``.
-
-### RSICD
-1. Download the file ``RSICD_optimal-master.zip`` from [here](https://github.com/201528014227051/RSICD_optimal).
-2. Extract the zip file and open its content.
-3. Copy the file ``dataset_rsicd.json`` into ``dataset/benchmarks/RSICD/labels/sentences/``.
-4. Extract the file ``txtclasses_rsicd.rar`` and copy its content into ``dataset/benchmarks/RSICD/labels/classes/``.
-5. Extract the file ``RSICD_images.zip`` and copy its content into ``dataset/benchmarks/RSICD/images/``.
-6. Prepare the dataset using ``dataset/benchmarks/RSICD/build_labels.ipynb``.
-
-### RSITMD
-1. Download the file ``RSITMD.zip`` from [here](https://github.com/xiaoyuan1996/AMFMN).
-2. Extract the zip file and open its content.
-3. Copy the content of the folder ``images`` into ``dataset/benchmarks/RSITMD/images/``.
-5. Copy the file ``dataset_RSITMD.json`` into ``dataset/benchmarks/RSITMD/labels/``.
-4. Prepare the dataset using ``dataset/benchmarks/RSITMD/build_labels.ipynb``.
-
-### SIDNEY
 

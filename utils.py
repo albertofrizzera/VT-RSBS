@@ -337,7 +337,6 @@ def get_preprocess(n_px):
 
 ### BASELINE CLIP ###
 def load_CLIP(model_name:str, device:str):
-    model_name = model_name.split("_")[1]
     model, imageprocessor = clip.load(model_name, device=device)
     textprocessor = clip.tokenize
     
@@ -369,7 +368,6 @@ def encode_image_CLIP(model:clip.model, imageprocessor:callable, images:List[PIL
     
 ### REMOTECLIP ###
 def load_remoteCLIP(model_name:str, device:str):
-    model_name = model_name.split("_")[1]
     model, _, imageprocessor = open_clip.create_model_and_transforms(model_name)
     
     ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/remoteCLIP/models--chendelong--RemoteCLIP/snapshots/bf1d8a3ccf2ddbf7c875705e46373bfe542bce38/RemoteCLIP-{model_name}.pt", map_location="cpu")
@@ -449,7 +447,6 @@ def load_geoRSCLIP(model_name:str, device:str):
     '''
     Loads the geoRSCLIP model.
     '''
-    model_name = model_name.split("_")[1]
     model, _, _ = open_clip.create_model_and_transforms(model_name)
     ckpt = torch.load(f"/media/data_fast/Riccardo/RemoTextVision_benchmark/geoRSCLIP/models--Zilun--GeoRSCLIP/snapshots/0b7b13838d11b8ab43ca72706fd03d5177e3ffa9/ckpt/RS5M_{model_name}.pt", map_location="cpu")
     model.load_state_dict(ckpt, strict=False)
@@ -490,7 +487,6 @@ def load_clipRSICDv2(model_name:str, device:str):
     '''
     Loads the CLIPrsicdv2 model.
     '''
-    model_name = model_name.split("_")[1]
     model = CLIPModel.from_pretrained(model_name)
     model.to(device)
     textprocessor = CLIPTokenizer.from_pretrained(model_name)
@@ -516,16 +512,16 @@ def encode_image_CLIPrsicdv2(model:CLIPModel, imageprocessor:CLIPImageProcessor,
     return image_embeddings
 
 
-if __name__=="__main__":
-    BASE_MODEL = "GeoRSCLIP_ViT-H-14"
-    DEVICE = "cuda"
-    model, textprocessor, imageprocessor = load_geoRSCLIP(BASE_MODEL, device=DEVICE)
-    print("Model parameters: ", sum(p.numel() for p in model.parameters()))
-    # Produce a dummy PIL image
-    image = Image.new("RGB", (224, 224))
-    images = [image,image,image]
-    texts = ["a remote sensing image of a forest", "a remote sensing image of a city", "a remote sensing image of a river"]
-    text_embs = encode_text_CLIP(model, textprocessor, texts, "cuda")
-    imgs_embs = encode_image_CLIP(model, imageprocessor, images, "cuda")
-    print(text_embs.device)
-    print(imgs_embs.device)
+#if __name__=="__main__":
+    # BASE_MODEL = "ViT-H-14"
+    # DEVICE = "cuda"
+    # model, textprocessor, imageprocessor = load_geoRSCLIP(BASE_MODEL, device=DEVICE)
+    # print("Model parameters: ", sum(p.numel() for p in model.parameters()))
+    # # Produce a dummy PIL image
+    # image = Image.new("RGB", (224, 224))
+    # images = [image,image,image]
+    # texts = ["a remote sensing image of a forest", "a remote sensing image of a city", "a remote sensing image of a river"]
+    # text_embs = encode_text_CLIP(model, textprocessor, texts, "cuda")
+    # imgs_embs = encode_image_CLIP(model, imageprocessor, images, "cuda")
+    # print(text_embs.device)
+    # print(imgs_embs.device)

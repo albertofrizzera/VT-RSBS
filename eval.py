@@ -20,12 +20,14 @@ load_function = load_CLIP
 encode_text_fn = encode_text_CLIP
 encode_image_fn = encode_image_CLIP
 
-BASE_MODEL = "CLIPrsicdv2_"+original_CLIP_models[0]
+MODEL_TYPE = "CLIPrsicdv2_"
+BASE_MODEL = original_CLIP_models[0]
 DEVICE = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 2
-SAVE_REPORT_PATH = "reports/report_"+BASE_MODEL.replace("/","")+".txt"
+SAVE_REPORT_PATH = "reports/report_"+MODEL_TYPE+BASE_MODEL.replace("/","")+".txt"
 # "UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"
-ZERO_SHOT = ["UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"]
+# ZERO_SHOT = ["UCM","WHU_RS19","RSSCN7","SIRI_WHU","RESISC45","RSI_CB128","RSI_CB256","EuroSAT","PatternNet","OPTIMAL_31","MLRSNet","RSICD","RSITMD"]
+ZERO_SHOT = ["EuroSAT"]
 # "RSICD","RSITMD","UCM","SIDNEY"
 RETRIEVAL = ["RSICD","RSITMD","UCM","SIDNEY"]
 retrieval_k_vals = [1, 5, 10, 50]
