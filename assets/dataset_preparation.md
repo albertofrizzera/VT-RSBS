@@ -3,14 +3,17 @@
 First, create a folder named "benchmarks", wherever you want, and put its path in the .env file.
 
 ### UCM
+This dataset has two versions, one with labels and one with captions. The following instructions prepare both of them.
+
 1. Download the file ``UCM_captions.zip`` from [here](https://mega.nz/folder/wCpSzSoS#RXzIlrv--TDt3ENZdKN8JA).
 2. Extract the zip file and open its content.
-3. Rename the file ``dataset.json`` into ``captions.json`` and put it under ``benchmarks/UCM/labels/``.
-4. Extract ``imgs.rar`` and put its content into ``benchmarks/UCM/images/captions/``.
-5. Download the file ``UCMerced_LandUse.zip`` from [here](http://weegee.vision.ucmerced.edu/datasets/landuse.html).
-6. Extract the zip file and open its content.
-7. Copy the content of the folder ``Images`` into ``benchmarks/UCM/images/labels/``.
-8. Copy the files ``metadata/UCM/UCM_captions.csv`` and ``metadata/UCM/UCM.csv`` into ``benchmarks/UCM/labels/``.
+3. Create a folder named "UCM" inside ``benchmarks/``.
+4. Rename the file ``dataset.json`` into ``captions.json`` and put it under ``benchmarks/UCM/labels/``.
+5. Extract ``imgs.rar`` and put its content into ``benchmarks/UCM/images/captions/``.
+6. Download the file ``UCMerced_LandUse.zip`` from [here](http://weegee.vision.ucmerced.edu/datasets/landuse.html).
+7. Extract the zip file and open its content.
+8. Copy the content of the folder ``Images`` into ``benchmarks/UCM/images/labels/``.
+9. Copy the files ``metadata/UCM/UCM_captions.csv`` and ``metadata/UCM/UCM.csv`` into ``benchmarks/UCM/labels/``.
 
 Final folder structure
 ```
@@ -30,24 +33,41 @@ Final folder structure
 |  |  |  |  |  ├── baseball_diamond_00.tif
 |  |  |  |  |  ├── baseball_diamond_01.tif
 │  │  ├── labels
-│  │  │  ├── captions.jsonù
+│  │  │  ├── captions.json
 │  │  │  ├── UCM_captions.csv
 │  │  │  ├── UCM.csv
 ```
 
 ### WHU_RS19
 1. Download the file ``WHU-RS19.zip`` from [here](https://captain-whu.github.io/BED4RS/#).
-2. Extract the zip file and copy its content into ``dataset/benchmarks/WHU_RS19/images/``.
-3. Prepare the dataset using ``dataset/benchmarks/WHU_RS19/build_labels.ipynb``.
+2. Create a folder named "WHU_RS19" inside ``benchmarks/``.
+3. Extract the zip file and copy its content into ``benchmarks/WHU_RS19/images/``.
+4. Copy the file ``metadata/WHU_RS19/WHU_RS19.csv`` into ``benchmarks/WHU_RS19/labels/``.
+
+Final folder structure
+```
+| benchmarks
+│  ├── WHU_RS19
+│  │  ├── images
+│  │  │  ├── airport
+│  │  │  │  ├── airport_01.jpg
+│  │  │  |  ├── airport_02.jpg
+│  │  │  |  ├── ...
+│  │  │  ├── beach
+│  │  │  │  ├── beach-01.jpg
+│  │  │  |  ├── beach-02.jpg
+│  │  ├── labels
+│  │  │  ├── WHU_RS19.csv
+```
 
 ### RSSCN7
 Steps:
-1. Navigate to the "benchmarks" folder.
-2. Clone the repository 
-```bash
-git clone https://github.com/palewithout/RSSCN7
-```
-3. Copy the file "metadata/RSSCN7/RSSCN7.pkl" inside "benchmarks/RSSCN7".
+1. Create a folder named "RSSCN7" inside ``benchmarks/`` and navigate to it.
+2. Clone the repository inside the folder.
+    ```bash
+    git clone https://github.com/palewithout/RSSCN7
+    ```
+3. Copy the file ``metadata/RSSCN7/RSSCN7.csv`` inside ``benchmarks/RSSCN7/labels``.
 
 This dataset does not provide train-test-val splits in literature. We created random train-test-val splits using stratification, to ensure that the classes are balanced in each split.
 

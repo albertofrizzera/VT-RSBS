@@ -1,0 +1,2101 @@
+,filepath,label,split
+0,airplane/airplane68.tif,airplane,train
+1,airplane/airplane77.tif,airplane,train
+2,agricultural/agricultural34.tif,agricultural,train
+3,agricultural/agricultural71.tif,agricultural,train
+4,chaparral/chaparral23.tif,chaparral,train
+5,freeway/freeway41.tif,freeway,train
+6,freeway/freeway03.tif,freeway,train
+7,runway/runway63.tif,runway,train
+8,freeway/freeway48.tif,freeway,train
+9,forest/forest29.tif,forest,train
+10,runway/runway52.tif,runway,train
+11,river/river29.tif,river,train
+12,dense_residential/denseresidential13.tif,dense residential,train
+13,freeway/freeway70.tif,freeway,train
+14,dense_residential/denseresidential25.tif,dense residential,train
+15,parking_lot/parkinglot76.tif,parking lot,train
+16,tennis_court/tenniscourt49.tif,tennis court,train
+17,forest/forest90.tif,forest,train
+18,storage_tanks/storagetanks10.tif,storage tanks,train
+19,mobile_home_park/mobilehomepark57.tif,mobile home park,train
+20,dense_residential/denseresidential79.tif,dense residential,train
+21,overpass/overpass50.tif,overpass,train
+22,overpass/overpass73.tif,overpass,train
+23,storage_tanks/storagetanks51.tif,storage tanks,train
+24,forest/forest07.tif,forest,train
+25,dense_residential/denseresidential30.tif,dense residential,train
+26,medium_residential/mediumresidential86.tif,medium residential,train
+27,storage_tanks/storagetanks14.tif,storage tanks,train
+28,storage_tanks/storagetanks00.tif,storage tanks,train
+29,freeway/freeway68.tif,freeway,train
+30,overpass/overpass08.tif,overpass,train
+31,sparse_residential/sparseresidential61.tif,sparse residential,train
+32,river/river36.tif,river,train
+33,sparse_residential/sparseresidential27.tif,sparse residential,train
+34,medium_residential/mediumresidential78.tif,medium residential,train
+35,tennis_court/tenniscourt73.tif,tennis court,train
+36,forest/forest63.tif,forest,train
+37,airplane/airplane34.tif,airplane,train
+38,baseball_diamond/baseballdiamond07.tif,baseball diamond,train
+39,medium_residential/mediumresidential75.tif,medium residential,train
+40,freeway/freeway91.tif,freeway,train
+41,airplane/airplane28.tif,airplane,train
+42,baseball_diamond/baseballdiamond62.tif,baseball diamond,train
+43,storage_tanks/storagetanks57.tif,storage tanks,train
+44,overpass/overpass38.tif,overpass,train
+45,beach/beach86.tif,beach,train
+46,intersection/intersection58.tif,intersection,train
+47,parking_lot/parkinglot09.tif,parking lot,train
+48,freeway/freeway46.tif,freeway,train
+49,dense_residential/denseresidential78.tif,dense residential,train
+50,airplane/airplane04.tif,airplane,train
+51,runway/runway83.tif,runway,train
+52,medium_residential/mediumresidential15.tif,medium residential,train
+53,harbor/harbor91.tif,harbor,train
+54,forest/forest48.tif,forest,train
+55,beach/beach03.tif,beach,train
+56,baseball_diamond/baseballdiamond89.tif,baseball diamond,train
+57,dense_residential/denseresidential16.tif,dense residential,train
+58,dense_residential/denseresidential92.tif,dense residential,train
+59,sparse_residential/sparseresidential93.tif,sparse residential,train
+60,sparse_residential/sparseresidential55.tif,sparse residential,train
+61,baseball_diamond/baseballdiamond90.tif,baseball diamond,train
+62,sparse_residential/sparseresidential24.tif,sparse residential,train
+63,tennis_court/tenniscourt07.tif,tennis court,train
+64,dense_residential/denseresidential08.tif,dense residential,train
+65,river/river92.tif,river,train
+66,baseball_diamond/baseballdiamond73.tif,baseball diamond,train
+67,buildings/buildings89.tif,buildings,train
+68,golf_course/golfcourse21.tif,golf course,train
+69,river/river05.tif,river,train
+70,dense_residential/denseresidential93.tif,dense residential,train
+71,storage_tanks/storagetanks40.tif,storage tanks,train
+72,airplane/airplane33.tif,airplane,train
+73,airplane/airplane10.tif,airplane,train
+74,beach/beach46.tif,beach,train
+75,forest/forest69.tif,forest,train
+76,forest/forest42.tif,forest,train
+77,forest/forest04.tif,forest,train
+78,storage_tanks/storagetanks79.tif,storage tanks,train
+79,beach/beach57.tif,beach,train
+80,chaparral/chaparral80.tif,chaparral,train
+81,airplane/airplane79.tif,airplane,train
+82,freeway/freeway56.tif,freeway,train
+83,golf_course/golfcourse52.tif,golf course,train
+84,baseball_diamond/baseballdiamond37.tif,baseball diamond,train
+85,golf_course/golfcourse70.tif,golf course,train
+86,river/river82.tif,river,train
+87,dense_residential/denseresidential76.tif,dense residential,train
+88,buildings/buildings45.tif,buildings,train
+89,runway/runway67.tif,runway,train
+90,beach/beach40.tif,beach,train
+91,harbor/harbor63.tif,harbor,train
+92,golf_course/golfcourse12.tif,golf course,train
+93,intersection/intersection57.tif,intersection,train
+94,storage_tanks/storagetanks29.tif,storage tanks,train
+95,harbor/harbor17.tif,harbor,train
+96,agricultural/agricultural93.tif,agricultural,train
+97,baseball_diamond/baseballdiamond21.tif,baseball diamond,train
+98,runway/runway38.tif,runway,train
+99,buildings/buildings47.tif,buildings,train
+100,sparse_residential/sparseresidential56.tif,sparse residential,train
+101,sparse_residential/sparseresidential25.tif,sparse residential,train
+102,sparse_residential/sparseresidential26.tif,sparse residential,train
+103,mobile_home_park/mobilehomepark76.tif,mobile home park,train
+104,mobile_home_park/mobilehomepark91.tif,mobile home park,train
+105,medium_residential/mediumresidential38.tif,medium residential,train
+106,chaparral/chaparral22.tif,chaparral,train
+107,mobile_home_park/mobilehomepark95.tif,mobile home park,train
+108,mobile_home_park/mobilehomepark67.tif,mobile home park,train
+109,tennis_court/tenniscourt58.tif,tennis court,train
+110,forest/forest01.tif,forest,train
+111,sparse_residential/sparseresidential50.tif,sparse residential,train
+112,airplane/airplane64.tif,airplane,train
+113,mobile_home_park/mobilehomepark14.tif,mobile home park,train
+114,chaparral/chaparral57.tif,chaparral,train
+115,runway/runway02.tif,runway,train
+116,storage_tanks/storagetanks75.tif,storage tanks,train
+117,sparse_residential/sparseresidential15.tif,sparse residential,train
+118,tennis_court/tenniscourt05.tif,tennis court,train
+119,buildings/buildings17.tif,buildings,train
+120,sparse_residential/sparseresidential94.tif,sparse residential,train
+121,runway/runway55.tif,runway,train
+122,baseball_diamond/baseballdiamond57.tif,baseball diamond,train
+123,intersection/intersection44.tif,intersection,train
+124,baseball_diamond/baseballdiamond16.tif,baseball diamond,train
+125,harbor/harbor01.tif,harbor,train
+126,tennis_court/tenniscourt69.tif,tennis court,train
+127,tennis_court/tenniscourt48.tif,tennis court,train
+128,baseball_diamond/baseballdiamond84.tif,baseball diamond,train
+129,buildings/buildings07.tif,buildings,train
+130,buildings/buildings76.tif,buildings,train
+131,mobile_home_park/mobilehomepark13.tif,mobile home park,train
+132,sparse_residential/sparseresidential00.tif,sparse residential,train
+133,river/river98.tif,river,train
+134,mobile_home_park/mobilehomepark83.tif,mobile home park,train
+135,beach/beach28.tif,beach,train
+136,river/river31.tif,river,train
+137,overpass/overpass53.tif,overpass,train
+138,beach/beach79.tif,beach,train
+139,agricultural/agricultural57.tif,agricultural,train
+140,parking_lot/parkinglot87.tif,parking lot,train
+141,intersection/intersection97.tif,intersection,train
+142,chaparral/chaparral49.tif,chaparral,train
+143,baseball_diamond/baseballdiamond28.tif,baseball diamond,train
+144,beach/beach19.tif,beach,train
+145,beach/beach22.tif,beach,train
+146,buildings/buildings09.tif,buildings,train
+147,tennis_court/tenniscourt10.tif,tennis court,train
+148,sparse_residential/sparseresidential59.tif,sparse residential,train
+149,intersection/intersection48.tif,intersection,train
+150,parking_lot/parkinglot70.tif,parking lot,train
+151,agricultural/agricultural39.tif,agricultural,train
+152,freeway/freeway00.tif,freeway,train
+153,tennis_court/tenniscourt59.tif,tennis court,train
+154,river/river53.tif,river,train
+155,dense_residential/denseresidential17.tif,dense residential,train
+156,storage_tanks/storagetanks95.tif,storage tanks,train
+157,baseball_diamond/baseballdiamond33.tif,baseball diamond,train
+158,storage_tanks/storagetanks19.tif,storage tanks,train
+159,airplane/airplane24.tif,airplane,train
+160,medium_residential/mediumresidential23.tif,medium residential,train
+161,tennis_court/tenniscourt14.tif,tennis court,train
+162,airplane/airplane95.tif,airplane,train
+163,runway/runway64.tif,runway,train
+164,dense_residential/denseresidential65.tif,dense residential,train
+165,baseball_diamond/baseballdiamond04.tif,baseball diamond,train
+166,freeway/freeway86.tif,freeway,train
+167,sparse_residential/sparseresidential28.tif,sparse residential,train
+168,river/river11.tif,river,train
+169,airplane/airplane35.tif,airplane,train
+170,freeway/freeway11.tif,freeway,train
+171,intersection/intersection20.tif,intersection,train
+172,airplane/airplane15.tif,airplane,train
+173,mobile_home_park/mobilehomepark85.tif,mobile home park,train
+174,airplane/airplane78.tif,airplane,train
+175,sparse_residential/sparseresidential95.tif,sparse residential,train
+176,agricultural/agricultural37.tif,agricultural,train
+177,agricultural/agricultural02.tif,agricultural,train
+178,river/river45.tif,river,train
+179,freeway/freeway33.tif,freeway,train
+180,overpass/overpass34.tif,overpass,train
+181,dense_residential/denseresidential51.tif,dense residential,train
+182,golf_course/golfcourse50.tif,golf course,train
+183,dense_residential/denseresidential52.tif,dense residential,train
+184,baseball_diamond/baseballdiamond42.tif,baseball diamond,train
+185,buildings/buildings41.tif,buildings,train
+186,mobile_home_park/mobilehomepark33.tif,mobile home park,train
+187,river/river69.tif,river,train
+188,chaparral/chaparral11.tif,chaparral,train
+189,golf_course/golfcourse78.tif,golf course,train
+190,forest/forest68.tif,forest,train
+191,beach/beach64.tif,beach,train
+192,baseball_diamond/baseballdiamond67.tif,baseball diamond,train
+193,beach/beach59.tif,beach,train
+194,airplane/airplane74.tif,airplane,train
+195,tennis_court/tenniscourt75.tif,tennis court,train
+196,forest/forest91.tif,forest,train
+197,airplane/airplane32.tif,airplane,train
+198,agricultural/agricultural06.tif,agricultural,train
+199,sparse_residential/sparseresidential88.tif,sparse residential,train
+200,river/river42.tif,river,train
+201,buildings/buildings01.tif,buildings,train
+202,tennis_court/tenniscourt31.tif,tennis court,train
+203,parking_lot/parkinglot85.tif,parking lot,train
+204,golf_course/golfcourse59.tif,golf course,train
+205,overpass/overpass69.tif,overpass,train
+206,freeway/freeway38.tif,freeway,train
+207,baseball_diamond/baseballdiamond66.tif,baseball diamond,train
+208,freeway/freeway36.tif,freeway,train
+209,overpass/overpass80.tif,overpass,train
+210,airplane/airplane75.tif,airplane,train
+211,forest/forest28.tif,forest,train
+212,beach/beach23.tif,beach,train
+213,storage_tanks/storagetanks11.tif,storage tanks,train
+214,airplane/airplane26.tif,airplane,train
+215,runway/runway45.tif,runway,train
+216,airplane/airplane73.tif,airplane,train
+217,forest/forest47.tif,forest,train
+218,medium_residential/mediumresidential82.tif,medium residential,train
+219,runway/runway27.tif,runway,train
+220,airplane/airplane30.tif,airplane,train
+221,chaparral/chaparral90.tif,chaparral,train
+222,overpass/overpass23.tif,overpass,train
+223,freeway/freeway50.tif,freeway,train
+224,storage_tanks/storagetanks69.tif,storage tanks,train
+225,runway/runway59.tif,runway,train
+226,intersection/intersection85.tif,intersection,train
+227,dense_residential/denseresidential15.tif,dense residential,train
+228,agricultural/agricultural73.tif,agricultural,train
+229,harbor/harbor62.tif,harbor,train
+230,forest/forest44.tif,forest,train
+231,intersection/intersection53.tif,intersection,train
+232,storage_tanks/storagetanks26.tif,storage tanks,train
+233,river/river80.tif,river,train
+234,storage_tanks/storagetanks37.tif,storage tanks,train
+235,runway/runway85.tif,runway,train
+236,baseball_diamond/baseballdiamond10.tif,baseball diamond,train
+237,river/river40.tif,river,train
+238,forest/forest54.tif,forest,train
+239,beach/beach68.tif,beach,train
+240,medium_residential/mediumresidential68.tif,medium residential,train
+241,harbor/harbor56.tif,harbor,train
+242,medium_residential/mediumresidential17.tif,medium residential,train
+243,harbor/harbor39.tif,harbor,train
+244,dense_residential/denseresidential33.tif,dense residential,train
+245,runway/runway82.tif,runway,train
+246,dense_residential/denseresidential74.tif,dense residential,train
+247,medium_residential/mediumresidential80.tif,medium residential,train
+248,buildings/buildings92.tif,buildings,train
+249,harbor/harbor05.tif,harbor,train
+250,beach/beach55.tif,beach,train
+251,tennis_court/tenniscourt97.tif,tennis court,train
+252,overpass/overpass92.tif,overpass,train
+253,parking_lot/parkinglot99.tif,parking lot,train
+254,dense_residential/denseresidential73.tif,dense residential,train
+255,storage_tanks/storagetanks61.tif,storage tanks,train
+256,intersection/intersection29.tif,intersection,train
+257,golf_course/golfcourse57.tif,golf course,train
+258,overpass/overpass27.tif,overpass,train
+259,golf_course/golfcourse75.tif,golf course,train
+260,harbor/harbor42.tif,harbor,train
+261,river/river95.tif,river,train
+262,beach/beach49.tif,beach,train
+263,buildings/buildings46.tif,buildings,train
+264,intersection/intersection62.tif,intersection,train
+265,chaparral/chaparral00.tif,chaparral,train
+266,medium_residential/mediumresidential44.tif,medium residential,train
+267,freeway/freeway09.tif,freeway,train
+268,chaparral/chaparral94.tif,chaparral,train
+269,dense_residential/denseresidential28.tif,dense residential,train
+270,harbor/harbor46.tif,harbor,train
+271,storage_tanks/storagetanks56.tif,storage tanks,train
+272,river/river24.tif,river,train
+273,intersection/intersection15.tif,intersection,train
+274,storage_tanks/storagetanks65.tif,storage tanks,train
+275,dense_residential/denseresidential23.tif,dense residential,train
+276,parking_lot/parkinglot49.tif,parking lot,train
+277,forest/forest39.tif,forest,train
+278,buildings/buildings56.tif,buildings,train
+279,parking_lot/parkinglot00.tif,parking lot,train
+280,parking_lot/parkinglot29.tif,parking lot,train
+281,golf_course/golfcourse55.tif,golf course,train
+282,parking_lot/parkinglot34.tif,parking lot,train
+283,medium_residential/mediumresidential05.tif,medium residential,train
+284,sparse_residential/sparseresidential23.tif,sparse residential,train
+285,golf_course/golfcourse19.tif,golf course,train
+286,dense_residential/denseresidential57.tif,dense residential,train
+287,intersection/intersection70.tif,intersection,train
+288,tennis_court/tenniscourt90.tif,tennis court,train
+289,intersection/intersection81.tif,intersection,train
+290,buildings/buildings06.tif,buildings,train
+291,agricultural/agricultural47.tif,agricultural,train
+292,buildings/buildings48.tif,buildings,train
+293,beach/beach42.tif,beach,train
+294,storage_tanks/storagetanks92.tif,storage tanks,train
+295,chaparral/chaparral83.tif,chaparral,train
+296,mobile_home_park/mobilehomepark09.tif,mobile home park,train
+297,harbor/harbor43.tif,harbor,train
+298,runway/runway22.tif,runway,train
+299,airplane/airplane13.tif,airplane,train
+300,medium_residential/mediumresidential94.tif,medium residential,train
+301,medium_residential/mediumresidential37.tif,medium residential,train
+302,golf_course/golfcourse51.tif,golf course,train
+303,medium_residential/mediumresidential56.tif,medium residential,train
+304,river/river43.tif,river,train
+305,medium_residential/mediumresidential19.tif,medium residential,train
+306,agricultural/agricultural31.tif,agricultural,train
+307,dense_residential/denseresidential80.tif,dense residential,train
+308,forest/forest49.tif,forest,train
+309,parking_lot/parkinglot33.tif,parking lot,train
+310,parking_lot/parkinglot27.tif,parking lot,train
+311,beach/beach12.tif,beach,train
+312,overpass/overpass76.tif,overpass,train
+313,chaparral/chaparral28.tif,chaparral,train
+314,river/river64.tif,river,train
+315,chaparral/chaparral48.tif,chaparral,train
+316,tennis_court/tenniscourt50.tif,tennis court,train
+317,forest/forest56.tif,forest,train
+318,mobile_home_park/mobilehomepark02.tif,mobile home park,train
+319,forest/forest14.tif,forest,train
+320,overpass/overpass20.tif,overpass,train
+321,buildings/buildings21.tif,buildings,train
+322,harbor/harbor74.tif,harbor,train
+323,beach/beach18.tif,beach,train
+324,harbor/harbor16.tif,harbor,train
+325,sparse_residential/sparseresidential70.tif,sparse residential,train
+326,chaparral/chaparral52.tif,chaparral,train
+327,mobile_home_park/mobilehomepark58.tif,mobile home park,train
+328,river/river56.tif,river,train
+329,agricultural/agricultural16.tif,agricultural,train
+330,runway/runway95.tif,runway,train
+331,intersection/intersection08.tif,intersection,train
+332,baseball_diamond/baseballdiamond17.tif,baseball diamond,train
+333,dense_residential/denseresidential64.tif,dense residential,train
+334,buildings/buildings08.tif,buildings,train
+335,golf_course/golfcourse31.tif,golf course,train
+336,medium_residential/mediumresidential07.tif,medium residential,train
+337,freeway/freeway92.tif,freeway,train
+338,baseball_diamond/baseballdiamond49.tif,baseball diamond,train
+339,freeway/freeway76.tif,freeway,train
+340,runway/runway25.tif,runway,train
+341,baseball_diamond/baseballdiamond63.tif,baseball diamond,train
+342,mobile_home_park/mobilehomepark84.tif,mobile home park,train
+343,harbor/harbor14.tif,harbor,train
+344,golf_course/golfcourse98.tif,golf course,train
+345,medium_residential/mediumresidential65.tif,medium residential,train
+346,overpass/overpass78.tif,overpass,train
+347,tennis_court/tenniscourt25.tif,tennis court,train
+348,airplane/airplane70.tif,airplane,train
+349,dense_residential/denseresidential98.tif,dense residential,train
+350,golf_course/golfcourse64.tif,golf course,train
+351,buildings/buildings43.tif,buildings,train
+352,chaparral/chaparral36.tif,chaparral,train
+353,mobile_home_park/mobilehomepark26.tif,mobile home park,train
+354,tennis_court/tenniscourt51.tif,tennis court,train
+355,agricultural/agricultural86.tif,agricultural,train
+356,medium_residential/mediumresidential48.tif,medium residential,train
+357,intersection/intersection76.tif,intersection,train
+358,river/river34.tif,river,train
+359,forest/forest45.tif,forest,train
+360,harbor/harbor66.tif,harbor,train
+361,golf_course/golfcourse58.tif,golf course,train
+362,golf_course/golfcourse77.tif,golf course,train
+363,dense_residential/denseresidential46.tif,dense residential,train
+364,medium_residential/mediumresidential71.tif,medium residential,train
+365,harbor/harbor67.tif,harbor,train
+366,medium_residential/mediumresidential47.tif,medium residential,train
+367,forest/forest46.tif,forest,train
+368,medium_residential/mediumresidential97.tif,medium residential,train
+369,river/river12.tif,river,train
+370,airplane/airplane14.tif,airplane,train
+371,golf_course/golfcourse87.tif,golf course,train
+372,agricultural/agricultural29.tif,agricultural,train
+373,forest/forest70.tif,forest,train
+374,harbor/harbor83.tif,harbor,train
+375,parking_lot/parkinglot45.tif,parking lot,train
+376,intersection/intersection05.tif,intersection,train
+377,parking_lot/parkinglot36.tif,parking lot,train
+378,dense_residential/denseresidential01.tif,dense residential,train
+379,parking_lot/parkinglot72.tif,parking lot,train
+380,forest/forest32.tif,forest,train
+381,tennis_court/tenniscourt55.tif,tennis court,train
+382,forest/forest12.tif,forest,train
+383,freeway/freeway64.tif,freeway,train
+384,chaparral/chaparral18.tif,chaparral,train
+385,chaparral/chaparral81.tif,chaparral,train
+386,river/river78.tif,river,train
+387,runway/runway72.tif,runway,train
+388,baseball_diamond/baseballdiamond29.tif,baseball diamond,train
+389,beach/beach16.tif,beach,train
+390,freeway/freeway37.tif,freeway,train
+391,intersection/intersection71.tif,intersection,train
+392,storage_tanks/storagetanks39.tif,storage tanks,train
+393,parking_lot/parkinglot03.tif,parking lot,train
+394,forest/forest58.tif,forest,train
+395,overpass/overpass16.tif,overpass,train
+396,baseball_diamond/baseballdiamond41.tif,baseball diamond,train
+397,overpass/overpass64.tif,overpass,train
+398,tennis_court/tenniscourt57.tif,tennis court,train
+399,storage_tanks/storagetanks67.tif,storage tanks,train
+400,storage_tanks/storagetanks47.tif,storage tanks,train
+401,intersection/intersection67.tif,intersection,train
+402,airplane/airplane41.tif,airplane,train
+403,buildings/buildings19.tif,buildings,train
+404,chaparral/chaparral42.tif,chaparral,train
+405,golf_course/golfcourse15.tif,golf course,train
+406,overpass/overpass37.tif,overpass,train
+407,mobile_home_park/mobilehomepark81.tif,mobile home park,train
+408,harbor/harbor30.tif,harbor,train
+409,storage_tanks/storagetanks91.tif,storage tanks,train
+410,agricultural/agricultural19.tif,agricultural,train
+411,tennis_court/tenniscourt02.tif,tennis court,train
+412,runway/runway08.tif,runway,train
+413,beach/beach05.tif,beach,train
+414,runway/runway48.tif,runway,train
+415,harbor/harbor35.tif,harbor,train
+416,airplane/airplane16.tif,airplane,train
+417,golf_course/golfcourse79.tif,golf course,train
+418,medium_residential/mediumresidential34.tif,medium residential,train
+419,freeway/freeway59.tif,freeway,train
+420,river/river06.tif,river,train
+421,agricultural/agricultural27.tif,agricultural,train
+422,baseball_diamond/baseballdiamond36.tif,baseball diamond,train
+423,airplane/airplane19.tif,airplane,train
+424,sparse_residential/sparseresidential40.tif,sparse residential,train
+425,buildings/buildings50.tif,buildings,train
+426,buildings/buildings80.tif,buildings,train
+427,baseball_diamond/baseballdiamond61.tif,baseball diamond,train
+428,medium_residential/mediumresidential06.tif,medium residential,train
+429,sparse_residential/sparseresidential29.tif,sparse residential,train
+430,parking_lot/parkinglot74.tif,parking lot,train
+431,baseball_diamond/baseballdiamond82.tif,baseball diamond,train
+432,mobile_home_park/mobilehomepark29.tif,mobile home park,train
+433,golf_course/golfcourse71.tif,golf course,train
+434,chaparral/chaparral51.tif,chaparral,train
+435,river/river37.tif,river,train
+436,agricultural/agricultural54.tif,agricultural,train
+437,agricultural/agricultural01.tif,agricultural,train
+438,parking_lot/parkinglot15.tif,parking lot,train
+439,chaparral/chaparral53.tif,chaparral,train
+440,storage_tanks/storagetanks01.tif,storage tanks,train
+441,parking_lot/parkinglot07.tif,parking lot,train
+442,tennis_court/tenniscourt74.tif,tennis court,train
+443,beach/beach92.tif,beach,train
+444,runway/runway17.tif,runway,train
+445,storage_tanks/storagetanks70.tif,storage tanks,train
+446,medium_residential/mediumresidential66.tif,medium residential,train
+447,harbor/harbor75.tif,harbor,train
+448,overpass/overpass10.tif,overpass,train
+449,buildings/buildings87.tif,buildings,train
+450,overpass/overpass75.tif,overpass,train
+451,airplane/airplane17.tif,airplane,train
+452,medium_residential/mediumresidential12.tif,medium residential,train
+453,beach/beach62.tif,beach,train
+454,river/river86.tif,river,train
+455,overpass/overpass65.tif,overpass,train
+456,beach/beach44.tif,beach,train
+457,chaparral/chaparral70.tif,chaparral,train
+458,forest/forest61.tif,forest,train
+459,buildings/buildings18.tif,buildings,train
+460,parking_lot/parkinglot40.tif,parking lot,train
+461,buildings/buildings15.tif,buildings,train
+462,freeway/freeway23.tif,freeway,train
+463,agricultural/agricultural50.tif,agricultural,train
+464,medium_residential/mediumresidential28.tif,medium residential,train
+465,dense_residential/denseresidential07.tif,dense residential,train
+466,baseball_diamond/baseballdiamond25.tif,baseball diamond,train
+467,runway/runway30.tif,runway,train
+468,beach/beach51.tif,beach,train
+469,intersection/intersection91.tif,intersection,train
+470,overpass/overpass72.tif,overpass,train
+471,freeway/freeway88.tif,freeway,train
+472,beach/beach43.tif,beach,train
+473,chaparral/chaparral71.tif,chaparral,train
+474,forest/forest74.tif,forest,train
+475,beach/beach50.tif,beach,train
+476,harbor/harbor52.tif,harbor,train
+477,mobile_home_park/mobilehomepark88.tif,mobile home park,train
+478,freeway/freeway13.tif,freeway,train
+479,intersection/intersection64.tif,intersection,train
+480,mobile_home_park/mobilehomepark66.tif,mobile home park,train
+481,dense_residential/denseresidential61.tif,dense residential,train
+482,buildings/buildings65.tif,buildings,train
+483,intersection/intersection12.tif,intersection,train
+484,runway/runway80.tif,runway,train
+485,freeway/freeway65.tif,freeway,train
+486,freeway/freeway90.tif,freeway,train
+487,airplane/airplane05.tif,airplane,train
+488,mobile_home_park/mobilehomepark05.tif,mobile home park,train
+489,airplane/airplane37.tif,airplane,train
+490,harbor/harbor65.tif,harbor,train
+491,intersection/intersection17.tif,intersection,train
+492,harbor/harbor21.tif,harbor,train
+493,river/river60.tif,river,train
+494,intersection/intersection74.tif,intersection,train
+495,buildings/buildings29.tif,buildings,train
+496,mobile_home_park/mobilehomepark92.tif,mobile home park,train
+497,overpass/overpass84.tif,overpass,train
+498,freeway/freeway20.tif,freeway,train
+499,medium_residential/mediumresidential99.tif,medium residential,train
+500,parking_lot/parkinglot91.tif,parking lot,train
+501,agricultural/agricultural88.tif,agricultural,train
+502,baseball_diamond/baseballdiamond40.tif,baseball diamond,train
+503,buildings/buildings93.tif,buildings,train
+504,tennis_court/tenniscourt06.tif,tennis court,train
+505,airplane/airplane11.tif,airplane,train
+506,intersection/intersection33.tif,intersection,train
+507,intersection/intersection28.tif,intersection,train
+508,runway/runway58.tif,runway,train
+509,forest/forest33.tif,forest,train
+510,buildings/buildings60.tif,buildings,train
+511,freeway/freeway83.tif,freeway,train
+512,beach/beach75.tif,beach,train
+513,buildings/buildings63.tif,buildings,train
+514,agricultural/agricultural96.tif,agricultural,train
+515,forest/forest20.tif,forest,train
+516,airplane/airplane88.tif,airplane,train
+517,tennis_court/tenniscourt76.tif,tennis court,train
+518,airplane/airplane48.tif,airplane,train
+519,parking_lot/parkinglot83.tif,parking lot,train
+520,golf_course/golfcourse73.tif,golf course,train
+521,golf_course/golfcourse85.tif,golf course,train
+522,medium_residential/mediumresidential18.tif,medium residential,train
+523,storage_tanks/storagetanks22.tif,storage tanks,train
+524,baseball_diamond/baseballdiamond18.tif,baseball diamond,train
+525,dense_residential/denseresidential32.tif,dense residential,train
+526,freeway/freeway18.tif,freeway,train
+527,mobile_home_park/mobilehomepark90.tif,mobile home park,train
+528,dense_residential/denseresidential50.tif,dense residential,train
+529,buildings/buildings81.tif,buildings,train
+530,river/river47.tif,river,train
+531,tennis_court/tenniscourt33.tif,tennis court,train
+532,sparse_residential/sparseresidential38.tif,sparse residential,train
+533,parking_lot/parkinglot67.tif,parking lot,train
+534,overpass/overpass77.tif,overpass,train
+535,harbor/harbor87.tif,harbor,train
+536,mobile_home_park/mobilehomepark36.tif,mobile home park,train
+537,river/river28.tif,river,train
+538,chaparral/chaparral98.tif,chaparral,train
+539,agricultural/agricultural56.tif,agricultural,train
+540,parking_lot/parkinglot80.tif,parking lot,train
+541,beach/beach20.tif,beach,train
+542,forest/forest81.tif,forest,train
+543,buildings/buildings38.tif,buildings,train
+544,tennis_court/tenniscourt84.tif,tennis court,train
+545,forest/forest65.tif,forest,train
+546,buildings/buildings74.tif,buildings,train
+547,agricultural/agricultural63.tif,agricultural,train
+548,parking_lot/parkinglot48.tif,parking lot,train
+549,parking_lot/parkinglot23.tif,parking lot,train
+550,overpass/overpass83.tif,overpass,train
+551,buildings/buildings58.tif,buildings,train
+552,buildings/buildings12.tif,buildings,train
+553,storage_tanks/storagetanks36.tif,storage tanks,train
+554,baseball_diamond/baseballdiamond86.tif,baseball diamond,train
+555,dense_residential/denseresidential29.tif,dense residential,train
+556,freeway/freeway98.tif,freeway,train
+557,beach/beach56.tif,beach,train
+558,medium_residential/mediumresidential96.tif,medium residential,train
+559,harbor/harbor51.tif,harbor,train
+560,overpass/overpass51.tif,overpass,train
+561,overpass/overpass25.tif,overpass,train
+562,beach/beach02.tif,beach,train
+563,river/river62.tif,river,train
+564,river/river97.tif,river,train
+565,airplane/airplane38.tif,airplane,train
+566,beach/beach61.tif,beach,train
+567,baseball_diamond/baseballdiamond68.tif,baseball diamond,train
+568,freeway/freeway85.tif,freeway,train
+569,sparse_residential/sparseresidential83.tif,sparse residential,train
+570,forest/forest17.tif,forest,train
+571,storage_tanks/storagetanks35.tif,storage tanks,train
+572,mobile_home_park/mobilehomepark78.tif,mobile home park,train
+573,airplane/airplane23.tif,airplane,train
+574,freeway/freeway22.tif,freeway,train
+575,buildings/buildings23.tif,buildings,train
+576,chaparral/chaparral43.tif,chaparral,train
+577,baseball_diamond/baseballdiamond47.tif,baseball diamond,train
+578,intersection/intersection37.tif,intersection,train
+579,storage_tanks/storagetanks71.tif,storage tanks,train
+580,chaparral/chaparral16.tif,chaparral,train
+581,sparse_residential/sparseresidential84.tif,sparse residential,train
+582,chaparral/chaparral75.tif,chaparral,train
+583,parking_lot/parkinglot05.tif,parking lot,train
+584,intersection/intersection51.tif,intersection,train
+585,runway/runway57.tif,runway,train
+586,sparse_residential/sparseresidential98.tif,sparse residential,train
+587,intersection/intersection89.tif,intersection,train
+588,baseball_diamond/baseballdiamond11.tif,baseball diamond,train
+589,river/river08.tif,river,train
+590,freeway/freeway52.tif,freeway,train
+591,chaparral/chaparral97.tif,chaparral,train
+592,agricultural/agricultural60.tif,agricultural,train
+593,medium_residential/mediumresidential29.tif,medium residential,train
+594,golf_course/golfcourse01.tif,golf course,train
+595,golf_course/golfcourse40.tif,golf course,train
+596,mobile_home_park/mobilehomepark35.tif,mobile home park,train
+597,mobile_home_park/mobilehomepark17.tif,mobile home park,train
+598,runway/runway28.tif,runway,train
+599,golf_course/golfcourse89.tif,golf course,train
+600,sparse_residential/sparseresidential04.tif,sparse residential,train
+601,intersection/intersection56.tif,intersection,train
+602,tennis_court/tenniscourt83.tif,tennis court,train
+603,airplane/airplane71.tif,airplane,train
+604,storage_tanks/storagetanks96.tif,storage tanks,train
+605,intersection/intersection27.tif,intersection,train
+606,chaparral/chaparral27.tif,chaparral,train
+607,baseball_diamond/baseballdiamond15.tif,baseball diamond,train
+608,harbor/harbor47.tif,harbor,train
+609,golf_course/golfcourse13.tif,golf course,train
+610,buildings/buildings10.tif,buildings,train
+611,chaparral/chaparral33.tif,chaparral,train
+612,beach/beach39.tif,beach,train
+613,beach/beach25.tif,beach,train
+614,overpass/overpass13.tif,overpass,train
+615,airplane/airplane55.tif,airplane,train
+616,medium_residential/mediumresidential89.tif,medium residential,train
+617,overpass/overpass44.tif,overpass,train
+618,storage_tanks/storagetanks24.tif,storage tanks,train
+619,harbor/harbor76.tif,harbor,train
+620,medium_residential/mediumresidential31.tif,medium residential,train
+621,freeway/freeway81.tif,freeway,train
+622,mobile_home_park/mobilehomepark68.tif,mobile home park,train
+623,mobile_home_park/mobilehomepark21.tif,mobile home park,train
+624,airplane/airplane93.tif,airplane,train
+625,chaparral/chaparral44.tif,chaparral,train
+626,forest/forest36.tif,forest,train
+627,sparse_residential/sparseresidential31.tif,sparse residential,train
+628,tennis_court/tenniscourt98.tif,tennis court,train
+629,sparse_residential/sparseresidential06.tif,sparse residential,train
+630,golf_course/golfcourse49.tif,golf course,train
+631,forest/forest30.tif,forest,train
+632,buildings/buildings86.tif,buildings,train
+633,chaparral/chaparral67.tif,chaparral,train
+634,mobile_home_park/mobilehomepark87.tif,mobile home park,train
+635,agricultural/agricultural24.tif,agricultural,train
+636,overpass/overpass74.tif,overpass,train
+637,storage_tanks/storagetanks59.tif,storage tanks,train
+638,sparse_residential/sparseresidential80.tif,sparse residential,train
+639,mobile_home_park/mobilehomepark74.tif,mobile home park,train
+640,forest/forest51.tif,forest,train
+641,baseball_diamond/baseballdiamond98.tif,baseball diamond,train
+642,overpass/overpass67.tif,overpass,train
+643,overpass/overpass58.tif,overpass,train
+644,runway/runway54.tif,runway,train
+645,beach/beach36.tif,beach,train
+646,storage_tanks/storagetanks72.tif,storage tanks,train
+647,storage_tanks/storagetanks55.tif,storage tanks,train
+648,tennis_court/tenniscourt81.tif,tennis court,train
+649,beach/beach13.tif,beach,train
+650,golf_course/golfcourse36.tif,golf course,train
+651,tennis_court/tenniscourt92.tif,tennis court,train
+652,beach/beach41.tif,beach,train
+653,harbor/harbor03.tif,harbor,train
+654,airplane/airplane61.tif,airplane,train
+655,overpass/overpass03.tif,overpass,train
+656,overpass/overpass33.tif,overpass,train
+657,medium_residential/mediumresidential52.tif,medium residential,train
+658,harbor/harbor34.tif,harbor,train
+659,medium_residential/mediumresidential22.tif,medium residential,train
+660,freeway/freeway53.tif,freeway,train
+661,runway/runway47.tif,runway,train
+662,medium_residential/mediumresidential04.tif,medium residential,train
+663,freeway/freeway19.tif,freeway,train
+664,golf_course/golfcourse42.tif,golf course,train
+665,golf_course/golfcourse32.tif,golf course,train
+666,chaparral/chaparral10.tif,chaparral,train
+667,buildings/buildings25.tif,buildings,train
+668,dense_residential/denseresidential49.tif,dense residential,train
+669,forest/forest71.tif,forest,train
+670,sparse_residential/sparseresidential64.tif,sparse residential,train
+671,intersection/intersection01.tif,intersection,train
+672,dense_residential/denseresidential83.tif,dense residential,train
+673,agricultural/agricultural66.tif,agricultural,train
+674,harbor/harbor22.tif,harbor,train
+675,golf_course/golfcourse35.tif,golf course,train
+676,storage_tanks/storagetanks23.tif,storage tanks,train
+677,golf_course/golfcourse29.tif,golf course,train
+678,beach/beach35.tif,beach,train
+679,medium_residential/mediumresidential70.tif,medium residential,train
+680,golf_course/golfcourse66.tif,golf course,train
+681,harbor/harbor79.tif,harbor,train
+682,intersection/intersection22.tif,intersection,train
+683,parking_lot/parkinglot28.tif,parking lot,train
+684,overpass/overpass05.tif,overpass,train
+685,golf_course/golfcourse17.tif,golf course,train
+686,freeway/freeway99.tif,freeway,train
+687,tennis_court/tenniscourt79.tif,tennis court,train
+688,storage_tanks/storagetanks09.tif,storage tanks,train
+689,overpass/overpass15.tif,overpass,train
+690,mobile_home_park/mobilehomepark73.tif,mobile home park,train
+691,dense_residential/denseresidential97.tif,dense residential,train
+692,river/river20.tif,river,train
+693,river/river00.tif,river,train
+694,storage_tanks/storagetanks66.tif,storage tanks,train
+695,dense_residential/denseresidential67.tif,dense residential,train
+696,freeway/freeway60.tif,freeway,train
+697,runway/runway79.tif,runway,train
+698,chaparral/chaparral46.tif,chaparral,train
+699,forest/forest67.tif,forest,train
+700,forest/forest59.tif,forest,train
+701,agricultural/agricultural04.tif,agricultural,train
+702,baseball_diamond/baseballdiamond71.tif,baseball diamond,train
+703,buildings/buildings42.tif,buildings,train
+704,freeway/freeway39.tif,freeway,train
+705,intersection/intersection35.tif,intersection,train
+706,agricultural/agricultural64.tif,agricultural,train
+707,sparse_residential/sparseresidential12.tif,sparse residential,train
+708,airplane/airplane52.tif,airplane,train
+709,storage_tanks/storagetanks07.tif,storage tanks,train
+710,sparse_residential/sparseresidential66.tif,sparse residential,train
+711,sparse_residential/sparseresidential87.tif,sparse residential,train
+712,airplane/airplane60.tif,airplane,train
+713,sparse_residential/sparseresidential17.tif,sparse residential,train
+714,river/river27.tif,river,train
+715,chaparral/chaparral78.tif,chaparral,train
+716,dense_residential/denseresidential87.tif,dense residential,train
+717,medium_residential/mediumresidential33.tif,medium residential,train
+718,medium_residential/mediumresidential45.tif,medium residential,train
+719,buildings/buildings32.tif,buildings,train
+720,dense_residential/denseresidential26.tif,dense residential,train
+721,medium_residential/mediumresidential10.tif,medium residential,train
+722,airplane/airplane57.tif,airplane,train
+723,intersection/intersection46.tif,intersection,train
+724,buildings/buildings31.tif,buildings,train
+725,runway/runway65.tif,runway,train
+726,tennis_court/tenniscourt56.tif,tennis court,train
+727,baseball_diamond/baseballdiamond76.tif,baseball diamond,train
+728,intersection/intersection83.tif,intersection,train
+729,golf_course/golfcourse99.tif,golf course,train
+730,airplane/airplane44.tif,airplane,train
+731,forest/forest53.tif,forest,train
+732,golf_course/golfcourse86.tif,golf course,train
+733,agricultural/agricultural70.tif,agricultural,train
+734,forest/forest57.tif,forest,train
+735,chaparral/chaparral09.tif,chaparral,train
+736,mobile_home_park/mobilehomepark62.tif,mobile home park,train
+737,agricultural/agricultural48.tif,agricultural,train
+738,mobile_home_park/mobilehomepark75.tif,mobile home park,train
+739,beach/beach33.tif,beach,train
+740,harbor/harbor00.tif,harbor,train
+741,golf_course/golfcourse63.tif,golf course,train
+742,mobile_home_park/mobilehomepark79.tif,mobile home park,train
+743,runway/runway44.tif,runway,train
+744,overpass/overpass93.tif,overpass,train
+745,runway/runway81.tif,runway,train
+746,storage_tanks/storagetanks38.tif,storage tanks,train
+747,sparse_residential/sparseresidential11.tif,sparse residential,train
+748,airplane/airplane66.tif,airplane,train
+749,agricultural/agricultural87.tif,agricultural,train
+750,sparse_residential/sparseresidential62.tif,sparse residential,train
+751,buildings/buildings78.tif,buildings,train
+752,harbor/harbor13.tif,harbor,train
+753,mobile_home_park/mobilehomepark04.tif,mobile home park,train
+754,harbor/harbor81.tif,harbor,train
+755,forest/forest25.tif,forest,train
+756,intersection/intersection72.tif,intersection,train
+757,forest/forest43.tif,forest,train
+758,agricultural/agricultural41.tif,agricultural,train
+759,tennis_court/tenniscourt18.tif,tennis court,train
+760,parking_lot/parkinglot92.tif,parking lot,train
+761,harbor/harbor31.tif,harbor,train
+762,chaparral/chaparral08.tif,chaparral,train
+763,forest/forest37.tif,forest,train
+764,mobile_home_park/mobilehomepark45.tif,mobile home park,train
+765,golf_course/golfcourse03.tif,golf course,train
+766,buildings/buildings13.tif,buildings,train
+767,tennis_court/tenniscourt19.tif,tennis court,train
+768,medium_residential/mediumresidential84.tif,medium residential,train
+769,parking_lot/parkinglot10.tif,parking lot,train
+770,tennis_court/tenniscourt16.tif,tennis court,train
+771,baseball_diamond/baseballdiamond93.tif,baseball diamond,train
+772,buildings/buildings51.tif,buildings,train
+773,golf_course/golfcourse38.tif,golf course,train
+774,intersection/intersection98.tif,intersection,train
+775,buildings/buildings72.tif,buildings,train
+776,parking_lot/parkinglot51.tif,parking lot,train
+777,agricultural/agricultural59.tif,agricultural,train
+778,harbor/harbor29.tif,harbor,train
+779,intersection/intersection32.tif,intersection,train
+780,overpass/overpass11.tif,overpass,train
+781,baseball_diamond/baseballdiamond72.tif,baseball diamond,train
+782,medium_residential/mediumresidential30.tif,medium residential,train
+783,overpass/overpass00.tif,overpass,train
+784,intersection/intersection40.tif,intersection,train
+785,airplane/airplane36.tif,airplane,train
+786,beach/beach17.tif,beach,train
+787,beach/beach52.tif,beach,train
+788,dense_residential/denseresidential90.tif,dense residential,train
+789,chaparral/chaparral56.tif,chaparral,train
+790,storage_tanks/storagetanks50.tif,storage tanks,train
+791,airplane/airplane29.tif,airplane,train
+792,sparse_residential/sparseresidential86.tif,sparse residential,train
+793,chaparral/chaparral19.tif,chaparral,train
+794,mobile_home_park/mobilehomepark37.tif,mobile home park,train
+795,storage_tanks/storagetanks74.tif,storage tanks,train
+796,beach/beach90.tif,beach,train
+797,mobile_home_park/mobilehomepark42.tif,mobile home park,train
+798,freeway/freeway71.tif,freeway,train
+799,sparse_residential/sparseresidential73.tif,sparse residential,train
+800,river/river17.tif,river,train
+801,overpass/overpass02.tif,overpass,train
+802,tennis_court/tenniscourt95.tif,tennis court,train
+803,freeway/freeway32.tif,freeway,train
+804,freeway/freeway27.tif,freeway,train
+805,agricultural/agricultural77.tif,agricultural,train
+806,parking_lot/parkinglot47.tif,parking lot,train
+807,runway/runway98.tif,runway,train
+808,tennis_court/tenniscourt38.tif,tennis court,train
+809,overpass/overpass17.tif,overpass,train
+810,baseball_diamond/baseballdiamond43.tif,baseball diamond,train
+811,dense_residential/denseresidential20.tif,dense residential,train
+812,agricultural/agricultural89.tif,agricultural,train
+813,river/river85.tif,river,train
+814,overpass/overpass29.tif,overpass,train
+815,parking_lot/parkinglot14.tif,parking lot,train
+816,airplane/airplane25.tif,airplane,train
+817,intersection/intersection03.tif,intersection,train
+818,parking_lot/parkinglot32.tif,parking lot,train
+819,river/river50.tif,river,train
+820,beach/beach66.tif,beach,train
+821,airplane/airplane46.tif,airplane,train
+822,golf_course/golfcourse95.tif,golf course,train
+823,intersection/intersection88.tif,intersection,train
+824,golf_course/golfcourse24.tif,golf course,train
+825,beach/beach76.tif,beach,train
+826,parking_lot/parkinglot20.tif,parking lot,train
+827,dense_residential/denseresidential96.tif,dense residential,train
+828,buildings/buildings90.tif,buildings,train
+829,dense_residential/denseresidential36.tif,dense residential,train
+830,mobile_home_park/mobilehomepark51.tif,mobile home park,train
+831,parking_lot/parkinglot02.tif,parking lot,train
+832,baseball_diamond/baseballdiamond79.tif,baseball diamond,train
+833,agricultural/agricultural49.tif,agricultural,train
+834,parking_lot/parkinglot24.tif,parking lot,train
+835,buildings/buildings02.tif,buildings,train
+836,airplane/airplane92.tif,airplane,train
+837,runway/runway06.tif,runway,train
+838,river/river79.tif,river,train
+839,golf_course/golfcourse08.tif,golf course,train
+840,overpass/overpass61.tif,overpass,train
+841,forest/forest05.tif,forest,train
+842,buildings/buildings26.tif,buildings,train
+843,harbor/harbor12.tif,harbor,train
+844,forest/forest87.tif,forest,train
+845,storage_tanks/storagetanks80.tif,storage tanks,train
+846,tennis_court/tenniscourt72.tif,tennis court,train
+847,buildings/buildings64.tif,buildings,train
+848,overpass/overpass60.tif,overpass,train
+849,intersection/intersection18.tif,intersection,train
+850,forest/forest03.tif,forest,train
+851,runway/runway34.tif,runway,train
+852,river/river81.tif,river,train
+853,agricultural/agricultural95.tif,agricultural,train
+854,runway/runway89.tif,runway,train
+855,airplane/airplane90.tif,airplane,train
+856,agricultural/agricultural05.tif,agricultural,train
+857,mobile_home_park/mobilehomepark01.tif,mobile home park,train
+858,intersection/intersection79.tif,intersection,train
+859,runway/runway84.tif,runway,train
+860,chaparral/chaparral72.tif,chaparral,train
+861,runway/runway10.tif,runway,train
+862,river/river26.tif,river,train
+863,runway/runway70.tif,runway,train
+864,baseball_diamond/baseballdiamond14.tif,baseball diamond,train
+865,tennis_court/tenniscourt63.tif,tennis court,train
+866,intersection/intersection30.tif,intersection,train
+867,forest/forest50.tif,forest,train
+868,overpass/overpass48.tif,overpass,train
+869,buildings/buildings44.tif,buildings,train
+870,mobile_home_park/mobilehomepark72.tif,mobile home park,train
+871,runway/runway93.tif,runway,train
+872,medium_residential/mediumresidential63.tif,medium residential,train
+873,chaparral/chaparral88.tif,chaparral,train
+874,tennis_court/tenniscourt70.tif,tennis court,train
+875,agricultural/agricultural83.tif,agricultural,train
+876,river/river35.tif,river,train
+877,runway/runway07.tif,runway,train
+878,airplane/airplane72.tif,airplane,train
+879,dense_residential/denseresidential24.tif,dense residential,train
+880,chaparral/chaparral35.tif,chaparral,train
+881,tennis_court/tenniscourt22.tif,tennis court,train
+882,intersection/intersection80.tif,intersection,train
+883,harbor/harbor88.tif,harbor,train
+884,airplane/airplane86.tif,airplane,train
+885,mobile_home_park/mobilehomepark30.tif,mobile home park,train
+886,agricultural/agricultural26.tif,agricultural,train
+887,tennis_court/tenniscourt71.tif,tennis court,train
+888,harbor/harbor89.tif,harbor,train
+889,parking_lot/parkinglot61.tif,parking lot,train
+890,parking_lot/parkinglot46.tif,parking lot,train
+891,harbor/harbor77.tif,harbor,train
+892,medium_residential/mediumresidential90.tif,medium residential,train
+893,intersection/intersection92.tif,intersection,train
+894,storage_tanks/storagetanks03.tif,storage tanks,train
+895,river/river04.tif,river,train
+896,mobile_home_park/mobilehomepark34.tif,mobile home park,train
+897,forest/forest21.tif,forest,train
+898,tennis_court/tenniscourt39.tif,tennis court,train
+899,golf_course/golfcourse00.tif,golf course,train
+900,tennis_court/tenniscourt13.tif,tennis court,train
+901,overpass/overpass46.tif,overpass,train
+902,chaparral/chaparral61.tif,chaparral,train
+903,harbor/harbor54.tif,harbor,train
+904,river/river18.tif,river,train
+905,overpass/overpass95.tif,overpass,train
+906,parking_lot/parkinglot38.tif,parking lot,train
+907,medium_residential/mediumresidential81.tif,medium residential,train
+908,runway/runway43.tif,runway,train
+909,tennis_court/tenniscourt88.tif,tennis court,train
+910,parking_lot/parkinglot59.tif,parking lot,train
+911,sparse_residential/sparseresidential44.tif,sparse residential,train
+912,parking_lot/parkinglot11.tif,parking lot,train
+913,dense_residential/denseresidential39.tif,dense residential,train
+914,sparse_residential/sparseresidential69.tif,sparse residential,train
+915,baseball_diamond/baseballdiamond52.tif,baseball diamond,train
+916,dense_residential/denseresidential37.tif,dense residential,train
+917,buildings/buildings75.tif,buildings,train
+918,medium_residential/mediumresidential16.tif,medium residential,train
+919,tennis_court/tenniscourt94.tif,tennis court,train
+920,forest/forest22.tif,forest,train
+921,intersection/intersection94.tif,intersection,train
+922,buildings/buildings62.tif,buildings,train
+923,harbor/harbor60.tif,harbor,train
+924,intersection/intersection02.tif,intersection,train
+925,golf_course/golfcourse04.tif,golf course,train
+926,dense_residential/denseresidential00.tif,dense residential,train
+927,mobile_home_park/mobilehomepark98.tif,mobile home park,train
+928,harbor/harbor18.tif,harbor,train
+929,tennis_court/tenniscourt47.tif,tennis court,train
+930,storage_tanks/storagetanks97.tif,storage tanks,train
+931,agricultural/agricultural21.tif,agricultural,train
+932,overpass/overpass28.tif,overpass,train
+933,river/river96.tif,river,train
+934,forest/forest64.tif,forest,train
+935,runway/runway51.tif,runway,train
+936,dense_residential/denseresidential99.tif,dense residential,train
+937,agricultural/agricultural78.tif,agricultural,train
+938,intersection/intersection95.tif,intersection,train
+939,buildings/buildings59.tif,buildings,train
+940,golf_course/golfcourse18.tif,golf course,train
+941,medium_residential/mediumresidential54.tif,medium residential,train
+942,tennis_court/tenniscourt04.tif,tennis court,train
+943,tennis_court/tenniscourt61.tif,tennis court,train
+944,baseball_diamond/baseballdiamond83.tif,baseball diamond,train
+945,agricultural/agricultural10.tif,agricultural,train
+946,runway/runway09.tif,runway,train
+947,chaparral/chaparral99.tif,chaparral,train
+948,agricultural/agricultural51.tif,agricultural,train
+949,agricultural/agricultural23.tif,agricultural,train
+950,agricultural/agricultural91.tif,agricultural,train
+951,harbor/harbor53.tif,harbor,train
+952,storage_tanks/storagetanks94.tif,storage tanks,train
+953,runway/runway37.tif,runway,train
+954,freeway/freeway55.tif,freeway,train
+955,buildings/buildings85.tif,buildings,train
+956,dense_residential/denseresidential21.tif,dense residential,train
+957,parking_lot/parkinglot26.tif,parking lot,train
+958,freeway/freeway31.tif,freeway,train
+959,freeway/freeway78.tif,freeway,train
+960,storage_tanks/storagetanks43.tif,storage tanks,train
+961,golf_course/golfcourse62.tif,golf course,train
+962,sparse_residential/sparseresidential37.tif,sparse residential,train
+963,medium_residential/mediumresidential67.tif,medium residential,train
+964,overpass/overpass52.tif,overpass,train
+965,parking_lot/parkinglot52.tif,parking lot,train
+966,dense_residential/denseresidential60.tif,dense residential,train
+967,intersection/intersection75.tif,intersection,train
+968,tennis_court/tenniscourt87.tif,tennis court,train
+969,baseball_diamond/baseballdiamond34.tif,baseball diamond,train
+970,storage_tanks/storagetanks27.tif,storage tanks,train
+971,sparse_residential/sparseresidential48.tif,sparse residential,train
+972,freeway/freeway72.tif,freeway,train
+973,parking_lot/parkinglot58.tif,parking lot,train
+974,forest/forest92.tif,forest,train
+975,harbor/harbor44.tif,harbor,train
+976,intersection/intersection13.tif,intersection,train
+977,golf_course/golfcourse81.tif,golf course,train
+978,parking_lot/parkinglot56.tif,parking lot,train
+979,river/river13.tif,river,train
+980,harbor/harbor71.tif,harbor,train
+981,baseball_diamond/baseballdiamond95.tif,baseball diamond,train
+982,chaparral/chaparral50.tif,chaparral,train
+983,storage_tanks/storagetanks77.tif,storage tanks,train
+984,river/river21.tif,river,train
+985,harbor/harbor59.tif,harbor,train
+986,dense_residential/denseresidential12.tif,dense residential,train
+987,storage_tanks/storagetanks54.tif,storage tanks,train
+988,golf_course/golfcourse16.tif,golf course,train
+989,runway/runway90.tif,runway,train
+990,chaparral/chaparral07.tif,chaparral,train
+991,dense_residential/denseresidential82.tif,dense residential,train
+992,baseball_diamond/baseballdiamond46.tif,baseball diamond,train
+993,dense_residential/denseresidential72.tif,dense residential,train
+994,forest/forest24.tif,forest,train
+995,harbor/harbor95.tif,harbor,train
+996,river/river68.tif,river,train
+997,beach/beach84.tif,beach,train
+998,agricultural/agricultural33.tif,agricultural,train
+999,storage_tanks/storagetanks25.tif,storage tanks,train
+1000,parking_lot/parkinglot63.tif,parking lot,train
+1001,forest/forest55.tif,forest,train
+1002,overpass/overpass21.tif,overpass,train
+1003,sparse_residential/sparseresidential49.tif,sparse residential,train
+1004,parking_lot/parkinglot64.tif,parking lot,train
+1005,buildings/buildings30.tif,buildings,train
+1006,golf_course/golfcourse02.tif,golf course,train
+1007,sparse_residential/sparseresidential58.tif,sparse residential,train
+1008,tennis_court/tenniscourt32.tif,tennis court,train
+1009,freeway/freeway07.tif,freeway,train
+1010,river/river99.tif,river,train
+1011,airplane/airplane47.tif,airplane,train
+1012,buildings/buildings20.tif,buildings,train
+1013,overpass/overpass63.tif,overpass,train
+1014,overpass/overpass57.tif,overpass,train
+1015,agricultural/agricultural36.tif,agricultural,train
+1016,agricultural/agricultural25.tif,agricultural,train
+1017,overpass/overpass55.tif,overpass,train
+1018,harbor/harbor61.tif,harbor,train
+1019,tennis_court/tenniscourt17.tif,tennis court,train
+1020,beach/beach91.tif,beach,train
+1021,overpass/overpass22.tif,overpass,train
+1022,airplane/airplane22.tif,airplane,train
+1023,river/river09.tif,river,train
+1024,baseball_diamond/baseballdiamond70.tif,baseball diamond,train
+1025,intersection/intersection16.tif,intersection,train
+1026,parking_lot/parkinglot57.tif,parking lot,train
+1027,mobile_home_park/mobilehomepark24.tif,mobile home park,train
+1028,forest/forest60.tif,forest,train
+1029,beach/beach96.tif,beach,train
+1030,intersection/intersection42.tif,intersection,train
+1031,baseball_diamond/baseballdiamond87.tif,baseball diamond,train
+1032,forest/forest02.tif,forest,train
+1033,medium_residential/mediumresidential20.tif,medium residential,train
+1034,sparse_residential/sparseresidential18.tif,sparse residential,train
+1035,medium_residential/mediumresidential21.tif,medium residential,train
+1036,beach/beach38.tif,beach,train
+1037,mobile_home_park/mobilehomepark06.tif,mobile home park,train
+1038,freeway/freeway58.tif,freeway,train
+1039,parking_lot/parkinglot65.tif,parking lot,train
+1040,golf_course/golfcourse74.tif,golf course,train
+1041,baseball_diamond/baseballdiamond78.tif,baseball diamond,train
+1042,baseball_diamond/baseballdiamond30.tif,baseball diamond,train
+1043,harbor/harbor80.tif,harbor,train
+1044,mobile_home_park/mobilehomepark15.tif,mobile home park,train
+1045,chaparral/chaparral25.tif,chaparral,train
+1046,agricultural/agricultural17.tif,agricultural,train
+1047,chaparral/chaparral14.tif,chaparral,train
+1048,parking_lot/parkinglot77.tif,parking lot,train
+1049,buildings/buildings91.tif,buildings,train
+1050,runway/runway99.tif,runway,train
+1051,dense_residential/denseresidential05.tif,dense residential,train
+1052,river/river74.tif,river,train
+1053,chaparral/chaparral41.tif,chaparral,train
+1054,mobile_home_park/mobilehomepark10.tif,mobile home park,train
+1055,tennis_court/tenniscourt78.tif,tennis court,train
+1056,chaparral/chaparral01.tif,chaparral,train
+1057,storage_tanks/storagetanks52.tif,storage tanks,train
+1058,agricultural/agricultural72.tif,agricultural,train
+1059,river/river07.tif,river,train
+1060,harbor/harbor64.tif,harbor,train
+1061,agricultural/agricultural14.tif,agricultural,train
+1062,harbor/harbor37.tif,harbor,train
+1063,baseball_diamond/baseballdiamond08.tif,baseball diamond,train
+1064,mobile_home_park/mobilehomepark50.tif,mobile home park,train
+1065,baseball_diamond/baseballdiamond96.tif,baseball diamond,train
+1066,dense_residential/denseresidential53.tif,dense residential,train
+1067,harbor/harbor25.tif,harbor,train
+1068,chaparral/chaparral21.tif,chaparral,train
+1069,intersection/intersection96.tif,intersection,train
+1070,agricultural/agricultural99.tif,agricultural,train
+1071,mobile_home_park/mobilehomepark27.tif,mobile home park,train
+1072,runway/runway49.tif,runway,train
+1073,sparse_residential/sparseresidential53.tif,sparse residential,train
+1074,sparse_residential/sparseresidential42.tif,sparse residential,train
+1075,sparse_residential/sparseresidential02.tif,sparse residential,train
+1076,parking_lot/parkinglot69.tif,parking lot,train
+1077,agricultural/agricultural53.tif,agricultural,train
+1078,airplane/airplane69.tif,airplane,train
+1079,chaparral/chaparral38.tif,chaparral,train
+1080,sparse_residential/sparseresidential79.tif,sparse residential,train
+1081,runway/runway97.tif,runway,train
+1082,dense_residential/denseresidential58.tif,dense residential,train
+1083,dense_residential/denseresidential81.tif,dense residential,train
+1084,medium_residential/mediumresidential35.tif,medium residential,train
+1085,freeway/freeway63.tif,freeway,train
+1086,beach/beach04.tif,beach,train
+1087,runway/runway94.tif,runway,train
+1088,forest/forest15.tif,forest,train
+1089,baseball_diamond/baseballdiamond88.tif,baseball diamond,train
+1090,freeway/freeway02.tif,freeway,train
+1091,airplane/airplane40.tif,airplane,train
+1092,runway/runway35.tif,runway,train
+1093,sparse_residential/sparseresidential03.tif,sparse residential,train
+1094,intersection/intersection66.tif,intersection,train
+1095,agricultural/agricultural11.tif,agricultural,train
+1096,golf_course/golfcourse44.tif,golf course,train
+1097,freeway/freeway25.tif,freeway,train
+1098,river/river25.tif,river,train
+1099,overpass/overpass79.tif,overpass,train
+1100,buildings/buildings98.tif,buildings,train
+1101,airplane/airplane96.tif,airplane,train
+1102,runway/runway39.tif,runway,train
+1103,tennis_court/tenniscourt36.tif,tennis court,train
+1104,sparse_residential/sparseresidential13.tif,sparse residential,train
+1105,forest/forest79.tif,forest,train
+1106,airplane/airplane39.tif,airplane,train
+1107,airplane/airplane50.tif,airplane,train
+1108,golf_course/golfcourse33.tif,golf course,train
+1109,intersection/intersection21.tif,intersection,train
+1110,storage_tanks/storagetanks82.tif,storage tanks,train
+1111,sparse_residential/sparseresidential47.tif,sparse residential,train
+1112,overpass/overpass71.tif,overpass,train
+1113,parking_lot/parkinglot98.tif,parking lot,train
+1114,runway/runway56.tif,runway,train
+1115,chaparral/chaparral30.tif,chaparral,train
+1116,buildings/buildings94.tif,buildings,train
+1117,agricultural/agricultural75.tif,agricultural,train
+1118,parking_lot/parkinglot84.tif,parking lot,train
+1119,harbor/harbor84.tif,harbor,train
+1120,medium_residential/mediumresidential95.tif,medium residential,train
+1121,overpass/overpass94.tif,overpass,train
+1122,harbor/harbor57.tif,harbor,train
+1123,tennis_court/tenniscourt77.tif,tennis court,train
+1124,medium_residential/mediumresidential32.tif,medium residential,train
+1125,beach/beach99.tif,beach,train
+1126,river/river15.tif,river,train
+1127,medium_residential/mediumresidential26.tif,medium residential,train
+1128,tennis_court/tenniscourt08.tif,tennis court,train
+1129,harbor/harbor04.tif,harbor,train
+1130,intersection/intersection11.tif,intersection,train
+1131,harbor/harbor99.tif,harbor,train
+1132,harbor/harbor28.tif,harbor,train
+1133,runway/runway69.tif,runway,train
+1134,river/river22.tif,river,train
+1135,river/river03.tif,river,train
+1136,forest/forest95.tif,forest,train
+1137,forest/forest00.tif,forest,train
+1138,sparse_residential/sparseresidential81.tif,sparse residential,train
+1139,golf_course/golfcourse53.tif,golf course,train
+1140,golf_course/golfcourse46.tif,golf course,train
+1141,tennis_court/tenniscourt37.tif,tennis court,train
+1142,golf_course/golfcourse06.tif,golf course,train
+1143,overpass/overpass19.tif,overpass,train
+1144,parking_lot/parkinglot53.tif,parking lot,train
+1145,dense_residential/denseresidential69.tif,dense residential,train
+1146,intersection/intersection36.tif,intersection,train
+1147,beach/beach47.tif,beach,train
+1148,storage_tanks/storagetanks02.tif,storage tanks,train
+1149,tennis_court/tenniscourt30.tif,tennis court,train
+1150,sparse_residential/sparseresidential09.tif,sparse residential,train
+1151,dense_residential/denseresidential91.tif,dense residential,train
+1152,tennis_court/tenniscourt54.tif,tennis court,train
+1153,chaparral/chaparral68.tif,chaparral,train
+1154,river/river66.tif,river,train
+1155,beach/beach00.tif,beach,train
+1156,medium_residential/mediumresidential85.tif,medium residential,train
+1157,chaparral/chaparral12.tif,chaparral,train
+1158,mobile_home_park/mobilehomepark07.tif,mobile home park,train
+1159,tennis_court/tenniscourt12.tif,tennis court,train
+1160,airplane/airplane99.tif,airplane,train
+1161,freeway/freeway82.tif,freeway,train
+1162,medium_residential/mediumresidential08.tif,medium residential,train
+1163,harbor/harbor38.tif,harbor,train
+1164,tennis_court/tenniscourt96.tif,tennis court,train
+1165,agricultural/agricultural65.tif,agricultural,train
+1166,agricultural/agricultural46.tif,agricultural,train
+1167,mobile_home_park/mobilehomepark28.tif,mobile home park,train
+1168,chaparral/chaparral40.tif,chaparral,train
+1169,parking_lot/parkinglot21.tif,parking lot,train
+1170,freeway/freeway57.tif,freeway,train
+1171,intersection/intersection68.tif,intersection,train
+1172,dense_residential/denseresidential47.tif,dense residential,train
+1173,chaparral/chaparral95.tif,chaparral,train
+1174,forest/forest75.tif,forest,train
+1175,chaparral/chaparral84.tif,chaparral,train
+1176,medium_residential/mediumresidential77.tif,medium residential,train
+1177,runway/runway41.tif,runway,train
+1178,freeway/freeway44.tif,freeway,train
+1179,buildings/buildings71.tif,buildings,train
+1180,intersection/intersection84.tif,intersection,train
+1181,storage_tanks/storagetanks06.tif,storage tanks,train
+1182,mobile_home_park/mobilehomepark31.tif,mobile home park,train
+1183,chaparral/chaparral13.tif,chaparral,train
+1184,airplane/airplane81.tif,airplane,train
+1185,baseball_diamond/baseballdiamond77.tif,baseball diamond,train
+1186,sparse_residential/sparseresidential76.tif,sparse residential,train
+1187,agricultural/agricultural40.tif,agricultural,train
+1188,tennis_court/tenniscourt60.tif,tennis court,train
+1189,beach/beach09.tif,beach,train
+1190,beach/beach11.tif,beach,train
+1191,beach/beach10.tif,beach,train
+1192,tennis_court/tenniscourt09.tif,tennis court,train
+1193,medium_residential/mediumresidential50.tif,medium residential,train
+1194,runway/runway60.tif,runway,train
+1195,sparse_residential/sparseresidential71.tif,sparse residential,train
+1196,baseball_diamond/baseballdiamond65.tif,baseball diamond,train
+1197,parking_lot/parkinglot31.tif,parking lot,train
+1198,chaparral/chaparral91.tif,chaparral,train
+1199,runway/runway00.tif,runway,train
+1200,beach/beach85.tif,beach,train
+1201,overpass/overpass88.tif,overpass,train
+1202,sparse_residential/sparseresidential78.tif,sparse residential,train
+1203,buildings/buildings27.tif,buildings,train
+1204,baseball_diamond/baseballdiamond74.tif,baseball diamond,train
+1205,storage_tanks/storagetanks90.tif,storage tanks,train
+1206,baseball_diamond/baseballdiamond39.tif,baseball diamond,train
+1207,overpass/overpass62.tif,overpass,train
+1208,parking_lot/parkinglot66.tif,parking lot,train
+1209,sparse_residential/sparseresidential14.tif,sparse residential,train
+1210,beach/beach07.tif,beach,train
+1211,freeway/freeway79.tif,freeway,train
+1212,freeway/freeway80.tif,freeway,train
+1213,sparse_residential/sparseresidential85.tif,sparse residential,train
+1214,medium_residential/mediumresidential02.tif,medium residential,train
+1215,freeway/freeway34.tif,freeway,train
+1216,freeway/freeway08.tif,freeway,train
+1217,beach/beach78.tif,beach,train
+1218,runway/runway53.tif,runway,train
+1219,beach/beach97.tif,beach,train
+1220,overpass/overpass96.tif,overpass,train
+1221,dense_residential/denseresidential68.tif,dense residential,train
+1222,golf_course/golfcourse80.tif,golf course,train
+1223,storage_tanks/storagetanks05.tif,storage tanks,train
+1224,sparse_residential/sparseresidential91.tif,sparse residential,train
+1225,overpass/overpass86.tif,overpass,train
+1226,beach/beach26.tif,beach,train
+1227,baseball_diamond/baseballdiamond94.tif,baseball diamond,train
+1228,airplane/airplane84.tif,airplane,train
+1229,overpass/overpass45.tif,overpass,train
+1230,dense_residential/denseresidential06.tif,dense residential,train
+1231,mobile_home_park/mobilehomepark54.tif,mobile home park,train
+1232,intersection/intersection90.tif,intersection,train
+1233,baseball_diamond/baseballdiamond92.tif,baseball diamond,train
+1234,airplane/airplane82.tif,airplane,train
+1235,baseball_diamond/baseballdiamond75.tif,baseball diamond,train
+1236,beach/beach74.tif,beach,train
+1237,mobile_home_park/mobilehomepark11.tif,mobile home park,train
+1238,forest/forest84.tif,forest,train
+1239,buildings/buildings67.tif,buildings,train
+1240,forest/forest88.tif,forest,train
+1241,dense_residential/denseresidential94.tif,dense residential,train
+1242,chaparral/chaparral39.tif,chaparral,train
+1243,chaparral/chaparral59.tif,chaparral,train
+1244,medium_residential/mediumresidential69.tif,medium residential,train
+1245,river/river51.tif,river,train
+1246,forest/forest16.tif,forest,train
+1247,sparse_residential/sparseresidential65.tif,sparse residential,train
+1248,sparse_residential/sparseresidential51.tif,sparse residential,train
+1249,golf_course/golfcourse47.tif,golf course,train
+1250,intersection/intersection52.tif,intersection,train
+1251,sparse_residential/sparseresidential32.tif,sparse residential,train
+1252,golf_course/golfcourse14.tif,golf course,train
+1253,runway/runway23.tif,runway,train
+1254,mobile_home_park/mobilehomepark19.tif,mobile home park,train
+1255,medium_residential/mediumresidential24.tif,medium residential,train
+1256,beach/beach81.tif,beach,train
+1257,freeway/freeway66.tif,freeway,train
+1258,golf_course/golfcourse72.tif,golf course,train
+1259,chaparral/chaparral82.tif,chaparral,train
+1260,mobile_home_park/mobilehomepark60.tif,mobile home park,train
+1261,river/river88.tif,river,train
+1262,mobile_home_park/mobilehomepark25.tif,mobile home park,train
+1263,mobile_home_park/mobilehomepark44.tif,mobile home park,train
+1264,harbor/harbor19.tif,harbor,train
+1265,beach/beach77.tif,beach,train
+1266,intersection/intersection07.tif,intersection,train
+1267,forest/forest82.tif,forest,train
+1268,buildings/buildings22.tif,buildings,train
+1269,sparse_residential/sparseresidential43.tif,sparse residential,train
+1270,river/river61.tif,river,train
+1271,sparse_residential/sparseresidential89.tif,sparse residential,train
+1272,overpass/overpass91.tif,overpass,train
+1273,chaparral/chaparral32.tif,chaparral,train
+1274,medium_residential/mediumresidential88.tif,medium residential,train
+1275,storage_tanks/storagetanks04.tif,storage tanks,train
+1276,golf_course/golfcourse54.tif,golf course,train
+1277,beach/beach83.tif,beach,train
+1278,agricultural/agricultural82.tif,agricultural,train
+1279,freeway/freeway40.tif,freeway,train
+1280,baseball_diamond/baseballdiamond22.tif,baseball diamond,train
+1281,storage_tanks/storagetanks60.tif,storage tanks,train
+1282,harbor/harbor93.tif,harbor,train
+1283,runway/runway14.tif,runway,train
+1284,dense_residential/denseresidential09.tif,dense residential,train
+1285,mobile_home_park/mobilehomepark41.tif,mobile home park,train
+1286,storage_tanks/storagetanks21.tif,storage tanks,train
+1287,mobile_home_park/mobilehomepark71.tif,mobile home park,train
+1288,golf_course/golfcourse69.tif,golf course,train
+1289,airplane/airplane09.tif,airplane,train
+1290,mobile_home_park/mobilehomepark96.tif,mobile home park,train
+1291,freeway/freeway69.tif,freeway,train
+1292,river/river87.tif,river,train
+1293,parking_lot/parkinglot06.tif,parking lot,train
+1294,parking_lot/parkinglot60.tif,parking lot,train
+1295,storage_tanks/storagetanks48.tif,storage tanks,train
+1296,golf_course/golfcourse30.tif,golf course,train
+1297,golf_course/golfcourse22.tif,golf course,train
+1298,medium_residential/mediumresidential13.tif,medium residential,train
+1299,runway/runway40.tif,runway,train
+1300,mobile_home_park/mobilehomepark20.tif,mobile home park,train
+1301,buildings/buildings24.tif,buildings,train
+1302,river/river57.tif,river,train
+1303,freeway/freeway49.tif,freeway,train
+1304,storage_tanks/storagetanks33.tif,storage tanks,train
+1305,agricultural/agricultural81.tif,agricultural,train
+1306,harbor/harbor96.tif,harbor,train
+1307,runway/runway24.tif,runway,train
+1308,runway/runway31.tif,runway,train
+1309,river/river84.tif,river,train
+1310,parking_lot/parkinglot39.tif,parking lot,train
+1311,agricultural/agricultural35.tif,agricultural,train
+1312,river/river72.tif,river,train
+1313,harbor/harbor92.tif,harbor,train
+1314,freeway/freeway94.tif,freeway,train
+1315,harbor/harbor86.tif,harbor,train
+1316,river/river44.tif,river,train
+1317,airplane/airplane01.tif,airplane,train
+1318,freeway/freeway89.tif,freeway,train
+1319,storage_tanks/storagetanks46.tif,storage tanks,train
+1320,baseball_diamond/baseballdiamond23.tif,baseball diamond,train
+1321,intersection/intersection86.tif,intersection,train
+1322,chaparral/chaparral77.tif,chaparral,train
+1323,overpass/overpass87.tif,overpass,train
+1324,baseball_diamond/baseballdiamond09.tif,baseball diamond,train
+1325,tennis_court/tenniscourt03.tif,tennis court,train
+1326,parking_lot/parkinglot25.tif,parking lot,train
+1327,dense_residential/denseresidential14.tif,dense residential,train
+1328,medium_residential/mediumresidential42.tif,medium residential,train
+1329,agricultural/agricultural13.tif,agricultural,train
+1330,runway/runway91.tif,runway,train
+1331,agricultural/agricultural90.tif,agricultural,train
+1332,buildings/buildings97.tif,buildings,train
+1333,baseball_diamond/baseballdiamond06.tif,baseball diamond,train
+1334,dense_residential/denseresidential77.tif,dense residential,train
+1335,runway/runway88.tif,runway,train
+1336,parking_lot/parkinglot16.tif,parking lot,train
+1337,chaparral/chaparral92.tif,chaparral,train
+1338,storage_tanks/storagetanks15.tif,storage tanks,train
+1339,mobile_home_park/mobilehomepark93.tif,mobile home park,train
+1340,parking_lot/parkinglot17.tif,parking lot,train
+1341,beach/beach14.tif,beach,train
+1342,storage_tanks/storagetanks42.tif,storage tanks,train
+1343,tennis_court/tenniscourt45.tif,tennis court,train
+1344,intersection/intersection00.tif,intersection,val
+1345,medium_residential/mediumresidential62.tif,medium residential,val
+1346,mobile_home_park/mobilehomepark38.tif,mobile home park,val
+1347,medium_residential/mediumresidential11.tif,medium residential,val
+1348,freeway/freeway16.tif,freeway,val
+1349,beach/beach30.tif,beach,val
+1350,storage_tanks/storagetanks81.tif,storage tanks,val
+1351,airplane/airplane54.tif,airplane,val
+1352,dense_residential/denseresidential59.tif,dense residential,val
+1353,intersection/intersection87.tif,intersection,val
+1354,overpass/overpass47.tif,overpass,val
+1355,river/river70.tif,river,val
+1356,buildings/buildings35.tif,buildings,val
+1357,intersection/intersection99.tif,intersection,val
+1358,overpass/overpass09.tif,overpass,val
+1359,agricultural/agricultural62.tif,agricultural,val
+1360,medium_residential/mediumresidential01.tif,medium residential,val
+1361,harbor/harbor26.tif,harbor,val
+1362,baseball_diamond/baseballdiamond27.tif,baseball diamond,val
+1363,medium_residential/mediumresidential72.tif,medium residential,val
+1364,airplane/airplane67.tif,airplane,val
+1365,freeway/freeway62.tif,freeway,val
+1366,river/river33.tif,river,val
+1367,chaparral/chaparral64.tif,chaparral,val
+1368,baseball_diamond/baseballdiamond05.tif,baseball diamond,val
+1369,chaparral/chaparral86.tif,chaparral,val
+1370,parking_lot/parkinglot54.tif,parking lot,val
+1371,tennis_court/tenniscourt01.tif,tennis court,val
+1372,baseball_diamond/baseballdiamond80.tif,baseball diamond,val
+1373,freeway/freeway21.tif,freeway,val
+1374,tennis_court/tenniscourt80.tif,tennis court,val
+1375,mobile_home_park/mobilehomepark55.tif,mobile home park,val
+1376,buildings/buildings34.tif,buildings,val
+1377,agricultural/agricultural80.tif,agricultural,val
+1378,golf_course/golfcourse48.tif,golf course,val
+1379,agricultural/agricultural45.tif,agricultural,val
+1380,airplane/airplane03.tif,airplane,val
+1381,overpass/overpass42.tif,overpass,val
+1382,dense_residential/denseresidential34.tif,dense residential,val
+1383,harbor/harbor20.tif,harbor,val
+1384,harbor/harbor33.tif,harbor,val
+1385,baseball_diamond/baseballdiamond50.tif,baseball diamond,val
+1386,harbor/harbor49.tif,harbor,val
+1387,tennis_court/tenniscourt64.tif,tennis court,val
+1388,storage_tanks/storagetanks89.tif,storage tanks,val
+1389,forest/forest83.tif,forest,val
+1390,mobile_home_park/mobilehomepark03.tif,mobile home park,val
+1391,runway/runway05.tif,runway,val
+1392,golf_course/golfcourse25.tif,golf course,val
+1393,storage_tanks/storagetanks88.tif,storage tanks,val
+1394,freeway/freeway74.tif,freeway,val
+1395,golf_course/golfcourse83.tif,golf course,val
+1396,mobile_home_park/mobilehomepark94.tif,mobile home park,val
+1397,tennis_court/tenniscourt00.tif,tennis court,val
+1398,dense_residential/denseresidential62.tif,dense residential,val
+1399,runway/runway36.tif,runway,val
+1400,golf_course/golfcourse41.tif,golf course,val
+1401,river/river54.tif,river,val
+1402,baseball_diamond/baseballdiamond20.tif,baseball diamond,val
+1403,dense_residential/denseresidential70.tif,dense residential,val
+1404,harbor/harbor41.tif,harbor,val
+1405,sparse_residential/sparseresidential07.tif,sparse residential,val
+1406,forest/forest13.tif,forest,val
+1407,storage_tanks/storagetanks98.tif,storage tanks,val
+1408,buildings/buildings99.tif,buildings,val
+1409,river/river30.tif,river,val
+1410,buildings/buildings52.tif,buildings,val
+1411,sparse_residential/sparseresidential52.tif,sparse residential,val
+1412,forest/forest26.tif,forest,val
+1413,beach/beach98.tif,beach,val
+1414,chaparral/chaparral34.tif,chaparral,val
+1415,agricultural/agricultural22.tif,agricultural,val
+1416,harbor/harbor48.tif,harbor,val
+1417,overpass/overpass99.tif,overpass,val
+1418,parking_lot/parkinglot71.tif,parking lot,val
+1419,intersection/intersection26.tif,intersection,val
+1420,beach/beach69.tif,beach,val
+1421,river/river67.tif,river,val
+1422,medium_residential/mediumresidential92.tif,medium residential,val
+1423,beach/beach48.tif,beach,val
+1424,freeway/freeway84.tif,freeway,val
+1425,intersection/intersection31.tif,intersection,val
+1426,mobile_home_park/mobilehomepark39.tif,mobile home park,val
+1427,harbor/harbor90.tif,harbor,val
+1428,dense_residential/denseresidential22.tif,dense residential,val
+1429,tennis_court/tenniscourt27.tif,tennis court,val
+1430,parking_lot/parkinglot41.tif,parking lot,val
+1431,storage_tanks/storagetanks63.tif,storage tanks,val
+1432,runway/runway71.tif,runway,val
+1433,sparse_residential/sparseresidential45.tif,sparse residential,val
+1434,runway/runway76.tif,runway,val
+1435,runway/runway03.tif,runway,val
+1436,beach/beach08.tif,beach,val
+1437,harbor/harbor50.tif,harbor,val
+1438,medium_residential/mediumresidential83.tif,medium residential,val
+1439,storage_tanks/storagetanks99.tif,storage tanks,val
+1440,sparse_residential/sparseresidential41.tif,sparse residential,val
+1441,medium_residential/mediumresidential61.tif,medium residential,val
+1442,parking_lot/parkinglot18.tif,parking lot,val
+1443,forest/forest89.tif,forest,val
+1444,freeway/freeway10.tif,freeway,val
+1445,runway/runway96.tif,runway,val
+1446,sparse_residential/sparseresidential90.tif,sparse residential,val
+1447,dense_residential/denseresidential43.tif,dense residential,val
+1448,beach/beach87.tif,beach,val
+1449,runway/runway87.tif,runway,val
+1450,chaparral/chaparral04.tif,chaparral,val
+1451,parking_lot/parkinglot89.tif,parking lot,val
+1452,dense_residential/denseresidential03.tif,dense residential,val
+1453,forest/forest19.tif,forest,val
+1454,chaparral/chaparral89.tif,chaparral,val
+1455,freeway/freeway47.tif,freeway,val
+1456,storage_tanks/storagetanks85.tif,storage tanks,val
+1457,mobile_home_park/mobilehomepark63.tif,mobile home park,val
+1458,harbor/harbor11.tif,harbor,val
+1459,mobile_home_park/mobilehomepark00.tif,mobile home park,val
+1460,beach/beach71.tif,beach,val
+1461,runway/runway01.tif,runway,val
+1462,airplane/airplane08.tif,airplane,val
+1463,baseball_diamond/baseballdiamond24.tif,baseball diamond,val
+1464,parking_lot/parkinglot90.tif,parking lot,val
+1465,river/river41.tif,river,val
+1466,dense_residential/denseresidential71.tif,dense residential,val
+1467,river/river01.tif,river,val
+1468,river/river10.tif,river,val
+1469,buildings/buildings03.tif,buildings,val
+1470,parking_lot/parkinglot68.tif,parking lot,val
+1471,mobile_home_park/mobilehomepark86.tif,mobile home park,val
+1472,harbor/harbor09.tif,harbor,val
+1473,mobile_home_park/mobilehomepark70.tif,mobile home park,val
+1474,overpass/overpass59.tif,overpass,val
+1475,parking_lot/parkinglot75.tif,parking lot,val
+1476,baseball_diamond/baseballdiamond69.tif,baseball diamond,val
+1477,medium_residential/mediumresidential14.tif,medium residential,val
+1478,tennis_court/tenniscourt62.tif,tennis court,val
+1479,buildings/buildings68.tif,buildings,val
+1480,medium_residential/mediumresidential43.tif,medium residential,val
+1481,intersection/intersection82.tif,intersection,val
+1482,mobile_home_park/mobilehomepark53.tif,mobile home park,val
+1483,sparse_residential/sparseresidential21.tif,sparse residential,val
+1484,freeway/freeway28.tif,freeway,val
+1485,parking_lot/parkinglot94.tif,parking lot,val
+1486,intersection/intersection50.tif,intersection,val
+1487,freeway/freeway15.tif,freeway,val
+1488,tennis_court/tenniscourt89.tif,tennis court,val
+1489,buildings/buildings37.tif,buildings,val
+1490,agricultural/agricultural07.tif,agricultural,val
+1491,chaparral/chaparral24.tif,chaparral,val
+1492,medium_residential/mediumresidential51.tif,medium residential,val
+1493,buildings/buildings69.tif,buildings,val
+1494,parking_lot/parkinglot81.tif,parking lot,val
+1495,freeway/freeway05.tif,freeway,val
+1496,sparse_residential/sparseresidential20.tif,sparse residential,val
+1497,tennis_court/tenniscourt99.tif,tennis court,val
+1498,airplane/airplane63.tif,airplane,val
+1499,storage_tanks/storagetanks28.tif,storage tanks,val
+1500,airplane/airplane98.tif,airplane,val
+1501,forest/forest72.tif,forest,val
+1502,intersection/intersection45.tif,intersection,val
+1503,freeway/freeway42.tif,freeway,val
+1504,chaparral/chaparral03.tif,chaparral,val
+1505,mobile_home_park/mobilehomepark23.tif,mobile home park,val
+1506,beach/beach32.tif,beach,val
+1507,tennis_court/tenniscourt40.tif,tennis court,val
+1508,agricultural/agricultural58.tif,agricultural,val
+1509,freeway/freeway17.tif,freeway,val
+1510,river/river38.tif,river,val
+1511,river/river71.tif,river,val
+1512,runway/runway18.tif,runway,val
+1513,airplane/airplane31.tif,airplane,val
+1514,harbor/harbor15.tif,harbor,val
+1515,river/river91.tif,river,val
+1516,freeway/freeway95.tif,freeway,val
+1517,chaparral/chaparral76.tif,chaparral,val
+1518,agricultural/agricultural30.tif,agricultural,val
+1519,freeway/freeway01.tif,freeway,val
+1520,sparse_residential/sparseresidential82.tif,sparse residential,val
+1521,river/river02.tif,river,val
+1522,agricultural/agricultural97.tif,agricultural,val
+1523,buildings/buildings82.tif,buildings,val
+1524,agricultural/agricultural67.tif,agricultural,val
+1525,golf_course/golfcourse67.tif,golf course,val
+1526,airplane/airplane20.tif,airplane,val
+1527,storage_tanks/storagetanks30.tif,storage tanks,val
+1528,forest/forest78.tif,forest,val
+1529,sparse_residential/sparseresidential92.tif,sparse residential,val
+1530,agricultural/agricultural98.tif,agricultural,val
+1531,freeway/freeway61.tif,freeway,val
+1532,dense_residential/denseresidential44.tif,dense residential,val
+1533,buildings/buildings70.tif,buildings,val
+1534,storage_tanks/storagetanks64.tif,storage tanks,val
+1535,baseball_diamond/baseballdiamond19.tif,baseball diamond,val
+1536,parking_lot/parkinglot86.tif,parking lot,val
+1537,river/river65.tif,river,val
+1538,dense_residential/denseresidential27.tif,dense residential,val
+1539,storage_tanks/storagetanks34.tif,storage tanks,val
+1540,forest/forest93.tif,forest,val
+1541,buildings/buildings28.tif,buildings,val
+1542,mobile_home_park/mobilehomepark69.tif,mobile home park,val
+1543,runway/runway12.tif,runway,val
+1544,runway/runway68.tif,runway,val
+1545,tennis_court/tenniscourt34.tif,tennis court,val
+1546,storage_tanks/storagetanks45.tif,storage tanks,val
+1547,dense_residential/denseresidential86.tif,dense residential,val
+1548,river/river46.tif,river,val
+1549,sparse_residential/sparseresidential99.tif,sparse residential,val
+1550,golf_course/golfcourse88.tif,golf course,val
+1551,harbor/harbor72.tif,harbor,val
+1552,overpass/overpass68.tif,overpass,val
+1553,buildings/buildings77.tif,buildings,val
+1554,golf_course/golfcourse28.tif,golf course,val
+1555,chaparral/chaparral87.tif,chaparral,val
+1556,overpass/overpass56.tif,overpass,val
+1557,freeway/freeway51.tif,freeway,val
+1558,overpass/overpass36.tif,overpass,val
+1559,parking_lot/parkinglot37.tif,parking lot,val
+1560,intersection/intersection19.tif,intersection,val
+1561,chaparral/chaparral54.tif,chaparral,val
+1562,airplane/airplane00.tif,airplane,val
+1563,intersection/intersection06.tif,intersection,val
+1564,intersection/intersection23.tif,intersection,val
+1565,airplane/airplane87.tif,airplane,val
+1566,medium_residential/mediumresidential98.tif,medium residential,val
+1567,overpass/overpass98.tif,overpass,val
+1568,chaparral/chaparral20.tif,chaparral,val
+1569,buildings/buildings88.tif,buildings,val
+1570,golf_course/golfcourse09.tif,golf course,val
+1571,overpass/overpass35.tif,overpass,val
+1572,forest/forest66.tif,forest,val
+1573,chaparral/chaparral55.tif,chaparral,val
+1574,storage_tanks/storagetanks53.tif,storage tanks,val
+1575,dense_residential/denseresidential02.tif,dense residential,val
+1576,dense_residential/denseresidential89.tif,dense residential,val
+1577,tennis_court/tenniscourt28.tif,tennis court,val
+1578,parking_lot/parkinglot73.tif,parking lot,val
+1579,golf_course/golfcourse11.tif,golf course,val
+1580,intersection/intersection55.tif,intersection,val
+1581,tennis_court/tenniscourt91.tif,tennis court,val
+1582,medium_residential/mediumresidential25.tif,medium residential,val
+1583,beach/beach95.tif,beach,val
+1584,buildings/buildings95.tif,buildings,val
+1585,chaparral/chaparral74.tif,chaparral,val
+1586,overpass/overpass82.tif,overpass,val
+1587,baseball_diamond/baseballdiamond13.tif,baseball diamond,val
+1588,agricultural/agricultural18.tif,agricultural,val
+1589,tennis_court/tenniscourt52.tif,tennis court,val
+1590,intersection/intersection39.tif,intersection,val
+1591,overpass/overpass24.tif,overpass,val
+1592,medium_residential/mediumresidential60.tif,medium residential,val
+1593,overpass/overpass97.tif,overpass,val
+1594,tennis_court/tenniscourt29.tif,tennis court,val
+1595,forest/forest06.tif,forest,val
+1596,sparse_residential/sparseresidential63.tif,sparse residential,val
+1597,beach/beach70.tif,beach,val
+1598,mobile_home_park/mobilehomepark18.tif,mobile home park,val
+1599,sparse_residential/sparseresidential96.tif,sparse residential,val
+1600,golf_course/golfcourse34.tif,golf course,val
+1601,forest/forest11.tif,forest,val
+1602,chaparral/chaparral63.tif,chaparral,val
+1603,airplane/airplane27.tif,airplane,val
+1604,runway/runway32.tif,runway,val
+1605,chaparral/chaparral45.tif,chaparral,val
+1606,medium_residential/mediumresidential53.tif,medium residential,val
+1607,overpass/overpass07.tif,overpass,val
+1608,runway/runway74.tif,runway,val
+1609,forest/forest31.tif,forest,val
+1610,airplane/airplane02.tif,airplane,val
+1611,forest/forest23.tif,forest,val
+1612,storage_tanks/storagetanks73.tif,storage tanks,val
+1613,beach/beach31.tif,beach,val
+1614,dense_residential/denseresidential75.tif,dense residential,val
+1615,agricultural/agricultural76.tif,agricultural,val
+1616,baseball_diamond/baseballdiamond12.tif,baseball diamond,val
+1617,parking_lot/parkinglot93.tif,parking lot,val
+1618,storage_tanks/storagetanks08.tif,storage tanks,val
+1619,beach/beach34.tif,beach,val
+1620,golf_course/golfcourse07.tif,golf course,val
+1621,baseball_diamond/baseballdiamond60.tif,baseball diamond,val
+1622,overpass/overpass30.tif,overpass,val
+1623,beach/beach67.tif,beach,val
+1624,airplane/airplane97.tif,airplane,val
+1625,chaparral/chaparral15.tif,chaparral,val
+1626,mobile_home_park/mobilehomepark22.tif,mobile home park,val
+1627,tennis_court/tenniscourt20.tif,tennis court,val
+1628,tennis_court/tenniscourt86.tif,tennis court,val
+1629,baseball_diamond/baseballdiamond55.tif,baseball diamond,val
+1630,agricultural/agricultural69.tif,agricultural,val
+1631,intersection/intersection49.tif,intersection,val
+1632,forest/forest40.tif,forest,val
+1633,golf_course/golfcourse61.tif,golf course,val
+1634,baseball_diamond/baseballdiamond26.tif,baseball diamond,val
+1635,storage_tanks/storagetanks86.tif,storage tanks,val
+1636,runway/runway75.tif,runway,val
+1637,airplane/airplane85.tif,airplane,val
+1638,medium_residential/mediumresidential49.tif,medium residential,val
+1639,baseball_diamond/baseballdiamond51.tif,baseball diamond,val
+1640,beach/beach27.tif,beach,val
+1641,dense_residential/denseresidential54.tif,dense residential,val
+1642,overpass/overpass54.tif,overpass,val
+1643,baseball_diamond/baseballdiamond64.tif,baseball diamond,val
+1644,forest/forest08.tif,forest,val
+1645,intersection/intersection78.tif,intersection,val
+1646,medium_residential/mediumresidential41.tif,medium residential,val
+1647,golf_course/golfcourse45.tif,golf course,val
+1648,buildings/buildings83.tif,buildings,val
+1649,intersection/intersection93.tif,intersection,val
+1650,beach/beach53.tif,beach,val
+1651,parking_lot/parkinglot30.tif,parking lot,val
+1652,agricultural/agricultural42.tif,agricultural,val
+1653,river/river49.tif,river,val
+1654,sparse_residential/sparseresidential54.tif,sparse residential,val
+1655,harbor/harbor10.tif,harbor,val
+1656,sparse_residential/sparseresidential75.tif,sparse residential,val
+1657,river/river48.tif,river,val
+1658,forest/forest09.tif,forest,val
+1659,runway/runway29.tif,runway,val
+1660,golf_course/golfcourse76.tif,golf course,val
+1661,golf_course/golfcourse23.tif,golf course,val
+1662,harbor/harbor85.tif,harbor,val
+1663,airplane/airplane18.tif,airplane,val
+1664,dense_residential/denseresidential10.tif,dense residential,val
+1665,runway/runway61.tif,runway,val
+1666,agricultural/agricultural03.tif,agricultural,val
+1667,airplane/airplane43.tif,airplane,val
+1668,agricultural/agricultural68.tif,agricultural,val
+1669,harbor/harbor82.tif,harbor,val
+1670,buildings/buildings36.tif,buildings,val
+1671,beach/beach82.tif,beach,val
+1672,harbor/harbor55.tif,harbor,val
+1673,sparse_residential/sparseresidential72.tif,sparse residential,val
+1674,parking_lot/parkinglot35.tif,parking lot,val
+1675,mobile_home_park/mobilehomepark49.tif,mobile home park,val
+1676,golf_course/golfcourse90.tif,golf course,val
+1677,baseball_diamond/baseballdiamond97.tif,baseball diamond,val
+1678,mobile_home_park/mobilehomepark64.tif,mobile home park,val
+1679,sparse_residential/sparseresidential36.tif,sparse residential,val
+1680,parking_lot/parkinglot19.tif,parking lot,test
+1681,beach/beach24.tif,beach,test
+1682,mobile_home_park/mobilehomepark65.tif,mobile home park,test
+1683,parking_lot/parkinglot13.tif,parking lot,test
+1684,baseball_diamond/baseballdiamond56.tif,baseball diamond,test
+1685,airplane/airplane21.tif,airplane,test
+1686,runway/runway77.tif,runway,test
+1687,parking_lot/parkinglot79.tif,parking lot,test
+1688,sparse_residential/sparseresidential30.tif,sparse residential,test
+1689,golf_course/golfcourse60.tif,golf course,test
+1690,forest/forest76.tif,forest,test
+1691,river/river77.tif,river,test
+1692,overpass/overpass49.tif,overpass,test
+1693,dense_residential/denseresidential41.tif,dense residential,test
+1694,agricultural/agricultural43.tif,agricultural,test
+1695,sparse_residential/sparseresidential16.tif,sparse residential,test
+1696,buildings/buildings14.tif,buildings,test
+1697,storage_tanks/storagetanks44.tif,storage tanks,test
+1698,freeway/freeway45.tif,freeway,test
+1699,overpass/overpass32.tif,overpass,test
+1700,mobile_home_park/mobilehomepark52.tif,mobile home park,test
+1701,river/river39.tif,river,test
+1702,baseball_diamond/baseballdiamond85.tif,baseball diamond,test
+1703,runway/runway33.tif,runway,test
+1704,harbor/harbor40.tif,harbor,test
+1705,golf_course/golfcourse93.tif,golf course,test
+1706,intersection/intersection63.tif,intersection,test
+1707,overpass/overpass04.tif,overpass,test
+1708,intersection/intersection77.tif,intersection,test
+1709,runway/runway20.tif,runway,test
+1710,dense_residential/denseresidential63.tif,dense residential,test
+1711,medium_residential/mediumresidential73.tif,medium residential,test
+1712,parking_lot/parkinglot50.tif,parking lot,test
+1713,medium_residential/mediumresidential09.tif,medium residential,test
+1714,airplane/airplane80.tif,airplane,test
+1715,overpass/overpass01.tif,overpass,test
+1716,harbor/harbor08.tif,harbor,test
+1717,agricultural/agricultural44.tif,agricultural,test
+1718,beach/beach88.tif,beach,test
+1719,medium_residential/mediumresidential46.tif,medium residential,test
+1720,buildings/buildings11.tif,buildings,test
+1721,chaparral/chaparral26.tif,chaparral,test
+1722,sparse_residential/sparseresidential10.tif,sparse residential,test
+1723,overpass/overpass89.tif,overpass,test
+1724,buildings/buildings54.tif,buildings,test
+1725,river/river94.tif,river,test
+1726,storage_tanks/storagetanks84.tif,storage tanks,test
+1727,tennis_court/tenniscourt68.tif,tennis court,test
+1728,agricultural/agricultural84.tif,agricultural,test
+1729,airplane/airplane51.tif,airplane,test
+1730,forest/forest94.tif,forest,test
+1731,storage_tanks/storagetanks17.tif,storage tanks,test
+1732,dense_residential/denseresidential31.tif,dense residential,test
+1733,dense_residential/denseresidential56.tif,dense residential,test
+1734,storage_tanks/storagetanks49.tif,storage tanks,test
+1735,parking_lot/parkinglot82.tif,parking lot,test
+1736,beach/beach80.tif,beach,test
+1737,agricultural/agricultural32.tif,agricultural,test
+1738,sparse_residential/sparseresidential60.tif,sparse residential,test
+1739,airplane/airplane89.tif,airplane,test
+1740,river/river14.tif,river,test
+1741,intersection/intersection09.tif,intersection,test
+1742,forest/forest77.tif,forest,test
+1743,mobile_home_park/mobilehomepark77.tif,mobile home park,test
+1744,overpass/overpass41.tif,overpass,test
+1745,buildings/buildings66.tif,buildings,test
+1746,overpass/overpass39.tif,overpass,test
+1747,storage_tanks/storagetanks12.tif,storage tanks,test
+1748,harbor/harbor94.tif,harbor,test
+1749,runway/runway92.tif,runway,test
+1750,baseball_diamond/baseballdiamond53.tif,baseball diamond,test
+1751,beach/beach37.tif,beach,test
+1752,river/river58.tif,river,test
+1753,golf_course/golfcourse27.tif,golf course,test
+1754,chaparral/chaparral37.tif,chaparral,test
+1755,medium_residential/mediumresidential91.tif,medium residential,test
+1756,dense_residential/denseresidential84.tif,dense residential,test
+1757,overpass/overpass90.tif,overpass,test
+1758,buildings/buildings57.tif,buildings,test
+1759,intersection/intersection10.tif,intersection,test
+1760,tennis_court/tenniscourt21.tif,tennis court,test
+1761,tennis_court/tenniscourt35.tif,tennis court,test
+1762,freeway/freeway97.tif,freeway,test
+1763,beach/beach60.tif,beach,test
+1764,beach/beach21.tif,beach,test
+1765,medium_residential/mediumresidential74.tif,medium residential,test
+1766,agricultural/agricultural09.tif,agricultural,test
+1767,river/river75.tif,river,test
+1768,harbor/harbor02.tif,harbor,test
+1769,river/river93.tif,river,test
+1770,airplane/airplane59.tif,airplane,test
+1771,buildings/buildings49.tif,buildings,test
+1772,medium_residential/mediumresidential93.tif,medium residential,test
+1773,chaparral/chaparral73.tif,chaparral,test
+1774,harbor/harbor58.tif,harbor,test
+1775,harbor/harbor70.tif,harbor,test
+1776,parking_lot/parkinglot08.tif,parking lot,test
+1777,golf_course/golfcourse82.tif,golf course,test
+1778,tennis_court/tenniscourt24.tif,tennis court,test
+1779,golf_course/golfcourse10.tif,golf course,test
+1780,storage_tanks/storagetanks13.tif,storage tanks,test
+1781,forest/forest38.tif,forest,test
+1782,mobile_home_park/mobilehomepark97.tif,mobile home park,test
+1783,beach/beach63.tif,beach,test
+1784,baseball_diamond/baseballdiamond91.tif,baseball diamond,test
+1785,harbor/harbor69.tif,harbor,test
+1786,mobile_home_park/mobilehomepark89.tif,mobile home park,test
+1787,storage_tanks/storagetanks78.tif,storage tanks,test
+1788,storage_tanks/storagetanks83.tif,storage tanks,test
+1789,harbor/harbor07.tif,harbor,test
+1790,river/river90.tif,river,test
+1791,medium_residential/mediumresidential55.tif,medium residential,test
+1792,river/river55.tif,river,test
+1793,freeway/freeway93.tif,freeway,test
+1794,forest/forest86.tif,forest,test
+1795,forest/forest96.tif,forest,test
+1796,beach/beach73.tif,beach,test
+1797,airplane/airplane65.tif,airplane,test
+1798,harbor/harbor24.tif,harbor,test
+1799,forest/forest62.tif,forest,test
+1800,tennis_court/tenniscourt23.tif,tennis court,test
+1801,beach/beach94.tif,beach,test
+1802,overpass/overpass85.tif,overpass,test
+1803,chaparral/chaparral93.tif,chaparral,test
+1804,overpass/overpass26.tif,overpass,test
+1805,runway/runway50.tif,runway,test
+1806,sparse_residential/sparseresidential22.tif,sparse residential,test
+1807,harbor/harbor68.tif,harbor,test
+1808,storage_tanks/storagetanks62.tif,storage tanks,test
+1809,sparse_residential/sparseresidential77.tif,sparse residential,test
+1810,intersection/intersection14.tif,intersection,test
+1811,intersection/intersection60.tif,intersection,test
+1812,river/river89.tif,river,test
+1813,overpass/overpass66.tif,overpass,test
+1814,parking_lot/parkinglot62.tif,parking lot,test
+1815,storage_tanks/storagetanks68.tif,storage tanks,test
+1816,golf_course/golfcourse91.tif,golf course,test
+1817,runway/runway15.tif,runway,test
+1818,golf_course/golfcourse26.tif,golf course,test
+1819,tennis_court/tenniscourt66.tif,tennis court,test
+1820,chaparral/chaparral96.tif,chaparral,test
+1821,mobile_home_park/mobilehomepark16.tif,mobile home park,test
+1822,baseball_diamond/baseballdiamond00.tif,baseball diamond,test
+1823,golf_course/golfcourse39.tif,golf course,test
+1824,parking_lot/parkinglot97.tif,parking lot,test
+1825,beach/beach93.tif,beach,test
+1826,chaparral/chaparral17.tif,chaparral,test
+1827,sparse_residential/sparseresidential57.tif,sparse residential,test
+1828,forest/forest18.tif,forest,test
+1829,forest/forest10.tif,forest,test
+1830,overpass/overpass31.tif,overpass,test
+1831,dense_residential/denseresidential04.tif,dense residential,test
+1832,agricultural/agricultural52.tif,agricultural,test
+1833,mobile_home_park/mobilehomepark80.tif,mobile home park,test
+1834,agricultural/agricultural85.tif,agricultural,test
+1835,parking_lot/parkinglot42.tif,parking lot,test
+1836,runway/runway19.tif,runway,test
+1837,forest/forest27.tif,forest,test
+1838,tennis_court/tenniscourt82.tif,tennis court,test
+1839,forest/forest41.tif,forest,test
+1840,buildings/buildings39.tif,buildings,test
+1841,chaparral/chaparral29.tif,chaparral,test
+1842,baseball_diamond/baseballdiamond02.tif,baseball diamond,test
+1843,beach/beach45.tif,beach,test
+1844,storage_tanks/storagetanks32.tif,storage tanks,test
+1845,dense_residential/denseresidential85.tif,dense residential,test
+1846,intersection/intersection73.tif,intersection,test
+1847,runway/runway11.tif,runway,test
+1848,mobile_home_park/mobilehomepark08.tif,mobile home park,test
+1849,dense_residential/denseresidential48.tif,dense residential,test
+1850,sparse_residential/sparseresidential05.tif,sparse residential,test
+1851,airplane/airplane58.tif,airplane,test
+1852,freeway/freeway29.tif,freeway,test
+1853,runway/runway26.tif,runway,test
+1854,tennis_court/tenniscourt15.tif,tennis court,test
+1855,mobile_home_park/mobilehomepark47.tif,mobile home park,test
+1856,chaparral/chaparral79.tif,chaparral,test
+1857,sparse_residential/sparseresidential19.tif,sparse residential,test
+1858,intersection/intersection24.tif,intersection,test
+1859,medium_residential/mediumresidential79.tif,medium residential,test
+1860,buildings/buildings33.tif,buildings,test
+1861,storage_tanks/storagetanks31.tif,storage tanks,test
+1862,freeway/freeway35.tif,freeway,test
+1863,buildings/buildings79.tif,buildings,test
+1864,mobile_home_park/mobilehomepark46.tif,mobile home park,test
+1865,golf_course/golfcourse20.tif,golf course,test
+1866,overpass/overpass14.tif,overpass,test
+1867,storage_tanks/storagetanks16.tif,storage tanks,test
+1868,river/river63.tif,river,test
+1869,dense_residential/denseresidential88.tif,dense residential,test
+1870,mobile_home_park/mobilehomepark32.tif,mobile home park,test
+1871,intersection/intersection65.tif,intersection,test
+1872,agricultural/agricultural94.tif,agricultural,test
+1873,medium_residential/mediumresidential59.tif,medium residential,test
+1874,baseball_diamond/baseballdiamond44.tif,baseball diamond,test
+1875,airplane/airplane06.tif,airplane,test
+1876,golf_course/golfcourse56.tif,golf course,test
+1877,runway/runway78.tif,runway,test
+1878,dense_residential/denseresidential38.tif,dense residential,test
+1879,sparse_residential/sparseresidential46.tif,sparse residential,test
+1880,chaparral/chaparral60.tif,chaparral,test
+1881,freeway/freeway24.tif,freeway,test
+1882,airplane/airplane83.tif,airplane,test
+1883,agricultural/agricultural15.tif,agricultural,test
+1884,dense_residential/denseresidential95.tif,dense residential,test
+1885,agricultural/agricultural12.tif,agricultural,test
+1886,intersection/intersection41.tif,intersection,test
+1887,airplane/airplane12.tif,airplane,test
+1888,golf_course/golfcourse37.tif,golf course,test
+1889,forest/forest52.tif,forest,test
+1890,baseball_diamond/baseballdiamond54.tif,baseball diamond,test
+1891,sparse_residential/sparseresidential68.tif,sparse residential,test
+1892,buildings/buildings53.tif,buildings,test
+1893,airplane/airplane91.tif,airplane,test
+1894,storage_tanks/storagetanks18.tif,storage tanks,test
+1895,beach/beach54.tif,beach,test
+1896,buildings/buildings61.tif,buildings,test
+1897,runway/runway21.tif,runway,test
+1898,agricultural/agricultural00.tif,agricultural,test
+1899,river/river59.tif,river,test
+1900,agricultural/agricultural74.tif,agricultural,test
+1901,dense_residential/denseresidential55.tif,dense residential,test
+1902,chaparral/chaparral02.tif,chaparral,test
+1903,runway/runway13.tif,runway,test
+1904,airplane/airplane49.tif,airplane,test
+1905,airplane/airplane94.tif,airplane,test
+1906,freeway/freeway14.tif,freeway,test
+1907,chaparral/chaparral06.tif,chaparral,test
+1908,medium_residential/mediumresidential39.tif,medium residential,test
+1909,beach/beach01.tif,beach,test
+1910,runway/runway42.tif,runway,test
+1911,buildings/buildings40.tif,buildings,test
+1912,parking_lot/parkinglot22.tif,parking lot,test
+1913,airplane/airplane45.tif,airplane,test
+1914,intersection/intersection34.tif,intersection,test
+1915,sparse_residential/sparseresidential01.tif,sparse residential,test
+1916,baseball_diamond/baseballdiamond99.tif,baseball diamond,test
+1917,agricultural/agricultural38.tif,agricultural,test
+1918,overpass/overpass43.tif,overpass,test
+1919,forest/forest73.tif,forest,test
+1920,mobile_home_park/mobilehomepark12.tif,mobile home park,test
+1921,medium_residential/mediumresidential36.tif,medium residential,test
+1922,tennis_court/tenniscourt43.tif,tennis court,test
+1923,medium_residential/mediumresidential58.tif,medium residential,test
+1924,freeway/freeway96.tif,freeway,test
+1925,forest/forest85.tif,forest,test
+1926,intersection/intersection43.tif,intersection,test
+1927,beach/beach29.tif,beach,test
+1928,medium_residential/mediumresidential64.tif,medium residential,test
+1929,baseball_diamond/baseballdiamond81.tif,baseball diamond,test
+1930,dense_residential/denseresidential40.tif,dense residential,test
+1931,golf_course/golfcourse65.tif,golf course,test
+1932,river/river19.tif,river,test
+1933,river/river23.tif,river,test
+1934,sparse_residential/sparseresidential67.tif,sparse residential,test
+1935,mobile_home_park/mobilehomepark40.tif,mobile home park,test
+1936,agricultural/agricultural20.tif,agricultural,test
+1937,airplane/airplane53.tif,airplane,test
+1938,tennis_court/tenniscourt53.tif,tennis court,test
+1939,beach/beach89.tif,beach,test
+1940,dense_residential/denseresidential35.tif,dense residential,test
+1941,dense_residential/denseresidential11.tif,dense residential,test
+1942,overpass/overpass18.tif,overpass,test
+1943,runway/runway66.tif,runway,test
+1944,storage_tanks/storagetanks87.tif,storage tanks,test
+1945,tennis_court/tenniscourt26.tif,tennis court,test
+1946,intersection/intersection47.tif,intersection,test
+1947,forest/forest99.tif,forest,test
+1948,intersection/intersection54.tif,intersection,test
+1949,sparse_residential/sparseresidential74.tif,sparse residential,test
+1950,tennis_court/tenniscourt85.tif,tennis court,test
+1951,dense_residential/denseresidential66.tif,dense residential,test
+1952,freeway/freeway43.tif,freeway,test
+1953,baseball_diamond/baseballdiamond38.tif,baseball diamond,test
+1954,medium_residential/mediumresidential40.tif,medium residential,test
+1955,tennis_court/tenniscourt41.tif,tennis court,test
+1956,agricultural/agricultural55.tif,agricultural,test
+1957,parking_lot/parkinglot01.tif,parking lot,test
+1958,intersection/intersection25.tif,intersection,test
+1959,harbor/harbor27.tif,harbor,test
+1960,beach/beach06.tif,beach,test
+1961,agricultural/agricultural08.tif,agricultural,test
+1962,tennis_court/tenniscourt67.tif,tennis court,test
+1963,chaparral/chaparral05.tif,chaparral,test
+1964,harbor/harbor98.tif,harbor,test
+1965,baseball_diamond/baseballdiamond31.tif,baseball diamond,test
+1966,chaparral/chaparral58.tif,chaparral,test
+1967,runway/runway16.tif,runway,test
+1968,overpass/overpass40.tif,overpass,test
+1969,golf_course/golfcourse84.tif,golf course,test
+1970,sparse_residential/sparseresidential08.tif,sparse residential,test
+1971,mobile_home_park/mobilehomepark43.tif,mobile home park,test
+1972,baseball_diamond/baseballdiamond01.tif,baseball diamond,test
+1973,freeway/freeway26.tif,freeway,test
+1974,medium_residential/mediumresidential87.tif,medium residential,test
+1975,freeway/freeway06.tif,freeway,test
+1976,overpass/overpass06.tif,overpass,test
+1977,storage_tanks/storagetanks76.tif,storage tanks,test
+1978,tennis_court/tenniscourt42.tif,tennis court,test
+1979,harbor/harbor06.tif,harbor,test
+1980,dense_residential/denseresidential18.tif,dense residential,test
+1981,golf_course/golfcourse94.tif,golf course,test
+1982,beach/beach58.tif,beach,test
+1983,parking_lot/parkinglot96.tif,parking lot,test
+1984,airplane/airplane56.tif,airplane,test
+1985,dense_residential/denseresidential42.tif,dense residential,test
+1986,sparse_residential/sparseresidential39.tif,sparse residential,test
+1987,golf_course/golfcourse05.tif,golf course,test
+1988,storage_tanks/storagetanks93.tif,storage tanks,test
+1989,parking_lot/parkinglot88.tif,parking lot,test
+1990,baseball_diamond/baseballdiamond03.tif,baseball diamond,test
+1991,forest/forest97.tif,forest,test
+1992,chaparral/chaparral47.tif,chaparral,test
+1993,beach/beach72.tif,beach,test
+1994,buildings/buildings04.tif,buildings,test
+1995,agricultural/agricultural92.tif,agricultural,test
+1996,medium_residential/mediumresidential57.tif,medium residential,test
+1997,overpass/overpass81.tif,overpass,test
+1998,dense_residential/denseresidential45.tif,dense residential,test
+1999,parking_lot/parkinglot43.tif,parking lot,test
+2000,freeway/freeway67.tif,freeway,test
+2001,sparse_residential/sparseresidential33.tif,sparse residential,test
+2002,golf_course/golfcourse68.tif,golf course,test
+2003,river/river76.tif,river,test
+2004,runway/runway04.tif,runway,test
+2005,storage_tanks/storagetanks20.tif,storage tanks,test
+2006,buildings/buildings16.tif,buildings,test
+2007,overpass/overpass12.tif,overpass,test
+2008,tennis_court/tenniscourt65.tif,tennis court,test
+2009,mobile_home_park/mobilehomepark59.tif,mobile home park,test
+2010,baseball_diamond/baseballdiamond32.tif,baseball diamond,test
+2011,buildings/buildings05.tif,buildings,test
+2012,runway/runway73.tif,runway,test
+2013,chaparral/chaparral66.tif,chaparral,test
+2014,mobile_home_park/mobilehomepark56.tif,mobile home park,test
+2015,baseball_diamond/baseballdiamond59.tif,baseball diamond,test
+2016,freeway/freeway30.tif,freeway,test
+2017,medium_residential/mediumresidential27.tif,medium residential,test
+2018,tennis_court/tenniscourt11.tif,tennis court,test
+2019,river/river52.tif,river,test
+2020,runway/runway62.tif,runway,test
+2021,forest/forest80.tif,forest,test
+2022,harbor/harbor97.tif,harbor,test
+2023,chaparral/chaparral65.tif,chaparral,test
+2024,parking_lot/parkinglot95.tif,parking lot,test
+2025,intersection/intersection04.tif,intersection,test
+2026,harbor/harbor45.tif,harbor,test
+2027,parking_lot/parkinglot55.tif,parking lot,test
+2028,freeway/freeway75.tif,freeway,test
+2029,storage_tanks/storagetanks58.tif,storage tanks,test
+2030,mobile_home_park/mobilehomepark61.tif,mobile home park,test
+2031,mobile_home_park/mobilehomepark48.tif,mobile home park,test
+2032,agricultural/agricultural79.tif,agricultural,test
+2033,forest/forest35.tif,forest,test
+2034,harbor/harbor36.tif,harbor,test
+2035,river/river83.tif,river,test
+2036,freeway/freeway73.tif,freeway,test
+2037,intersection/intersection38.tif,intersection,test
+2038,sparse_residential/sparseresidential34.tif,sparse residential,test
+2039,beach/beach65.tif,beach,test
+2040,parking_lot/parkinglot04.tif,parking lot,test
+2041,forest/forest98.tif,forest,test
+2042,buildings/buildings55.tif,buildings,test
+2043,sparse_residential/sparseresidential97.tif,sparse residential,test
+2044,forest/forest34.tif,forest,test
+2045,river/river16.tif,river,test
+2046,airplane/airplane42.tif,airplane,test
+2047,river/river73.tif,river,test
+2048,runway/runway46.tif,runway,test
+2049,tennis_court/tenniscourt44.tif,tennis court,test
+2050,airplane/airplane07.tif,airplane,test
+2051,beach/beach15.tif,beach,test
+2052,tennis_court/tenniscourt93.tif,tennis court,test
+2053,medium_residential/mediumresidential76.tif,medium residential,test
+2054,chaparral/chaparral69.tif,chaparral,test
+2055,storage_tanks/storagetanks41.tif,storage tanks,test
+2056,freeway/freeway87.tif,freeway,test
+2057,intersection/intersection61.tif,intersection,test
+2058,dense_residential/denseresidential19.tif,dense residential,test
+2059,freeway/freeway12.tif,freeway,test
+2060,baseball_diamond/baseballdiamond35.tif,baseball diamond,test
+2061,agricultural/agricultural61.tif,agricultural,test
+2062,river/river32.tif,river,test
+2063,medium_residential/mediumresidential00.tif,medium residential,test
+2064,chaparral/chaparral62.tif,chaparral,test
+2065,harbor/harbor78.tif,harbor,test
+2066,harbor/harbor32.tif,harbor,test
+2067,runway/runway86.tif,runway,test
+2068,agricultural/agricultural28.tif,agricultural,test
+2069,baseball_diamond/baseballdiamond45.tif,baseball diamond,test
+2070,golf_course/golfcourse96.tif,golf course,test
+2071,baseball_diamond/baseballdiamond58.tif,baseball diamond,test
+2072,medium_residential/mediumresidential03.tif,medium residential,test
+2073,buildings/buildings96.tif,buildings,test
+2074,buildings/buildings84.tif,buildings,test
+2075,harbor/harbor73.tif,harbor,test
+2076,freeway/freeway04.tif,freeway,test
+2077,parking_lot/parkinglot78.tif,parking lot,test
+2078,mobile_home_park/mobilehomepark99.tif,mobile home park,test
+2079,parking_lot/parkinglot12.tif,parking lot,test
+2080,baseball_diamond/baseballdiamond48.tif,baseball diamond,test
+2081,intersection/intersection59.tif,intersection,test
+2082,intersection/intersection69.tif,intersection,test
+2083,sparse_residential/sparseresidential35.tif,sparse residential,test
+2084,freeway/freeway77.tif,freeway,test
+2085,airplane/airplane62.tif,airplane,test
+2086,tennis_court/tenniscourt46.tif,tennis court,test
+2087,chaparral/chaparral85.tif,chaparral,test
+2088,golf_course/golfcourse43.tif,golf course,test
+2089,freeway/freeway54.tif,freeway,test
+2090,parking_lot/parkinglot44.tif,parking lot,test
+2091,mobile_home_park/mobilehomepark82.tif,mobile home park,test
+2092,buildings/buildings00.tif,buildings,test
+2093,chaparral/chaparral31.tif,chaparral,test
+2094,golf_course/golfcourse92.tif,golf course,test
+2095,overpass/overpass70.tif,overpass,test
+2096,harbor/harbor23.tif,harbor,test
+2097,golf_course/golfcourse97.tif,golf course,test
+2098,airplane/airplane76.tif,airplane,test
+2099,buildings/buildings73.tif,buildings,test
