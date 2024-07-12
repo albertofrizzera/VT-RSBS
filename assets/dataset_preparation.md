@@ -71,9 +71,44 @@ Steps:
 
 This dataset does not provide train-test-val splits in literature. We created random train-test-val splits using stratification, to ensure that the classes are balanced in each split.
 
+```
+| benchmarks
+│  ├── RSSCN7
+│  │  ├── aGrass
+│  │  │  ├── a001.jpg
+│  │  │  ├── a002.jpg
+│  │  │  ├── ...
+│  │  ├── bField
+│  │  │  ├── b001.jpg
+│  │  │  ├── b002.jpg
+│  │  │  ├── ...
+|  |  ├── ...
+│  │  ├── labels
+│  │  │  ├── RSSCN7.csv
+```
+
 ### SIRI_WHU
 1. Download the dataset from [here](https://www.kaggle.com/datasets/lzsy0226/siri-whu-data-set).
-2. Extract the zip file and copy all the images in ``dataset/benchmarks/SIRI_WHU/images/``.
+2. Create a folder named "SIRI_WHU" inside ``benchmarks/``.
+3. Extract the zip file and copy all the images in ``benchmarks/SIRI_WHU/images/``.
+4. Copy the file ``metadata/SIRI_WHU/SIRI_WHU.csv`` into ``benchmarks/SIRI_WHU/labels/``.
+
+```
+| benchmarks
+│  ├── SIRI_WHU
+│  │  ├── images
+│  │  │  ├── agriculture
+│  │  │  │  ├── 1.tif
+│  │  │  |  ├── 2.tif
+│  │  │  |  ├── ...
+│  │  │  ├── commercial
+│  │  │  │  ├── 1.tif
+│  │  │  |  ├── 2.tif
+│  │  │  |  ├── ...
+|  |  ├── ...
+│  │  ├── labels
+│  │  │  ├── SIRI_WHU.csv
+```
 
 ### RESISC45
 1. Download the file ``NWPU_RESISC45-20210923T210241Z-001.zip`` from [here](https://figshare.com/articles/dataset/NWPU-RESISC45_Dataset_with_12_classes/16674166).
