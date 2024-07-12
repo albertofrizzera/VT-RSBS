@@ -1,0 +1,1861 @@
+,filepath,label,split
+0,chaparral/chaparral(53).jpg,chaparral,train
+1,beach/beach(22).jpg,beach,train
+2,forest/forest(11).jpg,forest,train
+3,commercial_area/commercial_area(31).jpg,commercial area,train
+4,chaparral/chaparral(1).jpg,chaparral,train
+5,golf_course/golf_course(54).jpg,golf course,train
+6,dense_residential/dense_residential(32).jpg,dense residential,train
+7,lake/lake(53).jpg,lake,train
+8,lake/lake(15).jpg,lake,train
+9,circular_farmland/circular_farmland(6).jpg,circular farmland,train
+10,church/church(3).jpg,church,train
+11,basketball_court/basketball_court(44).jpg,basketball court,train
+12,mobile_home_park/mobile_home_park(9).jpg,mobile home park,train
+13,roundabout/roundabout(21).jpg,roundabout,train
+14,bridge/bridge(45).jpg,bridge,train
+15,airplane/airplane(43).jpg,airplane,train
+16,meadow/meadow(12).jpg,meadow,train
+17,dense_residential/dense_residential(24).jpg,dense residential,train
+18,island/island(29).jpg,island,train
+19,circular_farmland/circular_farmland(30).jpg,circular farmland,train
+20,bridge/bridge(42).jpg,bridge,train
+21,island/island(49).jpg,island,train
+22,railway/railway(38).jpg,railway,train
+23,baseball_diamond/baseball_diamond(25).jpg,baseball diamond,train
+24,overpass/overpass(57).jpg,overpass,train
+25,ground_track_field/ground_track_field(51).jpg,ground track field,train
+26,mountain/mountain(20).jpg,mountain,train
+27,parking_lot/parking_lot(13).jpg,parking lot,train
+28,airplane/airplane(42).jpg,airplane,train
+29,ground_track_field/ground_track_field(19).jpg,ground track field,train
+30,island/island(11).jpg,island,train
+31,circular_farmland/circular_farmland(13).jpg,circular farmland,train
+32,airport/airport(20).jpg,airport,train
+33,harbor/harbor(29).jpg,harbor,train
+34,bridge/bridge(9).jpg,bridge,train
+35,dense_residential/dense_residential(10).jpg,dense residential,train
+36,chaparral/chaparral(55).jpg,chaparral,train
+37,beach/beach(14).jpg,beach,train
+38,roundabout/roundabout(23).jpg,roundabout,train
+39,railway/railway(53).jpg,railway,train
+40,commercial_area/commercial_area(30).jpg,commercial area,train
+41,freeway/freeway(54).jpg,freeway,train
+42,commercial_area/commercial_area(51).jpg,commercial area,train
+43,medium_residential/medium_residential(2).jpg,medium residential,train
+44,intersection/intersection(46).jpg,intersection,train
+45,airplane/airplane(49).jpg,airplane,train
+46,industrial_area/industrial_area(27).jpg,industrial area,train
+47,roundabout/roundabout(35).jpg,roundabout,train
+48,basketball_court/basketball_court(34).jpg,basketball court,train
+49,bridge/bridge(43).jpg,bridge,train
+50,desert/desert(5).jpg,desert,train
+51,beach/beach(5).jpg,beach,train
+52,railway/railway(22).jpg,railway,train
+53,chaparral/chaparral(10).jpg,chaparral,train
+54,desert/desert(41).jpg,desert,train
+55,church/church(1).jpg,church,train
+56,overpass/overpass(2).jpg,overpass,train
+57,industrial_area/industrial_area(5).jpg,industrial area,train
+58,basketball_court/basketball_court(33).jpg,basketball court,train
+59,circular_farmland/circular_farmland(43).jpg,circular farmland,train
+60,golf_course/golf_course(45).jpg,golf course,train
+61,basketball_court/basketball_court(31).jpg,basketball court,train
+62,airport/airport(29).jpg,airport,train
+63,airplane/airplane(53).jpg,airplane,train
+64,overpass/overpass(51).jpg,overpass,train
+65,church/church(47).jpg,church,train
+66,chaparral/chaparral(13).jpg,chaparral,train
+67,meadow/meadow(55).jpg,meadow,train
+68,commercial_area/commercial_area(32).jpg,commercial area,train
+69,forest/forest(43).jpg,forest,train
+70,freeway/freeway(7).jpg,freeway,train
+71,parking_lot/parking_lot(59).jpg,parking lot,train
+72,bridge/bridge(19).jpg,bridge,train
+73,ground_track_field/ground_track_field(5).jpg,ground track field,train
+74,medium_residential/medium_residential(39).jpg,medium residential,train
+75,dense_residential/dense_residential(29).jpg,dense residential,train
+76,ground_track_field/ground_track_field(8).jpg,ground track field,train
+77,golf_course/golf_course(55).jpg,golf course,train
+78,lake/lake(5).jpg,lake,train
+79,forest/forest(17).jpg,forest,train
+80,basketball_court/basketball_court(7).jpg,basketball court,train
+81,intersection/intersection(21).jpg,intersection,train
+82,meadow/meadow(31).jpg,meadow,train
+83,harbor/harbor(47).jpg,harbor,train
+84,meadow/meadow(44).jpg,meadow,train
+85,basketball_court/basketball_court(12).jpg,basketball court,train
+86,forest/forest(37).jpg,forest,train
+87,parking_lot/parking_lot(14).jpg,parking lot,train
+88,ground_track_field/ground_track_field(2).jpg,ground track field,train
+89,meadow/meadow(24).jpg,meadow,train
+90,beach/beach(43).jpg,beach,train
+91,ground_track_field/ground_track_field(16).jpg,ground track field,train
+92,chaparral/chaparral(25).jpg,chaparral,train
+93,medium_residential/medium_residential(27).jpg,medium residential,train
+94,desert/desert(37).jpg,desert,train
+95,island/island(14).jpg,island,train
+96,overpass/overpass(55).jpg,overpass,train
+97,medium_residential/medium_residential(18).jpg,medium residential,train
+98,medium_residential/medium_residential(45).jpg,medium residential,train
+99,ground_track_field/ground_track_field(12).jpg,ground track field,train
+100,circular_farmland/circular_farmland(48).jpg,circular farmland,train
+101,meadow/meadow(19).jpg,meadow,train
+102,harbor/harbor(25).jpg,harbor,train
+103,beach/beach(16).jpg,beach,train
+104,circular_farmland/circular_farmland(19).jpg,circular farmland,train
+105,chaparral/chaparral(60).jpg,chaparral,train
+106,church/church(54).jpg,church,train
+107,medium_residential/medium_residential(59).jpg,medium residential,train
+108,beach/beach(57).jpg,beach,train
+109,bridge/bridge(54).jpg,bridge,train
+110,mobile_home_park/mobile_home_park(26).jpg,mobile home park,train
+111,freeway/freeway(1).jpg,freeway,train
+112,golf_course/golf_course(38).jpg,golf course,train
+113,mobile_home_park/mobile_home_park(44).jpg,mobile home park,train
+114,desert/desert(40).jpg,desert,train
+115,rectangular_farmland/rectangular_farmland(3).jpg,rectangular farmland,train
+116,desert/desert(35).jpg,desert,train
+117,island/island(10).jpg,island,train
+118,freeway/freeway(20).jpg,freeway,train
+119,railway/railway(28).jpg,railway,train
+120,desert/desert(51).jpg,desert,train
+121,medium_residential/medium_residential(24).jpg,medium residential,train
+122,forest/forest(38).jpg,forest,train
+123,industrial_area/industrial_area(38).jpg,industrial area,train
+124,lake/lake(50).jpg,lake,train
+125,circular_farmland/circular_farmland(18).jpg,circular farmland,train
+126,ground_track_field/ground_track_field(29).jpg,ground track field,train
+127,freeway/freeway(58).jpg,freeway,train
+128,bridge/bridge(28).jpg,bridge,train
+129,forest/forest(33).jpg,forest,train
+130,railway/railway(5).jpg,railway,train
+131,dense_residential/dense_residential(59).jpg,dense residential,train
+132,lake/lake(23).jpg,lake,train
+133,freeway/freeway(60).jpg,freeway,train
+134,church/church(41).jpg,church,train
+135,mountain/mountain(50).jpg,mountain,train
+136,beach/beach(11).jpg,beach,train
+137,circular_farmland/circular_farmland(20).jpg,circular farmland,train
+138,roundabout/roundabout(56).jpg,roundabout,train
+139,forest/forest(40).jpg,forest,train
+140,intersection/intersection(10).jpg,intersection,train
+141,harbor/harbor(14).jpg,harbor,train
+142,freeway/freeway(57).jpg,freeway,train
+143,commercial_area/commercial_area(25).jpg,commercial area,train
+144,beach/beach(24).jpg,beach,train
+145,baseball_diamond/baseball_diamond(26).jpg,baseball diamond,train
+146,industrial_area/industrial_area(55).jpg,industrial area,train
+147,lake/lake(13).jpg,lake,train
+148,overpass/overpass(52).jpg,overpass,train
+149,commercial_area/commercial_area(3).jpg,commercial area,train
+150,forest/forest(30).jpg,forest,train
+151,baseball_diamond/baseball_diamond(37).jpg,baseball diamond,train
+152,forest/forest(34).jpg,forest,train
+153,mountain/mountain(24).jpg,mountain,train
+154,commercial_area/commercial_area(13).jpg,commercial area,train
+155,church/church(26).jpg,church,train
+156,rectangular_farmland/rectangular_farmland(20).jpg,rectangular farmland,train
+157,airplane/airplane(35).jpg,airplane,train
+158,parking_lot/parking_lot(41).jpg,parking lot,train
+159,harbor/harbor(18).jpg,harbor,train
+160,beach/beach(6).jpg,beach,train
+161,mobile_home_park/mobile_home_park(56).jpg,mobile home park,train
+162,forest/forest(35).jpg,forest,train
+163,beach/beach(58).jpg,beach,train
+164,basketball_court/basketball_court(22).jpg,basketball court,train
+165,runway/runway(25).jpg,runway,train
+166,bridge/bridge(4).jpg,bridge,train
+167,chaparral/chaparral(7).jpg,chaparral,train
+168,desert/desert(50).jpg,desert,train
+169,meadow/meadow(41).jpg,meadow,train
+170,airport/airport(8).jpg,airport,train
+171,roundabout/roundabout(25).jpg,roundabout,train
+172,meadow/meadow(8).jpg,meadow,train
+173,intersection/intersection(40).jpg,intersection,train
+174,basketball_court/basketball_court(56).jpg,basketball court,train
+175,industrial_area/industrial_area(23).jpg,industrial area,train
+176,mobile_home_park/mobile_home_park(29).jpg,mobile home park,train
+177,mobile_home_park/mobile_home_park(3).jpg,mobile home park,train
+178,commercial_area/commercial_area(49).jpg,commercial area,train
+179,mountain/mountain(10).jpg,mountain,train
+180,freeway/freeway(42).jpg,freeway,train
+181,roundabout/roundabout(36).jpg,roundabout,train
+182,circular_farmland/circular_farmland(40).jpg,circular farmland,train
+183,industrial_area/industrial_area(52).jpg,industrial area,train
+184,lake/lake(17).jpg,lake,train
+185,forest/forest(29).jpg,forest,train
+186,parking_lot/parking_lot(47).jpg,parking lot,train
+187,basketball_court/basketball_court(18).jpg,basketball court,train
+188,ground_track_field/ground_track_field(48).jpg,ground track field,train
+189,chaparral/chaparral(8).jpg,chaparral,train
+190,mobile_home_park/mobile_home_park(49).jpg,mobile home park,train
+191,island/island(53).jpg,island,train
+192,church/church(50).jpg,church,train
+193,runway/runway(30).jpg,runway,train
+194,island/island(4).jpg,island,train
+195,intersection/intersection(11).jpg,intersection,train
+196,roundabout/roundabout(29).jpg,roundabout,train
+197,lake/lake(30).jpg,lake,train
+198,desert/desert(45).jpg,desert,train
+199,dense_residential/dense_residential(14).jpg,dense residential,train
+200,rectangular_farmland/rectangular_farmland(9).jpg,rectangular farmland,train
+201,commercial_area/commercial_area(39).jpg,commercial area,train
+202,chaparral/chaparral(56).jpg,chaparral,train
+203,island/island(3).jpg,island,train
+204,medium_residential/medium_residential(22).jpg,medium residential,train
+205,island/island(27).jpg,island,train
+206,circular_farmland/circular_farmland(15).jpg,circular farmland,train
+207,overpass/overpass(1).jpg,overpass,train
+208,rectangular_farmland/rectangular_farmland(60).jpg,rectangular farmland,train
+209,dense_residential/dense_residential(22).jpg,dense residential,train
+210,airplane/airplane(56).jpg,airplane,train
+211,mountain/mountain(39).jpg,mountain,train
+212,medium_residential/medium_residential(33).jpg,medium residential,train
+213,bridge/bridge(10).jpg,bridge,train
+214,airport/airport(18).jpg,airport,train
+215,rectangular_farmland/rectangular_farmland(30).jpg,rectangular farmland,train
+216,runway/runway(45).jpg,runway,train
+217,overpass/overpass(42).jpg,overpass,train
+218,harbor/harbor(21).jpg,harbor,train
+219,desert/desert(39).jpg,desert,train
+220,intersection/intersection(23).jpg,intersection,train
+221,basketball_court/basketball_court(43).jpg,basketball court,train
+222,bridge/bridge(44).jpg,bridge,train
+223,dense_residential/dense_residential(46).jpg,dense residential,train
+224,desert/desert(4).jpg,desert,train
+225,freeway/freeway(43).jpg,freeway,train
+226,church/church(35).jpg,church,train
+227,island/island(59).jpg,island,train
+228,beach/beach(9).jpg,beach,train
+229,mountain/mountain(43).jpg,mountain,train
+230,freeway/freeway(47).jpg,freeway,train
+231,island/island(12).jpg,island,train
+232,roundabout/roundabout(55).jpg,roundabout,train
+233,airplane/airplane(10).jpg,airplane,train
+234,roundabout/roundabout(4).jpg,roundabout,train
+235,meadow/meadow(21).jpg,meadow,train
+236,desert/desert(38).jpg,desert,train
+237,golf_course/golf_course(22).jpg,golf course,train
+238,bridge/bridge(20).jpg,bridge,train
+239,commercial_area/commercial_area(6).jpg,commercial area,train
+240,airport/airport(49).jpg,airport,train
+241,overpass/overpass(5).jpg,overpass,train
+242,commercial_area/commercial_area(37).jpg,commercial area,train
+243,airplane/airplane(31).jpg,airplane,train
+244,baseball_diamond/baseball_diamond(48).jpg,baseball diamond,train
+245,lake/lake(7).jpg,lake,train
+246,baseball_diamond/baseball_diamond(13).jpg,baseball diamond,train
+247,baseball_diamond/baseball_diamond(53).jpg,baseball diamond,train
+248,dense_residential/dense_residential(47).jpg,dense residential,train
+249,industrial_area/industrial_area(39).jpg,industrial area,train
+250,intersection/intersection(27).jpg,intersection,train
+251,golf_course/golf_course(12).jpg,golf course,train
+252,meadow/meadow(15).jpg,meadow,train
+253,ground_track_field/ground_track_field(17).jpg,ground track field,train
+254,church/church(60).jpg,church,train
+255,harbor/harbor(4).jpg,harbor,train
+256,bridge/bridge(41).jpg,bridge,train
+257,ground_track_field/ground_track_field(7).jpg,ground track field,train
+258,bridge/bridge(25).jpg,bridge,train
+259,mobile_home_park/mobile_home_park(52).jpg,mobile home park,train
+260,freeway/freeway(12).jpg,freeway,train
+261,basketball_court/basketball_court(59).jpg,basketball court,train
+262,industrial_area/industrial_area(28).jpg,industrial area,train
+263,lake/lake(44).jpg,lake,train
+264,parking_lot/parking_lot(54).jpg,parking lot,train
+265,desert/desert(27).jpg,desert,train
+266,meadow/meadow(49).jpg,meadow,train
+267,meadow/meadow(38).jpg,meadow,train
+268,baseball_diamond/baseball_diamond(57).jpg,baseball diamond,train
+269,beach/beach(28).jpg,beach,train
+270,harbor/harbor(46).jpg,harbor,train
+271,airport/airport(4).jpg,airport,train
+272,harbor/harbor(35).jpg,harbor,train
+273,desert/desert(12).jpg,desert,train
+274,dense_residential/dense_residential(37).jpg,dense residential,train
+275,airplane/airplane(18).jpg,airplane,train
+276,airplane/airplane(46).jpg,airplane,train
+277,chaparral/chaparral(9).jpg,chaparral,train
+278,circular_farmland/circular_farmland(2).jpg,circular farmland,train
+279,intersection/intersection(9).jpg,intersection,train
+280,mountain/mountain(51).jpg,mountain,train
+281,overpass/overpass(16).jpg,overpass,train
+282,golf_course/golf_course(29).jpg,golf course,train
+283,commercial_area/commercial_area(7).jpg,commercial area,train
+284,freeway/freeway(21).jpg,freeway,train
+285,forest/forest(4).jpg,forest,train
+286,circular_farmland/circular_farmland(47).jpg,circular farmland,train
+287,roundabout/roundabout(45).jpg,roundabout,train
+288,freeway/freeway(50).jpg,freeway,train
+289,freeway/freeway(19).jpg,freeway,train
+290,baseball_diamond/baseball_diamond(44).jpg,baseball diamond,train
+291,baseball_diamond/baseball_diamond(49).jpg,baseball diamond,train
+292,commercial_area/commercial_area(43).jpg,commercial area,train
+293,chaparral/chaparral(21).jpg,chaparral,train
+294,desert/desert(32).jpg,desert,train
+295,meadow/meadow(2).jpg,meadow,train
+296,baseball_diamond/baseball_diamond(43).jpg,baseball diamond,train
+297,desert/desert(47).jpg,desert,train
+298,meadow/meadow(23).jpg,meadow,train
+299,commercial_area/commercial_area(22).jpg,commercial area,train
+300,desert/desert(31).jpg,desert,train
+301,mobile_home_park/mobile_home_park(21).jpg,mobile home park,train
+302,roundabout/roundabout(28).jpg,roundabout,train
+303,island/island(26).jpg,island,train
+304,parking_lot/parking_lot(51).jpg,parking lot,train
+305,harbor/harbor(23).jpg,harbor,train
+306,meadow/meadow(45).jpg,meadow,train
+307,lake/lake(38).jpg,lake,train
+308,desert/desert(58).jpg,desert,train
+309,church/church(5).jpg,church,train
+310,overpass/overpass(60).jpg,overpass,train
+311,meadow/meadow(30).jpg,meadow,train
+312,railway/railway(7).jpg,railway,train
+313,beach/beach(33).jpg,beach,train
+314,industrial_area/industrial_area(18).jpg,industrial area,train
+315,medium_residential/medium_residential(36).jpg,medium residential,train
+316,ground_track_field/ground_track_field(54).jpg,ground track field,train
+317,church/church(14).jpg,church,train
+318,lake/lake(9).jpg,lake,train
+319,island/island(52).jpg,island,train
+320,harbor/harbor(12).jpg,harbor,train
+321,roundabout/roundabout(17).jpg,roundabout,train
+322,overpass/overpass(34).jpg,overpass,train
+323,ground_track_field/ground_track_field(14).jpg,ground track field,train
+324,mobile_home_park/mobile_home_park(31).jpg,mobile home park,train
+325,dense_residential/dense_residential(1).jpg,dense residential,train
+326,baseball_diamond/baseball_diamond(8).jpg,baseball diamond,train
+327,harbor/harbor(27).jpg,harbor,train
+328,industrial_area/industrial_area(21).jpg,industrial area,train
+329,church/church(59).jpg,church,train
+330,medium_residential/medium_residential(6).jpg,medium residential,train
+331,mountain/mountain(5).jpg,mountain,train
+332,parking_lot/parking_lot(38).jpg,parking lot,train
+333,railway/railway(17).jpg,railway,train
+334,basketball_court/basketball_court(36).jpg,basketball court,train
+335,commercial_area/commercial_area(16).jpg,commercial area,train
+336,bridge/bridge(14).jpg,bridge,train
+337,overpass/overpass(29).jpg,overpass,train
+338,industrial_area/industrial_area(50).jpg,industrial area,train
+339,ground_track_field/ground_track_field(6).jpg,ground track field,train
+340,church/church(10).jpg,church,train
+341,desert/desert(30).jpg,desert,train
+342,harbor/harbor(36).jpg,harbor,train
+343,beach/beach(20).jpg,beach,train
+344,runway/runway(27).jpg,runway,train
+345,circular_farmland/circular_farmland(50).jpg,circular farmland,train
+346,meadow/meadow(1).jpg,meadow,train
+347,runway/runway(22).jpg,runway,train
+348,island/island(6).jpg,island,train
+349,industrial_area/industrial_area(35).jpg,industrial area,train
+350,rectangular_farmland/rectangular_farmland(49).jpg,rectangular farmland,train
+351,forest/forest(14).jpg,forest,train
+352,chaparral/chaparral(42).jpg,chaparral,train
+353,meadow/meadow(22).jpg,meadow,train
+354,runway/runway(3).jpg,runway,train
+355,rectangular_farmland/rectangular_farmland(52).jpg,rectangular farmland,train
+356,lake/lake(31).jpg,lake,train
+357,golf_course/golf_course(28).jpg,golf course,train
+358,intersection/intersection(43).jpg,intersection,train
+359,medium_residential/medium_residential(15).jpg,medium residential,train
+360,overpass/overpass(58).jpg,overpass,train
+361,golf_course/golf_course(37).jpg,golf course,train
+362,airport/airport(46).jpg,airport,train
+363,roundabout/roundabout(8).jpg,roundabout,train
+364,rectangular_farmland/rectangular_farmland(51).jpg,rectangular farmland,train
+365,beach/beach(45).jpg,beach,train
+366,rectangular_farmland/rectangular_farmland(22).jpg,rectangular farmland,train
+367,mountain/mountain(55).jpg,mountain,train
+368,island/island(2).jpg,island,train
+369,chaparral/chaparral(45).jpg,chaparral,train
+370,circular_farmland/circular_farmland(35).jpg,circular farmland,train
+371,bridge/bridge(36).jpg,bridge,train
+372,bridge/bridge(50).jpg,bridge,train
+373,island/island(31).jpg,island,train
+374,church/church(55).jpg,church,train
+375,chaparral/chaparral(27).jpg,chaparral,train
+376,commercial_area/commercial_area(42).jpg,commercial area,train
+377,basketball_court/basketball_court(27).jpg,basketball court,train
+378,basketball_court/basketball_court(2).jpg,basketball court,train
+379,intersection/intersection(6).jpg,intersection,train
+380,mountain/mountain(28).jpg,mountain,train
+381,railway/railway(32).jpg,railway,train
+382,roundabout/roundabout(54).jpg,roundabout,train
+383,desert/desert(3).jpg,desert,train
+384,roundabout/roundabout(42).jpg,roundabout,train
+385,airplane/airplane(23).jpg,airplane,train
+386,overpass/overpass(47).jpg,overpass,train
+387,freeway/freeway(34).jpg,freeway,train
+388,railway/railway(48).jpg,railway,train
+389,intersection/intersection(32).jpg,intersection,train
+390,circular_farmland/circular_farmland(39).jpg,circular farmland,train
+391,island/island(42).jpg,island,train
+392,parking_lot/parking_lot(39).jpg,parking lot,train
+393,runway/runway(49).jpg,runway,train
+394,intersection/intersection(53).jpg,intersection,train
+395,basketball_court/basketball_court(10).jpg,basketball court,train
+396,parking_lot/parking_lot(16).jpg,parking lot,train
+397,airport/airport(30).jpg,airport,train
+398,golf_course/golf_course(26).jpg,golf course,train
+399,mountain/mountain(23).jpg,mountain,train
+400,lake/lake(48).jpg,lake,train
+401,baseball_diamond/baseball_diamond(50).jpg,baseball diamond,train
+402,mountain/mountain(31).jpg,mountain,train
+403,baseball_diamond/baseball_diamond(32).jpg,baseball diamond,train
+404,bridge/bridge(33).jpg,bridge,train
+405,parking_lot/parking_lot(56).jpg,parking lot,train
+406,intersection/intersection(56).jpg,intersection,train
+407,ground_track_field/ground_track_field(22).jpg,ground track field,train
+408,mountain/mountain(46).jpg,mountain,train
+409,rectangular_farmland/rectangular_farmland(28).jpg,rectangular farmland,train
+410,beach/beach(39).jpg,beach,train
+411,forest/forest(7).jpg,forest,train
+412,harbor/harbor(19).jpg,harbor,train
+413,runway/runway(43).jpg,runway,train
+414,runway/runway(26).jpg,runway,train
+415,runway/runway(5).jpg,runway,train
+416,intersection/intersection(22).jpg,intersection,train
+417,intersection/intersection(26).jpg,intersection,train
+418,mountain/mountain(40).jpg,mountain,train
+419,mountain/mountain(33).jpg,mountain,train
+420,railway/railway(52).jpg,railway,train
+421,harbor/harbor(11).jpg,harbor,train
+422,medium_residential/medium_residential(26).jpg,medium residential,train
+423,church/church(17).jpg,church,train
+424,forest/forest(49).jpg,forest,train
+425,golf_course/golf_course(44).jpg,golf course,train
+426,intersection/intersection(37).jpg,intersection,train
+427,lake/lake(1).jpg,lake,train
+428,roundabout/roundabout(11).jpg,roundabout,train
+429,lake/lake(18).jpg,lake,train
+430,circular_farmland/circular_farmland(17).jpg,circular farmland,train
+431,parking_lot/parking_lot(25).jpg,parking lot,train
+432,forest/forest(45).jpg,forest,train
+433,island/island(48).jpg,island,train
+434,airplane/airplane(25).jpg,airplane,train
+435,airport/airport(54).jpg,airport,train
+436,circular_farmland/circular_farmland(45).jpg,circular farmland,train
+437,industrial_area/industrial_area(4).jpg,industrial area,train
+438,ground_track_field/ground_track_field(46).jpg,ground track field,train
+439,desert/desert(36).jpg,desert,train
+440,freeway/freeway(35).jpg,freeway,train
+441,rectangular_farmland/rectangular_farmland(36).jpg,rectangular farmland,train
+442,rectangular_farmland/rectangular_farmland(45).jpg,rectangular farmland,train
+443,airport/airport(32).jpg,airport,train
+444,rectangular_farmland/rectangular_farmland(46).jpg,rectangular farmland,train
+445,ground_track_field/ground_track_field(36).jpg,ground track field,train
+446,lake/lake(26).jpg,lake,train
+447,golf_course/golf_course(31).jpg,golf course,train
+448,mountain/mountain(7).jpg,mountain,train
+449,mountain/mountain(29).jpg,mountain,train
+450,island/island(30).jpg,island,train
+451,lake/lake(56).jpg,lake,train
+452,church/church(53).jpg,church,train
+453,dense_residential/dense_residential(8).jpg,dense residential,train
+454,circular_farmland/circular_farmland(38).jpg,circular farmland,train
+455,mobile_home_park/mobile_home_park(54).jpg,mobile home park,train
+456,mountain/mountain(1).jpg,mountain,train
+457,basketball_court/basketball_court(25).jpg,basketball court,train
+458,overpass/overpass(38).jpg,overpass,train
+459,roundabout/roundabout(20).jpg,roundabout,train
+460,baseball_diamond/baseball_diamond(54).jpg,baseball diamond,train
+461,bridge/bridge(21).jpg,bridge,train
+462,airplane/airplane(52).jpg,airplane,train
+463,runway/runway(16).jpg,runway,train
+464,medium_residential/medium_residential(28).jpg,medium residential,train
+465,mountain/mountain(42).jpg,mountain,train
+466,desert/desert(15).jpg,desert,train
+467,industrial_area/industrial_area(31).jpg,industrial area,train
+468,commercial_area/commercial_area(14).jpg,commercial area,train
+469,beach/beach(59).jpg,beach,train
+470,airplane/airplane(58).jpg,airplane,train
+471,runway/runway(28).jpg,runway,train
+472,commercial_area/commercial_area(26).jpg,commercial area,train
+473,circular_farmland/circular_farmland(33).jpg,circular farmland,train
+474,circular_farmland/circular_farmland(22).jpg,circular farmland,train
+475,rectangular_farmland/rectangular_farmland(27).jpg,rectangular farmland,train
+476,freeway/freeway(31).jpg,freeway,train
+477,rectangular_farmland/rectangular_farmland(43).jpg,rectangular farmland,train
+478,overpass/overpass(3).jpg,overpass,train
+479,freeway/freeway(36).jpg,freeway,train
+480,golf_course/golf_course(41).jpg,golf course,train
+481,parking_lot/parking_lot(36).jpg,parking lot,train
+482,freeway/freeway(26).jpg,freeway,train
+483,lake/lake(12).jpg,lake,train
+484,industrial_area/industrial_area(29).jpg,industrial area,train
+485,golf_course/golf_course(1).jpg,golf course,train
+486,commercial_area/commercial_area(60).jpg,commercial area,train
+487,airplane/airplane(40).jpg,airplane,train
+488,runway/runway(52).jpg,runway,train
+489,industrial_area/industrial_area(30).jpg,industrial area,train
+490,rectangular_farmland/rectangular_farmland(34).jpg,rectangular farmland,train
+491,beach/beach(51).jpg,beach,train
+492,runway/runway(8).jpg,runway,train
+493,beach/beach(48).jpg,beach,train
+494,freeway/freeway(48).jpg,freeway,train
+495,industrial_area/industrial_area(17).jpg,industrial area,train
+496,lake/lake(4).jpg,lake,train
+497,commercial_area/commercial_area(57).jpg,commercial area,train
+498,overpass/overpass(17).jpg,overpass,train
+499,church/church(15).jpg,church,train
+500,intersection/intersection(42).jpg,intersection,train
+501,mobile_home_park/mobile_home_park(32).jpg,mobile home park,train
+502,overpass/overpass(54).jpg,overpass,train
+503,airport/airport(14).jpg,airport,train
+504,industrial_area/industrial_area(3).jpg,industrial area,train
+505,freeway/freeway(39).jpg,freeway,train
+506,baseball_diamond/baseball_diamond(18).jpg,baseball diamond,train
+507,chaparral/chaparral(31).jpg,chaparral,train
+508,airport/airport(59).jpg,airport,train
+509,church/church(33).jpg,church,train
+510,forest/forest(16).jpg,forest,train
+511,mobile_home_park/mobile_home_park(39).jpg,mobile home park,train
+512,meadow/meadow(47).jpg,meadow,train
+513,overpass/overpass(49).jpg,overpass,train
+514,church/church(51).jpg,church,train
+515,intersection/intersection(14).jpg,intersection,train
+516,desert/desert(6).jpg,desert,train
+517,railway/railway(1).jpg,railway,train
+518,intersection/intersection(36).jpg,intersection,train
+519,overpass/overpass(8).jpg,overpass,train
+520,lake/lake(37).jpg,lake,train
+521,dense_residential/dense_residential(27).jpg,dense residential,train
+522,medium_residential/medium_residential(47).jpg,medium residential,train
+523,medium_residential/medium_residential(32).jpg,medium residential,train
+524,ground_track_field/ground_track_field(56).jpg,ground track field,train
+525,railway/railway(13).jpg,railway,train
+526,baseball_diamond/baseball_diamond(24).jpg,baseball diamond,train
+527,baseball_diamond/baseball_diamond(2).jpg,baseball diamond,train
+528,island/island(17).jpg,island,train
+529,forest/forest(28).jpg,forest,train
+530,medium_residential/medium_residential(51).jpg,medium residential,train
+531,medium_residential/medium_residential(37).jpg,medium residential,train
+532,airport/airport(36).jpg,airport,train
+533,intersection/intersection(35).jpg,intersection,train
+534,rectangular_farmland/rectangular_farmland(23).jpg,rectangular farmland,train
+535,island/island(35).jpg,island,train
+536,ground_track_field/ground_track_field(34).jpg,ground track field,train
+537,railway/railway(59).jpg,railway,train
+538,dense_residential/dense_residential(42).jpg,dense residential,train
+539,runway/runway(4).jpg,runway,train
+540,parking_lot/parking_lot(37).jpg,parking lot,train
+541,baseball_diamond/baseball_diamond(20).jpg,baseball diamond,train
+542,lake/lake(35).jpg,lake,train
+543,circular_farmland/circular_farmland(28).jpg,circular farmland,train
+544,freeway/freeway(2).jpg,freeway,train
+545,circular_farmland/circular_farmland(34).jpg,circular farmland,train
+546,airplane/airplane(3).jpg,airplane,train
+547,medium_residential/medium_residential(60).jpg,medium residential,train
+548,bridge/bridge(1).jpg,bridge,train
+549,mountain/mountain(37).jpg,mountain,train
+550,runway/runway(11).jpg,runway,train
+551,intersection/intersection(16).jpg,intersection,train
+552,runway/runway(34).jpg,runway,train
+553,harbor/harbor(34).jpg,harbor,train
+554,chaparral/chaparral(46).jpg,chaparral,train
+555,airplane/airplane(33).jpg,airplane,train
+556,intersection/intersection(28).jpg,intersection,train
+557,railway/railway(33).jpg,railway,train
+558,harbor/harbor(33).jpg,harbor,train
+559,mountain/mountain(11).jpg,mountain,train
+560,airport/airport(51).jpg,airport,train
+561,mountain/mountain(16).jpg,mountain,train
+562,island/island(43).jpg,island,train
+563,parking_lot/parking_lot(35).jpg,parking lot,train
+564,medium_residential/medium_residential(23).jpg,medium residential,train
+565,bridge/bridge(6).jpg,bridge,train
+566,forest/forest(5).jpg,forest,train
+567,baseball_diamond/baseball_diamond(15).jpg,baseball diamond,train
+568,dense_residential/dense_residential(11).jpg,dense residential,train
+569,ground_track_field/ground_track_field(52).jpg,ground track field,train
+570,industrial_area/industrial_area(48).jpg,industrial area,train
+571,medium_residential/medium_residential(44).jpg,medium residential,train
+572,golf_course/golf_course(53).jpg,golf course,train
+573,ground_track_field/ground_track_field(35).jpg,ground track field,train
+574,circular_farmland/circular_farmland(54).jpg,circular farmland,train
+575,mobile_home_park/mobile_home_park(57).jpg,mobile home park,train
+576,parking_lot/parking_lot(18).jpg,parking lot,train
+577,golf_course/golf_course(56).jpg,golf course,train
+578,basketball_court/basketball_court(9).jpg,basketball court,train
+579,rectangular_farmland/rectangular_farmland(5).jpg,rectangular farmland,train
+580,industrial_area/industrial_area(8).jpg,industrial area,train
+581,baseball_diamond/baseball_diamond(46).jpg,baseball diamond,train
+582,runway/runway(54).jpg,runway,train
+583,runway/runway(14).jpg,runway,train
+584,baseball_diamond/baseball_diamond(9).jpg,baseball diamond,train
+585,church/church(46).jpg,church,train
+586,airport/airport(23).jpg,airport,train
+587,airport/airport(15).jpg,airport,train
+588,basketball_court/basketball_court(23).jpg,basketball court,train
+589,meadow/meadow(52).jpg,meadow,train
+590,railway/railway(4).jpg,railway,train
+591,desert/desert(26).jpg,desert,train
+592,golf_course/golf_course(19).jpg,golf course,train
+593,airplane/airplane(34).jpg,airplane,train
+594,overpass/overpass(26).jpg,overpass,train
+595,airport/airport(37).jpg,airport,train
+596,chaparral/chaparral(14).jpg,chaparral,train
+597,industrial_area/industrial_area(10).jpg,industrial area,train
+598,bridge/bridge(8).jpg,bridge,train
+599,golf_course/golf_course(52).jpg,golf course,train
+600,rectangular_farmland/rectangular_farmland(16).jpg,rectangular farmland,train
+601,lake/lake(49).jpg,lake,train
+602,desert/desert(14).jpg,desert,train
+603,airport/airport(13).jpg,airport,train
+604,basketball_court/basketball_court(11).jpg,basketball court,train
+605,airplane/airplane(14).jpg,airplane,train
+606,circular_farmland/circular_farmland(36).jpg,circular farmland,train
+607,industrial_area/industrial_area(13).jpg,industrial area,train
+608,railway/railway(40).jpg,railway,train
+609,chaparral/chaparral(34).jpg,chaparral,train
+610,rectangular_farmland/rectangular_farmland(19).jpg,rectangular farmland,train
+611,desert/desert(59).jpg,desert,train
+612,lake/lake(10).jpg,lake,train
+613,lake/lake(25).jpg,lake,train
+614,beach/beach(56).jpg,beach,train
+615,beach/beach(47).jpg,beach,train
+616,runway/runway(51).jpg,runway,train
+617,industrial_area/industrial_area(43).jpg,industrial area,train
+618,airplane/airplane(24).jpg,airplane,train
+619,forest/forest(10).jpg,forest,train
+620,harbor/harbor(15).jpg,harbor,train
+621,baseball_diamond/baseball_diamond(35).jpg,baseball diamond,train
+622,circular_farmland/circular_farmland(4).jpg,circular farmland,train
+623,overpass/overpass(56).jpg,overpass,train
+624,medium_residential/medium_residential(7).jpg,medium residential,train
+625,circular_farmland/circular_farmland(59).jpg,circular farmland,train
+626,intersection/intersection(4).jpg,intersection,train
+627,basketball_court/basketball_court(49).jpg,basketball court,train
+628,runway/runway(40).jpg,runway,train
+629,chaparral/chaparral(47).jpg,chaparral,train
+630,meadow/meadow(13).jpg,meadow,train
+631,medium_residential/medium_residential(50).jpg,medium residential,train
+632,intersection/intersection(52).jpg,intersection,train
+633,dense_residential/dense_residential(3).jpg,dense residential,train
+634,dense_residential/dense_residential(19).jpg,dense residential,train
+635,baseball_diamond/baseball_diamond(3).jpg,baseball diamond,train
+636,mountain/mountain(22).jpg,mountain,train
+637,circular_farmland/circular_farmland(8).jpg,circular farmland,train
+638,lake/lake(45).jpg,lake,train
+639,runway/runway(55).jpg,runway,train
+640,overpass/overpass(27).jpg,overpass,train
+641,dense_residential/dense_residential(34).jpg,dense residential,train
+642,intersection/intersection(55).jpg,intersection,train
+643,mobile_home_park/mobile_home_park(36).jpg,mobile home park,train
+644,desert/desert(49).jpg,desert,train
+645,industrial_area/industrial_area(32).jpg,industrial area,train
+646,chaparral/chaparral(26).jpg,chaparral,train
+647,desert/desert(17).jpg,desert,train
+648,forest/forest(32).jpg,forest,train
+649,industrial_area/industrial_area(44).jpg,industrial area,train
+650,runway/runway(41).jpg,runway,train
+651,church/church(38).jpg,church,train
+652,medium_residential/medium_residential(21).jpg,medium residential,train
+653,parking_lot/parking_lot(44).jpg,parking lot,train
+654,lake/lake(19).jpg,lake,train
+655,parking_lot/parking_lot(10).jpg,parking lot,train
+656,mobile_home_park/mobile_home_park(20).jpg,mobile home park,train
+657,lake/lake(29).jpg,lake,train
+658,airport/airport(12).jpg,airport,train
+659,forest/forest(2).jpg,forest,train
+660,beach/beach(36).jpg,beach,train
+661,ground_track_field/ground_track_field(28).jpg,ground track field,train
+662,mountain/mountain(53).jpg,mountain,train
+663,airplane/airplane(47).jpg,airplane,train
+664,roundabout/roundabout(10).jpg,roundabout,train
+665,runway/runway(58).jpg,runway,train
+666,runway/runway(35).jpg,runway,train
+667,baseball_diamond/baseball_diamond(11).jpg,baseball diamond,train
+668,harbor/harbor(50).jpg,harbor,train
+669,golf_course/golf_course(51).jpg,golf course,train
+670,railway/railway(18).jpg,railway,train
+671,runway/runway(12).jpg,runway,train
+672,airplane/airplane(26).jpg,airplane,train
+673,dense_residential/dense_residential(20).jpg,dense residential,train
+674,harbor/harbor(56).jpg,harbor,train
+675,mountain/mountain(44).jpg,mountain,train
+676,dense_residential/dense_residential(51).jpg,dense residential,train
+677,golf_course/golf_course(36).jpg,golf course,train
+678,industrial_area/industrial_area(26).jpg,industrial area,train
+679,industrial_area/industrial_area(33).jpg,industrial area,train
+680,church/church(28).jpg,church,train
+681,roundabout/roundabout(40).jpg,roundabout,train
+682,mobile_home_park/mobile_home_park(10).jpg,mobile home park,train
+683,desert/desert(57).jpg,desert,train
+684,bridge/bridge(3).jpg,bridge,train
+685,golf_course/golf_course(3).jpg,golf course,train
+686,parking_lot/parking_lot(55).jpg,parking lot,train
+687,dense_residential/dense_residential(17).jpg,dense residential,train
+688,ground_track_field/ground_track_field(4).jpg,ground track field,train
+689,parking_lot/parking_lot(15).jpg,parking lot,train
+690,circular_farmland/circular_farmland(32).jpg,circular farmland,train
+691,mountain/mountain(13).jpg,mountain,train
+692,bridge/bridge(37).jpg,bridge,train
+693,parking_lot/parking_lot(40).jpg,parking lot,train
+694,railway/railway(60).jpg,railway,train
+695,dense_residential/dense_residential(60).jpg,dense residential,train
+696,beach/beach(35).jpg,beach,train
+697,mountain/mountain(12).jpg,mountain,train
+698,railway/railway(37).jpg,railway,train
+699,mobile_home_park/mobile_home_park(37).jpg,mobile home park,train
+700,ground_track_field/ground_track_field(53).jpg,ground track field,train
+701,railway/railway(41).jpg,railway,train
+702,island/island(34).jpg,island,train
+703,rectangular_farmland/rectangular_farmland(8).jpg,rectangular farmland,train
+704,roundabout/roundabout(12).jpg,roundabout,train
+705,airport/airport(24).jpg,airport,train
+706,mobile_home_park/mobile_home_park(53).jpg,mobile home park,train
+707,dense_residential/dense_residential(41).jpg,dense residential,train
+708,intersection/intersection(44).jpg,intersection,train
+709,lake/lake(6).jpg,lake,train
+710,commercial_area/commercial_area(59).jpg,commercial area,train
+711,church/church(11).jpg,church,train
+712,baseball_diamond/baseball_diamond(17).jpg,baseball diamond,train
+713,lake/lake(2).jpg,lake,train
+714,meadow/meadow(54).jpg,meadow,train
+715,bridge/bridge(15).jpg,bridge,train
+716,island/island(45).jpg,island,train
+717,runway/runway(47).jpg,runway,train
+718,rectangular_farmland/rectangular_farmland(1).jpg,rectangular farmland,train
+719,mobile_home_park/mobile_home_park(1).jpg,mobile home park,train
+720,mobile_home_park/mobile_home_park(8).jpg,mobile home park,train
+721,ground_track_field/ground_track_field(55).jpg,ground track field,train
+722,lake/lake(59).jpg,lake,train
+723,beach/beach(52).jpg,beach,train
+724,industrial_area/industrial_area(19).jpg,industrial area,train
+725,ground_track_field/ground_track_field(27).jpg,ground track field,train
+726,harbor/harbor(13).jpg,harbor,train
+727,forest/forest(54).jpg,forest,train
+728,ground_track_field/ground_track_field(43).jpg,ground track field,train
+729,ground_track_field/ground_track_field(37).jpg,ground track field,train
+730,meadow/meadow(46).jpg,meadow,train
+731,meadow/meadow(18).jpg,meadow,train
+732,airport/airport(27).jpg,airport,train
+733,lake/lake(33).jpg,lake,train
+734,dense_residential/dense_residential(49).jpg,dense residential,train
+735,basketball_court/basketball_court(35).jpg,basketball court,train
+736,lake/lake(34).jpg,lake,train
+737,airport/airport(56).jpg,airport,train
+738,commercial_area/commercial_area(46).jpg,commercial area,train
+739,dense_residential/dense_residential(56).jpg,dense residential,train
+740,circular_farmland/circular_farmland(46).jpg,circular farmland,train
+741,church/church(37).jpg,church,train
+742,commercial_area/commercial_area(28).jpg,commercial area,train
+743,harbor/harbor(38).jpg,harbor,train
+744,island/island(16).jpg,island,train
+745,baseball_diamond/baseball_diamond(42).jpg,baseball diamond,train
+746,meadow/meadow(29).jpg,meadow,train
+747,baseball_diamond/baseball_diamond(52).jpg,baseball diamond,train
+748,bridge/bridge(23).jpg,bridge,train
+749,ground_track_field/ground_track_field(58).jpg,ground track field,train
+750,church/church(49).jpg,church,train
+751,lake/lake(27).jpg,lake,train
+752,desert/desert(48).jpg,desert,train
+753,chaparral/chaparral(15).jpg,chaparral,train
+754,parking_lot/parking_lot(27).jpg,parking lot,train
+755,meadow/meadow(43).jpg,meadow,train
+756,overpass/overpass(18).jpg,overpass,train
+757,circular_farmland/circular_farmland(3).jpg,circular farmland,train
+758,intersection/intersection(50).jpg,intersection,train
+759,church/church(48).jpg,church,train
+760,parking_lot/parking_lot(17).jpg,parking lot,train
+761,beach/beach(38).jpg,beach,train
+762,mobile_home_park/mobile_home_park(25).jpg,mobile home park,train
+763,dense_residential/dense_residential(15).jpg,dense residential,train
+764,airport/airport(33).jpg,airport,train
+765,beach/beach(2).jpg,beach,train
+766,beach/beach(10).jpg,beach,train
+767,island/island(46).jpg,island,train
+768,harbor/harbor(16).jpg,harbor,train
+769,mobile_home_park/mobile_home_park(55).jpg,mobile home park,train
+770,parking_lot/parking_lot(57).jpg,parking lot,train
+771,church/church(56).jpg,church,train
+772,railway/railway(21).jpg,railway,train
+773,freeway/freeway(32).jpg,freeway,train
+774,harbor/harbor(37).jpg,harbor,train
+775,lake/lake(20).jpg,lake,train
+776,desert/desert(43).jpg,desert,train
+777,chaparral/chaparral(6).jpg,chaparral,train
+778,rectangular_farmland/rectangular_farmland(37).jpg,rectangular farmland,train
+779,mountain/mountain(6).jpg,mountain,train
+780,circular_farmland/circular_farmland(29).jpg,circular farmland,train
+781,golf_course/golf_course(46).jpg,golf course,train
+782,overpass/overpass(45).jpg,overpass,train
+783,desert/desert(28).jpg,desert,train
+784,chaparral/chaparral(33).jpg,chaparral,train
+785,mountain/mountain(45).jpg,mountain,train
+786,commercial_area/commercial_area(19).jpg,commercial area,train
+787,lake/lake(55).jpg,lake,train
+788,forest/forest(44).jpg,forest,train
+789,ground_track_field/ground_track_field(1).jpg,ground track field,train
+790,industrial_area/industrial_area(15).jpg,industrial area,train
+791,parking_lot/parking_lot(4).jpg,parking lot,train
+792,medium_residential/medium_residential(1).jpg,medium residential,train
+793,mobile_home_park/mobile_home_park(42).jpg,mobile home park,train
+794,airplane/airplane(27).jpg,airplane,train
+795,industrial_area/industrial_area(25).jpg,industrial area,train
+796,golf_course/golf_course(27).jpg,golf course,train
+797,bridge/bridge(38).jpg,bridge,train
+798,desert/desert(20).jpg,desert,train
+799,runway/runway(53).jpg,runway,train
+800,chaparral/chaparral(32).jpg,chaparral,train
+801,chaparral/chaparral(38).jpg,chaparral,train
+802,baseball_diamond/baseball_diamond(6).jpg,baseball diamond,train
+803,intersection/intersection(51).jpg,intersection,train
+804,commercial_area/commercial_area(23).jpg,commercial area,train
+805,rectangular_farmland/rectangular_farmland(55).jpg,rectangular farmland,train
+806,beach/beach(4).jpg,beach,train
+807,chaparral/chaparral(23).jpg,chaparral,train
+808,runway/runway(6).jpg,runway,train
+809,mobile_home_park/mobile_home_park(46).jpg,mobile home park,train
+810,mobile_home_park/mobile_home_park(27).jpg,mobile home park,train
+811,circular_farmland/circular_farmland(23).jpg,circular farmland,train
+812,airplane/airplane(57).jpg,airplane,train
+813,meadow/meadow(33).jpg,meadow,train
+814,medium_residential/medium_residential(30).jpg,medium residential,train
+815,forest/forest(21).jpg,forest,train
+816,forest/forest(1).jpg,forest,train
+817,rectangular_farmland/rectangular_farmland(48).jpg,rectangular farmland,train
+818,intersection/intersection(54).jpg,intersection,train
+819,harbor/harbor(10).jpg,harbor,train
+820,medium_residential/medium_residential(13).jpg,medium residential,train
+821,island/island(18).jpg,island,train
+822,desert/desert(13).jpg,desert,train
+823,harbor/harbor(53).jpg,harbor,train
+824,island/island(32).jpg,island,train
+825,roundabout/roundabout(47).jpg,roundabout,train
+826,railway/railway(39).jpg,railway,train
+827,commercial_area/commercial_area(2).jpg,commercial area,train
+828,bridge/bridge(13).jpg,bridge,train
+829,beach/beach(8).jpg,beach,train
+830,medium_residential/medium_residential(19).jpg,medium residential,train
+831,island/island(24).jpg,island,train
+832,airplane/airplane(41).jpg,airplane,train
+833,commercial_area/commercial_area(53).jpg,commercial area,train
+834,industrial_area/industrial_area(34).jpg,industrial area,train
+835,commercial_area/commercial_area(35).jpg,commercial area,train
+836,freeway/freeway(10).jpg,freeway,train
+837,forest/forest(41).jpg,forest,train
+838,overpass/overpass(15).jpg,overpass,train
+839,airport/airport(2).jpg,airport,train
+840,runway/runway(15).jpg,runway,train
+841,beach/beach(53).jpg,beach,train
+842,rectangular_farmland/rectangular_farmland(21).jpg,rectangular farmland,train
+843,freeway/freeway(37).jpg,freeway,train
+844,bridge/bridge(49).jpg,bridge,train
+845,rectangular_farmland/rectangular_farmland(32).jpg,rectangular farmland,train
+846,medium_residential/medium_residential(4).jpg,medium residential,train
+847,beach/beach(27).jpg,beach,train
+848,roundabout/roundabout(38).jpg,roundabout,train
+849,island/island(36).jpg,island,train
+850,basketball_court/basketball_court(50).jpg,basketball court,train
+851,bridge/bridge(40).jpg,bridge,train
+852,intersection/intersection(12).jpg,intersection,train
+853,intersection/intersection(48).jpg,intersection,train
+854,roundabout/roundabout(57).jpg,roundabout,train
+855,airplane/airplane(54).jpg,airplane,train
+856,parking_lot/parking_lot(48).jpg,parking lot,train
+857,airplane/airplane(32).jpg,airplane,train
+858,chaparral/chaparral(2).jpg,chaparral,train
+859,ground_track_field/ground_track_field(39).jpg,ground track field,train
+860,lake/lake(8).jpg,lake,train
+861,parking_lot/parking_lot(32).jpg,parking lot,train
+862,railway/railway(50).jpg,railway,train
+863,forest/forest(52).jpg,forest,train
+864,roundabout/roundabout(6).jpg,roundabout,train
+865,mobile_home_park/mobile_home_park(6).jpg,mobile home park,train
+866,chaparral/chaparral(58).jpg,chaparral,train
+867,commercial_area/commercial_area(15).jpg,commercial area,train
+868,beach/beach(31).jpg,beach,train
+869,church/church(39).jpg,church,train
+870,rectangular_farmland/rectangular_farmland(53).jpg,rectangular farmland,train
+871,baseball_diamond/baseball_diamond(40).jpg,baseball diamond,train
+872,island/island(7).jpg,island,train
+873,freeway/freeway(11).jpg,freeway,train
+874,harbor/harbor(43).jpg,harbor,train
+875,medium_residential/medium_residential(48).jpg,medium residential,train
+876,dense_residential/dense_residential(5).jpg,dense residential,train
+877,airport/airport(17).jpg,airport,train
+878,airplane/airplane(19).jpg,airplane,train
+879,intersection/intersection(59).jpg,intersection,train
+880,industrial_area/industrial_area(7).jpg,industrial area,train
+881,basketball_court/basketball_court(51).jpg,basketball court,train
+882,overpass/overpass(25).jpg,overpass,train
+883,circular_farmland/circular_farmland(25).jpg,circular farmland,train
+884,intersection/intersection(2).jpg,intersection,train
+885,island/island(25).jpg,island,train
+886,intersection/intersection(58).jpg,intersection,train
+887,rectangular_farmland/rectangular_farmland(14).jpg,rectangular farmland,train
+888,basketball_court/basketball_court(40).jpg,basketball court,train
+889,freeway/freeway(5).jpg,freeway,train
+890,airport/airport(10).jpg,airport,train
+891,island/island(56).jpg,island,train
+892,island/island(19).jpg,island,train
+893,dense_residential/dense_residential(36).jpg,dense residential,train
+894,overpass/overpass(40).jpg,overpass,train
+895,chaparral/chaparral(24).jpg,chaparral,train
+896,forest/forest(42).jpg,forest,train
+897,island/island(23).jpg,island,train
+898,basketball_court/basketball_court(53).jpg,basketball court,train
+899,freeway/freeway(44).jpg,freeway,train
+900,parking_lot/parking_lot(29).jpg,parking lot,train
+901,circular_farmland/circular_farmland(24).jpg,circular farmland,train
+902,freeway/freeway(18).jpg,freeway,train
+903,overpass/overpass(4).jpg,overpass,train
+904,beach/beach(15).jpg,beach,train
+905,chaparral/chaparral(50).jpg,chaparral,train
+906,airplane/airplane(17).jpg,airplane,train
+907,island/island(20).jpg,island,train
+908,dense_residential/dense_residential(55).jpg,dense residential,train
+909,roundabout/roundabout(37).jpg,roundabout,train
+910,harbor/harbor(39).jpg,harbor,train
+911,desert/desert(10).jpg,desert,train
+912,ground_track_field/ground_track_field(18).jpg,ground track field,train
+913,roundabout/roundabout(14).jpg,roundabout,train
+914,meadow/meadow(56).jpg,meadow,train
+915,commercial_area/commercial_area(24).jpg,commercial area,train
+916,desert/desert(46).jpg,desert,train
+917,church/church(40).jpg,church,train
+918,dense_residential/dense_residential(58).jpg,dense residential,train
+919,railway/railway(58).jpg,railway,train
+920,meadow/meadow(57).jpg,meadow,train
+921,forest/forest(47).jpg,forest,train
+922,golf_course/golf_course(8).jpg,golf course,train
+923,dense_residential/dense_residential(31).jpg,dense residential,train
+924,golf_course/golf_course(23).jpg,golf course,train
+925,medium_residential/medium_residential(8).jpg,medium residential,train
+926,roundabout/roundabout(30).jpg,roundabout,train
+927,mountain/mountain(52).jpg,mountain,train
+928,industrial_area/industrial_area(54).jpg,industrial area,train
+929,intersection/intersection(30).jpg,intersection,train
+930,golf_course/golf_course(48).jpg,golf course,train
+931,airplane/airplane(36).jpg,airplane,train
+932,harbor/harbor(7).jpg,harbor,train
+933,beach/beach(17).jpg,beach,train
+934,basketball_court/basketball_court(54).jpg,basketball court,train
+935,airplane/airplane(1).jpg,airplane,train
+936,harbor/harbor(2).jpg,harbor,train
+937,beach/beach(19).jpg,beach,train
+938,overpass/overpass(53).jpg,overpass,train
+939,harbor/harbor(9).jpg,harbor,train
+940,runway/runway(37).jpg,runway,train
+941,railway/railway(11).jpg,railway,train
+942,mobile_home_park/mobile_home_park(4).jpg,mobile home park,train
+943,freeway/freeway(22).jpg,freeway,train
+944,roundabout/roundabout(27).jpg,roundabout,train
+945,basketball_court/basketball_court(39).jpg,basketball court,train
+946,mountain/mountain(26).jpg,mountain,train
+947,parking_lot/parking_lot(26).jpg,parking lot,train
+948,golf_course/golf_course(43).jpg,golf course,train
+949,railway/railway(43).jpg,railway,train
+950,baseball_diamond/baseball_diamond(38).jpg,baseball diamond,train
+951,commercial_area/commercial_area(11).jpg,commercial area,train
+952,airport/airport(44).jpg,airport,train
+953,airplane/airplane(29).jpg,airplane,train
+954,island/island(15).jpg,island,train
+955,meadow/meadow(11).jpg,meadow,train
+956,desert/desert(56).jpg,desert,train
+957,forest/forest(55).jpg,forest,train
+958,airport/airport(57).jpg,airport,train
+959,church/church(7).jpg,church,train
+960,golf_course/golf_course(58).jpg,golf course,train
+961,freeway/freeway(51).jpg,freeway,train
+962,golf_course/golf_course(49).jpg,golf course,train
+963,mobile_home_park/mobile_home_park(23).jpg,mobile home park,train
+964,commercial_area/commercial_area(12).jpg,commercial area,train
+965,golf_course/golf_course(17).jpg,golf course,train
+966,chaparral/chaparral(57).jpg,chaparral,train
+967,harbor/harbor(28).jpg,harbor,train
+968,airport/airport(35).jpg,airport,train
+969,rectangular_farmland/rectangular_farmland(17).jpg,rectangular farmland,train
+970,church/church(12).jpg,church,train
+971,roundabout/roundabout(13).jpg,roundabout,train
+972,mountain/mountain(21).jpg,mountain,train
+973,runway/runway(36).jpg,runway,train
+974,mobile_home_park/mobile_home_park(22).jpg,mobile home park,train
+975,basketball_court/basketball_court(29).jpg,basketball court,train
+976,dense_residential/dense_residential(48).jpg,dense residential,train
+977,mobile_home_park/mobile_home_park(50).jpg,mobile home park,train
+978,overpass/overpass(24).jpg,overpass,train
+979,commercial_area/commercial_area(10).jpg,commercial area,train
+980,parking_lot/parking_lot(22).jpg,parking lot,train
+981,bridge/bridge(30).jpg,bridge,train
+982,runway/runway(48).jpg,runway,train
+983,roundabout/roundabout(31).jpg,roundabout,train
+984,ground_track_field/ground_track_field(47).jpg,ground track field,train
+985,meadow/meadow(35).jpg,meadow,train
+986,rectangular_farmland/rectangular_farmland(39).jpg,rectangular farmland,train
+987,medium_residential/medium_residential(9).jpg,medium residential,train
+988,bridge/bridge(35).jpg,bridge,train
+989,rectangular_farmland/rectangular_farmland(57).jpg,rectangular farmland,train
+990,meadow/meadow(26).jpg,meadow,train
+991,railway/railway(31).jpg,railway,train
+992,medium_residential/medium_residential(40).jpg,medium residential,train
+993,airplane/airplane(5).jpg,airplane,train
+994,beach/beach(30).jpg,beach,train
+995,meadow/meadow(36).jpg,meadow,train
+996,mobile_home_park/mobile_home_park(11).jpg,mobile home park,train
+997,commercial_area/commercial_area(50).jpg,commercial area,train
+998,baseball_diamond/baseball_diamond(39).jpg,baseball diamond,train
+999,airport/airport(1).jpg,airport,train
+1000,forest/forest(27).jpg,forest,train
+1001,beach/beach(55).jpg,beach,train
+1002,intersection/intersection(18).jpg,intersection,train
+1003,chaparral/chaparral(43).jpg,chaparral,train
+1004,industrial_area/industrial_area(9).jpg,industrial area,train
+1005,roundabout/roundabout(19).jpg,roundabout,train
+1006,freeway/freeway(40).jpg,freeway,train
+1007,airplane/airplane(7).jpg,airplane,train
+1008,dense_residential/dense_residential(16).jpg,dense residential,train
+1009,freeway/freeway(49).jpg,freeway,train
+1010,forest/forest(31).jpg,forest,train
+1011,intersection/intersection(7).jpg,intersection,train
+1012,ground_track_field/ground_track_field(11).jpg,ground track field,train
+1013,medium_residential/medium_residential(17).jpg,medium residential,train
+1014,basketball_court/basketball_court(58).jpg,basketball court,train
+1015,bridge/bridge(53).jpg,bridge,train
+1016,harbor/harbor(26).jpg,harbor,train
+1017,railway/railway(2).jpg,railway,train
+1018,roundabout/roundabout(5).jpg,roundabout,train
+1019,airport/airport(43).jpg,airport,train
+1020,airplane/airplane(28).jpg,airplane,train
+1021,mountain/mountain(14).jpg,mountain,train
+1022,meadow/meadow(59).jpg,meadow,train
+1023,roundabout/roundabout(48).jpg,roundabout,train
+1024,basketball_court/basketball_court(55).jpg,basketball court,train
+1025,overpass/overpass(32).jpg,overpass,train
+1026,church/church(32).jpg,church,train
+1027,chaparral/chaparral(29).jpg,chaparral,train
+1028,dense_residential/dense_residential(45).jpg,dense residential,train
+1029,railway/railway(45).jpg,railway,train
+1030,meadow/meadow(50).jpg,meadow,train
+1031,church/church(34).jpg,church,train
+1032,railway/railway(36).jpg,railway,train
+1033,basketball_court/basketball_court(45).jpg,basketball court,train
+1034,industrial_area/industrial_area(2).jpg,industrial area,train
+1035,dense_residential/dense_residential(38).jpg,dense residential,train
+1036,meadow/meadow(39).jpg,meadow,train
+1037,desert/desert(24).jpg,desert,train
+1038,mobile_home_park/mobile_home_park(45).jpg,mobile home park,train
+1039,basketball_court/basketball_court(30).jpg,basketball court,train
+1040,parking_lot/parking_lot(33).jpg,parking lot,train
+1041,mountain/mountain(3).jpg,mountain,train
+1042,baseball_diamond/baseball_diamond(55).jpg,baseball diamond,train
+1043,harbor/harbor(49).jpg,harbor,train
+1044,intersection/intersection(19).jpg,intersection,train
+1045,bridge/bridge(17).jpg,bridge,train
+1046,overpass/overpass(12).jpg,overpass,train
+1047,commercial_area/commercial_area(1).jpg,commercial area,train
+1048,golf_course/golf_course(9).jpg,golf course,train
+1049,roundabout/roundabout(60).jpg,roundabout,train
+1050,forest/forest(23).jpg,forest,train
+1051,rectangular_farmland/rectangular_farmland(29).jpg,rectangular farmland,train
+1052,golf_course/golf_course(2).jpg,golf course,train
+1053,ground_track_field/ground_track_field(45).jpg,ground track field,train
+1054,chaparral/chaparral(3).jpg,chaparral,train
+1055,basketball_court/basketball_court(38).jpg,basketball court,train
+1056,baseball_diamond/baseball_diamond(14).jpg,baseball diamond,train
+1057,circular_farmland/circular_farmland(56).jpg,circular farmland,train
+1058,airport/airport(9).jpg,airport,train
+1059,overpass/overpass(14).jpg,overpass,train
+1060,harbor/harbor(60).jpg,harbor,train
+1061,church/church(45).jpg,church,train
+1062,ground_track_field/ground_track_field(26).jpg,ground track field,train
+1063,freeway/freeway(53).jpg,freeway,train
+1064,industrial_area/industrial_area(16).jpg,industrial area,train
+1065,freeway/freeway(27).jpg,freeway,train
+1066,harbor/harbor(55).jpg,harbor,train
+1067,railway/railway(56).jpg,railway,train
+1068,island/island(33).jpg,island,train
+1069,forest/forest(51).jpg,forest,train
+1070,mountain/mountain(19).jpg,mountain,train
+1071,chaparral/chaparral(20).jpg,chaparral,train
+1072,mountain/mountain(58).jpg,mountain,train
+1073,forest/forest(8).jpg,forest,train
+1074,baseball_diamond/baseball_diamond(59).jpg,baseball diamond,train
+1075,railway/railway(15).jpg,railway,train
+1076,freeway/freeway(24).jpg,freeway,train
+1077,dense_residential/dense_residential(52).jpg,dense residential,train
+1078,parking_lot/parking_lot(9).jpg,parking lot,train
+1079,airport/airport(19).jpg,airport,train
+1080,medium_residential/medium_residential(3).jpg,medium residential,train
+1081,beach/beach(29).jpg,beach,train
+1082,airport/airport(11).jpg,airport,train
+1083,bridge/bridge(51).jpg,bridge,train
+1084,basketball_court/basketball_court(21).jpg,basketball court,train
+1085,dense_residential/dense_residential(35).jpg,dense residential,train
+1086,airplane/airplane(2).jpg,airplane,train
+1087,airport/airport(47).jpg,airport,train
+1088,railway/railway(42).jpg,railway,train
+1089,meadow/meadow(34).jpg,meadow,train
+1090,medium_residential/medium_residential(43).jpg,medium residential,train
+1091,lake/lake(3).jpg,lake,train
+1092,mobile_home_park/mobile_home_park(48).jpg,mobile home park,train
+1093,desert/desert(42).jpg,desert,train
+1094,parking_lot/parking_lot(52).jpg,parking lot,train
+1095,bridge/bridge(47).jpg,bridge,train
+1096,intersection/intersection(60).jpg,intersection,train
+1097,golf_course/golf_course(35).jpg,golf course,train
+1098,freeway/freeway(6).jpg,freeway,train
+1099,mobile_home_park/mobile_home_park(15).jpg,mobile home park,train
+1100,runway/runway(2).jpg,runway,train
+1101,meadow/meadow(37).jpg,meadow,train
+1102,forest/forest(24).jpg,forest,train
+1103,industrial_area/industrial_area(40).jpg,industrial area,train
+1104,runway/runway(50).jpg,runway,train
+1105,commercial_area/commercial_area(34).jpg,commercial area,train
+1106,parking_lot/parking_lot(45).jpg,parking lot,train
+1107,chaparral/chaparral(49).jpg,chaparral,train
+1108,golf_course/golf_course(5).jpg,golf course,train
+1109,bridge/bridge(22).jpg,bridge,train
+1110,airport/airport(53).jpg,airport,train
+1111,medium_residential/medium_residential(35).jpg,medium residential,train
+1112,overpass/overpass(20).jpg,overpass,train
+1113,freeway/freeway(14).jpg,freeway,train
+1114,mobile_home_park/mobile_home_park(19).jpg,mobile home park,train
+1115,overpass/overpass(33).jpg,overpass,train
+1116,golf_course/golf_course(50).jpg,golf course,train
+1117,roundabout/roundabout(53).jpg,roundabout,train
+1118,commercial_area/commercial_area(36).jpg,commercial area,train
+1119,rectangular_farmland/rectangular_farmland(4).jpg,rectangular farmland,train
+1120,circular_farmland/circular_farmland(55).jpg,circular farmland,train
+1121,airplane/airplane(50).jpg,airplane,train
+1122,rectangular_farmland/rectangular_farmland(35).jpg,rectangular farmland,train
+1123,circular_farmland/circular_farmland(53).jpg,circular farmland,train
+1124,mobile_home_park/mobile_home_park(18).jpg,mobile home park,train
+1125,parking_lot/parking_lot(24).jpg,parking lot,train
+1126,circular_farmland/circular_farmland(1).jpg,circular farmland,train
+1127,church/church(19).jpg,church,train
+1128,airport/airport(55).jpg,airport,train
+1129,rectangular_farmland/rectangular_farmland(50).jpg,rectangular farmland,train
+1130,harbor/harbor(3).jpg,harbor,train
+1131,industrial_area/industrial_area(20).jpg,industrial area,train
+1132,basketball_court/basketball_court(8).jpg,basketball court,train
+1133,runway/runway(10).jpg,runway,train
+1134,parking_lot/parking_lot(3).jpg,parking lot,train
+1135,rectangular_farmland/rectangular_farmland(10).jpg,rectangular farmland,train
+1136,church/church(8).jpg,church,train
+1137,medium_residential/medium_residential(38).jpg,medium residential,train
+1138,bridge/bridge(46).jpg,bridge,train
+1139,roundabout/roundabout(26).jpg,roundabout,train
+1140,parking_lot/parking_lot(21).jpg,parking lot,train
+1141,church/church(9).jpg,church,train
+1142,commercial_area/commercial_area(21).jpg,commercial area,train
+1143,baseball_diamond/baseball_diamond(10).jpg,baseball diamond,train
+1144,runway/runway(9).jpg,runway,train
+1145,roundabout/roundabout(15).jpg,roundabout,train
+1146,baseball_diamond/baseball_diamond(47).jpg,baseball diamond,train
+1147,railway/railway(8).jpg,railway,train
+1148,airport/airport(60).jpg,airport,train
+1149,church/church(20).jpg,church,train
+1150,runway/runway(39).jpg,runway,train
+1151,chaparral/chaparral(12).jpg,chaparral,train
+1152,beach/beach(12).jpg,beach,train
+1153,mountain/mountain(47).jpg,mountain,train
+1154,mountain/mountain(59).jpg,mountain,train
+1155,roundabout/roundabout(18).jpg,roundabout,train
+1156,circular_farmland/circular_farmland(21).jpg,circular farmland,train
+1157,basketball_court/basketball_court(48).jpg,basketball court,train
+1158,golf_course/golf_course(57).jpg,golf course,train
+1159,dense_residential/dense_residential(21).jpg,dense residential,train
+1160,desert/desert(55).jpg,desert,train
+1161,roundabout/roundabout(41).jpg,roundabout,train
+1162,basketball_court/basketball_court(46).jpg,basketball court,train
+1163,forest/forest(60).jpg,forest,train
+1164,golf_course/golf_course(7).jpg,golf course,train
+1165,railway/railway(46).jpg,railway,train
+1166,baseball_diamond/baseball_diamond(60).jpg,baseball diamond,train
+1167,railway/railway(12).jpg,railway,train
+1168,golf_course/golf_course(11).jpg,golf course,train
+1169,railway/railway(9).jpg,railway,train
+1170,harbor/harbor(5).jpg,harbor,train
+1171,basketball_court/basketball_court(57).jpg,basketball court,train
+1172,rectangular_farmland/rectangular_farmland(47).jpg,rectangular farmland,train
+1173,mobile_home_park/mobile_home_park(51).jpg,mobile home park,train
+1174,medium_residential/medium_residential(11).jpg,medium residential,train
+1175,bridge/bridge(26).jpg,bridge,train
+1176,meadow/meadow(27).jpg,meadow,train
+1177,overpass/overpass(39).jpg,overpass,train
+1178,ground_track_field/ground_track_field(40).jpg,ground track field,train
+1179,dense_residential/dense_residential(26).jpg,dense residential,train
+1180,overpass/overpass(21).jpg,overpass,train
+1181,railway/railway(30).jpg,railway,train
+1182,parking_lot/parking_lot(19).jpg,parking lot,train
+1183,lake/lake(39).jpg,lake,train
+1184,ground_track_field/ground_track_field(3).jpg,ground track field,train
+1185,church/church(22).jpg,church,train
+1186,basketball_court/basketball_court(4).jpg,basketball court,train
+1187,airplane/airplane(38).jpg,airplane,train
+1188,airplane/airplane(8).jpg,airplane,train
+1189,baseball_diamond/baseball_diamond(22).jpg,baseball diamond,train
+1190,bridge/bridge(18).jpg,bridge,val
+1191,medium_residential/medium_residential(42).jpg,medium residential,val
+1192,basketball_court/basketball_court(52).jpg,basketball court,val
+1193,industrial_area/industrial_area(1).jpg,industrial area,val
+1194,island/island(57).jpg,island,val
+1195,chaparral/chaparral(36).jpg,chaparral,val
+1196,chaparral/chaparral(17).jpg,chaparral,val
+1197,freeway/freeway(23).jpg,freeway,val
+1198,dense_residential/dense_residential(4).jpg,dense residential,val
+1199,harbor/harbor(32).jpg,harbor,val
+1200,island/island(39).jpg,island,val
+1201,runway/runway(56).jpg,runway,val
+1202,commercial_area/commercial_area(29).jpg,commercial area,val
+1203,mountain/mountain(27).jpg,mountain,val
+1204,ground_track_field/ground_track_field(41).jpg,ground track field,val
+1205,circular_farmland/circular_farmland(42).jpg,circular farmland,val
+1206,parking_lot/parking_lot(49).jpg,parking lot,val
+1207,mobile_home_park/mobile_home_park(58).jpg,mobile home park,val
+1208,meadow/meadow(40).jpg,meadow,val
+1209,industrial_area/industrial_area(45).jpg,industrial area,val
+1210,roundabout/roundabout(16).jpg,roundabout,val
+1211,basketball_court/basketball_court(14).jpg,basketball court,val
+1212,parking_lot/parking_lot(46).jpg,parking lot,val
+1213,lake/lake(32).jpg,lake,val
+1214,industrial_area/industrial_area(53).jpg,industrial area,val
+1215,basketball_court/basketball_court(3).jpg,basketball court,val
+1216,airport/airport(42).jpg,airport,val
+1217,meadow/meadow(48).jpg,meadow,val
+1218,golf_course/golf_course(16).jpg,golf course,val
+1219,medium_residential/medium_residential(58).jpg,medium residential,val
+1220,golf_course/golf_course(6).jpg,golf course,val
+1221,basketball_court/basketball_court(28).jpg,basketball court,val
+1222,ground_track_field/ground_track_field(31).jpg,ground track field,val
+1223,beach/beach(1).jpg,beach,val
+1224,mobile_home_park/mobile_home_park(43).jpg,mobile home park,val
+1225,overpass/overpass(59).jpg,overpass,val
+1226,overpass/overpass(31).jpg,overpass,val
+1227,railway/railway(14).jpg,railway,val
+1228,roundabout/roundabout(3).jpg,roundabout,val
+1229,baseball_diamond/baseball_diamond(41).jpg,baseball diamond,val
+1230,intersection/intersection(38).jpg,intersection,val
+1231,golf_course/golf_course(30).jpg,golf course,val
+1232,parking_lot/parking_lot(42).jpg,parking lot,val
+1233,golf_course/golf_course(32).jpg,golf course,val
+1234,airport/airport(45).jpg,airport,val
+1235,harbor/harbor(40).jpg,harbor,val
+1236,overpass/overpass(35).jpg,overpass,val
+1237,ground_track_field/ground_track_field(60).jpg,ground track field,val
+1238,beach/beach(44).jpg,beach,val
+1239,dense_residential/dense_residential(50).jpg,dense residential,val
+1240,mountain/mountain(18).jpg,mountain,val
+1241,roundabout/roundabout(32).jpg,roundabout,val
+1242,runway/runway(21).jpg,runway,val
+1243,baseball_diamond/baseball_diamond(29).jpg,baseball diamond,val
+1244,mountain/mountain(4).jpg,mountain,val
+1245,airport/airport(21).jpg,airport,val
+1246,lake/lake(16).jpg,lake,val
+1247,chaparral/chaparral(5).jpg,chaparral,val
+1248,mountain/mountain(8).jpg,mountain,val
+1249,railway/railway(10).jpg,railway,val
+1250,mobile_home_park/mobile_home_park(2).jpg,mobile home park,val
+1251,golf_course/golf_course(40).jpg,golf course,val
+1252,mountain/mountain(25).jpg,mountain,val
+1253,golf_course/golf_course(47).jpg,golf course,val
+1254,dense_residential/dense_residential(18).jpg,dense residential,val
+1255,meadow/meadow(9).jpg,meadow,val
+1256,ground_track_field/ground_track_field(49).jpg,ground track field,val
+1257,industrial_area/industrial_area(22).jpg,industrial area,val
+1258,rectangular_farmland/rectangular_farmland(13).jpg,rectangular farmland,val
+1259,island/island(13).jpg,island,val
+1260,forest/forest(9).jpg,forest,val
+1261,medium_residential/medium_residential(29).jpg,medium residential,val
+1262,baseball_diamond/baseball_diamond(12).jpg,baseball diamond,val
+1263,mountain/mountain(60).jpg,mountain,val
+1264,railway/railway(54).jpg,railway,val
+1265,lake/lake(42).jpg,lake,val
+1266,airplane/airplane(12).jpg,airplane,val
+1267,mobile_home_park/mobile_home_park(41).jpg,mobile home park,val
+1268,intersection/intersection(45).jpg,intersection,val
+1269,desert/desert(16).jpg,desert,val
+1270,dense_residential/dense_residential(53).jpg,dense residential,val
+1271,overpass/overpass(13).jpg,overpass,val
+1272,freeway/freeway(33).jpg,freeway,val
+1273,roundabout/roundabout(44).jpg,roundabout,val
+1274,commercial_area/commercial_area(40).jpg,commercial area,val
+1275,meadow/meadow(3).jpg,meadow,val
+1276,medium_residential/medium_residential(31).jpg,medium residential,val
+1277,runway/runway(23).jpg,runway,val
+1278,rectangular_farmland/rectangular_farmland(2).jpg,rectangular farmland,val
+1279,desert/desert(19).jpg,desert,val
+1280,forest/forest(57).jpg,forest,val
+1281,harbor/harbor(8).jpg,harbor,val
+1282,desert/desert(44).jpg,desert,val
+1283,intersection/intersection(13).jpg,intersection,val
+1284,commercial_area/commercial_area(45).jpg,commercial area,val
+1285,airport/airport(34).jpg,airport,val
+1286,chaparral/chaparral(16).jpg,chaparral,val
+1287,church/church(30).jpg,church,val
+1288,church/church(24).jpg,church,val
+1289,meadow/meadow(20).jpg,meadow,val
+1290,railway/railway(34).jpg,railway,val
+1291,airport/airport(38).jpg,airport,val
+1292,airport/airport(41).jpg,airport,val
+1293,lake/lake(28).jpg,lake,val
+1294,intersection/intersection(33).jpg,intersection,val
+1295,forest/forest(53).jpg,forest,val
+1296,freeway/freeway(28).jpg,freeway,val
+1297,forest/forest(56).jpg,forest,val
+1298,harbor/harbor(57).jpg,harbor,val
+1299,beach/beach(50).jpg,beach,val
+1300,airport/airport(28).jpg,airport,val
+1301,circular_farmland/circular_farmland(10).jpg,circular farmland,val
+1302,meadow/meadow(51).jpg,meadow,val
+1303,bridge/bridge(39).jpg,bridge,val
+1304,golf_course/golf_course(14).jpg,golf course,val
+1305,church/church(58).jpg,church,val
+1306,harbor/harbor(20).jpg,harbor,val
+1307,lake/lake(22).jpg,lake,val
+1308,chaparral/chaparral(52).jpg,chaparral,val
+1309,roundabout/roundabout(52).jpg,roundabout,val
+1310,baseball_diamond/baseball_diamond(34).jpg,baseball diamond,val
+1311,industrial_area/industrial_area(57).jpg,industrial area,val
+1312,lake/lake(14).jpg,lake,val
+1313,runway/runway(57).jpg,runway,val
+1314,island/island(1).jpg,island,val
+1315,beach/beach(21).jpg,beach,val
+1316,chaparral/chaparral(22).jpg,chaparral,val
+1317,golf_course/golf_course(18).jpg,golf course,val
+1318,rectangular_farmland/rectangular_farmland(44).jpg,rectangular farmland,val
+1319,parking_lot/parking_lot(6).jpg,parking lot,val
+1320,rectangular_farmland/rectangular_farmland(25).jpg,rectangular farmland,val
+1321,airport/airport(52).jpg,airport,val
+1322,church/church(36).jpg,church,val
+1323,dense_residential/dense_residential(7).jpg,dense residential,val
+1324,parking_lot/parking_lot(2).jpg,parking lot,val
+1325,rectangular_farmland/rectangular_farmland(58).jpg,rectangular farmland,val
+1326,parking_lot/parking_lot(58).jpg,parking lot,val
+1327,forest/forest(20).jpg,forest,val
+1328,circular_farmland/circular_farmland(12).jpg,circular farmland,val
+1329,roundabout/roundabout(50).jpg,roundabout,val
+1330,freeway/freeway(59).jpg,freeway,val
+1331,freeway/freeway(4).jpg,freeway,val
+1332,airplane/airplane(11).jpg,airplane,val
+1333,island/island(8).jpg,island,val
+1334,island/island(9).jpg,island,val
+1335,parking_lot/parking_lot(34).jpg,parking lot,val
+1336,forest/forest(19).jpg,forest,val
+1337,bridge/bridge(16).jpg,bridge,val
+1338,commercial_area/commercial_area(20).jpg,commercial area,val
+1339,basketball_court/basketball_court(37).jpg,basketball court,val
+1340,industrial_area/industrial_area(36).jpg,industrial area,val
+1341,mobile_home_park/mobile_home_park(59).jpg,mobile home park,val
+1342,forest/forest(39).jpg,forest,val
+1343,desert/desert(33).jpg,desert,val
+1344,mobile_home_park/mobile_home_park(33).jpg,mobile home park,val
+1345,mobile_home_park/mobile_home_park(12).jpg,mobile home park,val
+1346,runway/runway(42).jpg,runway,val
+1347,runway/runway(1).jpg,runway,val
+1348,basketball_court/basketball_court(32).jpg,basketball court,val
+1349,intersection/intersection(47).jpg,intersection,val
+1350,railway/railway(25).jpg,railway,val
+1351,commercial_area/commercial_area(9).jpg,commercial area,val
+1352,golf_course/golf_course(10).jpg,golf course,val
+1353,lake/lake(47).jpg,lake,val
+1354,church/church(27).jpg,church,val
+1355,overpass/overpass(41).jpg,overpass,val
+1356,circular_farmland/circular_farmland(41).jpg,circular farmland,val
+1357,parking_lot/parking_lot(1).jpg,parking lot,val
+1358,bridge/bridge(32).jpg,bridge,val
+1359,ground_track_field/ground_track_field(50).jpg,ground track field,val
+1360,bridge/bridge(2).jpg,bridge,val
+1361,bridge/bridge(48).jpg,bridge,val
+1362,medium_residential/medium_residential(25).jpg,medium residential,val
+1363,mountain/mountain(54).jpg,mountain,val
+1364,lake/lake(36).jpg,lake,val
+1365,harbor/harbor(17).jpg,harbor,val
+1366,chaparral/chaparral(35).jpg,chaparral,val
+1367,dense_residential/dense_residential(33).jpg,dense residential,val
+1368,mobile_home_park/mobile_home_park(5).jpg,mobile home park,val
+1369,airport/airport(39).jpg,airport,val
+1370,circular_farmland/circular_farmland(11).jpg,circular farmland,val
+1371,baseball_diamond/baseball_diamond(31).jpg,baseball diamond,val
+1372,freeway/freeway(15).jpg,freeway,val
+1373,chaparral/chaparral(51).jpg,chaparral,val
+1374,dense_residential/dense_residential(6).jpg,dense residential,val
+1375,medium_residential/medium_residential(56).jpg,medium residential,val
+1376,harbor/harbor(24).jpg,harbor,val
+1377,island/island(5).jpg,island,val
+1378,baseball_diamond/baseball_diamond(27).jpg,baseball diamond,val
+1379,beach/beach(32).jpg,beach,val
+1380,roundabout/roundabout(51).jpg,roundabout,val
+1381,beach/beach(41).jpg,beach,val
+1382,railway/railway(29).jpg,railway,val
+1383,parking_lot/parking_lot(11).jpg,parking lot,val
+1384,airplane/airplane(22).jpg,airplane,val
+1385,commercial_area/commercial_area(4).jpg,commercial area,val
+1386,railway/railway(51).jpg,railway,val
+1387,ground_track_field/ground_track_field(38).jpg,ground track field,val
+1388,runway/runway(24).jpg,runway,val
+1389,forest/forest(25).jpg,forest,val
+1390,chaparral/chaparral(48).jpg,chaparral,val
+1391,overpass/overpass(44).jpg,overpass,val
+1392,freeway/freeway(9).jpg,freeway,val
+1393,beach/beach(49).jpg,beach,val
+1394,meadow/meadow(5).jpg,meadow,val
+1395,intersection/intersection(29).jpg,intersection,val
+1396,island/island(50).jpg,island,val
+1397,intersection/intersection(1).jpg,intersection,val
+1398,forest/forest(46).jpg,forest,val
+1399,desert/desert(18).jpg,desert,val
+1400,airplane/airplane(16).jpg,airplane,val
+1401,airplane/airplane(13).jpg,airplane,val
+1402,commercial_area/commercial_area(8).jpg,commercial area,val
+1403,beach/beach(3).jpg,beach,val
+1404,freeway/freeway(30).jpg,freeway,val
+1405,rectangular_farmland/rectangular_farmland(6).jpg,rectangular farmland,val
+1406,mobile_home_park/mobile_home_park(35).jpg,mobile home park,val
+1407,desert/desert(1).jpg,desert,val
+1408,bridge/bridge(58).jpg,bridge,val
+1409,island/island(40).jpg,island,val
+1410,runway/runway(18).jpg,runway,val
+1411,circular_farmland/circular_farmland(16).jpg,circular farmland,val
+1412,mountain/mountain(17).jpg,mountain,val
+1413,medium_residential/medium_residential(16).jpg,medium residential,val
+1414,airplane/airplane(39).jpg,airplane,val
+1415,mountain/mountain(34).jpg,mountain,val
+1416,baseball_diamond/baseball_diamond(51).jpg,baseball diamond,val
+1417,roundabout/roundabout(34).jpg,roundabout,val
+1418,medium_residential/medium_residential(20).jpg,medium residential,val
+1419,railway/railway(47).jpg,railway,val
+1420,basketball_court/basketball_court(19).jpg,basketball court,val
+1421,dense_residential/dense_residential(2).jpg,dense residential,val
+1422,baseball_diamond/baseball_diamond(28).jpg,baseball diamond,val
+1423,desert/desert(11).jpg,desert,val
+1424,runway/runway(60).jpg,runway,val
+1425,parking_lot/parking_lot(28).jpg,parking lot,val
+1426,bridge/bridge(55).jpg,bridge,val
+1427,airport/airport(3).jpg,airport,val
+1428,overpass/overpass(9).jpg,overpass,val
+1429,roundabout/roundabout(24).jpg,roundabout,val
+1430,forest/forest(50).jpg,forest,val
+1431,bridge/bridge(27).jpg,bridge,val
+1432,commercial_area/commercial_area(17).jpg,commercial area,val
+1433,airplane/airplane(21).jpg,airplane,val
+1434,freeway/freeway(29).jpg,freeway,val
+1435,church/church(31).jpg,church,val
+1436,harbor/harbor(48).jpg,harbor,val
+1437,beach/beach(26).jpg,beach,val
+1438,island/island(37).jpg,island,val
+1439,runway/runway(33).jpg,runway,val
+1440,railway/railway(44).jpg,railway,val
+1441,railway/railway(3).jpg,railway,val
+1442,bridge/bridge(7).jpg,bridge,val
+1443,commercial_area/commercial_area(41).jpg,commercial area,val
+1444,circular_farmland/circular_farmland(14).jpg,circular farmland,val
+1445,overpass/overpass(11).jpg,overpass,val
+1446,medium_residential/medium_residential(41).jpg,medium residential,val
+1447,rectangular_farmland/rectangular_farmland(26).jpg,rectangular farmland,val
+1448,intersection/intersection(39).jpg,intersection,val
+1449,overpass/overpass(46).jpg,overpass,val
+1450,circular_farmland/circular_farmland(44).jpg,circular farmland,val
+1451,lake/lake(52).jpg,lake,val
+1452,industrial_area/industrial_area(59).jpg,industrial area,val
+1453,ground_track_field/ground_track_field(33).jpg,ground track field,val
+1454,airplane/airplane(20).jpg,airplane,val
+1455,baseball_diamond/baseball_diamond(36).jpg,baseball diamond,val
+1456,dense_residential/dense_residential(39).jpg,dense residential,val
+1457,rectangular_farmland/rectangular_farmland(42).jpg,rectangular farmland,val
+1458,basketball_court/basketball_court(42).jpg,basketball court,val
+1459,chaparral/chaparral(54).jpg,chaparral,val
+1460,rectangular_farmland/rectangular_farmland(31).jpg,rectangular farmland,val
+1461,airplane/airplane(45).jpg,airplane,val
+1462,meadow/meadow(32).jpg,meadow,val
+1463,freeway/freeway(8).jpg,freeway,val
+1464,mobile_home_park/mobile_home_park(24).jpg,mobile home park,val
+1465,church/church(44).jpg,church,val
+1466,basketball_court/basketball_court(16).jpg,basketball court,val
+1467,industrial_area/industrial_area(37).jpg,industrial area,val
+1468,rectangular_farmland/rectangular_farmland(38).jpg,rectangular farmland,val
+1469,meadow/meadow(25).jpg,meadow,val
+1470,commercial_area/commercial_area(33).jpg,commercial area,val
+1471,ground_track_field/ground_track_field(24).jpg,ground track field,val
+1472,desert/desert(54).jpg,desert,val
+1473,harbor/harbor(54).jpg,harbor,val
+1474,baseball_diamond/baseball_diamond(33).jpg,baseball diamond,val
+1475,church/church(23).jpg,church,val
+1476,ground_track_field/ground_track_field(10).jpg,ground track field,val
+1477,intersection/intersection(31).jpg,intersection,val
+1478,harbor/harbor(59).jpg,harbor,val
+1479,industrial_area/industrial_area(60).jpg,industrial area,val
+1480,circular_farmland/circular_farmland(31).jpg,circular farmland,val
+1481,ground_track_field/ground_track_field(13).jpg,ground track field,val
+1482,overpass/overpass(23).jpg,overpass,val
+1483,golf_course/golf_course(42).jpg,golf course,val
+1484,industrial_area/industrial_area(56).jpg,industrial area,val
+1485,desert/desert(2).jpg,desert,val
+1486,church/church(42).jpg,church,val
+1487,mountain/mountain(35).jpg,mountain,val
+1488,ground_track_field/ground_track_field(25).jpg,ground track field,test
+1489,mountain/mountain(49).jpg,mountain,test
+1490,parking_lot/parking_lot(53).jpg,parking lot,test
+1491,basketball_court/basketball_court(41).jpg,basketball court,test
+1492,island/island(44).jpg,island,test
+1493,golf_course/golf_course(4).jpg,golf course,test
+1494,bridge/bridge(57).jpg,bridge,test
+1495,runway/runway(7).jpg,runway,test
+1496,airplane/airplane(55).jpg,airplane,test
+1497,baseball_diamond/baseball_diamond(23).jpg,baseball diamond,test
+1498,lake/lake(24).jpg,lake,test
+1499,overpass/overpass(43).jpg,overpass,test
+1500,harbor/harbor(1).jpg,harbor,test
+1501,airport/airport(16).jpg,airport,test
+1502,beach/beach(42).jpg,beach,test
+1503,commercial_area/commercial_area(18).jpg,commercial area,test
+1504,circular_farmland/circular_farmland(49).jpg,circular farmland,test
+1505,island/island(22).jpg,island,test
+1506,island/island(55).jpg,island,test
+1507,church/church(57).jpg,church,test
+1508,ground_track_field/ground_track_field(20).jpg,ground track field,test
+1509,ground_track_field/ground_track_field(21).jpg,ground track field,test
+1510,circular_farmland/circular_farmland(60).jpg,circular farmland,test
+1511,bridge/bridge(12).jpg,bridge,test
+1512,harbor/harbor(41).jpg,harbor,test
+1513,mountain/mountain(41).jpg,mountain,test
+1514,medium_residential/medium_residential(46).jpg,medium residential,test
+1515,baseball_diamond/baseball_diamond(7).jpg,baseball diamond,test
+1516,golf_course/golf_course(15).jpg,golf course,test
+1517,basketball_court/basketball_court(15).jpg,basketball court,test
+1518,island/island(28).jpg,island,test
+1519,desert/desert(29).jpg,desert,test
+1520,desert/desert(8).jpg,desert,test
+1521,church/church(21).jpg,church,test
+1522,circular_farmland/circular_farmland(26).jpg,circular farmland,test
+1523,circular_farmland/circular_farmland(5).jpg,circular farmland,test
+1524,bridge/bridge(59).jpg,bridge,test
+1525,intersection/intersection(20).jpg,intersection,test
+1526,airplane/airplane(44).jpg,airplane,test
+1527,intersection/intersection(3).jpg,intersection,test
+1528,mobile_home_park/mobile_home_park(40).jpg,mobile home park,test
+1529,golf_course/golf_course(39).jpg,golf course,test
+1530,roundabout/roundabout(22).jpg,roundabout,test
+1531,runway/runway(44).jpg,runway,test
+1532,chaparral/chaparral(30).jpg,chaparral,test
+1533,meadow/meadow(6).jpg,meadow,test
+1534,freeway/freeway(13).jpg,freeway,test
+1535,commercial_area/commercial_area(58).jpg,commercial area,test
+1536,mountain/mountain(48).jpg,mountain,test
+1537,bridge/bridge(56).jpg,bridge,test
+1538,dense_residential/dense_residential(44).jpg,dense residential,test
+1539,railway/railway(35).jpg,railway,test
+1540,bridge/bridge(60).jpg,bridge,test
+1541,airplane/airplane(4).jpg,airplane,test
+1542,meadow/meadow(28).jpg,meadow,test
+1543,mountain/mountain(15).jpg,mountain,test
+1544,harbor/harbor(52).jpg,harbor,test
+1545,freeway/freeway(17).jpg,freeway,test
+1546,meadow/meadow(60).jpg,meadow,test
+1547,overpass/overpass(36).jpg,overpass,test
+1548,airplane/airplane(51).jpg,airplane,test
+1549,bridge/bridge(34).jpg,bridge,test
+1550,golf_course/golf_course(13).jpg,golf course,test
+1551,freeway/freeway(41).jpg,freeway,test
+1552,parking_lot/parking_lot(60).jpg,parking lot,test
+1553,freeway/freeway(45).jpg,freeway,test
+1554,mountain/mountain(30).jpg,mountain,test
+1555,chaparral/chaparral(39).jpg,chaparral,test
+1556,dense_residential/dense_residential(23).jpg,dense residential,test
+1557,circular_farmland/circular_farmland(51).jpg,circular farmland,test
+1558,basketball_court/basketball_court(17).jpg,basketball court,test
+1559,commercial_area/commercial_area(44).jpg,commercial area,test
+1560,medium_residential/medium_residential(12).jpg,medium residential,test
+1561,roundabout/roundabout(7).jpg,roundabout,test
+1562,church/church(52).jpg,church,test
+1563,church/church(29).jpg,church,test
+1564,lake/lake(57).jpg,lake,test
+1565,mountain/mountain(57).jpg,mountain,test
+1566,baseball_diamond/baseball_diamond(30).jpg,baseball diamond,test
+1567,overpass/overpass(6).jpg,overpass,test
+1568,parking_lot/parking_lot(23).jpg,parking lot,test
+1569,runway/runway(29).jpg,runway,test
+1570,basketball_court/basketball_court(20).jpg,basketball court,test
+1571,lake/lake(21).jpg,lake,test
+1572,mountain/mountain(38).jpg,mountain,test
+1573,lake/lake(41).jpg,lake,test
+1574,intersection/intersection(17).jpg,intersection,test
+1575,golf_course/golf_course(25).jpg,golf course,test
+1576,roundabout/roundabout(39).jpg,roundabout,test
+1577,desert/desert(25).jpg,desert,test
+1578,medium_residential/medium_residential(55).jpg,medium residential,test
+1579,ground_track_field/ground_track_field(32).jpg,ground track field,test
+1580,lake/lake(58).jpg,lake,test
+1581,harbor/harbor(58).jpg,harbor,test
+1582,airplane/airplane(48).jpg,airplane,test
+1583,runway/runway(13).jpg,runway,test
+1584,medium_residential/medium_residential(10).jpg,medium residential,test
+1585,commercial_area/commercial_area(38).jpg,commercial area,test
+1586,harbor/harbor(42).jpg,harbor,test
+1587,railway/railway(19).jpg,railway,test
+1588,roundabout/roundabout(2).jpg,roundabout,test
+1589,railway/railway(49).jpg,railway,test
+1590,mobile_home_park/mobile_home_park(38).jpg,mobile home park,test
+1591,commercial_area/commercial_area(56).jpg,commercial area,test
+1592,runway/runway(31).jpg,runway,test
+1593,circular_farmland/circular_farmland(57).jpg,circular farmland,test
+1594,mountain/mountain(36).jpg,mountain,test
+1595,island/island(54).jpg,island,test
+1596,airplane/airplane(30).jpg,airplane,test
+1597,airplane/airplane(37).jpg,airplane,test
+1598,runway/runway(38).jpg,runway,test
+1599,industrial_area/industrial_area(49).jpg,industrial area,test
+1600,golf_course/golf_course(60).jpg,golf course,test
+1601,airplane/airplane(60).jpg,airplane,test
+1602,airport/airport(26).jpg,airport,test
+1603,rectangular_farmland/rectangular_farmland(56).jpg,rectangular farmland,test
+1604,ground_track_field/ground_track_field(15).jpg,ground track field,test
+1605,airport/airport(22).jpg,airport,test
+1606,basketball_court/basketball_court(60).jpg,basketball court,test
+1607,beach/beach(34).jpg,beach,test
+1608,mountain/mountain(9).jpg,mountain,test
+1609,harbor/harbor(45).jpg,harbor,test
+1610,meadow/meadow(53).jpg,meadow,test
+1611,baseball_diamond/baseball_diamond(1).jpg,baseball diamond,test
+1612,church/church(18).jpg,church,test
+1613,airport/airport(58).jpg,airport,test
+1614,intersection/intersection(8).jpg,intersection,test
+1615,forest/forest(58).jpg,forest,test
+1616,commercial_area/commercial_area(54).jpg,commercial area,test
+1617,runway/runway(59).jpg,runway,test
+1618,circular_farmland/circular_farmland(7).jpg,circular farmland,test
+1619,island/island(60).jpg,island,test
+1620,commercial_area/commercial_area(55).jpg,commercial area,test
+1621,baseball_diamond/baseball_diamond(4).jpg,baseball diamond,test
+1622,mobile_home_park/mobile_home_park(7).jpg,mobile home park,test
+1623,ground_track_field/ground_track_field(59).jpg,ground track field,test
+1624,chaparral/chaparral(41).jpg,chaparral,test
+1625,rectangular_farmland/rectangular_farmland(7).jpg,rectangular farmland,test
+1626,parking_lot/parking_lot(20).jpg,parking lot,test
+1627,island/island(47).jpg,island,test
+1628,desert/desert(22).jpg,desert,test
+1629,lake/lake(11).jpg,lake,test
+1630,airplane/airplane(15).jpg,airplane,test
+1631,airport/airport(25).jpg,airport,test
+1632,airport/airport(7).jpg,airport,test
+1633,mobile_home_park/mobile_home_park(47).jpg,mobile home park,test
+1634,chaparral/chaparral(11).jpg,chaparral,test
+1635,golf_course/golf_course(59).jpg,golf course,test
+1636,basketball_court/basketball_court(1).jpg,basketball court,test
+1637,rectangular_farmland/rectangular_farmland(11).jpg,rectangular farmland,test
+1638,golf_course/golf_course(21).jpg,golf course,test
+1639,island/island(41).jpg,island,test
+1640,church/church(43).jpg,church,test
+1641,basketball_court/basketball_court(5).jpg,basketball court,test
+1642,circular_farmland/circular_farmland(9).jpg,circular farmland,test
+1643,mobile_home_park/mobile_home_park(30).jpg,mobile home park,test
+1644,basketball_court/basketball_court(13).jpg,basketball court,test
+1645,airplane/airplane(59).jpg,airplane,test
+1646,lake/lake(46).jpg,lake,test
+1647,forest/forest(36).jpg,forest,test
+1648,meadow/meadow(14).jpg,meadow,test
+1649,chaparral/chaparral(44).jpg,chaparral,test
+1650,meadow/meadow(42).jpg,meadow,test
+1651,dense_residential/dense_residential(28).jpg,dense residential,test
+1652,basketball_court/basketball_court(26).jpg,basketball court,test
+1653,lake/lake(43).jpg,lake,test
+1654,church/church(16).jpg,church,test
+1655,bridge/bridge(31).jpg,bridge,test
+1656,mountain/mountain(2).jpg,mountain,test
+1657,roundabout/roundabout(46).jpg,roundabout,test
+1658,parking_lot/parking_lot(12).jpg,parking lot,test
+1659,intersection/intersection(5).jpg,intersection,test
+1660,forest/forest(3).jpg,forest,test
+1661,rectangular_farmland/rectangular_farmland(24).jpg,rectangular farmland,test
+1662,overpass/overpass(30).jpg,overpass,test
+1663,roundabout/roundabout(59).jpg,roundabout,test
+1664,runway/runway(17).jpg,runway,test
+1665,railway/railway(55).jpg,railway,test
+1666,freeway/freeway(56).jpg,freeway,test
+1667,mobile_home_park/mobile_home_park(17).jpg,mobile home park,test
+1668,roundabout/roundabout(43).jpg,roundabout,test
+1669,baseball_diamond/baseball_diamond(19).jpg,baseball diamond,test
+1670,desert/desert(23).jpg,desert,test
+1671,meadow/meadow(7).jpg,meadow,test
+1672,industrial_area/industrial_area(42).jpg,industrial area,test
+1673,island/island(38).jpg,island,test
+1674,dense_residential/dense_residential(12).jpg,dense residential,test
+1675,parking_lot/parking_lot(5).jpg,parking lot,test
+1676,industrial_area/industrial_area(6).jpg,industrial area,test
+1677,desert/desert(9).jpg,desert,test
+1678,harbor/harbor(44).jpg,harbor,test
+1679,dense_residential/dense_residential(40).jpg,dense residential,test
+1680,roundabout/roundabout(1).jpg,roundabout,test
+1681,rectangular_farmland/rectangular_farmland(33).jpg,rectangular farmland,test
+1682,beach/beach(37).jpg,beach,test
+1683,bridge/bridge(11).jpg,bridge,test
+1684,intersection/intersection(25).jpg,intersection,test
+1685,lake/lake(54).jpg,lake,test
+1686,harbor/harbor(6).jpg,harbor,test
+1687,beach/beach(54).jpg,beach,test
+1688,medium_residential/medium_residential(54).jpg,medium residential,test
+1689,airport/airport(5).jpg,airport,test
+1690,harbor/harbor(22).jpg,harbor,test
+1691,mobile_home_park/mobile_home_park(34).jpg,mobile home park,test
+1692,circular_farmland/circular_farmland(58).jpg,circular farmland,test
+1693,forest/forest(22).jpg,forest,test
+1694,industrial_area/industrial_area(14).jpg,industrial area,test
+1695,overpass/overpass(28).jpg,overpass,test
+1696,overpass/overpass(10).jpg,overpass,test
+1697,mobile_home_park/mobile_home_park(60).jpg,mobile home park,test
+1698,roundabout/roundabout(33).jpg,roundabout,test
+1699,ground_track_field/ground_track_field(23).jpg,ground track field,test
+1700,circular_farmland/circular_farmland(52).jpg,circular farmland,test
+1701,desert/desert(60).jpg,desert,test
+1702,medium_residential/medium_residential(57).jpg,medium residential,test
+1703,freeway/freeway(3).jpg,freeway,test
+1704,ground_track_field/ground_track_field(9).jpg,ground track field,test
+1705,basketball_court/basketball_court(47).jpg,basketball court,test
+1706,dense_residential/dense_residential(57).jpg,dense residential,test
+1707,roundabout/roundabout(9).jpg,roundabout,test
+1708,bridge/bridge(52).jpg,bridge,test
+1709,ground_track_field/ground_track_field(30).jpg,ground track field,test
+1710,railway/railway(23).jpg,railway,test
+1711,overpass/overpass(22).jpg,overpass,test
+1712,industrial_area/industrial_area(41).jpg,industrial area,test
+1713,mountain/mountain(56).jpg,mountain,test
+1714,rectangular_farmland/rectangular_farmland(41).jpg,rectangular farmland,test
+1715,commercial_area/commercial_area(52).jpg,commercial area,test
+1716,parking_lot/parking_lot(30).jpg,parking lot,test
+1717,forest/forest(18).jpg,forest,test
+1718,railway/railway(6).jpg,railway,test
+1719,rectangular_farmland/rectangular_farmland(54).jpg,rectangular farmland,test
+1720,bridge/bridge(5).jpg,bridge,test
+1721,overpass/overpass(48).jpg,overpass,test
+1722,circular_farmland/circular_farmland(37).jpg,circular farmland,test
+1723,forest/forest(48).jpg,forest,test
+1724,intersection/intersection(34).jpg,intersection,test
+1725,railway/railway(26).jpg,railway,test
+1726,basketball_court/basketball_court(24).jpg,basketball court,test
+1727,meadow/meadow(4).jpg,meadow,test
+1728,chaparral/chaparral(37).jpg,chaparral,test
+1729,freeway/freeway(25).jpg,freeway,test
+1730,dense_residential/dense_residential(54).jpg,dense residential,test
+1731,golf_course/golf_course(33).jpg,golf course,test
+1732,forest/forest(59).jpg,forest,test
+1733,runway/runway(46).jpg,runway,test
+1734,circular_farmland/circular_farmland(27).jpg,circular farmland,test
+1735,chaparral/chaparral(40).jpg,chaparral,test
+1736,dense_residential/dense_residential(13).jpg,dense residential,test
+1737,airport/airport(48).jpg,airport,test
+1738,overpass/overpass(19).jpg,overpass,test
+1739,freeway/freeway(38).jpg,freeway,test
+1740,chaparral/chaparral(59).jpg,chaparral,test
+1741,lake/lake(60).jpg,lake,test
+1742,desert/desert(34).jpg,desert,test
+1743,island/island(21).jpg,island,test
+1744,dense_residential/dense_residential(9).jpg,dense residential,test
+1745,overpass/overpass(37).jpg,overpass,test
+1746,commercial_area/commercial_area(27).jpg,commercial area,test
+1747,church/church(25).jpg,church,test
+1748,baseball_diamond/baseball_diamond(16).jpg,baseball diamond,test
+1749,intersection/intersection(15).jpg,intersection,test
+1750,roundabout/roundabout(49).jpg,roundabout,test
+1751,rectangular_farmland/rectangular_farmland(18).jpg,rectangular farmland,test
+1752,runway/runway(20).jpg,runway,test
+1753,beach/beach(18).jpg,beach,test
+1754,baseball_diamond/baseball_diamond(5).jpg,baseball diamond,test
+1755,airport/airport(31).jpg,airport,test
+1756,dense_residential/dense_residential(25).jpg,dense residential,test
+1757,dense_residential/dense_residential(43).jpg,dense residential,test
+1758,parking_lot/parking_lot(50).jpg,parking lot,test
+1759,freeway/freeway(46).jpg,freeway,test
+1760,parking_lot/parking_lot(8).jpg,parking lot,test
+1761,railway/railway(16).jpg,railway,test
+1762,golf_course/golf_course(24).jpg,golf course,test
+1763,medium_residential/medium_residential(53).jpg,medium residential,test
+1764,chaparral/chaparral(4).jpg,chaparral,test
+1765,commercial_area/commercial_area(47).jpg,commercial area,test
+1766,medium_residential/medium_residential(49).jpg,medium residential,test
+1767,church/church(6).jpg,church,test
+1768,intersection/intersection(24).jpg,intersection,test
+1769,medium_residential/medium_residential(5).jpg,medium residential,test
+1770,forest/forest(6).jpg,forest,test
+1771,chaparral/chaparral(19).jpg,chaparral,test
+1772,beach/beach(13).jpg,beach,test
+1773,bridge/bridge(24).jpg,bridge,test
+1774,meadow/meadow(58).jpg,meadow,test
+1775,forest/forest(13).jpg,forest,test
+1776,mobile_home_park/mobile_home_park(13).jpg,mobile home park,test
+1777,rectangular_farmland/rectangular_farmland(15).jpg,rectangular farmland,test
+1778,lake/lake(40).jpg,lake,test
+1779,forest/forest(12).jpg,forest,test
+1780,medium_residential/medium_residential(14).jpg,medium residential,test
+1781,desert/desert(53).jpg,desert,test
+1782,baseball_diamond/baseball_diamond(58).jpg,baseball diamond,test
+1783,mobile_home_park/mobile_home_park(28).jpg,mobile home park,test
+1784,beach/beach(60).jpg,beach,test
+1785,airport/airport(50).jpg,airport,test
+1786,industrial_area/industrial_area(46).jpg,industrial area,test
+1787,island/island(58).jpg,island,test
+1788,ground_track_field/ground_track_field(44).jpg,ground track field,test
+1789,church/church(2).jpg,church,test
+1790,harbor/harbor(31).jpg,harbor,test
+1791,freeway/freeway(55).jpg,freeway,test
+1792,ground_track_field/ground_track_field(42).jpg,ground track field,test
+1793,chaparral/chaparral(28).jpg,chaparral,test
+1794,commercial_area/commercial_area(5).jpg,commercial area,test
+1795,beach/beach(7).jpg,beach,test
+1796,industrial_area/industrial_area(47).jpg,industrial area,test
+1797,desert/desert(52).jpg,desert,test
+1798,overpass/overpass(50).jpg,overpass,test
+1799,parking_lot/parking_lot(31).jpg,parking lot,test
+1800,baseball_diamond/baseball_diamond(21).jpg,baseball diamond,test
+1801,airplane/airplane(9).jpg,airplane,test
+1802,runway/runway(19).jpg,runway,test
+1803,forest/forest(15).jpg,forest,test
+1804,rectangular_farmland/rectangular_farmland(59).jpg,rectangular farmland,test
+1805,dense_residential/dense_residential(30).jpg,dense residential,test
+1806,beach/beach(46).jpg,beach,test
+1807,overpass/overpass(7).jpg,overpass,test
+1808,industrial_area/industrial_area(51).jpg,industrial area,test
+1809,meadow/meadow(17).jpg,meadow,test
+1810,runway/runway(32).jpg,runway,test
+1811,baseball_diamond/baseball_diamond(45).jpg,baseball diamond,test
+1812,rectangular_farmland/rectangular_farmland(40).jpg,rectangular farmland,test
+1813,intersection/intersection(57).jpg,intersection,test
+1814,industrial_area/industrial_area(11).jpg,industrial area,test
+1815,intersection/intersection(49).jpg,intersection,test
+1816,golf_course/golf_course(20).jpg,golf course,test
+1817,bridge/bridge(29).jpg,bridge,test
+1818,railway/railway(27).jpg,railway,test
+1819,harbor/harbor(30).jpg,harbor,test
+1820,forest/forest(26).jpg,forest,test
+1821,meadow/meadow(10).jpg,meadow,test
+1822,freeway/freeway(52).jpg,freeway,test
+1823,mobile_home_park/mobile_home_park(16).jpg,mobile home park,test
+1824,airport/airport(40).jpg,airport,test
+1825,desert/desert(7).jpg,desert,test
+1826,beach/beach(40).jpg,beach,test
+1827,meadow/meadow(16).jpg,meadow,test
+1828,basketball_court/basketball_court(6).jpg,basketball court,test
+1829,medium_residential/medium_residential(52).jpg,medium residential,test
+1830,ground_track_field/ground_track_field(57).jpg,ground track field,test
+1831,golf_course/golf_course(34).jpg,golf course,test
+1832,industrial_area/industrial_area(58).jpg,industrial area,test
+1833,beach/beach(25).jpg,beach,test
+1834,lake/lake(51).jpg,lake,test
+1835,railway/railway(24).jpg,railway,test
+1836,intersection/intersection(41).jpg,intersection,test
+1837,parking_lot/parking_lot(7).jpg,parking lot,test
+1838,railway/railway(57).jpg,railway,test
+1839,chaparral/chaparral(18).jpg,chaparral,test
+1840,freeway/freeway(16).jpg,freeway,test
+1841,baseball_diamond/baseball_diamond(56).jpg,baseball diamond,test
+1842,industrial_area/industrial_area(12).jpg,industrial area,test
+1843,mobile_home_park/mobile_home_park(14).jpg,mobile home park,test
+1844,mountain/mountain(32).jpg,mountain,test
+1845,medium_residential/medium_residential(34).jpg,medium residential,test
+1846,commercial_area/commercial_area(48).jpg,commercial area,test
+1847,rectangular_farmland/rectangular_farmland(12).jpg,rectangular farmland,test
+1848,industrial_area/industrial_area(24).jpg,industrial area,test
+1849,desert/desert(21).jpg,desert,test
+1850,church/church(13).jpg,church,test
+1851,railway/railway(20).jpg,railway,test
+1852,beach/beach(23).jpg,beach,test
+1853,parking_lot/parking_lot(43).jpg,parking lot,test
+1854,church/church(4).jpg,church,test
+1855,island/island(51).jpg,island,test
+1856,airplane/airplane(6).jpg,airplane,test
+1857,harbor/harbor(51).jpg,harbor,test
+1858,roundabout/roundabout(58).jpg,roundabout,test
+1859,airport/airport(6).jpg,airport,test

@@ -174,3 +174,13 @@ For a detailed breakdown on each dataset, refer to the [report](md_files/single_
 ### Image to Text Recall @ 1 (%)
 ![alt text](assets/I2T.png)
 
+### BIBTEX
+```
+@inproceedings{Radford2021LearningTV,
+    title={Learning Transferable Visual Models From Natural Language Supervision},
+    author={Alec Radford and Jong Wook Kim and Chris Hallacy and Aditya Ramesh and Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
+    booktitle={International Conference on Machine Learning},
+    year={2021},
+    url={https://api.semanticscholar.org/CorpusID:231591445}
+    }
+```

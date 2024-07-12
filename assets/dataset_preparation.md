@@ -71,6 +71,7 @@ Steps:
 
 This dataset does not provide train-test-val splits in literature. We created random train-test-val splits using stratification, to ensure that the classes are balanced in each split.
 
+Final folder structure
 ```
 | benchmarks
 │  ├── RSSCN7
@@ -93,6 +94,7 @@ This dataset does not provide train-test-val splits in literature. We created ra
 3. Extract the zip file and copy all the images in ``benchmarks/SIRI_WHU/images/``.
 4. Copy the file ``metadata/SIRI_WHU/SIRI_WHU.csv`` into ``benchmarks/SIRI_WHU/labels/``.
 
+Final folder structure
 ```
 | benchmarks
 │  ├── SIRI_WHU
@@ -114,6 +116,8 @@ This dataset does not provide train-test-val splits in literature. We created ra
 1. Download the file ``NWPU_RESISC45-20210923T210241Z-001.zip`` from [here](https://figshare.com/articles/dataset/NWPU-RESISC45_Dataset_with_12_classes/16674166).
 2. Extract the zip file and copy its content into ``dataset/benchmarks/RESISC45/images/``.
 3. Prepare the dataset using ``dataset/benchmarks/RESISC45/build_labels.ipynb``.
+
+### RSI_CB128
 
 ### RSI_CB256
 1. Download the file ``RSI-CB256.rar`` from [here](https://github.com/lehaifeng/RSI-CB).
@@ -160,14 +164,3 @@ This dataset does not provide train-test-val splits in literature. We created ra
 4. Prepare the dataset using ``dataset/benchmarks/RSITMD/build_labels.ipynb``.
 
 ### SIDNEY
-
-### BIBTEX
-```
-    @inproceedings{Radford2021LearningTV,
-        title={Learning Transferable Visual Models From Natural Language Supervision},
-        author={Alec Radford and Jong Wook Kim and Chris Hallacy and Aditya Ramesh and Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
-        booktitle={International Conference on Machine Learning},
-        year={2021},
-        url={https://api.semanticscholar.org/CorpusID:231591445}
-        }
-```
