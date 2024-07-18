@@ -121,7 +121,7 @@ After you have defined these functions, you can evaluate your model by following
 1. Modify the beginning of the module ```eval.py``` by importing your custom functions, and replacing them after "load_function", "encode_text_fn" and "encode_image_fn".
 2. Modify the templates, placing the ones that you want to use for evaluation.
 3. Run ```eval.py```.
-4. Collect the results in the ```reports/``` folder saved in a txt file.
+4. Collect the results in the ```reports/``` folder. The report is saved as a txt file.
 
 ## Datasets
 

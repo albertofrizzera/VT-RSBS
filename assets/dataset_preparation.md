@@ -114,15 +114,53 @@ Final folder structure
 
 ### RESISC45
 1. Download the file ``NWPU_RESISC45-20210923T210241Z-001.zip`` from [here](https://figshare.com/articles/dataset/NWPU-RESISC45_Dataset_with_12_classes/16674166).
-2. Extract the zip file and copy its content into ``dataset/benchmarks/RESISC45/images/``.
-3. Prepare the dataset using ``dataset/benchmarks/RESISC45/build_labels.ipynb``.
+2. Extract the zip file and copy its content into ``benchmarks/RESISC45/images/``.
+3. Copy the file ``metadata/RESISC45/RESISC45.csv`` into ``benchmarks/RESISC45/labels/``.
+
+Final folder structure
+```
+| benchmarks
+│  ├── RESISC45
+│  │  ├── images
+│  │  │  ├── airfield
+│  │  │  │  ├── img0000.tif
+│  │  │  |  ├── img0001.tif
+│  │  │  |  ├── ...
+│  │  │  ├── anchorage
+│  │  │  │  ├── img0000.tif
+│  │  │  |  ├── img0001.tif
+│  │  │  |  ├── ...
+|  |  ├── ...
+│  │  ├── labels
+│  │  │  ├── RESISC45.csv
+```
 
 ### RSI_CB128
 
 ### RSI_CB256
 1. Download the file ``RSI-CB256.rar`` from [here](https://github.com/lehaifeng/RSI-CB).
-2. Extract the rar file and copy its content into ``dataset/benchmarks/RSI_CB256/images/``.
-3. Prepare the dataset using ``dataset/benchmarks/RSI_CB256/build_labels.ipynb``.
+2. Extract the rar file and copy its content into ``benchmarks/RSI_CB256/images/``.
+3. Copy the file ``metadata/RSI_CB256/RSI_CB256.csv`` into ``benchmarks/RSI_CB256/labels/``.
+
+Final folder structure
+```
+| benchmarks
+│  ├── RSI_CB256
+│  │  ├── images
+│  │  │  ├── construction_land
+│  │  │  │  ├── city_building
+│  │  │  │  │  ├── city_building_(1).tif
+│  │  │  │  │  ├── city_building_(2).tif
+│  │  │  │  │  ├── ...
+│  │  │  │  ├── container
+│  │  │  │  │  ├── container_(1).tif
+│  │  │  │  │  ├── container_(2).tif
+│  │  │  │  │  ├── ...
+|  |  ├── ...
+│  │  ├── labels
+│  │  │  ├── RSI_CB256.csv
+```
+
 
 ### EuroSAT
 1. Download the file ``EuroSAT.zip`` from [here](https://github.com/phelber/eurosat).
