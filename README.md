@@ -1,5 +1,6 @@
 <center> 
-<h1><strong>Evaluate and benchmark your vision language embeddings for remote sensing applications</strong></h1>
+<h1><strong>Vision-Text Remote Sensing Benchmarking System (VT-RSBS):
+Evaluate your vision language embeddings for remote sensing applications</strong></h1>
 <em>
 Alberto Frizzera, info@albertofrizzera.com<br>
 Riccardo Ricci, riccardo.ricci-1@unitn.it
