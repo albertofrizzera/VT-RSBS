@@ -1,13 +1,15 @@
-<center> 
-<h1><strong>Vision-Text Remote Sensing Benchmarking System (VT-RSBS):
-Evaluate your vision language embeddings for remote sensing applications</strong></h1>
-<em>
-Alberto Frizzera, info@albertofrizzera.com<br>
-Riccardo Ricci, riccardo.ricci-1@unitn.it
-</em>
-<br>
-</center>
+# Vision-Text Remote Sensing Benchmarking System (VT-RSBS)
 
+## Evaluate your vision language embeddings for remote sensing applications
+
+
+### Authors:
+- **Alberto Frizzera**  
+  Email: [info@albertofrizzera.com](mailto:info@albertofrizzera.com)
+
+- **Riccardo Ricci**  
+  Email: [riccardo.ricci-1@unitn.it](mailto:riccardo.ricci-1@unitn.it)
+  
 ## Introduction
 
 Embeddings are mathematical representations of data. They usually take the form of vectors, and the cool thing is that they are not random, but carry information (they "represent" something).
