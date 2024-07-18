@@ -161,7 +161,7 @@ To visualize the samples of all the above datasets, a web tool has been implemen
 Each dataset should be downloaded and preprocessed accoring to the instructions in [dataset preparation](assets/dataset_preparation.md).
 
 ## Benchmark Models
-The following figures report results on zero-shot classification, linear probing and retrieval of the models in literature up to now. There are original models, as well as models fine-tuned on remote sensing datasets.
+The following figures report average performance on zero-shot classification, linear probing and retrieval of some models.
 
 For a detailed breakdown on each dataset, refer to the [report](md_files/single_model_breakdown.md).
 
