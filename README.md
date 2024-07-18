@@ -1,8 +1,5 @@
 # VT-RSBS: Vision-Text Remote Sensing Benchmarking System
 
-## Evaluate your vision language embeddings for remote sensing applications
-
-
 ### Authors:
 - **Alberto Frizzera**  
   Email: [info@albertofrizzera.com](mailto:info@albertofrizzera.com)
