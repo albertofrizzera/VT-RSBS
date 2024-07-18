@@ -13,7 +13,7 @@
 ## Introduction
 
 Embeddings are mathematical representations of data. They usually take the form of vectors, and the cool thing is that they are not random, but carry information (they "represent" something).
-For example, if we consider images, "similar" pairs will have similar embeddings.
+For example, if we consider images, "similar" images should have similar embeddings.
 The concept of similarity is entirely enforced during training.
 
 Consider two images, one that contains a horse and one that contains a fish, they are probably visually different, but they share the concept of representing animals. In remote sensing, suppose to take an image of a forest and an image of a field. They are visually different, but they share the concept of being a vegetated area.
@@ -35,7 +35,7 @@ Using descriptions of the image, the authors showed that the model was able to l
 These vision-language embeddings can be useful for text-image retrieval, image-text retrieval, image captioning among others. However, it is difficult to correctly evaluate them, for the lack of a common benchmark system. 
 Indeed, some papers tackled the problem of adapting CLIP for remote sensing, but the lack evaluation systems causes the results to not be comparable.
 
-To solve this issue, we built this benchmarking system and assessed the performance of the algorithms in literature up to now. 
+To solve this issue, we built this benchmarking system and assessed the performance of some public algorithms. We are constantly updating the benchmark with new models and datasets, and we are open to any contribution. Feel free to open an issue :)
 
 The benchmark implements 4 tasks
 - image classification
