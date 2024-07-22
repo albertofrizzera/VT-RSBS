@@ -315,14 +315,15 @@ class UCM(Dataset):
         sample = self.data.iloc[index]
         if self.label_type=="label":
             image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/images/labels",sample["filepath"])).convert("RGB")
-            target = sample[self.label_type]
         else:
             image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/images/captions",sample["filename"])).convert("RGB")
             # Get target (it is a list in str format, using ast to convert it to a list)
-            target = sample[self.label_type]
+        
+        target = sample[self.label_type]
+        if self.label_type == "sentence":
             target = ast.literal_eval(target)
             target = [n.strip() for n in target]
-        
+
         return image, target
 
     def __len__(self):
@@ -352,8 +353,10 @@ class RSITMD(Dataset):
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSITMD/images/",sample["filename"])).convert("RGB")
         # Get target (it is a list in str format, using ast to convert it to a list)
         target = sample[self.label_type]
-        target = ast.literal_eval(target)
-        target = [n.strip() for n in target]
+        
+        if self.label_type == "sentence":
+            target = ast.literal_eval(target)
+            target = [n.strip() for n in target]
         
         return image, target
 
@@ -384,8 +387,9 @@ class RSICD(Dataset):
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSICD/images/",sample["filename"])).convert("RGB")
         # Get target (it is a list in str format, using ast to convert it to a list)
         target = sample[self.label_type]
-        target = ast.literal_eval(target)
-        target = [n.strip() for n in target]
+        if self.label_type == "sentence":
+            target = ast.literal_eval(target)
+            target = [n.strip() for n in target]
 
         return image, target
 
