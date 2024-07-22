@@ -249,6 +249,7 @@ def encode_dataset(model, dataset: dutils.Dataset, encode_text_fn:callable, text
         image_encodings = torch.cat(image_encodings)
         text_encodings = torch.cat(text_encodings)
         
+        print(len(image_to_text_map), len(text_to_image_map))
         text_to_image_map = torch.LongTensor(text_to_image_map).to(device)
         image_to_text_map = torch.LongTensor(image_to_text_map).to(device)
 

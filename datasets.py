@@ -2,12 +2,11 @@
 import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "../"))
-import pickle
+import ast
 import numpy as np
 from torch.utils.data import Dataset
 from PIL import Image
 from dotenv import load_dotenv
-import clip
 import pandas as pd
 
 # DATASETS FOR IMAGE CLASSIFICATION ONLY 
@@ -319,7 +318,10 @@ class UCM(Dataset):
         else:
             image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/images/captions",sample["filename"])).convert("RGB")
         
+        # Get target (it is a list in str format, using ast to convert it to a list)
         target = sample[self.label_type]
+        target = ast.literal_eval(target)
+        target = [n.strip() for n in target]
         
         return image, target
 
@@ -348,8 +350,10 @@ class RSITMD(Dataset):
     def __getitem__(self, index):
         sample = self.data.iloc[index]
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSITMD/images/",sample["filename"])).convert("RGB")
-        
+        # Get target (it is a list in str format, using ast to convert it to a list)
         target = sample[self.label_type]
+        target = ast.literal_eval(target)
+        target = [n.strip() for n in target]
         
         return image, target
 
@@ -378,7 +382,10 @@ class RSICD(Dataset):
     def __getitem__(self, index):
         sample = self.data.iloc[index]
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"RSICD/images/",sample["filename"])).convert("RGB")
+        # Get target (it is a list in str format, using ast to convert it to a list)
         target = sample[self.label_type]
+        target = ast.literal_eval(target)
+        target = [n.strip() for n in target]
 
         return image, target
 
@@ -406,8 +413,10 @@ class SIDNEY(Dataset):
     def __getitem__(self, index):
         sample = self.data.iloc[index]
         image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"SIDNEY/images/",sample["filename"])).convert("RGB")
-        
+        # Get target (it is a list in str format, using ast to convert it to a list)
         target = sample[self.label_type]
+        target = ast.literal_eval(target)
+        target = [n.strip() for n in target]
         
         return image, target
 

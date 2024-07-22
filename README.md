@@ -160,7 +160,7 @@ Each dataset should be downloaded and preprocessed accoring to the instructions 
 ## Benchmark Models
 The following figures report average performance on zero-shot classification, linear probing and retrieval of some models.
 
-For a detailed breakdown on each dataset, refer to the [report](md_files/single_model_breakdown.md).
+For a detailed breakdown on each dataset, refer to the [report](assets/single_model_breakdown.md).
 
 ### Zero-shot classification accuracy (%)
 ![alt text](assets/zero_shot_acc.png)
