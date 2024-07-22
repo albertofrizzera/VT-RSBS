@@ -315,13 +315,13 @@ class UCM(Dataset):
         sample = self.data.iloc[index]
         if self.label_type=="label":
             image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/images/labels",sample["filepath"])).convert("RGB")
+            target = sample[self.label_type]
         else:
             image = Image.open(os.path.join(os.environ["BENCHMARK_DATASETS"],"UCM/images/captions",sample["filename"])).convert("RGB")
-        
-        # Get target (it is a list in str format, using ast to convert it to a list)
-        target = sample[self.label_type]
-        target = ast.literal_eval(target)
-        target = [n.strip() for n in target]
+            # Get target (it is a list in str format, using ast to convert it to a list)
+            target = sample[self.label_type]
+            target = ast.literal_eval(target)
+            target = [n.strip() for n in target]
         
         return image, target
 
